@@ -1,2 +1,2 @@
 # KMIPN 6 
-### Tim: Dreamcode Trio
+### Tim: Dreamcode Tria
