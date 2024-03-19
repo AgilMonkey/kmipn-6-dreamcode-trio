@@ -12,7 +12,7 @@ size = Vector2(128, 128)
 [node name="Level2D" type="Node2D" parent="."]
 
 [node name="Ground" type="StaticBody2D" parent="Level2D"]
-position = Vector2(960, 944)
+position = Vector2(714, 490)
 scale = Vector2(15.32, 1)
 
 [node name="Icon" type="Sprite2D" parent="Level2D/Ground"]
@@ -23,8 +23,8 @@ texture = ExtResource("1_mysvv")
 shape = SubResource("RectangleShape2D_wcy38")
 
 [node name="Player" parent="Level2D" instance=ExtResource("2_htqtv")]
-position = Vector2(1000, 872)
+position = Vector2(754, 418)
 
 [node name="Flower" parent="." instance=ExtResource("3_m6swh")]
-position = Vector2(600, 824)
+position = Vector2(308, 380)
 scale = Vector2(2.60827, 2.60827)
