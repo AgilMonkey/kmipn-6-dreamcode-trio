@@ -5,11 +5,11 @@
 [ext_resource type="Script" path="res://scenes/player/InteractNode.gd" id="3_5at7y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p7pti"]
-radius = 72.0
-height = 208.0
+radius = 16.0
+height = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk0s5"]
-radius = 104.0
+radius = 64.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -17,12 +17,12 @@ collision_mask = 5
 script = ExtResource("1_cou1i")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
 texture = ExtResource("2_vlseu")
 offset = Vector2(0, -55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -104)
+position = Vector2(0, -8)
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_p7pti")
 
 [node name="InteractNode" type="Area2D" parent="."]
@@ -31,6 +31,6 @@ collision_mask = 8
 script = ExtResource("3_5at7y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNode"]
-position = Vector2(0, -104)
+position = Vector2(0, -40)
 shape = SubResource("CircleShape2D_dk0s5")
 debug_color = Color(0.572549, 0.545098, 0.282353, 0.419608)

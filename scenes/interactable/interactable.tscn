@@ -12,8 +12,8 @@ icon_offset = Vector2(0, -50)
 [node name="InteractIcon" type="Sprite2D" parent="."]
 visible = false
 z_index = 50
-position = Vector2(0, -64)
-scale = Vector2(0.64, 0.64)
+position = Vector2(0, -24)
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_3tnjy")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
