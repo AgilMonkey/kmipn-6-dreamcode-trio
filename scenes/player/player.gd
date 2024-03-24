@@ -8,9 +8,11 @@ var direction: Vector2
 
 @onready var interact_node = $InteractNode
 
+
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
 	Dialogic.timeline_ended.connect(dialogue_stop)
+
 
 func _physics_process(delta):
 	if direction:
@@ -30,6 +32,7 @@ func _input(event):
 
 func dialogue_start():
 	set_process_input(false)
+
 
 func dialogue_stop():
 	set_process_input(true)
