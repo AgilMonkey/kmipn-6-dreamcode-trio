@@ -8,6 +8,8 @@ class_name Interactable
 
 @export var icon_offset: Vector2 = Vector2(0, 100)
 
+var is_interacting := false
+
 @onready var interact_icon: Sprite2D = get_node("InteractIcon")
 
 
