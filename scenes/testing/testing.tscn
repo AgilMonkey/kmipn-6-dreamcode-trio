@@ -12,6 +12,10 @@ size = Vector2(128, 128)
 script = ExtResource("1_35fbk")
 
 [node name="Level2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Flower" parent="Level2D" instance=ExtResource("4_uhqjw")]
+position = Vector2(549, 357)
 
 [node name="Ground" type="StaticBody2D" parent="Level2D"]
 position = Vector2(714, 490)
@@ -26,6 +30,3 @@ shape = SubResource("RectangleShape2D_wcy38")
 
 [node name="Player" parent="Level2D" instance=ExtResource("3_c8aj4")]
 position = Vector2(754, 418)
-
-[node name="Flower" parent="." instance=ExtResource("4_uhqjw")]
-position = Vector2(429, 274)
