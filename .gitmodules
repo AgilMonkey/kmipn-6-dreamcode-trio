@@ -1,0 +1,4 @@
+[submodule "addons/dialogic-agil"]
+	path = addons/dialogic-agil
+	url = https://github.com/AgilMonkey/dialogic-agil
+	branch = addon
