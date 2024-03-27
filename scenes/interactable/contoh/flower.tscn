@@ -13,8 +13,7 @@ size = Vector2(48, 32)
 [node name="Flower" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -21)
-scale = Vector2(1.5, 1.5)
+position = Vector2(1, -16)
 texture = ExtResource("1_4oyck")
 
 [node name="Interactable" parent="." instance=ExtResource("2_njpsi")]
