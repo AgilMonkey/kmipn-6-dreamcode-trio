@@ -18,7 +18,7 @@ y_sort_enabled = true
 position = Vector2(549, 357)
 
 [node name="Ground" type="StaticBody2D" parent="Level2D"]
-position = Vector2(714, 490)
+position = Vector2(717, 701)
 scale = Vector2(15.32, 1)
 
 [node name="Icon" type="Sprite2D" parent="Level2D/Ground"]
