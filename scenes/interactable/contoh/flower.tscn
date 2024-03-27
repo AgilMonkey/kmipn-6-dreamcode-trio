@@ -1,21 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4xvt2gimfp7j"]
+[gd_scene load_steps=6 format=3 uid="uid://b4xvt2gimfp7j"]
 
 [ext_resource type="Texture2D" uid="uid://cyd18qo0qf8na" path="res://assets/kenney_abstract-platformer/PNG/Other/plantGreen_6.png" id="1_4oyck"]
 [ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interactable.tscn" id="2_njpsi"]
 [ext_resource type="Script" path="res://scenes/interactable/contoh/flower_interact.gd" id="3_20pdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7mbo1"]
-radius = 15.0
+radius = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slb1w"]
+size = Vector2(48, 32)
 
 [node name="Flower" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(1, -16)
 texture = ExtResource("1_4oyck")
 
 [node name="Interactable" parent="." instance=ExtResource("2_njpsi")]
+position = Vector2(0, -21)
 script = ExtResource("3_20pdk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_7mbo1")
 debug_color = Color(6.73831e-07, 0.627389, 0.502336, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_slb1w")
