@@ -1,8 +1,47 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnvfy6v4dwocl"]
+[gd_scene load_steps=10 format=3 uid="uid://cnvfy6v4dwocl"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_cou1i"]
-[ext_resource type="Texture2D" uid="uid://bh262wxd7m8j0" path="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="2_rbucr"]
+[ext_resource type="Texture2D" uid="uid://d2qtav3ggkjl" path="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_16x16.png" id="2_dusm6"]
 [ext_resource type="Script" path="res://scenes/player/InteractNode.gd" id="3_5at7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q2xv"]
+atlas = ExtResource("2_dusm6")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e405s"]
+atlas = ExtResource("2_dusm6")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v04is"]
+atlas = ExtResource("2_dusm6")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gu86b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q2xv")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e405s")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v04is")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p7pti"]
 radius = 16.0
@@ -16,13 +55,13 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_cou1i")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
-texture = ExtResource("2_rbucr")
+sprite_frames = SubResource("SpriteFrames_gu86b")
+animation = &"idle_down"
+autoplay = "idle_down"
 offset = Vector2(0, -16)
-hframes = 4
-frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708

@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+@export var SPEED = 300.0
 
 var direction: Vector2
 
 @onready var interact_pivot = $InteractPivot
 @onready var interact_node = $InteractPivot/InteractNode
+@onready var PlayerSprite: AnimatedSprite2D = $PlayerSprite
 
 
 func _ready():
@@ -24,7 +24,16 @@ func _physics_process(delta):
 		interact_pivot.rotation = ang
 		
 		# Ganti animasinya
-		
+		if direction.y > 0:
+			PlayerSprite.play("idle_down")
+		elif direction.y < 0:
+			PlayerSprite.play("idle_up")
+		elif direction.x > 0:
+			PlayerSprite.flip_h = false
+			PlayerSprite.play("idle_side")
+		elif direction.x < 0:
+			PlayerSprite.flip_h = true
+			PlayerSprite.play("idle_side")
 	else:
 		velocity = Vector2.ZERO
 	
@@ -33,7 +42,7 @@ func _physics_process(delta):
 
 
 func _input(event):
-	direction = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
+	direction = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).normalized()
 	
 	if event.is_action_pressed("interact"):
 		interact_node.interact()
