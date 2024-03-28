@@ -26,7 +26,7 @@ directories/dtl_directory={
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}
-layout/style_list=["res://dialogic-stuff/default_style.tres"]
+layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres"]
 layout/default_style="res://dialogic-stuff/default_style.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

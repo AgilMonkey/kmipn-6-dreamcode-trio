@@ -58,4 +58,4 @@ script = ExtResource("10_4tevf")
 name = "default_style"
 base_overrides = {}
 layers = Array[ExtResource("2_5aupg")]([SubResource("Resource_maox8"), SubResource("Resource_8eday"), SubResource("Resource_u7q0q"), SubResource("Resource_y631p"), SubResource("Resource_bpxbd"), SubResource("Resource_523tn"), SubResource("Resource_63i5h"), SubResource("Resource_6crdr")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = 5
