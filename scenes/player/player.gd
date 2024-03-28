@@ -6,7 +6,8 @@ const JUMP_VELOCITY = -600.0
 
 var direction: Vector2
 
-@onready var interact_node = $InteractNode
+@onready var interact_pivot = $InteractPivot
+@onready var interact_node = $InteractPivot/InteractNode
 
 
 func _ready():
@@ -17,8 +18,16 @@ func _ready():
 func _physics_process(delta):
 	if direction:
 		velocity = direction * SPEED
+		
+		# Putar InteractPivot sesuai arah player
+		var ang = direction.angle() - PI/2
+		interact_pivot.rotation = ang
+		
+		# Ganti animasinya
+		
 	else:
 		velocity = Vector2.ZERO
+	
 	
 	move_and_slide()
 
