@@ -50,6 +50,8 @@ func _input(event):
 
 func dialogue_start():
 	set_process_input(false)
+	direction = Vector2.ZERO
+	velocity = Vector2.ZERO
 
 
 func dialogue_stop():
