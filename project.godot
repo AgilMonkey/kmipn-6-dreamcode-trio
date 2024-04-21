@@ -21,13 +21,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"flower": "res://dialogic-stuff/characters/flower.dch",
+"test_mc": "res://dialogic-stuff/characters/test_mc.dch"
+}
 directories/dtl_directory={
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}
-layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres"]
-layout/default_style="res://dialogic-stuff/default_style.tres"
+layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]
+layout/default_style="res://dialogic-stuff/bubble style/bubble_style.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

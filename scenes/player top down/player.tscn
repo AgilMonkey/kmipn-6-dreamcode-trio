@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://cnvfy6v4dwocl"]
 
-[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_cou1i"]
+[ext_resource type="Script" path="res://scenes/player top down/player.gd" id="1_cou1i"]
 [ext_resource type="Texture2D" uid="uid://d2qtav3ggkjl" path="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_16x16.png" id="2_dusm6"]
-[ext_resource type="Script" path="res://scenes/player/InteractNode.gd" id="3_5at7y"]
+[ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_5at7y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4q2xv"]
 atlas = ExtResource("2_dusm6")
@@ -44,8 +44,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p7pti"]
-radius = 56.0
-height = 246.0
+radius = 15.9999
+height = 37.9999
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6c7w"]
 size = Vector2(48, 48)

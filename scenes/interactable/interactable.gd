@@ -15,7 +15,12 @@ var is_interacting := false
 
 func _ready():
 	interact_icon.position = icon_offset
+	Dialogic.timeline_started.connect(func(): is_interacting = true)
+	Dialogic.timeline_ended.connect(func(): is_interacting = false)
 
+
+func _process(delta):
+	visible = not is_interacting 
 
 ## Fungsi ini nanti akan di overwrite sama interaksi kalian sendiri
 func interact():
