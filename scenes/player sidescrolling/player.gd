@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var speed = 300.0
 var direction := Vector2.ZERO
 
+var is_minigame := false
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -31,6 +33,9 @@ func _physics_process(delta):
 
 
 func _input(event):
+	if is_minigame:
+		return
+	
 	direction = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).normalized()
 	
 	if event.is_action_pressed("interact"):
@@ -45,3 +50,11 @@ func dialogue_start():
 
 func dialogue_stop():
 	set_process_input(true)
+
+
+func _on_minigame_started():
+	is_minigame = true
+
+
+func _on_minigame_quitted():
+	is_minigame = false

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxt6rjj4gp3hl"]
+[gd_scene load_steps=7 format=3 uid="uid://dxt6rjj4gp3hl"]
 
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_lxw62"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_3edie"]
 [ext_resource type="PackedScene" uid="uid://wnxmjk7bcxmj" path="res://scenes/levels/prototype level 1/Box.tscn" id="2_auvsq"]
+[ext_resource type="PackedScene" uid="uid://8f1qq5dm32wb" path="res://scenes/levels/prototype level 1/box gameplay scene/prototype_gameplay_box.tscn" id="4_kmrm7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oa4i"]
 size = Vector2(1488, 144)
@@ -58,3 +59,9 @@ shape = SubResource("RectangleShape2D_unjdv")
 
 [node name="Player" parent="." instance=ExtResource("2_3edie")]
 position = Vector2(184, 680)
+
+[node name="PrototypeGameplayBox" parent="." instance=ExtResource("4_kmrm7")]
+visible = false
+
+[connection signal="_on_quitted" from="PrototypeGameplayBox" to="Player" method="_on_minigame_quitted"]
+[connection signal="_on_started" from="PrototypeGameplayBox" to="Player" method="_on_minigame_started"]
