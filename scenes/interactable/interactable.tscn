@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scenes/interactable/interactable.gd" id="1_6rkav"]
 [ext_resource type="Texture2D" uid="uid://dtr6jq6tcreeo" path="res://assets/kenney_game-icons/PNG/White/2x/exclamation.png" id="2_3tnjy"]
 
-[node name="Interactable" type="Area2D"]
+[node name="Interactable" type="Area2D" node_paths=PackedStringArray("interact_icon")]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_6rkav")
-icon_offset = Vector2(0, -80)
+interact_icon = NodePath("InteractIcon")
 
 [node name="InteractIcon" type="Sprite2D" parent="."]
 visible = false

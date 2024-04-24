@@ -26,6 +26,7 @@ directories/dch_directory={
 "test_mc": "res://dialogic-stuff/characters/test_mc.dch"
 }
 directories/dtl_directory={
+"box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://wnxmjk7bcxmj"]
+
+[ext_resource type="Texture2D" uid="uid://lrcoigb504ei" path="res://scenes/levels/Interiors_free_48x48.png" id="1_bbvhn"]
+[ext_resource type="PackedScene" uid="uid://bfews3baru8fl" path="res://scenes/interactable/dialouge-interacting/interacting_dialogue.tscn" id="2_upwiy"]
+[ext_resource type="Texture2D" uid="uid://dtr6jq6tcreeo" path="res://assets/kenney_game-icons/PNG/White/2x/exclamation.png" id="3_3qlo4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm1wr"]
+atlas = ExtResource("1_bbvhn")
+region = Rect2(530, 509, 44, 41)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jd6ks"]
+radius = 64.0
+
+[node name="Box" type="Node2D"]
+
+[node name="Box" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.34146, 2.34146)
+texture = SubResource("AtlasTexture_mm1wr")
+metadata/_edit_lock_ = true
+
+[node name="InteractingDialogue" parent="." node_paths=PackedStringArray("interact_icon") instance=ExtResource("2_upwiy")]
+timeline_name = "box_dialogue"
+interact_icon = NodePath("InteractIcon")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractingDialogue"]
+shape = SubResource("CircleShape2D_jd6ks")
+debug_color = Color(0.607843, 0.533333, 0.25098, 0.419608)
+
+[node name="InteractIcon" type="Sprite2D" parent="InteractingDialogue"]
+visible = false
+position = Vector2(0, -128)
+texture = ExtResource("3_3qlo4")

@@ -5,18 +5,16 @@ class_name Interactable
 ## Nanti akan di referensi oleh benda lain agar bisa diinteraksikan. Interaksi
 ## bisa dialog, event, dll.
 
-
-@export var icon_offset: Vector2 = Vector2(0, 100)
-
 var is_interacting := false
 
-@onready var interact_icon: Sprite2D = get_node("InteractIcon")
+@export var interact_icon: Sprite2D
 
 
 func _ready():
-	interact_icon.position = icon_offset
 	Dialogic.timeline_started.connect(func(): is_interacting = true)
 	Dialogic.timeline_ended.connect(func(): is_interacting = false)
+	area_entered.connect(_on_area_entered)
+	area_exited.connect(_on_area_exited)
 
 
 func _process(delta):
@@ -28,8 +26,8 @@ func interact():
 
 
 func _on_area_entered(area):
-	interact_icon.show()
+	if interact_icon: interact_icon.show()
 
 
 func _on_area_exited(area):
-	interact_icon.hide()
+	if interact_icon: interact_icon.hide()
