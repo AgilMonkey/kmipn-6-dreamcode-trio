@@ -7,5 +7,7 @@ func interact():
 		if obj is InteractableDialogue:
 			var layout = obj.interact()
 			layout.register_character(load("res://dialogic-stuff/characters/test_mc.dch"), $TextBubblePivot)
+			break
+		
 		obj.interact()
 		break
