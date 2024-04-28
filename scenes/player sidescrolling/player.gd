@@ -10,6 +10,7 @@ var is_minigame := false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var interact_node = $InteractNode
+@onready var sprite = $Sprite2D
 
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
@@ -26,6 +27,7 @@ func _physics_process(delta):
 
 	if direction:
 		velocity.x = direction.x * speed
+		sprite.flip_h = direction.x <= 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
@@ -36,7 +38,7 @@ func _input(event):
 	if is_minigame:
 		return
 	
-	direction = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).normalized()
+	direction.x = Input.get_axis("move_left", "move_right")
 	
 	if event.is_action_pressed("interact"):
 		interact_node.interact()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dss8y88t5p2ut"]
 
-[ext_resource type="Texture2D" uid="uid://d2qtav3ggkjl" path="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_16x16.png" id="1_m7tvi"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
+[ext_resource type="Texture2D" uid="uid://k4a08trcpndt" path="res://assets/karakter-real.png" id="2_hk6up"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_4n47d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
@@ -16,11 +16,10 @@ script = ExtResource("1_sf4uv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(8, 8)
-texture = ExtResource("1_m7tvi")
-offset = Vector2(0, -16)
-hframes = 24
-vframes = 7
+position = Vector2(0, 1)
+scale = Vector2(0.416667, 0.416667)
+texture = ExtResource("2_hk6up")
+offset = Vector2(0, -230.4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -96)
