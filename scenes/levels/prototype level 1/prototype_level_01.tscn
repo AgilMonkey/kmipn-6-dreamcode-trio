@@ -57,6 +57,13 @@ position = Vector2(-80, 576)
 position = Vector2(15, 0)
 shape = SubResource("RectangleShape2D_unjdv")
 
+[node name="Wall3" type="StaticBody2D" parent="Level"]
+position = Vector2(1416, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Wall3"]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_unjdv")
+
 [node name="Player" parent="." instance=ExtResource("2_3edie")]
 position = Vector2(184, 680)
 

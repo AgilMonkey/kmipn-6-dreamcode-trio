@@ -42,6 +42,7 @@ gravity_scale = 0.0
 freeze_mode = 1
 linear_damp = 5.0
 angular_damp = 5.0
+metadata/_edit_group_ = true
 
 [node name="GreenGem" type="Sprite2D" parent="TestObject"]
 scale = Vector2(1.51807, 1)
@@ -51,19 +52,122 @@ texture = SubResource("AtlasTexture_s0ybb")
 polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
 
 [node name="TestObject2" type="RigidBody2D" parent="."]
-position = Vector2(936, 384)
+position = Vector2(904, 400)
 collision_layer = 16
 collision_mask = 16
 gravity_scale = 0.0
 freeze_mode = 1
 linear_damp = 5.0
 angular_damp = 5.0
+metadata/_edit_group_ = true
 
 [node name="GreenGem" type="Sprite2D" parent="TestObject2"]
 scale = Vector2(1.51807, 1)
 texture = SubResource("AtlasTexture_s0ybb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject2"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject3" type="RigidBody2D" parent="."]
+position = Vector2(680, 288)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject3"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject3"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject4" type="RigidBody2D" parent="."]
+position = Vector2(288, 280)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject4"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject4"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject5" type="RigidBody2D" parent="."]
+position = Vector2(280, 536)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject5"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject5"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject6" type="RigidBody2D" parent="."]
+position = Vector2(680, 576)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject6"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject6"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject7" type="RigidBody2D" parent="."]
+position = Vector2(1088, 544)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject7"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject7"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject8" type="RigidBody2D" parent="."]
+position = Vector2(1104, 224)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject8"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject8"]
 polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
 
 [node name="Hand" type="CharacterBody2D" parent="."]

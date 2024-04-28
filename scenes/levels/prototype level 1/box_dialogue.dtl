@@ -1,10 +1,8 @@
-test_mc: This is a pretty cool box
-test_mc: I wonder if i should bring it home ?
-- Ofcourse i will
-	test_mc: I would, but it's probably to big
-	test_mc: But let's see what's inside !
+test_mc: Sebuah kotak...
+test_mc: Apakah sebaiknya aku lihat ke dalam ?
+- Iyalah!
 	[signal arg="_play_box_minigame"]
 	[end_timeline]
 - Nah
 	test_mc: Yeah right, i'm not a bum
-test_mc: Well goodbye little box
+	test_mc: Yaudahlah

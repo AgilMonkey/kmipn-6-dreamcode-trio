@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch0y7e2l2ddw4"]
+
+[ext_resource type="Texture2D" uid="uid://bwfsp0g6i8nxg" path="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="1_nehdc"]
+[ext_resource type="PackedScene" uid="uid://bfews3baru8fl" path="res://scenes/interactable/dialouge-interacting/interacting_dialogue.tscn" id="2_xtwnx"]
+
+[node name="PakRt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -128)
+scale = Vector2(8, 8)
+texture = ExtResource("1_nehdc")
+hframes = 4
+frame = 3
+
+[node name="InteractingDialogue" parent="." instance=ExtResource("2_xtwnx")]

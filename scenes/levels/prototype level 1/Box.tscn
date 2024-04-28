@@ -20,7 +20,7 @@ texture = SubResource("AtlasTexture_mm1wr")
 metadata/_edit_lock_ = true
 
 [node name="InteractingDialogue" parent="." node_paths=PackedStringArray("interact_icon") instance=ExtResource("2_upwiy")]
-timeline_name = "box_dialogue"
+timeline_path = "res://scenes/levels/prototype level 1/box_dialogue.dtl"
 interact_icon = NodePath("InteractIcon")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractingDialogue"]
