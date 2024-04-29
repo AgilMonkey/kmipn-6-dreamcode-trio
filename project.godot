@@ -27,6 +27,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
+"dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}

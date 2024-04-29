@@ -1,6 +1,9 @@
 extends Node2D
 
+@export_file("*.dtl") var dialog_dapat_kunci
 
+
+signal got_pak_rt_key
 signal _on_started
 signal _on_quitted
 
@@ -20,3 +23,8 @@ func _input(event):
 		hide()
 		$Hand.process_mode = Node.PROCESS_MODE_DISABLED
 		_on_quitted.emit()
+
+
+func _on_key_pak_rt_key_got():
+	var layout = Dialogic.start(dialog_dapat_kunci)
+	layout.register_character(load("res://dialogic-stuff/characters/test_mc.dch"), $PosisiDialogMC)

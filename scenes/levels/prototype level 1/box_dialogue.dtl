@@ -4,5 +4,5 @@ test_mc: Apakah sebaiknya aku lihat ke dalam ?
 	[signal arg="_play_box_minigame"]
 	[end_timeline]
 - Nah
-	test_mc: Yeah right, i'm not a bum
+	test_mc: Ya benar juga ngapain coba
 	test_mc: Yaudahlah
