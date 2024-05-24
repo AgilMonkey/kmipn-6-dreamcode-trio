@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbjafnpmklodo"]
+
+[ext_resource type="Script" path="res://scenes/tangan/Tangan.gd" id="1_jubvw"]
+[ext_resource type="Texture2D" uid="uid://cbyq2dshcwxgb" path="res://assets/3.8 - Minigame vending machine/tangan1.png" id="2_ras7i"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="3_c76is"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8gvbr"]
+radius = 136.235
+
+[node name="Tangan" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_jubvw")
+
+[node name="TanganSprite" type="Sprite2D" parent="."]
+position = Vector2(-248, 192)
+texture = ExtResource("2_ras7i")
+
+[node name="LenganSprite" type="Sprite2D" parent="."]
+modulate = Color(0.93845, 0.93845, 0.93845, 1)
+position = Vector2(177.997, 563.255)
+rotation = -0.302558
+scale = Vector2(0.247389, 1.89058)
+texture = ExtResource("3_c76is")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8gvbr")
