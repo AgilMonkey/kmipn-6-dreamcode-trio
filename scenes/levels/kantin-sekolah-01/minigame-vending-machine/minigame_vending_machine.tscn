@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://1n7sobvo6h37"]
+
+[ext_resource type="Texture2D" uid="uid://82a7j82mysq5" path="res://assets/3.8 - Minigame vending machine/background.png" id="1_noebq"]
+[ext_resource type="Texture2D" uid="uid://br5fl81pfi4i6" path="res://assets/3.8 - Minigame vending machine/Ambil barang.png" id="2_4qkpl"]
+[ext_resource type="Texture2D" uid="uid://c8q1uc7ce7013" path="res://assets/3.8 - Minigame vending machine/Vinding.png" id="2_iditl"]
+[ext_resource type="Texture2D" uid="uid://b0mvg7nqmskva" path="res://assets/3.8 - Minigame vending machine/Botol.png" id="4_gr28g"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="5_8solp"]
+[ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/Tangan.gd" id="6_dtv8y"]
+[ext_resource type="Texture2D" uid="uid://cbyq2dshcwxgb" path="res://assets/3.8 - Minigame vending machine/tangan1.png" id="6_fjowk"]
+[ext_resource type="Texture2D" uid="uid://bs6u5soacu36n" path="res://assets/3.8 - Minigame vending machine/Lengan.png" id="6_ittwt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ffd6c"]
+bounce = 0.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1h0h"]
+size = Vector2(244, 110)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vaj26"]
+
+[node name="MinigameVendingMachine" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(728, 408)
+scale = Vector2(1.51098, 1.4375)
+texture = ExtResource("1_noebq")
+
+[node name="Vinding" type="Sprite2D" parent="."]
+position = Vector2(681, 308)
+texture = ExtResource("2_iditl")
+region_enabled = true
+region_rect = Rect2(106, 0, 1164, 671)
+
+[node name="AmbilBarang" type="Sprite2D" parent="."]
+position = Vector2(710, 408.426)
+scale = Vector2(0.741256, 0.741256)
+texture = ExtResource("2_4qkpl")
+region_enabled = true
+region_rect = Rect2(457, 329, 512, 217)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(690.5, 420.5)
+scale = Vector2(1.15039, 0.423828)
+
+[node name="BotolClip" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+clip_children = 1
+position = Vector2(758.5, 441.926)
+scale = Vector2(1.15039, 0.423828)
+texture = ExtResource("5_8solp")
+
+[node name="Botol" type="RigidBody2D" parent="BotolClip"]
+position = Vector2(-3.91174, -987.429)
+rotation = 1.1472
+scale = Vector2(1.63764, 1.90808)
+skew = -0.854795
+physics_material_override = SubResource("PhysicsMaterial_ffd6c")
+gravity_scale = 2.0
+metadata/_edit_group_ = true
+
+[node name="BotolSprite" type="Sprite2D" parent="BotolClip/Botol"]
+texture = ExtResource("4_gr28g")
+region_enabled = true
+region_rect = Rect2(593, 428, 243, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotolClip/Botol"]
+position = Vector2(-0.00012207, -3.05176e-05)
+shape = SubResource("RectangleShape2D_b1h0h")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(712, 483.426)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_vaj26")
+
+[node name="Tangan" type="Node2D" parent="."]
+position = Vector2(744, 480)
+script = ExtResource("6_dtv8y")
+
+[node name="tangan" type="Sprite2D" parent="Tangan"]
+position = Vector2(-248, 192)
+texture = ExtResource("6_fjowk")
+
+[node name="Lengan" type="Sprite2D" parent="Tangan"]
+position = Vector2(-248, 176)
+texture = ExtResource("6_ittwt")
