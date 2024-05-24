@@ -1,2 +1,3 @@
 # KMIPN 6 
-### Tim: Dreamcode Tria
+## Tim: Dreamcode Trio
+#### Nijika was here
