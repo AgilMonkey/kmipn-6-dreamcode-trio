@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk0o3fqjtmhkg"]
+
+[ext_resource type="PackedScene" uid="uid://br8afrngjutyv" path="res://scenes/testing/subviewport testing/game_view.tscn" id="1_snktx"]
+[ext_resource type="Texture2D" uid="uid://coif6m6p6ycfl" path="res://assets/Simple Shapes/Circle.png" id="2_spnve"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8cyjg"]
+radius = 56.5685
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ejay1"]
+viewport_path = NodePath("Node/MinigameView/GameViewport")
+
+[node name="SubviewportTesting" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(784, 32)
+
+[node name="s" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.199, 0.199)
+texture = ExtResource("2_spnve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_8cyjg")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="MinigameView" type="Control" parent="Node"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Node/MinigameView"]
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 184.0
+offset_right = 1256.0
+offset_bottom = 728.0
+
+[node name="ColorRect" type="ColorRect" parent="Node/MinigameView/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Node/MinigameView/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_ejay1")
+stretch_mode = 2
+
+[node name="GameViewport" type="SubViewport" parent="Node/MinigameView"]
+handle_input_locally = false
+size = Vector2i(910, 520)
+
+[node name="GameView" parent="Node/MinigameView/GameViewport" instance=ExtResource("1_snktx")]
