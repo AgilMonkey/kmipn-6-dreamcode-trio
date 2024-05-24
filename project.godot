@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Projek-kmipn-6-dreamcode"
-run/main_scene="res://scenes/testing/testing.tscn"
+run/main_scene="res://scenes/levels/prototype level 1/prototype_level_01.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,13 +21,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"flower": "res://dialogic-stuff/characters/flower.dch",
+"test_mc": "res://dialogic-stuff/characters/test_mc.dch"
+}
 directories/dtl_directory={
+"box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
+"dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}
-layout/style_list=["res://dialogic-stuff/default_style.tres"]
-layout/default_style="res://dialogic-stuff/default_style.tres"
+layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]
+layout/default_style="res://dialogic-stuff/bubble style/bubble_style.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -119,6 +124,8 @@ dialogic_default_action={
 2d_physics/layer_2="player"
 2d_physics/layer_3="world"
 2d_physics/layer_4="interactable"
+2d_physics/layer_5="object"
+2d_physics/layer_6="minigame"
 
 [physics]
 

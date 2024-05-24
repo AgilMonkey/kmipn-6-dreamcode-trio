@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/testing/testing.gd" id="1_35fbk"]
 [ext_resource type="Texture2D" uid="uid://dcuv013erp1xw" path="res://assets/kenney_abstract-platformer/PNG/Tiles/Green tiles/tileGreen_05.png" id="2_bj7wr"]
-[ext_resource type="PackedScene" uid="uid://cnvfy6v4dwocl" path="res://scenes/player/player.tscn" id="3_c8aj4"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="4_6mu3t"]
 [ext_resource type="PackedScene" uid="uid://b4xvt2gimfp7j" path="res://scenes/interactable/contoh/flower.tscn" id="4_uhqjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcy38"]
@@ -14,8 +14,11 @@ script = ExtResource("1_35fbk")
 [node name="Level2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Player" parent="Level2D" instance=ExtResource("4_6mu3t")]
+position = Vector2(416, 632)
+
 [node name="Flower" parent="Level2D" instance=ExtResource("4_uhqjw")]
-position = Vector2(549, 357)
+position = Vector2(928, 640)
 
 [node name="Ground" type="StaticBody2D" parent="Level2D"]
 position = Vector2(717, 701)
@@ -27,6 +30,3 @@ texture = ExtResource("2_bj7wr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/Ground"]
 shape = SubResource("RectangleShape2D_wcy38")
-
-[node name="Player" parent="Level2D" instance=ExtResource("3_c8aj4")]
-position = Vector2(754, 418)

@@ -1,0 +1,219 @@
+[gd_scene load_steps=7 format=3 uid="uid://ys6vtsy1wp13"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="2_mgko6"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="4_420fr"]
+
+[sub_resource type="GDScript" id="GDScript_d2hmr"]
+script/source = "@tool
+extends DialogicLayoutLayer
+
+## A layer that allows showing up to 10 choices.
+## Choices are positioned in the center of the screen.
+
+@export_group(\"Text\")
+@export_subgroup('Font')
+@export var font_use_global: bool = true
+@export_file('*.ttf', '*.tres') var font_custom: String = \"\"
+@export_subgroup('Size')
+@export var font_size_use_global: bool = true
+@export var font_size_custom: int = 16
+@export_subgroup('Color')
+@export var text_color_use_global: bool = true
+@export var text_color_custom: Color = Color.WHITE
+@export var text_color_pressed: Color = Color.WHITE
+@export var text_color_hovered: Color = Color.GRAY
+@export var text_color_disabled: Color = Color.DARK_GRAY
+@export var text_color_focused: Color = Color.WHITE
+
+@export_group('Boxes')
+@export_subgroup('Panels')
+@export_file('*.tres') var boxes_stylebox_normal: String = \"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_normal.tres\"
+@export_file('*.tres') var boxes_stylebox_hovered: String = \"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_hover.tres\"
+@export_file('*.tres') var boxes_stylebox_pressed: String = \"\"
+@export_file('*.tres') var boxes_stylebox_disabled: String = \"\"
+@export_file('*.tres') var boxes_stylebox_focused: String = \"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_focus.tres\"
+@export_subgroup('Modulate')
+@export_subgroup('Size & Position')
+@export var boxes_v_separation: int = 10
+@export var boxes_fill_width: bool = true
+@export var boxes_min_size: Vector2 = Vector2()
+
+@export_group('Sounds')
+@export_range(-80, 24, 0.01) var sounds_volume: float = -10
+@export_file(\"*.wav\", \"*.ogg\", \"*.mp3\") var sounds_pressed: String = \"res://addons/dialogic/Example Assets/sound-effects/typing1.wav\"
+@export_file(\"*.wav\", \"*.ogg\", \"*.mp3\") var sounds_hover: String = \"res://addons/dialogic/Example Assets/sound-effects/typing2.wav\"
+@export_file(\"*.wav\", \"*.ogg\", \"*.mp3\") var sounds_focus: String = \"res://addons/dialogic/Example Assets/sound-effects/typing4.wav\"
+
+func get_choices() -> VBoxContainer:
+	return $Choices
+
+
+func get_button_sound() -> DialogicNode_ButtonSound:
+	return %DialogicNode_ButtonSound
+
+
+## Method that applies all exported settings
+func _apply_export_overrides() -> void:
+	# apply text settings
+	var layer_theme: Theme = Theme.new()
+
+	# font
+	if font_use_global and get_global_setting(&'font', false):
+		layer_theme.set_font(&'font', &'Button', load(get_global_setting(&'font', '') as String) as Font)
+	elif ResourceLoader.exists(font_custom):
+		layer_theme.set_font(&'font', &'Button', load(font_custom) as Font)
+
+	# font size
+	if font_size_use_global:
+		layer_theme.set_font_size(&'font_size', &'Button', get_global_setting(&'font_size', font_size_custom) as int)
+	else:
+		layer_theme.set_font_size(&'font_size', &'Button', font_size_custom)
+
+	# font color
+	if text_color_use_global:
+		layer_theme.set_color(&'font_color', &'Button', get_global_setting(&'font_color', text_color_custom) as Color)
+	else:
+		layer_theme.set_color(&'font_color', &'Button', text_color_custom)
+
+	layer_theme.set_color(&'font_pressed_color', &'Button', text_color_pressed)
+	layer_theme.set_color(&'font_hover_color', &'Button', text_color_hovered)
+	layer_theme.set_color(&'font_disabled_color', &'Button', text_color_disabled)
+	layer_theme.set_color(&'font_pressed_color', &'Button', text_color_pressed)
+	layer_theme.set_color(&'font_focus_color', &'Button', text_color_focused)
+
+
+	# apply box settings
+	if ResourceLoader.exists(boxes_stylebox_normal):
+		var style_box: StyleBox = load(boxes_stylebox_normal)
+		layer_theme.set_stylebox(&'normal', &'Button', style_box)
+		layer_theme.set_stylebox(&'hover', &'Button', style_box)
+		layer_theme.set_stylebox(&'pressed', &'Button', style_box)
+		layer_theme.set_stylebox(&'disabled', &'Button', style_box)
+		layer_theme.set_stylebox(&'focus', &'Button', style_box)
+
+	if ResourceLoader.exists(boxes_stylebox_hovered):
+		layer_theme.set_stylebox(&'hover', &'Button', load(boxes_stylebox_hovered) as StyleBox)
+
+	if ResourceLoader.exists(boxes_stylebox_pressed):
+		layer_theme.set_stylebox(&'pressed', &'Button', load(boxes_stylebox_pressed) as StyleBox)
+	if ResourceLoader.exists(boxes_stylebox_disabled):
+		layer_theme.set_stylebox(&'disabled', &'Button', load(boxes_stylebox_disabled) as StyleBox)
+	if ResourceLoader.exists(boxes_stylebox_focused):
+		layer_theme.set_stylebox(&'focus', &'Button', load(boxes_stylebox_focused) as StyleBox)
+
+	get_choices().add_theme_constant_override(&\"separation\", boxes_v_separation)
+
+	for child: Node in get_choices().get_children():
+		if not child is DialogicNode_ChoiceButton:
+			continue
+		var choice: DialogicNode_ChoiceButton = child as DialogicNode_ChoiceButton
+
+		if boxes_fill_width:
+			choice.size_flags_horizontal = Control.SIZE_FILL
+		else:
+			choice.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+
+		choice.custom_minimum_size = boxes_min_size
+
+	set(&'theme', layer_theme)
+
+	# apply sound settings
+	var button_sound: DialogicNode_ButtonSound = get_button_sound()
+	button_sound.volume_db = sounds_volume
+	button_sound.sound_pressed = load(sounds_pressed)
+	button_sound.sound_hover = load(sounds_hover)
+	button_sound.sound_focus = load(sounds_focus)
+"
+
+[sub_resource type="AudioStream" id="AudioStream_pe27w"]
+
+[node name="VN_ChoiceLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("GDScript_d2hmr")
+
+[node name="Choices" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 93.0
+offset_top = -176.0
+offset_right = 266.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 2
+metadata/_edit_layout_mode = 1
+
+[node name="DialogicNode_ChoiceButton1" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton2" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton3" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton4" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton5" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton6" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton7" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton8" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton9" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton10" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton11" type="Button" parent="Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="Choices"]
+unique_name_in_owner = true
+script = ExtResource("2_mgko6")
+sound_pressed = ExtResource("3_mql8i")
+sound_hover = ExtResource("4_420fr")
+sound_focus = SubResource("AudioStream_pe27w")

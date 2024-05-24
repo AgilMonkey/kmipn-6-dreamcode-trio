@@ -1,0 +1,8 @@
+test_mc: Sebuah kotak...
+test_mc: Apakah sebaiknya aku lihat ke dalam ?
+- Iyalah!
+	[signal arg="_play_box_minigame"]
+	[end_timeline]
+- Nah
+	test_mc: Ya benar juga ngapain coba
+	test_mc: Yaudahlah

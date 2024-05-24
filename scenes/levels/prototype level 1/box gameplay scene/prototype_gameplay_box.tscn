@@ -1,0 +1,283 @@
+[gd_scene load_steps=13 format=3 uid="uid://8f1qq5dm32wb"]
+
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_8k4j6"]
+[ext_resource type="Script" path="res://scenes/levels/prototype level 1/box gameplay scene/prototype_gameplay_box.gd" id="1_wif2e"]
+[ext_resource type="Script" path="res://scenes/levels/prototype level 1/box gameplay scene/Hand.gd" id="2_omat8"]
+[ext_resource type="Texture2D" uid="uid://drehcvdg8g4ho" path="res://assets/kenney_abstract-platformer/Vector/vector_complete.svg" id="3_0ibol"]
+[ext_resource type="Script" path="res://scenes/levels/prototype level 1/box gameplay scene/KeyPakRT.gd" id="3_1ljfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwka1"]
+atlas = ExtResource("3_0ibol")
+region = Rect2(6683, 3140, 199, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6oth"]
+size = Vector2(147.078, 90.5096)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0ybb"]
+atlas = ExtResource("3_0ibol")
+region = Rect2(8218, 957, 166, 206)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wasj7"]
+size = Vector2(132, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbret"]
+size = Vector2(96, 66)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kdcda"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lej5g"]
+
+[node name="PrototypeGameplayBox" type="Node2D"]
+script = ExtResource("1_wif2e")
+dialog_dapat_kunci = "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl"
+
+[node name="PosisiDialogMC" type="Marker2D" parent="."]
+position = Vector2(832, 784)
+gizmo_extents = 68.0
+
+[node name="Box" type="Sprite2D" parent="."]
+self_modulate = Color(0.439216, 0.368627, 0.27451, 1)
+position = Vector2(678, 388)
+scale = Vector2(2.41406, 1.26562)
+texture = ExtResource("1_8k4j6")
+metadata/_edit_lock_ = true
+
+[node name="BoxBackground" type="Sprite2D" parent="Box"]
+modulate = Color(0.4, 0.321569, 0.235294, 1)
+scale = Vector2(0.935275, 0.901235)
+texture = ExtResource("1_8k4j6")
+
+[node name="KeyPakRT" type="Area2D" parent="." groups=["quest_item"]]
+position = Vector2(472, 400)
+collision_layer = 16
+collision_mask = 16
+input_pickable = false
+monitoring = false
+script = ExtResource("3_1ljfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="KeyPakRT"]
+modulate = Color(0.185674, 0.176096, 0.178522, 1)
+scale = Vector2(0.643216, 0.395826)
+texture = SubResource("AtlasTexture_dwka1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPakRT"]
+position = Vector2(-3.99999, 4.00004)
+rotation = -0.785397
+shape = SubResource("RectangleShape2D_q6oth")
+
+[node name="TestObject" type="RigidBody2D" parent="."]
+position = Vector2(472, 416)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject2" type="RigidBody2D" parent="."]
+position = Vector2(904, 400)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject2"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject2"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject3" type="RigidBody2D" parent="."]
+position = Vector2(680, 288)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject3"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject3"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject4" type="RigidBody2D" parent="."]
+position = Vector2(288, 280)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject4"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject4"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject5" type="RigidBody2D" parent="."]
+position = Vector2(280, 536)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject5"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject5"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject6" type="RigidBody2D" parent="."]
+position = Vector2(680, 576)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject6"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject6"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject7" type="RigidBody2D" parent="."]
+position = Vector2(1088, 544)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject7"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject7"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="TestObject8" type="RigidBody2D" parent="."]
+position = Vector2(1104, 224)
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+freeze_mode = 1
+linear_damp = 5.0
+angular_damp = 5.0
+metadata/_edit_group_ = true
+
+[node name="GreenGem" type="Sprite2D" parent="TestObject8"]
+scale = Vector2(1.51807, 1)
+texture = SubResource("AtlasTexture_s0ybb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TestObject8"]
+polygon = PackedVector2Array(-64, -104, 64, -104, 128, -24, 128, 0, 32, 104, -40, 104, -128, -8, -128, -32)
+
+[node name="Hand" type="CharacterBody2D" parent="."]
+process_mode = 4
+position = Vector2(680, 584)
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("2_omat8")
+
+[node name="Square" type="Sprite2D" parent="Hand"]
+self_modulate = Color(0.807843, 0.615686, 0.564706, 1)
+position = Vector2(0, 704)
+scale = Vector2(0.25, 2.75)
+texture = ExtResource("1_8k4j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand"]
+position = Vector2(0, 47)
+shape = SubResource("RectangleShape2D_wasj7")
+
+[node name="HoldArea" type="Area2D" parent="Hand"]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand/HoldArea"]
+position = Vector2(0, 47)
+shape = SubResource("RectangleShape2D_xbret")
+debug_color = Color(1, 0, 0.121569, 0.419608)
+
+[node name="HandBorder" type="StaticBody2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandBorder"]
+position = Vector2(54, 384)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_kdcda")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HandBorder"]
+position = Vector2(695, 58)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HandBorder"]
+position = Vector2(1303, 407)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="HandBorder"]
+position = Vector2(688, 716)
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+
+[node name="BoxBorder" type="StaticBody2D" parent="."]
+position = Vector2(696, 400)
+scale = Vector2(0.895875, 0.895875)
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBorder"]
+position = Vector2(-660.806, -8.9298)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_kdcda")
+debug_color = Color(0.811765, 0.407843, 0.137255, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BoxBorder"]
+position = Vector2(1.19209e-06, -330.403)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+debug_color = Color(0.811765, 0.407843, 0.137255, 0.419608)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BoxBorder"]
+position = Vector2(616.157, 8.92982)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+debug_color = Color(0.811765, 0.407843, 0.137255, 0.419608)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BoxBorder"]
+position = Vector2(-8.92982, 303.614)
+shape = SubResource("WorldBoundaryShape2D_lej5g")
+debug_color = Color(0.811765, 0.407843, 0.137255, 0.419608)
+
+[connection signal="key_got" from="KeyPakRT" to="." method="_on_key_pak_rt_key_got"]
+[connection signal="body_exited" from="Hand/HoldArea" to="Hand" method="_on_hold_area_body_exited"]

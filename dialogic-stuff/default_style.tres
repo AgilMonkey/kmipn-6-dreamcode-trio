@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogicStyle" load_steps=19 format=3 uid="uid://dq20q7xfwb5re"]
 
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_6krjx"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_6krjx"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_5aupg"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_6xa56"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_tlp4h"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="5_nmuou"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_t3t17"]
-[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_xrkec"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_rotp6"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_lpssm"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_6xa56"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_tlp4h"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="5_nmuou"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_t3t17"]
+[ext_resource type="PackedScene" uid="uid://ys6vtsy1wp13" path="res://dialogic-stuff/CenteredChoices/custom_vn_choice_layer.tscn" id="7_q4tus"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_rotp6"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_lpssm"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_4tevf"]
 
 [sub_resource type="Resource" id="Resource_maox8"]
@@ -38,8 +38,10 @@ overrides = {}
 
 [sub_resource type="Resource" id="Resource_523tn"]
 script = ExtResource("2_5aupg")
-scene = ExtResource("7_xrkec")
-overrides = {}
+scene = ExtResource("7_q4tus")
+overrides = {
+"font_size_custom": "24.0"
+}
 
 [sub_resource type="Resource" id="Resource_63i5h"]
 script = ExtResource("2_5aupg")
@@ -58,4 +60,4 @@ script = ExtResource("10_4tevf")
 name = "default_style"
 base_overrides = {}
 layers = Array[ExtResource("2_5aupg")]([SubResource("Resource_maox8"), SubResource("Resource_8eday"), SubResource("Resource_u7q0q"), SubResource("Resource_y631p"), SubResource("Resource_bpxbd"), SubResource("Resource_523tn"), SubResource("Resource_63i5h"), SubResource("Resource_6crdr")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = 5

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxt6rjj4gp3hl"]
+
+[ext_resource type="Texture2D" uid="uid://cay70qk18lo1o" path="res://assets/back-level-prototype.png" id="1_7aw2b"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_3edie"]
+[ext_resource type="PackedScene" uid="uid://wnxmjk7bcxmj" path="res://scenes/levels/prototype level 1/Box.tscn" id="2_auvsq"]
+[ext_resource type="PackedScene" uid="uid://8f1qq5dm32wb" path="res://scenes/levels/prototype level 1/box gameplay scene/prototype_gameplay_box.tscn" id="4_kmrm7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt2di"]
+size = Vector2(130, 426)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny6af"]
+size = Vector2(2512, 112)
+
+[node name="PrototypeLevel01" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="WorldCollision" type="StaticBody2D" parent="Level"]
+
+[node name="Back-level-prototype" type="Sprite2D" parent="Level/WorldCollision"]
+position = Vector2(1359, 351)
+scale = Vector2(0.474344, 0.474344)
+texture = ExtResource("1_7aw2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/WorldCollision"]
+position = Vector2(-57, 467)
+shape = SubResource("RectangleShape2D_gt2di")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/WorldCollision"]
+position = Vector2(1128, 736)
+shape = SubResource("RectangleShape2D_ny6af")
+
+[node name="Box" parent="Level" instance=ExtResource("2_auvsq")]
+position = Vector2(496, 635)
+
+[node name="Player" parent="." instance=ExtResource("2_3edie")]
+position = Vector2(184, 680)
+
+[node name="PrototypeGameplayBox" parent="." instance=ExtResource("4_kmrm7")]
+visible = false
+
+[connection signal="_on_quitted" from="PrototypeGameplayBox" to="Player" method="_on_minigame_quitted"]
+[connection signal="_on_started" from="PrototypeGameplayBox" to="Player" method="_on_minigame_started"]

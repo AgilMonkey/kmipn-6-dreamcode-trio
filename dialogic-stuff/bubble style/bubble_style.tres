@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=3 format=3 uid="uid://be00bbi2cep1f"]
+
+[ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://dialogic-stuff/bubble style/CustomBubbleStyle/custom_bubble_style.tscn" id="1_mhnw2"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_bdqek"]
+
+[resource]
+script = ExtResource("5_bdqek")
+name = "bubble_style"
+base_scene = ExtResource("1_mhnw2")
+base_overrides = {}
+layers = Array[Resource("res://addons/dialogic/Resources/dialogic_style_layer.gd")]([])
+metadata/_latest_layer = -1

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://syki6k0e6aac"]
+
+[ext_resource type="Script" path="res://dialogic-stuff/bubble style/CustomBubbleStyle/text_bubble_base.gd" id="1_urqwc"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_olold"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_p324j"]
+
+[node name="Custom" type="CanvasLayer"]
+script = ExtResource("1_urqwc")
+
+[node name="Example" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExamplePoint" type="Polygon2D" parent="Example"]
+polygon = PackedVector2Array(0, -24, -22, 0, 0, 28, 24, 0)
+
+[node name="Label" type="RichTextLabel" parent="Example"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -227.0
+offset_right = 836.0
+offset_bottom = -16.0
+grow_vertical = 0
+bbcode_enabled = true
+text = "This is a fallback bubble, that is not actually connected to any character. In game use the following code to add speech bubbles to a character:
+[color=darkgray]
+var layout = Dialogic.start(timeline_path)
+layout.register_character(character_resource, node)
+[/color]
+[color=lightblue]@character_resource[/color] should be a loaded DialogicCharacter (a .dch file).
+[color=lightblue]@node[/color] should be the 2D node the bubble should point at.
+	-> E.g. [color=darkgray]layout.register_character(load(\"res://path/to/my/character.dch\"), $BubbleMarker)"
+
+[node name="FullAdvanceInputLayer" parent="." instance=ExtResource("2_olold")]
+apply_overrides_on_ready = true
+
+[node name="TextBubbleLayer" parent="." instance=ExtResource("4_p324j")]
+name_label_box_modulate = Color(0, 0, 0, 1)
+apply_overrides_on_ready = true

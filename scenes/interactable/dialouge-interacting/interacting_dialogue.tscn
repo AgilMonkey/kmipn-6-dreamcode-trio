@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfews3baru8fl"]
+
+[ext_resource type="Script" path="res://scenes/interactable/dialouge-interacting/interactable_dialogue.gd" id="1_8ptjg"]
+
+[node name="InteractingDialogue" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_8ptjg")
