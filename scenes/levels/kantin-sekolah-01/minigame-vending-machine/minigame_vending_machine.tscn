@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://1n7sobvo6h37"]
+[gd_scene load_steps=20 format=3 uid="uid://1n7sobvo6h37"]
 
 [ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/minigame_vending_machine.gd" id="1_brnkr"]
 [ext_resource type="Texture2D" uid="uid://82a7j82mysq5" path="res://assets/3.8 - Minigame vending machine/background.png" id="1_noebq"]
@@ -11,6 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://chlmpgpgu6ilx" path="res://assets/3.8 - Minigame vending machine/tangan1.svg" id="9_sstxs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vaj26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1viqm"]
+size = Vector2(194, 831)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlr70"]
+size = Vector2(169.999, 1537.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abfuy"]
 size = Vector2(574, 557)
@@ -222,6 +228,28 @@ position = Vector2(712, 483.426)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape2D_vaj26")
 
+[node name="TanganBorder" type="StaticBody2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(14, 388)
+shape = SubResource("RectangleShape2D_1viqm")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(1360, 373)
+shape = SubResource("RectangleShape2D_1viqm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(734.25, -18.0003)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_dlr70")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(690, 878)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_dlr70")
+
 [node name="BotolReturnBoundary" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 16
@@ -252,11 +280,10 @@ position = Vector2(678.5, 639)
 shape = SubResource("RectangleShape2D_bgveo")
 debug_color = Color(0.250526, 0.670391, 0.43271, 0.141176)
 
-[node name="BotolOutside" type="Node2D" parent="."]
-
 [node name="Tangan" parent="." instance=ExtResource("6_dgtt2")]
 position = Vector2(793, 851)
 rotation = -0.415298
+collision_mask = 32
 
 [node name="TanganSprite" parent="Tangan" index="0"]
 z_index = 2

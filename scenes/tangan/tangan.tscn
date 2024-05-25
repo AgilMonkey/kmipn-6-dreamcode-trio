@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scenes/tangan/GrabObject.gd" id="4_ociki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8gvbr"]
-radius = 136.235
+radius = 105.005
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bht05"]
 radius = 61.0082
