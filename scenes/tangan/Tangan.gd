@@ -31,3 +31,6 @@ func _physics_process(delta):
 		grabbed_obj.global_position = global_position
 	
 	move_and_slide()
+
+func set_input(enable):
+	set_process_input(enable)
