@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1n7sobvo6h37"]
+[gd_scene load_steps=11 format=3 uid="uid://1n7sobvo6h37"]
 
 [ext_resource type="Texture2D" uid="uid://82a7j82mysq5" path="res://assets/3.8 - Minigame vending machine/background.png" id="1_noebq"]
 [ext_resource type="Texture2D" uid="uid://br5fl81pfi4i6" path="res://assets/3.8 - Minigame vending machine/Ambil barang.png" id="2_4qkpl"]
@@ -14,6 +14,9 @@ bounce = 0.2
 size = Vector2(244, 110)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vaj26"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qeto1"]
+load_path = "res://.godot/imported/badan.svg-db21e7a7b05e0da73fcbfa5ae8a3875f.ctex"
 
 [node name="MinigameVendingMachine" type="Node2D"]
 
@@ -51,8 +54,11 @@ position = Vector2(-3.91174, -987.429)
 rotation = 1.1472
 scale = Vector2(1.63764, 1.90808)
 skew = -0.854795
+collision_layer = 25
+collision_mask = 17
 physics_material_override = SubResource("PhysicsMaterial_ffd6c")
 gravity_scale = 2.0
+freeze_mode = 1
 metadata/_edit_group_ = true
 
 [node name="BotolSprite" type="Sprite2D" parent="BotolClip/Botol"]
@@ -72,3 +78,8 @@ shape = SubResource("WorldBoundaryShape2D_vaj26")
 
 [node name="Tangan" parent="." instance=ExtResource("6_dgtt2")]
 position = Vector2(880, 624)
+rotation = -0.415298
+
+[node name="Badan" type="Sprite2D" parent="."]
+position = Vector2(-224, 904)
+texture = SubResource("CompressedTexture2D_qeto1")
