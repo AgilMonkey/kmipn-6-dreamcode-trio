@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://br8afrngjutyv"]
+
+[ext_resource type="Texture2D" uid="uid://k4a08trcpndt" path="res://assets/karakter-real.png" id="2_pqe2y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njs5g"]
+size = Vector2(253, 485)
+
+[node name="GameView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 568.0
+offset_bottom = 384.0
+
+[node name="Back" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 664.0
+offset_bottom = 432.0
+color = Color(0.262345, 0.706512, 0.669012, 1)
+
+[node name="s" type="StaticBody2D" parent="."]
+position = Vector2(208, 208)
+scale = Vector2(0.431957, 0.431957)
+
+[node name="Karakter-real" type="Sprite2D" parent="s"]
+scale = Vector2(1.02083, 1.02083)
+texture = ExtResource("2_pqe2y")
+region_enabled = true
+region_rect = Rect2(573, 160, 221, 455)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="s"]
+shape = SubResource("RectangleShape2D_njs5g")
+debug_color = Color(0, 0.6, 0.701961, 0)

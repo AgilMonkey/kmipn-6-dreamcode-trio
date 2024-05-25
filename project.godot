@@ -125,7 +125,7 @@ dialogic_default_action={
 2d_physics/layer_3="world"
 2d_physics/layer_4="interactable"
 2d_physics/layer_5="object"
-2d_physics/layer_6="minigame"
+2d_physics/layer_6="tangan"
 
 [physics]
 
@@ -134,3 +134,4 @@ common/physics_ticks_per_second=70
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+anti_aliasing/quality/msaa_2d=1

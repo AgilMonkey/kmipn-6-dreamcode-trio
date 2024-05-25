@@ -228,6 +228,7 @@ shape = SubResource("RectangleShape2D_xbret")
 debug_color = Color(1, 0, 0.121569, 0.419608)
 
 [node name="HandBorder" type="StaticBody2D" parent="."]
+process_mode = 4
 collision_layer = 32
 collision_mask = 32
 

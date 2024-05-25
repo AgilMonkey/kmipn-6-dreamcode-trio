@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcac5hx41xx52"]
+
+[ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/BotolScript.gd" id="1_3b674"]
+[ext_resource type="Texture2D" uid="uid://b0mvg7nqmskva" path="res://assets/3.8 - Minigame vending machine/Botol.png" id="2_wrmp0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ffd6c"]
+bounce = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1h0h"]
+size = Vector2(244, 110)
+
+[node name="Botol" type="RigidBody2D"]
+collision_layer = 25
+collision_mask = 17
+physics_material_override = SubResource("PhysicsMaterial_ffd6c")
+gravity_scale = 2.0
+freeze_mode = 1
+script = ExtResource("1_3b674")
+metadata/_edit_group_ = true
+
+[node name="BotolSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_wrmp0")
+region_enabled = true
+region_rect = Rect2(593, 428, 243, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b1h0h")
+
+[node name="AreaCheck" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCheck"]
+shape = SubResource("RectangleShape2D_b1h0h")
+debug_color = Color(0.580392, 0.537255, 0.352941, 0)
+
+[connection signal="grabbed" from="." to="." method="_on_grabbed"]
+[connection signal="released" from="." to="." method="_on_released"]

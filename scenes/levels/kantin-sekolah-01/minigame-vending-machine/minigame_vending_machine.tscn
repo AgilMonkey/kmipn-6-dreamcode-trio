@@ -1,0 +1,305 @@
+[gd_scene load_steps=20 format=3 uid="uid://1n7sobvo6h37"]
+
+[ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/minigame_vending_machine.gd" id="1_brnkr"]
+[ext_resource type="Texture2D" uid="uid://82a7j82mysq5" path="res://assets/3.8 - Minigame vending machine/background.png" id="1_noebq"]
+[ext_resource type="Texture2D" uid="uid://br5fl81pfi4i6" path="res://assets/3.8 - Minigame vending machine/Ambil barang.png" id="2_4qkpl"]
+[ext_resource type="Texture2D" uid="uid://c8q1uc7ce7013" path="res://assets/3.8 - Minigame vending machine/Vinding.png" id="2_iditl"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="5_8solp"]
+[ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="6_dgtt2"]
+[ext_resource type="PackedScene" uid="uid://bcac5hx41xx52" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/botol.tscn" id="6_j6rqs"]
+[ext_resource type="Texture2D" uid="uid://b5mn6x0ew7yep" path="res://assets/3.8 - Minigame vending machine/tangan2.svg" id="8_e0i4b"]
+[ext_resource type="Texture2D" uid="uid://chlmpgpgu6ilx" path="res://assets/3.8 - Minigame vending machine/tangan1.svg" id="9_sstxs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vaj26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1viqm"]
+size = Vector2(194, 831)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlr70"]
+size = Vector2(169.999, 1537.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abfuy"]
+size = Vector2(574, 557)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgveo"]
+size = Vector2(1473, 274)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qeto1"]
+
+[sub_resource type="Animation" id="Animation_b1ax8"]
+resource_name = "get_kaleng"
+length = 2.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tangan")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BotolClip/Botol:freeze")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tangan/TanganSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_e0i4b")]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}, {
+"args": [],
+"method": &"selesaikan_game"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ikgiu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BotolClip/Botol:freeze")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(793, 851)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tangan/TanganSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_e0i4b")]
+}
+
+[sub_resource type="Animation" id="Animation_vgqjs"]
+resource_name = "start_game"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BotolClip/Botol:freeze")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(793, 851), Vector2(832, 584)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tangan")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}, {
+"args": [true],
+"method": &"set_process_input"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tangan/TanganSprite:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_sstxs")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8410x"]
+_data = {
+"RESET": SubResource("Animation_ikgiu"),
+"get_kaleng": SubResource("Animation_b1ax8"),
+"start_game": SubResource("Animation_vgqjs")
+}
+
+[node name="MinigameVendingMachine" type="Node2D"]
+script = ExtResource("1_brnkr")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(728, 408)
+scale = Vector2(1.51098, 1.4375)
+texture = ExtResource("1_noebq")
+
+[node name="Vinding" type="Sprite2D" parent="."]
+position = Vector2(681, 308)
+texture = ExtResource("2_iditl")
+region_enabled = true
+region_rect = Rect2(106, 0, 1164, 671)
+
+[node name="AmbilBarang" type="Sprite2D" parent="."]
+position = Vector2(710, 408.426)
+scale = Vector2(0.741256, 0.741256)
+texture = ExtResource("2_4qkpl")
+region_enabled = true
+region_rect = Rect2(457, 329, 512, 217)
+
+[node name="BotolClip" type="Sprite2D" parent="."]
+clip_children = 1
+position = Vector2(710.5, 409.213)
+scale = Vector2(0.720703, 0.296043)
+texture = ExtResource("5_8solp")
+
+[node name="Botol" parent="BotolClip" instance=ExtResource("6_j6rqs")]
+position = Vector2(-24.2818, -919.505)
+rotation = -0.497387
+scale = Vector2(1.54098, 3.3107)
+skew = 0.406035
+freeze = true
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(712, 483.426)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_vaj26")
+
+[node name="TanganBorder" type="StaticBody2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(14, 388)
+shape = SubResource("RectangleShape2D_1viqm")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(1360, 373)
+shape = SubResource("RectangleShape2D_1viqm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(734.25, -18.0003)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_dlr70")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(690, 878)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_dlr70")
+
+[node name="BotolReturnBoundary" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+priority = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(225, 206.5)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(695, 35)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(1196, 210)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
+
+[node name="BotolAccept" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+priority = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotolAccept"]
+position = Vector2(678.5, 639)
+shape = SubResource("RectangleShape2D_bgveo")
+debug_color = Color(0.250526, 0.670391, 0.43271, 0.141176)
+
+[node name="Tangan" parent="." instance=ExtResource("6_dgtt2")]
+position = Vector2(793, 851)
+rotation = -0.415298
+collision_mask = 32
+
+[node name="TanganSprite" parent="Tangan" index="0"]
+z_index = 2
+texture = ExtResource("8_e0i4b")
+
+[node name="Badan" type="Sprite2D" parent="."]
+position = Vector2(-224, 904)
+texture = SubResource("CompressedTexture2D_qeto1")
+
+[node name="AnimationMinigame" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8410x")
+}
+autoplay = "start_game"
+
+[connection signal="grabbed" from="BotolClip/Botol" to="." method="_on_botol_grabbed"]
+[connection signal="released" from="BotolClip/Botol" to="." method="_on_botol_released"]
+
+[editable path="Tangan"]
