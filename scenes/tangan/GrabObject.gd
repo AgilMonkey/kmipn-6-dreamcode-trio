@@ -13,12 +13,14 @@ func grab():
 		grabbed_obj_gravity_scale = body.gravity_scale
 		body.gravity_scale = 0
 		grabbed_obj = body
+		grabbed_obj.grab(tangan_character)
 		rel_pos_grab_obj = body.global_position - global_position
 
 
 func release():
 	if grabbed_obj:
 		grabbed_obj.gravity_scale = grabbed_obj_gravity_scale
+		grabbed_obj.release(tangan_character)
 		grabbed_obj = null
 
 
