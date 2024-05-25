@@ -1,21 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://1n7sobvo6h37"]
+[gd_scene load_steps=11 format=3 uid="uid://1n7sobvo6h37"]
 
 [ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/minigame_vending_machine.gd" id="1_brnkr"]
 [ext_resource type="Texture2D" uid="uid://82a7j82mysq5" path="res://assets/3.8 - Minigame vending machine/background.png" id="1_noebq"]
 [ext_resource type="Texture2D" uid="uid://br5fl81pfi4i6" path="res://assets/3.8 - Minigame vending machine/Ambil barang.png" id="2_4qkpl"]
 [ext_resource type="Texture2D" uid="uid://c8q1uc7ce7013" path="res://assets/3.8 - Minigame vending machine/Vinding.png" id="2_iditl"]
-[ext_resource type="Texture2D" uid="uid://b0mvg7nqmskva" path="res://assets/3.8 - Minigame vending machine/Botol.png" id="4_gr28g"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="5_8solp"]
-[ext_resource type="Script" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/BotolScript.gd" id="5_8ymb1"]
 [ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="6_dgtt2"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ffd6c"]
-bounce = 0.1
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1h0h"]
-size = Vector2(244, 110)
+[ext_resource type="PackedScene" uid="uid://bcac5hx41xx52" path="res://scenes/levels/kantin-sekolah-01/minigame-vending-machine/botol.tscn" id="6_j6rqs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vaj26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abfuy"]
+size = Vector2(574, 557)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qeto1"]
 
@@ -46,32 +42,37 @@ position = Vector2(710.5, 409.213)
 scale = Vector2(0.720703, 0.296043)
 texture = ExtResource("5_8solp")
 
-[node name="Botol" type="RigidBody2D" parent="BotolClip"]
-position = Vector2(-2.08134, -936.394)
-rotation = -0.997195
-scale = Vector2(2.15771, 2.94613)
-skew = 0.741731
-collision_layer = 25
-collision_mask = 17
-physics_material_override = SubResource("PhysicsMaterial_ffd6c")
-gravity_scale = 2.0
-freeze_mode = 1
-script = ExtResource("5_8ymb1")
-metadata/_edit_group_ = true
-
-[node name="BotolSprite" type="Sprite2D" parent="BotolClip/Botol"]
-texture = ExtResource("4_gr28g")
-region_enabled = true
-region_rect = Rect2(593, 428, 243, 110)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BotolClip/Botol"]
-shape = SubResource("RectangleShape2D_b1h0h")
+[node name="Botol" parent="BotolClip" instance=ExtResource("6_j6rqs")]
+position = Vector2(-24.2818, -919.505)
+rotation = -0.497387
+scale = Vector2(1.54098, 3.3107)
+skew = 0.406035
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(712, 483.426)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape2D_vaj26")
+
+[node name="BotolReturnBoundary" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+priority = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(225, 206.5)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(695, 35)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BotolReturnBoundary"]
+position = Vector2(1196, 210)
+shape = SubResource("RectangleShape2D_abfuy")
+debug_color = Color(0.682353, 0.494118, 0.215686, 0.141176)
 
 [node name="BotolOutside" type="Node2D" parent="."]
 
@@ -84,6 +85,4 @@ position = Vector2(-224, 904)
 texture = SubResource("CompressedTexture2D_qeto1")
 
 [connection signal="grabbed" from="BotolClip/Botol" to="." method="_on_botol_grabbed"]
-[connection signal="grabbed" from="BotolClip/Botol" to="BotolClip/Botol" method="_on_grabbed"]
 [connection signal="released" from="BotolClip/Botol" to="." method="_on_botol_released"]
-[connection signal="released" from="BotolClip/Botol" to="BotolClip/Botol" method="_on_released"]

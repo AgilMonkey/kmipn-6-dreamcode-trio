@@ -2,7 +2,9 @@ extends RigidBody2D
 
 @export_flags_2d_physics var grabbed_col_mask = 0
 var normal_col_mask = 0b00000000_00000000_00000000_00011001
+
 @onready var col_shape := $CollisionShape2D
+@onready var area_check: Area2D = $AreaCheck
 
 signal grabbed(object: RigidBody2D)
 signal released(object: RigidBody2D)
