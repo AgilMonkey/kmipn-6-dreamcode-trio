@@ -58,7 +58,7 @@ texture = ExtResource("5_x3suv")
 [node name="ObjectiveButtonArea" type="Area2D" parent="Key"]
 position = Vector2(-158, 211)
 collision_layer = 24
-collision_mask = 16
+collision_mask = 24
 script = ExtResource("30_u45go")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key/ObjectiveButtonArea"]
@@ -151,7 +151,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_rm1ck")
 flat = true
 
 [node name="HandCursor" type="Node2D" parent="."]
-position = Vector2(488, 420)
+position = Vector2(573, 625)
 
 [node name="HandCursorSprite" type="Sprite2D" parent="HandCursor"]
 texture = ExtResource("30_e2mtx")
@@ -167,4 +167,5 @@ debug_color = Color(0.941191, 0.493599, 0.240106, 0.42)
 
 [connection signal="area_entered" from="Key/ObjectiveButtonArea" to="Key/ObjectiveButtonArea" method="_on_area_entered"]
 [connection signal="area_exited" from="Key/ObjectiveButtonArea" to="Key/ObjectiveButtonArea" method="_on_area_exited"]
-[connection signal="pressed" from="ObjectiveButton" to="Key" method="_on_objective_pressed"]
+[connection signal="interacted" from="Key/ObjectiveButtonArea" to="." method="key_found"]
+[connection signal="pressed" from="ObjectiveButton" to="." method="key_found"]
