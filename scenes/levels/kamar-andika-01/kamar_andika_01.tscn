@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6kf16uesqcve"]
+[gd_scene load_steps=8 format=3 uid="uid://c6kf16uesqcve"]
 
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_fcpmb"]
 [ext_resource type="Script" path="res://scenes/levels/kamar-andika-01/kamar_andika_01.gd" id="1_kf1ef"]
+[ext_resource type="PackedScene" uid="uid://dwlisj3ch1c44" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.tscn" id="2_c0twi"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_dkl6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgygd"]
@@ -15,6 +16,7 @@ size = Vector2(304, 336)
 
 [node name="KamarAndika01" type="Node2D"]
 script = ExtResource("1_kf1ef")
+scene_ruang_tamu = ExtResource("2_c0twi")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.611765, 0.501961, 0.494118, 1)
@@ -68,5 +70,4 @@ debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 [node name="Player" parent="." instance=ExtResource("2_dkl6q")]
 position = Vector2(512, 672)
 
-[connection signal="area_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_area_entered"]
 [connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]

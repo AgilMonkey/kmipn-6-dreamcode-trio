@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwlisj3ch1c44"]
+
+[ext_resource type="Texture2D" uid="uid://1ivuvwp8dyj3" path="res://scenes/levels/ruang-tamu-01/shupogaki.png" id="1_affo2"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="3_4juw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
+size = Vector2(1840, 237.304)
+
+[node name="RuangTamu01" type="Node2D"]
+
+[node name="Shupogaki" type="Sprite2D" parent="."]
+position = Vector2(616, 392)
+scale = Vector2(0.33652, 0.33652)
+texture = ExtResource("1_affo2")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(704, 784)
+
+[node name="Lantai" type="Sprite2D" parent="Ground"]
+modulate = Color(0.988235, 0.92549, 0.819608, 1)
+position = Vector2(0, -42.6989)
+scale = Vector2(2.84362, 0.296691)
+texture = ExtResource("2_bchjv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+modulate = Color(0.176471, 0.117647, 0.184314, 1)
+scale = Vector2(2.84362, 0.303521)
+texture = ExtResource("2_bchjv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(190.779, 0)
+shape = SubResource("RectangleShape2D_yjopp")
+
+[node name="Player" parent="." instance=ExtResource("3_4juw4")]
+position = Vector2(889, 665)
