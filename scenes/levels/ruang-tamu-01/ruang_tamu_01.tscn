@@ -102,6 +102,7 @@ limit_left = -88
 limit_top = -280
 limit_right = 1592
 limit_bottom = 776
+position_smoothing_speed = 100.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("5_3cl1m")

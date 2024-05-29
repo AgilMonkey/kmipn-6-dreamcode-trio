@@ -1,8 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=10 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_4n47d"]
+[ext_resource type="Script" path="res://addons/smoothing/smoothing_2d.gd" id="4_nn2kx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
+radius = 56.0
+height = 224.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dax35"]
+radius = 128.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv5pg"]
 atlas = ExtResource("2_5ax5e")
@@ -16,98 +24,10 @@ region = Rect2(510, 0, 53, 128)
 atlas = ExtResource("2_5ax5e")
 region = Rect2(641, 0, 54, 142)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
-radius = 56.0
-height = 224.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dax35"]
-radius = 128.0
-
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_sf4uv")
 speed = 500.0
-
-[node name="GfxPlayer" type="Node2D" parent="."]
-
-[node name="TanganKiri2" type="Sprite2D" parent="GfxPlayer"]
-position = Vector2(27.1938, -107.684)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
-texture = SubResource("AtlasTexture_kv5pg")
-offset = Vector2(2.64366, 61.69)
-flip_h = true
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="LenganKiri" type="Sprite2D" parent="GfxPlayer"]
-position = Vector2(19.217, -137.03)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
-texture = SubResource("AtlasTexture_c746m")
-offset = Vector2(6.85545, 46.0599)
-flip_h = true
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/LenganKiri"]
-position = Vector2(8.36523, 82.5546)
-texture = SubResource("AtlasTexture_kv5pg")
-offset = Vector2(2.64366, 61.69)
-flip_h = true
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="Tubuh" type="Sprite2D" parent="GfxPlayer"]
-position = Vector2(-7, -107)
-scale = Vector2(0.366492, 0.366492)
-texture = ExtResource("2_5ax5e")
-region_enabled = true
-region_rect = Rect2(278, 16, 167, 252)
-
-[node name="Kepala" type="Sprite2D" parent="GfxPlayer/Tubuh"]
-position = Vector2(8.18572, -207.372)
-texture = ExtResource("2_5ax5e")
-region_enabled = true
-region_rect = Rect2(0, 0, 199, 225)
-
-[node name="KakiKiri" type="Sprite2D" parent="GfxPlayer/Tubuh"]
-position = Vector2(-33.133, 99.5163)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(0, 49.1142)
-region_enabled = true
-region_rect = Rect2(0, 276, 48, 108)
-
-[node name="KakiKiriBawah" type="Sprite2D" parent="GfxPlayer/Tubuh/KakiKiri"]
-position = Vector2(-1.45355, 82.5717)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(8.85871, 46.215)
-region_enabled = true
-region_rect = Rect2(113, 282, 65, 128)
-
-[node name="KakiKanan" type="Sprite2D" parent="GfxPlayer/Tubuh"]
-position = Vector2(47.5932, 99.4515)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(0, 49.1142)
-region_enabled = true
-region_rect = Rect2(0, 276, 48, 108)
-
-[node name="KakiKananBawah" type="Sprite2D" parent="GfxPlayer/Tubuh/KakiKanan"]
-position = Vector2(-1.45355, 82.5717)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(8.85871, 46.215)
-region_enabled = true
-region_rect = Rect2(113, 282, 65, 128)
-
-[node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Tubuh"]
-position = Vector2(-59.2237, -84.9529)
-rotation = 0.133345
-texture = SubResource("AtlasTexture_c746m")
-offset = Vector2(-13.2145, 45.5875)
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Tubuh/LenganKanan"]
-position = Vector2(-20.9166, 86.4221)
-texture = SubResource("AtlasTexture_x4g82")
-offset = Vector2(3.16103, 49.472)
-region_rect = Rect2(107, 260, 59, 225)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -127,3 +47,89 @@ debug_color = Color(0.870588, 0.72549, 0.145098, 0.419608)
 
 [node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
 position = Vector2(56, -192)
+
+[node name="Smoothing2D" type="Node2D" parent="."]
+script = ExtResource("4_nn2kx")
+flags = 15
+
+[node name="GfxPlayer" type="Node2D" parent="Smoothing2D"]
+unique_name_in_owner = true
+
+[node name="TanganKiri2" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(27.1938, -107.684)
+rotation = -0.164423
+scale = Vector2(0.366492, 0.366492)
+texture = SubResource("AtlasTexture_kv5pg")
+offset = Vector2(2.64366, 61.69)
+flip_h = true
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(19.217, -137.03)
+rotation = -0.164423
+scale = Vector2(0.366492, 0.366492)
+texture = SubResource("AtlasTexture_c746m")
+offset = Vector2(6.85545, 46.0599)
+flip_h = true
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/LenganKiri"]
+position = Vector2(8.36523, 82.5546)
+texture = SubResource("AtlasTexture_kv5pg")
+offset = Vector2(2.64366, 61.69)
+flip_h = true
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="Tubuh" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(-7, -107)
+scale = Vector2(0.366492, 0.366492)
+texture = ExtResource("2_5ax5e")
+region_enabled = true
+region_rect = Rect2(278, 16, 167, 252)
+
+[node name="Kepala" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
+position = Vector2(8.18572, -207.372)
+texture = ExtResource("2_5ax5e")
+region_enabled = true
+region_rect = Rect2(0, 0, 199, 225)
+
+[node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
+position = Vector2(-33.133, 99.5163)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(0, 49.1142)
+region_enabled = true
+region_rect = Rect2(0, 276, 48, 108)
+
+[node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKiri"]
+position = Vector2(-1.45355, 82.5717)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(8.85871, 46.215)
+region_enabled = true
+region_rect = Rect2(113, 282, 65, 128)
+
+[node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
+position = Vector2(47.5932, 99.4515)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(0, 49.1142)
+region_enabled = true
+region_rect = Rect2(0, 276, 48, 108)
+
+[node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKanan"]
+position = Vector2(-1.45355, 82.5717)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(8.85871, 46.215)
+region_enabled = true
+region_rect = Rect2(113, 282, 65, 128)
+
+[node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
+position = Vector2(-59.2237, -84.9529)
+rotation = 0.133345
+texture = SubResource("AtlasTexture_c746m")
+offset = Vector2(-13.2145, 45.5875)
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/LenganKanan"]
+position = Vector2(-20.9166, 86.4221)
+texture = SubResource("AtlasTexture_x4g82")
+offset = Vector2(3.16103, 49.472)
+region_rect = Rect2(107, 260, 59, 225)
