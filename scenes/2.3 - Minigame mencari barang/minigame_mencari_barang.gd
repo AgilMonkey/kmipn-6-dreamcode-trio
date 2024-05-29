@@ -15,3 +15,14 @@ func _process(delta):
 	pass
 
 
+func _on_objective_pressed():
+	print("You found the key!")
+	#key_found()
+	#pass
+
+
+func key_found():
+	var t = 0.0
+	t += get_process_delta_time() * 0.4
+
+	$Sprite2D.position = Vector2(500, 100).lerp(Vector2(100, 500), t)

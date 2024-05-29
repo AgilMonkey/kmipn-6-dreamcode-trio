@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://0xmmdcr30fx7"]
+[gd_scene load_steps=34 format=3 uid="uid://0xmmdcr30fx7"]
 
 [ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
 [ext_resource type="Texture2D" uid="uid://d0ccyfundu2l5" path="res://assets/2.3 - Minigame mencari barang/Background taman.png" id="2_bjbie"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://kq08bs50e7g6" path="res://assets/2.3 - Minigame mencari barang/Background Hitam.png" id="4_4l3he"]
 [ext_resource type="Texture2D" uid="uid://wmypoy27jesg" path="res://assets/2.3 - Minigame mencari barang/Kunci.png" id="5_x3suv"]
 [ext_resource type="Texture2D" uid="uid://craaf6144givt" path="res://assets/2.3 - Minigame mencari barang/kotak3.png" id="6_7blhs"]
-[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/Key.gd" id="6_douil"]
 [ext_resource type="Texture2D" uid="uid://cwcqfjvtxtpkn" path="res://assets/2.3 - Minigame mencari barang/kotak1-2.png" id="7_4i1q4"]
 [ext_resource type="Texture2D" uid="uid://0mvsaxop1g1l" path="res://assets/2.3 - Minigame mencari barang/kotak2-1.png" id="8_passc"]
 [ext_resource type="Texture2D" uid="uid://ce3vh01oun8iw" path="res://assets/2.3 - Minigame mencari barang/Barang1.png" id="9_eu3oy"]
@@ -55,7 +54,6 @@ texture = ExtResource("3_h5dkx")
 [node name="Key" type="Sprite2D" parent="."]
 position = Vector2(683, 384)
 texture = ExtResource("5_x3suv")
-script = ExtResource("6_douil")
 
 [node name="ObjectiveButtonArea" type="Area2D" parent="Key"]
 position = Vector2(-158, 211)
