@@ -1,0 +1,137 @@
+[gd_scene load_steps=31 format=3 uid="uid://0xmmdcr30fx7"]
+
+[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
+[ext_resource type="Texture2D" uid="uid://d0ccyfundu2l5" path="res://assets/2.3 - Minigame mencari barang/Background taman.png" id="2_bjbie"]
+[ext_resource type="Texture2D" uid="uid://dwa2bthjiigo3" path="res://assets/2.3 - Minigame mencari barang/Background Jalan.png" id="3_h5dkx"]
+[ext_resource type="Texture2D" uid="uid://kq08bs50e7g6" path="res://assets/2.3 - Minigame mencari barang/Background Hitam.png" id="4_4l3he"]
+[ext_resource type="Texture2D" uid="uid://wmypoy27jesg" path="res://assets/2.3 - Minigame mencari barang/Kunci.png" id="5_x3suv"]
+[ext_resource type="Texture2D" uid="uid://craaf6144givt" path="res://assets/2.3 - Minigame mencari barang/kotak3.png" id="6_7blhs"]
+[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/Key.gd" id="6_douil"]
+[ext_resource type="Texture2D" uid="uid://cwcqfjvtxtpkn" path="res://assets/2.3 - Minigame mencari barang/kotak1-2.png" id="7_4i1q4"]
+[ext_resource type="Texture2D" uid="uid://0mvsaxop1g1l" path="res://assets/2.3 - Minigame mencari barang/kotak2-1.png" id="8_passc"]
+[ext_resource type="Texture2D" uid="uid://ce3vh01oun8iw" path="res://assets/2.3 - Minigame mencari barang/Barang1.png" id="9_eu3oy"]
+[ext_resource type="Texture2D" uid="uid://diolcmfshvd16" path="res://assets/2.3 - Minigame mencari barang/barang2.png" id="10_qrqcr"]
+[ext_resource type="Texture2D" uid="uid://c2ew20tkr2b70" path="res://assets/2.3 - Minigame mencari barang/barang3.png" id="11_wctxb"]
+[ext_resource type="Texture2D" uid="uid://oojc0oyhe2eb" path="res://assets/2.3 - Minigame mencari barang/barang4.png" id="12_jnp6m"]
+[ext_resource type="Texture2D" uid="uid://bd7thi5g4eb7q" path="res://assets/2.3 - Minigame mencari barang/barang5.png" id="13_uroj7"]
+[ext_resource type="Texture2D" uid="uid://f3yx23mr55nx" path="res://assets/2.3 - Minigame mencari barang/barang6.png" id="14_7awh3"]
+[ext_resource type="Texture2D" uid="uid://t8lvtsjxpksd" path="res://assets/2.3 - Minigame mencari barang/barang7.png" id="15_ybfx5"]
+[ext_resource type="Texture2D" uid="uid://i4sjps6ckd71" path="res://assets/2.3 - Minigame mencari barang/barang8.png" id="16_la22a"]
+[ext_resource type="Texture2D" uid="uid://b2rh78fvihs83" path="res://assets/2.3 - Minigame mencari barang/barang9.png" id="17_2ybbu"]
+[ext_resource type="Texture2D" uid="uid://benyw2i4d4s37" path="res://assets/2.3 - Minigame mencari barang/Batu1.png" id="18_ijtux"]
+[ext_resource type="Texture2D" uid="uid://slvr83xb6j0o" path="res://assets/2.3 - Minigame mencari barang/Batu2.png" id="19_mcrwy"]
+[ext_resource type="Texture2D" uid="uid://dmcbhfetfyfh1" path="res://assets/2.3 - Minigame mencari barang/Batu3.png" id="20_ud4vm"]
+[ext_resource type="Texture2D" uid="uid://c7g8e4hp2qt7u" path="res://assets/2.3 - Minigame mencari barang/Batu4.png" id="21_rtgxc"]
+[ext_resource type="Texture2D" uid="uid://ccewu5tuntr4b" path="res://assets/2.3 - Minigame mencari barang/Batu5.png" id="22_1ahu7"]
+[ext_resource type="Texture2D" uid="uid://dxsafsh0putcl" path="res://assets/2.3 - Minigame mencari barang/Batu6.png" id="23_hejtp"]
+[ext_resource type="Texture2D" uid="uid://cefxq1fmnm8f" path="res://assets/2.3 - Minigame mencari barang/Boneka1.png" id="24_d5uaw"]
+[ext_resource type="Texture2D" uid="uid://cl25kxyf8n3w1" path="res://assets/2.3 - Minigame mencari barang/Boneka2.png" id="25_y6rk0"]
+[ext_resource type="Texture2D" uid="uid://noraereyj0mt" path="res://assets/2.3 - Minigame mencari barang/kotak1-1.png" id="26_nd7rn"]
+[ext_resource type="Texture2D" uid="uid://dkj3417k026h" path="res://assets/2.3 - Minigame mencari barang/Kotak1.png" id="27_160ea"]
+[ext_resource type="Texture2D" uid="uid://ct3xfnjhsusqd" path="res://assets/2.3 - Minigame mencari barang/kotak2.png" id="28_vpt8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rm1ck"]
+
+[node name="minigame_mencari_barang" type="Node2D"]
+script = ExtResource("1_q14on")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(683, 384)
+
+[node name="Grass" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_bjbie")
+
+[node name="Road" type="Sprite2D" parent="Background"]
+texture = ExtResource("3_h5dkx")
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(683, 384)
+texture = ExtResource("5_x3suv")
+script = ExtResource("6_douil")
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2(683, 384)
+
+[node name="Box3" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("6_7blhs")
+
+[node name="Box1-2" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("7_4i1q4")
+
+[node name="Box2-1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("8_passc")
+
+[node name="Item1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("9_eu3oy")
+
+[node name="Item2" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("10_qrqcr")
+
+[node name="Item3" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("11_wctxb")
+
+[node name="Item4" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("12_jnp6m")
+
+[node name="Item5" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("13_uroj7")
+
+[node name="Item6" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("14_7awh3")
+
+[node name="Item7" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("15_ybfx5")
+
+[node name="Item8" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("16_la22a")
+
+[node name="Item9" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("17_2ybbu")
+
+[node name="Stone1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("18_ijtux")
+
+[node name="Stone2" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("19_mcrwy")
+
+[node name="Stone3" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("20_ud4vm")
+
+[node name="Stone4" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("21_rtgxc")
+
+[node name="Stone5" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("22_1ahu7")
+
+[node name="Stone6" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("23_hejtp")
+
+[node name="Doll1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("24_d5uaw")
+
+[node name="Doll2" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("25_y6rk0")
+
+[node name="Box1-1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("26_nd7rn")
+
+[node name="Box1" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("27_160ea")
+
+[node name="Box2" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("28_vpt8n")
+
+[node name="BlackBar" type="Sprite2D" parent="."]
+position = Vector2(683, 384)
+texture = ExtResource("4_4l3he")
+
+[node name="ObjectiveButton" type="Button" parent="."]
+offset_left = 525.0
+offset_top = 595.0
+offset_right = 591.0
+offset_bottom = 650.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rm1ck")
+flat = true
+
+[connection signal="pressed" from="ObjectiveButton" to="Key" method="_on_objective_pressed"]
