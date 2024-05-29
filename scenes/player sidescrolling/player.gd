@@ -10,11 +10,14 @@ var is_minigame := false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var interact_node = $InteractNode
-@onready var sprite = $Sprite2D
+@onready var sprite = %GfxPlayer
+@onready var smoothing := $Smoothing2D
 
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
 	Dialogic.timeline_ended.connect(dialogue_stop)
+	
+	smoothing.teleport()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -27,7 +30,7 @@ func _physics_process(delta):
 
 	if direction:
 		velocity.x = direction.x * speed
-		sprite.flip_h = direction.x <= 0
+		sprite.scale.x = -1 if direction.x <= 0 else 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+LevelManager="*res://scenes/autoloads/level_manager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
@@ -61,7 +62,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/smoothing/plugin.cfg")
 
 [input]
 
