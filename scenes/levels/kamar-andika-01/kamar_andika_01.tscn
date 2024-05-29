@@ -81,6 +81,9 @@ text = "Ke ruang tamu ->"
 shape = SubResource("RectangleShape2D_otely")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
+[node name="RuangTamuPos" type="Marker2D" parent="."]
+position = Vector2(1256, 672)
+
 [node name="Player" parent="." instance=ExtResource("2_dkl6q")]
 position = Vector2(512, 672)
 

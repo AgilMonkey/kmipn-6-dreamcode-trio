@@ -11,12 +11,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var interact_node = $InteractNode
 @onready var sprite = %GfxPlayer
+@onready var smoothing := $Smoothing2D
 
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
 	Dialogic.timeline_ended.connect(dialogue_stop)
 	
-	$Smoothing2D.teleport()
+	smoothing.teleport()
 
 func _physics_process(delta):
 	# Add the gravity.
