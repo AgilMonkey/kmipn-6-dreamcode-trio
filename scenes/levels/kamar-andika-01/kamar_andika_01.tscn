@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_fcpmb"]
 [ext_resource type="Script" path="res://scenes/levels/kamar-andika-01/kamar_andika_01.gd" id="1_kf1ef"]
-[ext_resource type="PackedScene" uid="uid://dwlisj3ch1c44" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.tscn" id="2_c0twi"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_dkl6q"]
+[ext_resource type="Texture2D" uid="uid://1ivuvwp8dyj3" path="res://scenes/levels/ruang-tamu-01/shupogaki.png" id="4_oilqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgygd"]
 size = Vector2(1840, 237.304)
@@ -16,7 +16,6 @@ size = Vector2(304, 336)
 
 [node name="KamarAndika01" type="Node2D"]
 script = ExtResource("1_kf1ef")
-scene_ruang_tamu = ExtResource("2_c0twi")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.611765, 0.501961, 0.494118, 1)
@@ -56,6 +55,12 @@ shape = SubResource("RectangleShape2D_lol5s")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
 position = Vector2(1808, 0)
 shape = SubResource("RectangleShape2D_lol5s")
+
+[node name="Shupogaki" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(792, 408)
+scale = Vector2(0.137667, 0.137667)
+texture = ExtResource("4_oilqd")
 
 [node name="Area2DKeRuangTamu" type="Area2D" parent="."]
 position = Vector2(1664, 568)
