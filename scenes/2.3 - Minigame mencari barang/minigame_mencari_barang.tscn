@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://0xmmdcr30fx7"]
+[gd_scene load_steps=35 format=3 uid="uid://0xmmdcr30fx7"]
 
 [ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
 [ext_resource type="Texture2D" uid="uid://d0ccyfundu2l5" path="res://assets/2.3 - Minigame mencari barang/Background taman.png" id="2_bjbie"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ct3xfnjhsusqd" path="res://assets/2.3 - Minigame mencari barang/kotak2.png" id="28_vpt8n"]
 [ext_resource type="Texture2D" uid="uid://6h63vg0kcv3h" path="res://assets/kenney_cursor-pack/Vector/Outline/hand_small_point.svg" id="30_e2mtx"]
 [ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/ObjectiveButtonArea.gd" id="30_u45go"]
+[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/HandCursor.gd" id="30_vlods"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ckue"]
 size = Vector2(67, 58)
@@ -152,6 +153,7 @@ flat = true
 
 [node name="HandCursor" type="Node2D" parent="."]
 position = Vector2(573, 625)
+script = ExtResource("30_vlods")
 
 [node name="HandCursorSprite" type="Sprite2D" parent="HandCursor"]
 texture = ExtResource("30_e2mtx")
