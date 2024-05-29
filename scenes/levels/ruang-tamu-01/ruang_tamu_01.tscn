@@ -49,6 +49,16 @@ position = Vector2(0, -512)
 scale = Vector2(1.72973, 1.72973)
 texture = ExtResource("2_q1xqj")
 
+[node name="Label" type="Label" parent="Area2DToKamarAndika/Square/Triangle"]
+offset_left = -394.667
+offset_top = 468.667
+offset_right = 419.333
+offset_bottom = 616.667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Ke ruang andika
+Pencet 'Z'"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToKamarAndika"]
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
