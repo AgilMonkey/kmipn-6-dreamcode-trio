@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=7 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_4n47d"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c746m"]
+atlas = ExtResource("2_5ax5e")
+region = Rect2(107, 260, 59, 225)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
 radius = 56.0
-height = 192.0
+height = 224.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dax35"]
 radius = 128.0
@@ -15,6 +19,17 @@ radius = 128.0
 script = ExtResource("1_sf4uv")
 
 [node name="GfxPlayer" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="TanganKiri" type="Sprite2D" parent="GfxPlayer"]
+position = Vector2(27, -126)
+rotation = -0.164423
+scale = Vector2(0.366492, 0.366492)
+texture = SubResource("AtlasTexture_c746m")
+offset = Vector2(-5.45712, 87.3143)
+flip_h = true
+region_rect = Rect2(107, 260, 59, 225)
 
 [node name="Tubuh" type="Sprite2D" parent="GfxPlayer"]
 position = Vector2(-7, -99)
@@ -22,6 +37,13 @@ scale = Vector2(0.366492, 0.366492)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(204, 89, 191, 240)
+
+[node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Tubuh"]
+position = Vector2(-60.0286, -70.9429)
+rotation = 0.133345
+texture = SubResource("AtlasTexture_c746m")
+offset = Vector2(-5.45712, 87.3143)
+region_rect = Rect2(107, 260, 59, 225)
 
 [node name="KakiKiri" type="Sprite2D" parent="GfxPlayer/Tubuh"]
 position = Vector2(163.714, 204.643)
@@ -37,24 +59,26 @@ offset = Vector2(-182.814, -24.5572)
 region_enabled = true
 region_rect = Rect2(8, 262, 66, 185)
 
+[node name="Kepala" type="Sprite2D" parent="GfxPlayer"]
+position = Vector2(-4, -175)
+scale = Vector2(0.366492, 0.366492)
+texture = ExtResource("2_5ax5e")
+region_enabled = true
+region_rect = Rect2(0, 0, 199, 224)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -96)
+position = Vector2(0, -112)
 shape = SubResource("CapsuleShape2D_lvp4u")
-metadata/_edit_lock_ = true
 
 [node name="InteractNode" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_4n47d")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNode"]
 position = Vector2(0, -104)
 shape = SubResource("CircleShape2D_dax35")
 debug_color = Color(0.870588, 0.72549, 0.145098, 0.419608)
-metadata/_edit_lock_ = true
 
 [node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
-position = Vector2(32, -128)
-metadata/_edit_lock_ = true
+position = Vector2(56, -192)
