@@ -57,6 +57,9 @@ shape = SubResource("RectangleShape2D_lol5s")
 
 [node name="Area2DKeRuangTamu" type="Area2D" parent="."]
 position = Vector2(1664, 568)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
 shape = SubResource("RectangleShape2D_otely")
@@ -64,3 +67,6 @@ debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
 [node name="Player" parent="." instance=ExtResource("2_dkl6q")]
 position = Vector2(512, 672)
+
+[connection signal="area_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_area_entered"]
+[connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]
