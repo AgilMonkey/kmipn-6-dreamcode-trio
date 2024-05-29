@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://0xmmdcr30fx7"]
+[gd_scene load_steps=35 format=3 uid="uid://0xmmdcr30fx7"]
 
 [ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
 [ext_resource type="Texture2D" uid="uid://d0ccyfundu2l5" path="res://assets/2.3 - Minigame mencari barang/Background taman.png" id="2_bjbie"]
@@ -29,8 +29,16 @@
 [ext_resource type="Texture2D" uid="uid://noraereyj0mt" path="res://assets/2.3 - Minigame mencari barang/kotak1-1.png" id="26_nd7rn"]
 [ext_resource type="Texture2D" uid="uid://dkj3417k026h" path="res://assets/2.3 - Minigame mencari barang/Kotak1.png" id="27_160ea"]
 [ext_resource type="Texture2D" uid="uid://ct3xfnjhsusqd" path="res://assets/2.3 - Minigame mencari barang/kotak2.png" id="28_vpt8n"]
+[ext_resource type="Texture2D" uid="uid://6h63vg0kcv3h" path="res://assets/kenney_cursor-pack/Vector/Outline/hand_small_point.svg" id="30_e2mtx"]
+[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/ObjectiveButtonArea.gd" id="30_u45go"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ckue"]
+size = Vector2(67, 58)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rm1ck"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5osrl"]
+radius = 15.1327
 
 [node name="minigame_mencari_barang" type="Node2D"]
 script = ExtResource("1_q14on")
@@ -48,6 +56,16 @@ texture = ExtResource("3_h5dkx")
 position = Vector2(683, 384)
 texture = ExtResource("5_x3suv")
 script = ExtResource("6_douil")
+
+[node name="ObjectiveButtonArea" type="Area2D" parent="Key"]
+position = Vector2(-158, 211)
+collision_layer = 24
+collision_mask = 16
+script = ExtResource("30_u45go")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/ObjectiveButtonArea"]
+position = Vector2(32.5, 27)
+shape = SubResource("RectangleShape2D_0ckue")
 
 [node name="Foreground" type="Node2D" parent="."]
 position = Vector2(683, 384)
@@ -134,4 +152,21 @@ mouse_default_cursor_shape = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rm1ck")
 flat = true
 
+[node name="HandCursor" type="Node2D" parent="."]
+position = Vector2(488, 420)
+
+[node name="HandCursorSprite" type="Sprite2D" parent="HandCursor"]
+texture = ExtResource("30_e2mtx")
+offset = Vector2(7, 10)
+
+[node name="HandArea" type="Area2D" parent="HandCursor"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandCursor/HandArea"]
+shape = SubResource("CircleShape2D_5osrl")
+debug_color = Color(0.941191, 0.493599, 0.240106, 0.42)
+
+[connection signal="area_entered" from="Key/ObjectiveButtonArea" to="Key/ObjectiveButtonArea" method="_on_area_entered"]
+[connection signal="area_exited" from="Key/ObjectiveButtonArea" to="Key/ObjectiveButtonArea" method="_on_area_exited"]
 [connection signal="pressed" from="ObjectiveButton" to="Key" method="_on_objective_pressed"]
