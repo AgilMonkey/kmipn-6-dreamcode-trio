@@ -300,6 +300,15 @@ libraries = {
 }
 autoplay = "start_game"
 
+[node name="Foreground" type="Node2D" parent="."]
+z_index = 10
+
+[node name="Square" type="Sprite2D" parent="Foreground"]
+modulate = Color(0.0253638, 0.0253638, 0.0253638, 1)
+position = Vector2(657.75, 17.5)
+scale = Vector2(2.89941, 0.130859)
+texture = ExtResource("5_8solp")
+
 [connection signal="grabbed" from="BotolClip/Botol" to="." method="_on_botol_grabbed"]
 [connection signal="released" from="BotolClip/Botol" to="." method="_on_botol_released"]
 
