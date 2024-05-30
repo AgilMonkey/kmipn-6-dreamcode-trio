@@ -39,10 +39,10 @@ position = Vector2(-48, -42.6989)
 scale = Vector2(3.65625, 0.296691)
 texture = ExtResource("2_bchjv")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground/Lantai"]
+[node name="Back" type="Sprite2D" parent="Ground"]
 modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(0, 143.917)
-scale = Vector2(1, 1.02302)
+position = Vector2(-48, -6.10352e-05)
+scale = Vector2(3.65625, 0.303521)
 texture = ExtResource("2_bchjv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
