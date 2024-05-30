@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=11 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
@@ -24,42 +24,7 @@ region = Rect2(510, 0, 53, 128)
 atlas = ExtResource("2_5ax5e")
 region = Rect2(641, 0, 54, 142)
 
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_ucwsb"]
-target_nodepath = NodePath("../IKTargetLeftLeg")
-joint_one_bone_idx = 9
-joint_one_bone2d_node = NodePath("Base/Body/LeftThigh")
-joint_two_bone_idx = 10
-joint_two_bone2d_node = NodePath("Base/Body/LeftThigh/LeftLeg")
-
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_on6nd"]
-target_nodepath = NodePath("../IKTargetRightLeg")
-joint_one_bone_idx = 12
-joint_one_bone2d_node = NodePath("Base/Body/RightThigh")
-joint_two_bone_idx = 13
-joint_two_bone2d_node = NodePath("Base/Body/RightThigh/RightLeg")
-
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_8i6pu"]
-target_nodepath = NodePath("../IKTargetLeftArm")
-flip_bend_direction = true
-joint_one_bone_idx = 3
-joint_one_bone2d_node = NodePath("Base/Body/LeftShoulder")
-joint_two_bone_idx = 4
-joint_two_bone2d_node = NodePath("Base/Body/LeftShoulder/LeftArm")
-
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_xl0wj"]
-target_nodepath = NodePath("../IKTargetRightArm")
-joint_one_bone_idx = 6
-joint_one_bone2d_node = NodePath("Base/Body/RightShoulder")
-joint_two_bone_idx = 7
-joint_two_bone2d_node = NodePath("Base/Body/RightShoulder/RightArm")
-
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_a0wte"]
-enabled = true
-modification_count = 4
-modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_ucwsb")
-modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_on6nd")
-modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_8i6pu")
-modifications/3 = SubResource("SkeletonModification2DTwoBoneIK_xl0wj")
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
@@ -92,8 +57,8 @@ flags = 15
 [node name="GfxPlayer" type="Node2D" parent="Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(41.0333, -110.864)
-rotation = -0.572407
+position = Vector2(29.0257, -106.067)
+rotation = -0.127539
 scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -101,8 +66,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(24.314, -132.338)
-rotation = -0.556966
+position = Vector2(22.5954, -132.502)
+rotation = -0.130731
 scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -123,8 +88,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
 
 [node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(23.6761, -41.8447)
-rotation = -0.363462
+position = Vector2(14.9503, -40.2586)
 scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
@@ -132,8 +96,7 @@ region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
 [node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(14.4271, -68.3867)
-rotation = -0.363462
+position = Vector2(15.7415, -68.3547)
 scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
@@ -141,17 +104,15 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-20.7045, -40.6671)
-rotation = 0.221001
-scale = Vector2(0.365969, 0.365969)
+position = Vector2(-15.1486, -40.1583)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
 [node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-13.2452, -69.6044)
-rotation = 0.231311
+position = Vector2(-14.5229, -70.0385)
 scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
@@ -159,16 +120,16 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-47.0809, -107.106)
-rotation = 0.515579
+position = Vector2(-36.8549, -101.884)
+rotation = 0.0896672
 scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-26.417, -132.237)
-rotation = 0.449384
+position = Vector2(-26.3601, -132.681)
+rotation = 0.0896672
 scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
@@ -215,7 +176,6 @@ rest = Transform2D(0.995983, 0.0895471, -0.0895471, 0.995983, -31.8558, -55.6886
 auto_calculate_length_and_angle = false
 length = 32.0925
 bone_angle = 101.608
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder"]
 position = Vector2(1.23743, -0.176788)
@@ -228,7 +188,6 @@ rest = Transform2D(1, 0, 0, 1, -6.45745, 31.4362)
 auto_calculate_length_and_angle = false
 length = 36.4417
 bone_angle = 97.8153
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
 scale = Vector2(0.366, 0.366)
@@ -247,7 +206,6 @@ rest = Transform2D(1, 0, 0, 1, 19.5854, -59.4641)
 auto_calculate_length_and_angle = false
 length = 35.573
 bone_angle = 79.0062
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder"]
 position = Vector2(-1.23744, 3.88908)
@@ -261,7 +219,6 @@ rest = Transform2D(1, 0, 0, 1, 6.7839, 34.9202)
 auto_calculate_length_and_angle = false
 length = 38.3287
 bone_angle = 80.0738
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder/RightArm"]
 position = Vector2(-1.591, -4.59621)
@@ -282,7 +239,6 @@ rest = Transform2D(1, 0, 0, 1, -20, 12.6046)
 auto_calculate_length_and_angle = false
 length = 24.2513
 bone_angle = 89.4093
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh"]
 position = Vector2(1.22965, -5.71622)
@@ -295,7 +251,6 @@ rest = Transform2D(1, 0, 0, 1, 0.25, 24.25)
 auto_calculate_length_and_angle = false
 length = 28.25
 bone_angle = 90.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh/LeftLeg"]
 position = Vector2(0.353951, -0.085968)
@@ -315,7 +270,6 @@ rest = Transform2D(1, 0, 0, 1, 10.75, 12.1326)
 auto_calculate_length_and_angle = false
 length = 26.5335
 bone_angle = 90.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh"]
 position = Vector2(0.744095, -3.56043)
@@ -328,7 +282,6 @@ rest = Transform2D(1, 0, 0, 1, 0, 26.5335)
 auto_calculate_length_and_angle = false
 length = 28.25
 bone_angle = 90.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh/RightLeg"]
 position = Vector2(-0.0471555, -1.99779)
@@ -341,15 +294,3 @@ rest = Transform2D(1, 0, 0, 1, 0, 28.25)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
-
-[node name="IKTargetLeftLeg" type="Marker2D" parent="Smoothing2D"]
-position = Vector2(-30.2039, 0)
-
-[node name="IKTargetRightLeg" type="Marker2D" parent="Smoothing2D"]
-position = Vector2(39.6426, 0)
-
-[node name="IKTargetLeftArm" type="Marker2D" parent="Smoothing2D"]
-position = Vector2(-128.839, 0)
-
-[node name="IKTargetRightArm" type="Marker2D" parent="Smoothing2D"]
-position = Vector2(120.816, 0)
