@@ -10,8 +10,9 @@ var is_minigame := false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var interact_node = $InteractNode
-@onready var sprite = %GfxPlayer
-@onready var smoothing := $Smoothing2D
+@onready var gfx_player = $GfxPlayer
+@onready var smoothing := $GfxPlayer/Smoothing2D
+@onready var animation_tree = $AnimationTree
 
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
@@ -30,11 +31,21 @@ func _physics_process(delta):
 
 	if direction:
 		velocity.x = direction.x * speed
-		sprite.scale.x = -1 if direction.x <= 0 else 1
+		gfx_player.scale.x = -1 if direction.x <= 0 else 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
+	update_anim()
+
+
+func update_anim():
+	if direction:
+		animation_tree['parameters/conditions/idle'] = false
+		animation_tree['parameters/conditions/is_moving'] = true
+	else:
+		animation_tree['parameters/conditions/idle'] = true
+		animation_tree['parameters/conditions/is_moving'] = false
 
 
 func _input(event):
