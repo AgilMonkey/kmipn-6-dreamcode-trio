@@ -8,11 +8,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgygd"]
 size = Vector2(1840, 237.304)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lol5s"]
-size = Vector2(80, 960)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otely"]
 size = Vector2(304, 336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lol5s"]
+size = Vector2(80, 960)
 
 [node name="KamarAndika01" type="Node2D"]
 script = ExtResource("1_kf1ef")
@@ -22,6 +22,12 @@ modulate = Color(0.611765, 0.501961, 0.494118, 1)
 position = Vector2(704, 396)
 scale = Vector2(2.875, 1.70312)
 texture = ExtResource("1_fcpmb")
+
+[node name="Shupogaki" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(656, 416)
+scale = Vector2(0.137667, 0.137667)
+texture = ExtResource("4_oilqd")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
@@ -40,27 +46,6 @@ texture = ExtResource("1_fcpmb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(190.779, 0)
 shape = SubResource("RectangleShape2D_lgygd")
-
-[node name="Wall" type="StaticBody2D" parent="."]
-position = Vector2(0, 352)
-
-[node name="Sprite2D" type="Sprite2D" parent="Wall"]
-modulate = Color(0.176471, 0.117647, 0.184314, 1)
-scale = Vector2(0.15625, 1.84375)
-texture = ExtResource("1_fcpmb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-shape = SubResource("RectangleShape2D_lol5s")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
-position = Vector2(1808, 0)
-shape = SubResource("RectangleShape2D_lol5s")
-
-[node name="Shupogaki" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(792, 408)
-scale = Vector2(0.137667, 0.137667)
-texture = ExtResource("4_oilqd")
 
 [node name="Area2DKeRuangTamu" type="Area2D" parent="."]
 position = Vector2(1664, 568)
@@ -86,5 +71,20 @@ position = Vector2(1256, 672)
 
 [node name="Player" parent="." instance=ExtResource("2_dkl6q")]
 position = Vector2(512, 672)
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 352)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall"]
+modulate = Color(0.176471, 0.117647, 0.184314, 1)
+scale = Vector2(0.15625, 1.84375)
+texture = ExtResource("1_fcpmb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_lol5s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1808, 0)
+shape = SubResource("RectangleShape2D_lol5s")
 
 [connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]
