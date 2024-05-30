@@ -1,0 +1,214 @@
+[gd_scene load_steps=29 format=3 uid="uid://gxvnoob7qh73"]
+
+[ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
+[ext_resource type="Texture2D" uid="uid://b8s1vkliy2vuf" path="res://assets/1.6 - Minigame memakan makanan/piring.png" id="2_75sqk"]
+[ext_resource type="Texture2D" uid="uid://bayo7ofu3mjsk" path="res://assets/1.6 - Minigame memakan makanan/nasi3.png" id="3_06w3k"]
+[ext_resource type="Texture2D" uid="uid://bkpxsojcul1kv" path="res://assets/1.6 - Minigame memakan makanan/nasi2.png" id="4_umbpg"]
+[ext_resource type="Texture2D" uid="uid://cjeylnud2jjyw" path="res://assets/1.6 - Minigame memakan makanan/nasi1.png" id="5_oiww5"]
+[ext_resource type="Texture2D" uid="uid://d3x0044jhjkqa" path="res://assets/1.6 - Minigame memakan makanan/sosis2.png" id="6_4bufj"]
+[ext_resource type="Texture2D" uid="uid://de6ogyyvgsxd5" path="res://assets/1.6 - Minigame memakan makanan/sosis1.png" id="7_ttgjg"]
+[ext_resource type="Texture2D" uid="uid://dr1r51u3kxq2m" path="res://assets/1.6 - Minigame memakan makanan/telur2.png" id="8_gkxau"]
+[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/Sausage1Area.gd" id="8_hul2a"]
+[ext_resource type="Texture2D" uid="uid://caeju6adkku2j" path="res://assets/1.6 - Minigame memakan makanan/telur1.png" id="9_xxh1c"]
+[ext_resource type="Texture2D" uid="uid://dit66oyjweo7x" path="res://assets/1.6 - Minigame memakan makanan/gelas.png" id="10_ypysn"]
+[ext_resource type="Texture2D" uid="uid://bvwiiex05vfy4" path="res://assets/1.6 - Minigame memakan makanan/air1.png" id="11_ecbvl"]
+[ext_resource type="Texture2D" uid="uid://i11dndk3b5fb" path="res://assets/1.6 - Minigame memakan makanan/air2.png" id="12_y5eji"]
+[ext_resource type="Texture2D" uid="uid://b1f4h6qqjutbd" path="res://assets/1.6 - Minigame memakan makanan/sayur1.png" id="13_uveh0"]
+[ext_resource type="Texture2D" uid="uid://rumr81m4uap6" path="res://assets/1.6 - Minigame memakan makanan/sayur2.png" id="14_pqwju"]
+[ext_resource type="Texture2D" uid="uid://d4dcxo1h2yv82" path="res://assets/1.6 - Minigame memakan makanan/background hitam.svg" id="15_xrxpe"]
+[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/HandCursor.gd" id="16_kjh7v"]
+[ext_resource type="Texture2D" uid="uid://cc62ari0amtwy" path="res://assets/1.6 - Minigame memakan makanan/tangan 1.svg" id="17_0o2ck"]
+[ext_resource type="Texture2D" uid="uid://cxr8et0vr6gds" path="res://assets/1.6 - Minigame memakan makanan/tangan 2.svg" id="18_bjwax"]
+[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/HandArea.gd" id="20_gcemk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_20b10"]
+radius = 55.7665
+height = 215.059
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_de02a"]
+radius = 51.7659
+height = 229.193
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_esl25"]
+radius = 112.876
+height = 341.945
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8854h"]
+radius = 27.8627
+height = 318.865
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ao1bc"]
+radius = 31.0971
+height = 330.77
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1wh1"]
+radius = 104.732
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y0vsp"]
+radius = 69.6167
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cp76"]
+size = Vector2(516, 20)
+
+[node name="minigame_memakan_makanan" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(0.711, 0.711)
+
+[node name="Table" type="Sprite2D" parent="Background"]
+texture = ExtResource("1_updoi")
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(0.711, 0.711)
+
+[node name="Plate" type="Sprite2D" parent="Foreground"]
+texture = ExtResource("2_75sqk")
+
+[node name="Food" type="Node2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(0.711, 0.711)
+
+[node name="Rice" type="Node2D" parent="Food"]
+
+[node name="Rice3" type="Sprite2D" parent="Food/Rice"]
+texture = ExtResource("3_06w3k")
+
+[node name="Rice3Area" type="Area2D" parent="Food/Rice/Rice3"]
+position = Vector2(-140, 130)
+rotation = 0.23911
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice3/Rice3Area"]
+shape = SubResource("CapsuleShape2D_20b10")
+
+[node name="Rice2" type="Sprite2D" parent="Food/Rice"]
+position = Vector2(0, 7.03235)
+texture = ExtResource("4_umbpg")
+
+[node name="Rice2Area" type="Area2D" parent="Food/Rice/Rice2"]
+position = Vector2(-50, 140)
+rotation = 0.359538
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice2/Rice2Area"]
+shape = SubResource("CapsuleShape2D_de02a")
+
+[node name="Rice1" type="Sprite2D" parent="Food/Rice"]
+texture = ExtResource("5_oiww5")
+
+[node name="Rice1Area" type="Area2D" parent="Food/Rice/Rice1"]
+position = Vector2(-40, 150)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice1/Rice1Area"]
+rotation = -1.43641
+shape = SubResource("CapsuleShape2D_esl25")
+
+[node name="Sausage1" type="Node2D" parent="Food"]
+
+[node name="Sausage1" type="Sprite2D" parent="Food/Sausage1"]
+texture = ExtResource("7_ttgjg")
+
+[node name="Sausage1Area" type="Area2D" parent="Food/Sausage1"]
+position = Vector2(-251.758, -168.776)
+rotation = 0.802851
+scale = Vector2(1.04772, 0.988537)
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("8_hul2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Sausage1/Sausage1Area"]
+scale = Vector2(1.17843, 1.03617)
+shape = SubResource("CapsuleShape2D_8854h")
+
+[node name="Sausage2" type="Node2D" parent="Food"]
+position = Vector2(-410.689, 312.236)
+scale = Vector2(1, 1)
+
+[node name="Sausage2" type="Sprite2D" parent="Food/Sausage2"]
+scale = Vector2(1, 1)
+texture = ExtResource("6_4bufj")
+
+[node name="Sausage2Area" type="Area2D" parent="Food/Sausage2/Sausage2"]
+position = Vector2(-178.622, -113.924)
+rotation = 0.767945
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Sausage2/Sausage2/Sausage2Area"]
+shape = SubResource("CapsuleShape2D_ao1bc")
+
+[node name="Egg" type="Node2D" parent="Food"]
+
+[node name="Egg2" type="Sprite2D" parent="Food/Egg"]
+texture = ExtResource("8_gkxau")
+
+[node name="Egg1" type="Sprite2D" parent="Food/Egg"]
+texture = ExtResource("9_xxh1c")
+
+[node name="Water" type="Node2D" parent="Food"]
+
+[node name="WaterEmpty" type="Sprite2D" parent="Food/Water"]
+texture = ExtResource("10_ypysn")
+
+[node name="Water2" type="Sprite2D" parent="Food/Water"]
+texture = ExtResource("12_y5eji")
+
+[node name="Water1" type="Sprite2D" parent="Food/Water"]
+scale = Vector2(1, 1)
+texture = ExtResource("11_ecbvl")
+
+[node name="WaterArea" type="Area2D" parent="Food/Water"]
+position = Vector2(620, -70)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Water/WaterArea"]
+shape = SubResource("CircleShape2D_t1wh1")
+
+[node name="Veggie" type="Node2D" parent="Food"]
+
+[node name="Veggie1" type="Sprite2D" parent="Food/Veggie"]
+texture = ExtResource("13_uveh0")
+
+[node name="Veggie2" type="Sprite2D" parent="Food/Veggie"]
+texture = ExtResource("14_pqwju")
+
+[node name="BlackBar" type="Sprite2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(0.711, 0.711)
+texture = ExtResource("15_xrxpe")
+
+[node name="HandCursor" type="Node2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(0.711, 0.711)
+script = ExtResource("16_kjh7v")
+
+[node name="HandCursorSpriteOff" type="Sprite2D" parent="HandCursor"]
+texture = ExtResource("17_0o2ck")
+
+[node name="HandCursorSrpiteOn" type="Sprite2D" parent="HandCursor"]
+visible = false
+scale = Vector2(1, 1)
+texture = ExtResource("18_bjwax")
+
+[node name="HandArea" type="Area2D" parent="HandCursor"]
+position = Vector2(251.758, -185.654)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("20_gcemk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandCursor/HandArea"]
+shape = SubResource("CircleShape2D_y0vsp")
+
+[node name="EatCollision" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EatCollision"]
+position = Vector2(659, 702)
+scale = Vector2(1, 1.01028)
+shape = SubResource("RectangleShape2D_0cp76")
+
+[connection signal="area_entered" from="Food/Sausage1/Sausage1Area" to="Food/Sausage1/Sausage1Area" method="_on_area_entered"]
