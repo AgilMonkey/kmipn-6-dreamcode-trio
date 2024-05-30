@@ -16,7 +16,7 @@ size = Vector2(2168, 237.304)
 size = Vector2(160, 960)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5a68g"]
-radius = 216.0
+radius = 112.285
 
 [sub_resource type="Resource" id="Resource_dhdlo"]
 script = ExtResource("7_1bgrd")
@@ -93,11 +93,46 @@ text = "Ke ruang andika
 Pencet 'Z'"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToKamarAndika"]
+position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="KamarAndikaPos" type="Marker2D" parent="."]
 position = Vector2(704, 665)
+
+[node name="Area2DToDapur" type="Area2D" parent="."]
+position = Vector2(976, 496)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource("2_qhi1o")
+
+[node name="Square" type="Sprite2D" parent="Area2DToDapur"]
+scale = Vector2(0.1875, 0.1875)
+texture = ExtResource("2_bchjv")
+
+[node name="Triangle" type="Sprite2D" parent="Area2DToDapur/Square"]
+position = Vector2(0, -512)
+scale = Vector2(1.72973, 1.72973)
+texture = ExtResource("2_q1xqj")
+
+[node name="Label" type="Label" parent="Area2DToDapur/Square/Triangle"]
+offset_left = -394.667
+offset_top = 468.667
+offset_right = 419.333
+offset_bottom = 616.667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Ke Dapur
+wPencet 'Z'"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToDapur"]
+position = Vector2(0, 48)
+shape = SubResource("CircleShape2D_5a68g")
+debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
+
+[node name="DapurPos" type="Marker2D" parent="."]
+position = Vector2(954, 665)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(909, 390)
@@ -131,7 +166,11 @@ position = Vector2(992, 665)
 position = Vector2(752, 248)
 shape = SubResource("RectangleShape2D_vc66s")
 debug_color = Color(0, 0.6, 0.701961, 0)
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
 [connection signal="on_change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]
+[connection signal="body_entered" from="Area2DToDapur" to="Area2DToDapur" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2DToDapur" to="Area2DToDapur" method="_on_body_exited"]
+[connection signal="on_change_scene" from="Area2DToDapur" to="." method="_on_area_2d_to_dapur_on_change_scene"]
