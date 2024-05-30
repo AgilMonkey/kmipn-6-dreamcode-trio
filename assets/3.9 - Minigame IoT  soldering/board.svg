@@ -1,6 +1,28 @@
-<svg id="Folder20" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-  <defs>
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Folder20"
+   width="1135.0157"
+   height="789.01123"
+   viewBox="0 0 1135.0157 789.01123"
+   version="1.1"
+   sodipodi:docname="board.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
       .cls-1 {
         fill: #d47b4f;
         stroke: #575757;
@@ -9,7 +31,12 @@
       }
     </style>
   </defs>
-  <g id="Folder4">
-    <path class="cls-1" d="M1498,940l2-742s-7.99-16.065-23-16L396,183s-21.641,2.062-21,20l1,740s-1.868,18.584,17,18H1480S1498,957.176,1498,940Z"/>
+  <g
+     id="Folder4"
+     transform="translate(-369.98746,-176.99979)">
+    <path
+       class="cls-1"
+       d="m 1498,940 2,-742 c 0,0 -7.99,-16.065 -23,-16 l -1081,1 c 0,0 -21.641,2.062 -21,20 l 1,740 c 0,0 -1.868,18.584 17,18 h 1087 c 0,0 18,-3.824 18,-21 z"
+       id="path1" />
   </g>
 </svg>
