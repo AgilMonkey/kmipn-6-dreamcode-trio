@@ -1,0 +1,28 @@
+<svg id="Folder20" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #474747;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #212121;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #cacaca;
+      }
+
+      .cls-3 {
+        fill: #dcdcdc;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M1369,441l49-34m-60,28,58-42m67,180s-9.07-2.861-12-5-101-127-101-127l-11-5-54-66s-9.39-4.149-11-6-9-13-9-13l72-51,10,15,3,9,46,71,1,13,88,139,1,11Z"/>
+    <path class="cls-2" d="M1310,332l-9-12-18,2-2-2,16-10-5-6-15,3-2-4,44-27,2,3-5,10,4,6,12-7,3,4-9,14,7,10Z"/>
+    <path class="cls-3" d="M1288,295l-69-100-1-10-10-20V151l2-1,20,30,8,5,69,99Z"/>
+  </g>
+</svg>

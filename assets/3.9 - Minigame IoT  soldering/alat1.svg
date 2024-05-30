@@ -1,0 +1,13 @@
+<svg id="Folder20" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dcdcdc;
+        stroke: #212121;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1288,295l-69-100-1-10-10-20V151l2-1,20,30,8,5,69,99Z"/>
+</svg>
