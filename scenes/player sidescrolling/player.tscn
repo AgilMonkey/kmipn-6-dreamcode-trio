@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=21 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
@@ -24,18 +24,474 @@ region = Rect2(510, 0, 53, 128)
 atlas = ExtResource("2_5ax5e")
 region = Rect2(641, 0, 54, 142)
 
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_a0wte"]
+
+[sub_resource type="Animation" id="Animation_hg6eq"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-31.8558, -55.6886), Vector2(-31.8558, -55.6886)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0896672, 0.214478, 0.0896672]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(19.5854, -59.4641), Vector2(19.5854, -59.4641)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.176941, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -64.4973), Vector2(0, -62.9314), Vector2(0, -64.4973)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -16.534)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10.75, 12.1326)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 12.6046)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ur5ki"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31.8558, -55.6886)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0896672]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19.5854, -59.4641)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -64.4973)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 12.6046)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10.75, 12.1326)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -16.534)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4hu7n"]
+resource_name = "run"
+length = 0.7
+loop_mode = 1
+step = 0.175
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-20, 12.6046), Vector2(-20, 12.6046), Vector2(-20, 12.6046)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.175, 0.35, 0.525, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.59118, 0.0, -0.694989, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10.75, 12.1326), Vector2(10.75, 12.1326), Vector2(10.75, 12.1326)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.175, 0.35, 0.525, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.66205, 0.0, 0.79762, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.175, 0.35, 0.525, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -16.534), Vector2(0, -32.0906), Vector2(0, -16.534), Vector2(0, -32.0906), Vector2(0, -16.534)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-31.8558, -55.6886), Vector2(-31.8558, -55.6886), Vector2(-31.8558, -55.6886)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.175, 0.35, 0.525, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0896672, -0.558935, 0.0896672, 0.58807, 0.0896672]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(19.5854, -59.4641), Vector2(19.5854, -59.4641), Vector2(19.5854, -59.4641)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.175, 0.35, 0.525, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.744281, 0.0, -0.427483, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7m2tu"]
+_data = {
+"RESET": SubResource("Animation_ur5ki"),
+"idle": SubResource("Animation_hg6eq"),
+"run": SubResource("Animation_4hu7n")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nuhdk"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t35j4"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7fsvm"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_abtwe"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_secua"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_i134l"]
+states/idle/node = SubResource("AnimationNodeAnimation_nuhdk")
+states/idle/position = Vector2(324, 49)
+states/run/node = SubResource("AnimationNodeAnimation_t35j4")
+states/run/position = Vector2(324, 160)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_7fsvm"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_abtwe"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_secua")]
+graph_offset = Vector2(-13, -24)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_sf4uv")
 speed = 450.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -112)
 shape = SubResource("CapsuleShape2D_lvp4u")
 
 [node name="InteractNode" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_4n47d")
@@ -48,88 +504,265 @@ debug_color = Color(0.870588, 0.72549, 0.145098, 0.419608)
 [node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
 position = Vector2(56, -192)
 
-[node name="Smoothing2D" type="Node2D" parent="."]
+[node name="GfxPlayer" type="Node2D" parent="."]
+position = Vector2(0, 0.836143)
+
+[node name="Smoothing2D" type="Node2D" parent="GfxPlayer"]
 script = ExtResource("4_nn2kx")
-flags = 15
 
-[node name="GfxPlayer" type="Node2D" parent="Smoothing2D"]
-unique_name_in_owner = true
+[node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
-[node name="TanganKiri2" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(27.1938, -107.684)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
+[node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(31.5066, -106.603)
+rotation = -0.21007
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
-[node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(19.217, -137.03)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
+[node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(22.9204, -132.414)
+rotation = -0.213262
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
-[node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/LenganKiri"]
-position = Vector2(8.36523, 82.5546)
-texture = SubResource("AtlasTexture_kv5pg")
-offset = Vector2(2.64366, 61.69)
-flip_h = true
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="Tubuh" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-7, -107)
-scale = Vector2(0.366492, 0.366492)
+[node name="Tubuh" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(-2.87297, -101.624)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
-[node name="Kepala" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(8.18572, -207.372)
+[node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
+position = Vector2(-4.25413, -209.997)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
 
-[node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(-33.133, 99.5163)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(0, 49.1142)
-region_enabled = true
-region_rect = Rect2(0, 276, 48, 108)
-
-[node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKiri"]
-position = Vector2(-1.45355, 82.5717)
+[node name="KakiKananBawah" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(14.9503, -40.2626)
+scale = Vector2(0.365941, 0.365941)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
-[node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(47.5932, 99.4515)
+[node name="KakiKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(15.7414, -68.3542)
+scale = Vector2(0.365941, 0.365941)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
 region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
-[node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKanan"]
-position = Vector2(-1.45355, 82.5717)
+[node name="KakiKiriBawah" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(-15.1487, -40.1621)
+scale = Vector2(0.365941, 0.365941)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
-[node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(-59.2237, -84.9529)
-rotation = 0.133345
+[node name="KakiKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(-14.5231, -70.0376)
+scale = Vector2(0.365941, 0.365941)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(0, 49.1142)
+region_enabled = true
+region_rect = Rect2(0, 276, 48, 108)
+
+[node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(-38.6254, -102.479)
+rotation = 0.147883
+scale = Vector2(0.365937, 0.365937)
+texture = SubResource("AtlasTexture_x4g82")
+offset = Vector2(3.16103, 49.472)
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
+position = Vector2(-26.3586, -132.608)
+rotation = 0.147883
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)
 
-[node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/LenganKanan"]
-position = Vector2(-20.9166, 86.4221)
-texture = SubResource("AtlasTexture_x4g82")
-offset = Vector2(3.16103, 49.472)
-region_rect = Rect2(107, 260, 59, 225)
+[node name="Skeleton2D" type="Skeleton2D" parent="GfxPlayer/Smoothing2D"]
+modification_stack = SubResource("SkeletonModificationStack2D_a0wte")
+
+[node name="Base" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D"]
+position = Vector2(4.24744, -60.3929)
+rest = Transform2D(1, 0, 0, 1, 4.24744, -60.3929)
+auto_calculate_length_and_angle = false
+length = 16.534
+bone_angle = -90.0
+
+[node name="Body" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base"]
+position = Vector2(0, -16.534)
+rest = Transform2D(1, 0, 0, 1, 0, -16.534)
+auto_calculate_length_and_angle = false
+length = 64.4973
+bone_angle = -90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-7.12041, -24.6975)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../SpriteContainer/Tubuh")
+
+[node name="Head" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(0, -64.4973)
+rest = Transform2D(1, 0, 0, 1, 0, -64.4973)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head"]
+position = Vector2(-8.67742, -37.7896)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../SpriteContainer/Tubuh/Kepala")
+
+[node name="LeftShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-31.8558, -55.6886)
+rotation = 0.0896672
+scale = Vector2(0.999829, 0.999829)
+rest = Transform2D(0.995983, 0.0895471, -0.0895471, 0.995983, -31.8558, -55.6886)
+auto_calculate_length_and_angle = false
+length = 32.0925
+bone_angle = 101.608
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder"]
+position = Vector2(1.23743, -0.176788)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../SpriteContainer/LenganKiri")
+
+[node name="LeftArm" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder"]
+position = Vector2(-6.45745, 31.4362)
+rest = Transform2D(1, 0, 0, 1, -6.45745, 31.4362)
+auto_calculate_length_and_angle = false
+length = 36.4417
+bone_angle = 97.8153
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../SpriteContainer/TanganKiri")
+
+[node name="LeftHand" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
+position = Vector2(-4.95534, 36.1032)
+rest = Transform2D(1, 0, 0, 1, -4.95534, 36.1032)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="RightShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(19.5854, -59.4641)
+scale = Vector2(0.999828, 0.999828)
+rest = Transform2D(1, 0, 0, 1, 19.5854, -59.4641)
+auto_calculate_length_and_angle = false
+length = 35.573
+bone_angle = 79.0062
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder"]
+position = Vector2(-1.23744, 3.88908)
+rotation = -0.130731
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../SpriteContainer/LenganKanan")
+
+[node name="RightArm" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder"]
+position = Vector2(6.7839, 34.9202)
+rest = Transform2D(1, 0, 0, 1, 6.7839, 34.9202)
+auto_calculate_length_and_angle = false
+length = 38.3287
+bone_angle = 80.0738
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder/RightArm"]
+position = Vector2(-1.591, -4.59621)
+rotation = -0.127539
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../SpriteContainer/TanganKanan")
+
+[node name="RightHand" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder/RightArm"]
+position = Vector2(6.60712, 37.755)
+rest = Transform2D(1, 0, 0, 1, 6.60712, 37.755)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="LeftThigh" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-20, 12.6046)
+scale = Vector2(0.99984, 0.99984)
+rest = Transform2D(1, 0, 0, 1, -20, 12.6046)
+auto_calculate_length_and_angle = false
+length = 24.2513
+bone_angle = 89.4093
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh"]
+position = Vector2(1.22965, -5.71622)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../SpriteContainer/KakiKiri")
+
+[node name="LeftLeg" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh"]
+position = Vector2(0.25, 24.25)
+rest = Transform2D(1, 0, 0, 1, 0.25, 24.25)
+auto_calculate_length_and_angle = false
+length = 28.25
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh/LeftLeg"]
+position = Vector2(0.353951, -0.085968)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../SpriteContainer/KakiKiriBawah")
+
+[node name="LeftFoot" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh/LeftLeg"]
+position = Vector2(0, 28.25)
+rest = Transform2D(1, 0, 0, 1, 0, 28.25)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="RightThigh" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(10.75, 12.1326)
+scale = Vector2(0.999838, 0.999838)
+rest = Transform2D(1, 0, 0, 1, 10.75, 12.1326)
+auto_calculate_length_and_angle = false
+length = 26.5335
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh"]
+position = Vector2(0.744095, -3.56043)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../SpriteContainer/KakiKanan")
+
+[node name="RightLeg" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh"]
+position = Vector2(0, 26.5335)
+rest = Transform2D(1, 0, 0, 1, 0, 26.5335)
+auto_calculate_length_and_angle = false
+length = 28.25
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh/RightLeg"]
+position = Vector2(-0.0471555, -1.99779)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../SpriteContainer/KakiKananBawah")
+
+[node name="RightFoot" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh/RightLeg"]
+position = Vector2(0, 28.25)
+rest = Transform2D(1, 0, 0, 1, 0, 28.25)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7m2tu")
+}
+autoplay = "idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_i134l")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/idle = true
+parameters/conditions/is_moving = false
