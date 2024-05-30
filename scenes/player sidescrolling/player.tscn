@@ -93,7 +93,7 @@ flags = 15
 
 [node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
 position = Vector2(41.0333, -110.864)
-rotation = -0.572408
+rotation = -0.572407
 scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
