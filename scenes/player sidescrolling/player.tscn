@@ -53,83 +53,181 @@ script = ExtResource("4_nn2kx")
 flags = 15
 
 [node name="GfxPlayer" type="Node2D" parent="Smoothing2D"]
-unique_name_in_owner = true
 
 [node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(25.0915, -109.787)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(29.0257, -106.067)
+rotation = -0.127539
+scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(17.1148, -139.132)
-rotation = -0.164423
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(22.5954, -132.502)
+rotation = -0.130731
+scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="Tubuh" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-7, -107)
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(-2.87297, -101.624)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(8.18572, -207.372)
+position = Vector2(-4.25413, -211.993)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
 
 [node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(9.90981, -40.29)
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(14.9503, -40.2586)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
 [node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(10.4425, -70.5518)
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(15.7415, -68.3547)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
 region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-19.6757, -40.2662)
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(-15.1486, -40.1582)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
 [node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-19.143, -70.5281)
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(-14.5229, -70.0385)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
 region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-40.5137, -107.762)
-rotation = 0.133345
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(-36.8549, -101.884)
+rotation = 0.0896672
+scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(-28.705, -138.135)
-rotation = 0.133345
-scale = Vector2(0.366492, 0.366492)
+position = Vector2(-26.36, -132.681)
+rotation = 0.0896672
+scale = Vector2(0.366, 0.366)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Smoothing2D"]
+
+[node name="Base" type="Bone2D" parent="Smoothing2D/Skeleton2D"]
+position = Vector2(4.24744, -60.3929)
+
+[node name="Body" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base"]
+position = Vector2(0, -16.534)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-7.12041, -24.6975)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../GfxPlayer/Tubuh")
+
+[node name="Head" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(0, -64.4973)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/Head"]
+position = Vector2(-8.67742, -37.7896)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../GfxPlayer/Tubuh/Kepala")
+
+[node name="LeftShoulder" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-31.8558, -55.6886)
+rotation = 0.0896672
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder"]
+position = Vector2(1.23743, -0.176788)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../GfxPlayer/LenganKiri")
+
+[node name="LeftArm" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder"]
+position = Vector2(-6.45745, 31.4362)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../GfxPlayer/TanganKiri")
+
+[node name="LeftHand" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
+position = Vector2(-4.95534, 36.1032)
+
+[node name="RightShoulder" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(19.5854, -59.4641)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder"]
+position = Vector2(-1.23744, 3.88908)
+rotation = -0.130731
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../GfxPlayer/LenganKanan")
+
+[node name="RightArm" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder"]
+position = Vector2(6.7839, 34.9202)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder/RightArm"]
+position = Vector2(-1.591, -4.59621)
+rotation = -0.127539
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../GfxPlayer/TanganKanan")
+
+[node name="RightHand" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightShoulder/RightArm"]
+position = Vector2(6.60712, 37.755)
+
+[node name="LeftThigh" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(-20, 12.6046)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh"]
+position = Vector2(1.22965, -5.71622)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../GfxPlayer/KakiKiri")
+
+[node name="LeftLeg" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh"]
+position = Vector2(0.25, 24.25)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh/LeftLeg"]
+position = Vector2(0.353951, -0.085968)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../GfxPlayer/KakiKiriBawah")
+
+[node name="LeftFoot" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/LeftThigh/LeftLeg"]
+position = Vector2(0, 28.25)
+
+[node name="RightThigh" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body"]
+position = Vector2(10.75, 12.1326)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh"]
+position = Vector2(0.744095, -3.56043)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../GfxPlayer/KakiKanan")
+
+[node name="RightLeg" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh"]
+position = Vector2(0, 26.5335)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh/RightLeg"]
+position = Vector2(-0.0471555, -1.99779)
+scale = Vector2(0.366, 0.366)
+remote_path = NodePath("../../../../../../GfxPlayer/KakiKananBawah")
+
+[node name="RightFoot" type="Bone2D" parent="Smoothing2D/Skeleton2D/Base/Body/RightThigh/RightLeg"]
+position = Vector2(0, 28.25)

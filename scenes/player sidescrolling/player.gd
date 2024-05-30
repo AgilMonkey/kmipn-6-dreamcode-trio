@@ -10,7 +10,7 @@ var is_minigame := false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var interact_node = $InteractNode
-@onready var sprite = %GfxPlayer
+@onready var skeleton = $Smoothing2D/Skeleton2D
 @onready var smoothing := $Smoothing2D
 
 func _ready():
@@ -30,7 +30,7 @@ func _physics_process(delta):
 
 	if direction:
 		velocity.x = direction.x * speed
-		sprite.scale.x = -1 if direction.x <= 0 else 1
+		skeleton.scale.x = -1 if direction.x <= 0 else 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
