@@ -1,20 +1,801 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnnadwqgs0iwg"]
 
 [ext_resource type="Texture2D" uid="uid://ck2l73embhevx" path="res://assets/3.9 - Minigame IoT  soldering/board.svg" id="1_dftwm"]
-[ext_resource type="Texture2D" uid="uid://c2ykn4p55u8u1" path="res://assets/3.9 - Minigame IoT  soldering/board2.png" id="2_la20o"]
 [ext_resource type="Texture2D" uid="uid://dubi1w4hslu5v" path="res://assets/3.9 - Minigame IoT  soldering/board1.png" id="3_70rig"]
+[ext_resource type="Texture2D" uid="uid://dpsicbeiv1olp" path="res://assets/3.9 - Minigame IoT  soldering/pins.png" id="3_mf4ol"]
 
-[node name="MinigameSoldering" type="Node2D"]
+[node name="MinigameSoldering" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Board" type="Sprite2D" parent="."]
 position = Vector2(652, 383)
 scale = Vector2(0.529785, 0.529785)
 texture = ExtResource("1_dftwm")
-
-[node name="Pins" type="Sprite2D" parent="Board"]
-scale = Vector2(0.968796, 0.968796)
-texture = ExtResource("2_la20o")
+metadata/_edit_lock_ = true
 
 [node name="Pins2" type="Sprite2D" parent="Board"]
 position = Vector2(0, 340)
 texture = ExtResource("3_70rig")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 216.0
+offset_right = 884.0
+offset_bottom = 541.0
+columns = 10
+
+[node name="Pins" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins2" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins2"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins3" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins3"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins4" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins4"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins5" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins5"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins6" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins6"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins7" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins7"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins8" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins8"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins9" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins9"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins10" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins10"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins11" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins11"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins12" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins12"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins13" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins13"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins14" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins14"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins15" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins15"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins16" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins16"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins17" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins17"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins18" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins18"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins19" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins19"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins20" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins20"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins21" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins21"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins22" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins22"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins23" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins23"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins24" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins24"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins25" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins25"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins26" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins26"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins27" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins27"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins28" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins28"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins29" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins29"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins30" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins30"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins31" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins31"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins32" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins32"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins33" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins33"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins34" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins34"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins35" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins35"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins36" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins36"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins37" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins37"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins38" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins38"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins39" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins39"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins40" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins40"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins41" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins41"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins42" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins42"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins43" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins43"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins44" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins44"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins45" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins45"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins46" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins46"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins47" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins47"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins48" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins48"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins49" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins49"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins50" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins50"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins51" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins51"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins52" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins52"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins53" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins53"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins54" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins54"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins55" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins55"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins56" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins56"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins57" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins57"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins58" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins58"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins59" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins59"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins60" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins60"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins61" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins61"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins62" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins62"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins63" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins63"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins64" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins64"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins65" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins65"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins66" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins66"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins67" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins67"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins68" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins68"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins69" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins69"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
+
+[node name="Pins70" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Pins" type="TextureRect" parent="GridContainer/Pins70"]
+layout_mode = 2
+texture = ExtResource("3_mf4ol")
