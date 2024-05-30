@@ -55,8 +55,8 @@ flags = 15
 [node name="GfxPlayer" type="Node2D" parent="Smoothing2D"]
 unique_name_in_owner = true
 
-[node name="TanganKiri2" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(27.1938, -107.684)
+[node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(25.0915, -109.787)
 rotation = -0.164423
 scale = Vector2(0.366492, 0.366492)
 texture = SubResource("AtlasTexture_kv5pg")
@@ -64,19 +64,12 @@ offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
-[node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
-position = Vector2(19.217, -137.03)
+[node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(17.1148, -139.132)
 rotation = -0.164423
 scale = Vector2(0.366492, 0.366492)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
-flip_h = true
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/LenganKiri"]
-position = Vector2(8.36523, 82.5546)
-texture = SubResource("AtlasTexture_kv5pg")
-offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
@@ -93,43 +86,50 @@ texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
 
-[node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(-33.133, 99.5163)
-texture = ExtResource("2_5ax5e")
-offset = Vector2(0, 49.1142)
-region_enabled = true
-region_rect = Rect2(0, 276, 48, 108)
-
-[node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKiri"]
-position = Vector2(-1.45355, 82.5717)
+[node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(9.90981, -40.29)
+scale = Vector2(0.366492, 0.366492)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
-[node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(47.5932, 99.4515)
+[node name="KakiKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(10.4425, -70.5518)
+scale = Vector2(0.366492, 0.366492)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
 region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
-[node name="KakiKananBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/KakiKanan"]
-position = Vector2(-1.45355, 82.5717)
+[node name="KakiKiriBawah" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(-19.6757, -40.2662)
+scale = Vector2(0.366492, 0.366492)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
 region_rect = Rect2(113, 282, 65, 128)
 
-[node name="LenganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh"]
-position = Vector2(-59.2237, -84.9529)
+[node name="KakiKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(-19.143, -70.5281)
+scale = Vector2(0.366492, 0.366492)
+texture = ExtResource("2_5ax5e")
+offset = Vector2(0, 49.1142)
+region_enabled = true
+region_rect = Rect2(0, 276, 48, 108)
+
+[node name="TanganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(-40.5137, -107.762)
 rotation = 0.133345
-texture = SubResource("AtlasTexture_c746m")
-offset = Vector2(-13.2145, 45.5875)
-region_rect = Rect2(107, 260, 59, 225)
-
-[node name="TanganKanan" type="Sprite2D" parent="Smoothing2D/GfxPlayer/Tubuh/LenganKanan"]
-position = Vector2(-20.9166, 86.4221)
+scale = Vector2(0.366492, 0.366492)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
+region_rect = Rect2(107, 260, 59, 225)
+
+[node name="LenganKiri" type="Sprite2D" parent="Smoothing2D/GfxPlayer"]
+position = Vector2(-28.705, -138.135)
+rotation = 0.133345
+scale = Vector2(0.366492, 0.366492)
+texture = SubResource("AtlasTexture_c746m")
+offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)
