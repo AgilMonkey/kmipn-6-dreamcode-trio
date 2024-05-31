@@ -24,10 +24,10 @@ func set_pin_connection():
 		for row in range(rows):
 			var pin: Pin = get_pin(col, row)
 			pin.row_col = Vector2(row, col)
-			pin.pin_up = get_pin(pin.row_col.x - 1, pin.row_col.y)
-			pin.pin_down = get_pin(pin.row_col.x + 1, pin.row_col.y)
-			pin.pin_left = get_pin(pin.row_col.x, pin.row_col.y - 1)
-			pin.pin_right = get_pin(pin.row_col.x, pin.row_col.y + 1)
+			pin.pin_up = get_pin(pin.row_col.x, pin.row_col.y - 1)
+			pin.pin_down = get_pin(pin.row_col.x, pin.row_col.y + 1)
+			pin.pin_left = get_pin(pin.row_col.x - 1, pin.row_col.y)
+			pin.pin_right = get_pin(pin.row_col.x + 1, pin.row_col.y)
 
 
 ## Tolong ingat row dan col awal 0
