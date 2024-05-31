@@ -14,26 +14,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Board" type="Sprite2D" parent="."]
-position = Vector2(652, 383)
+[node name="Board" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 351.0
+offset_top = 174.0
+offset_right = 953.0
+offset_bottom = 592.0
+
+[node name="BackBoard" type="Sprite2D" parent="Board"]
+position = Vector2(301, 209)
 scale = Vector2(0.529785, 0.529785)
 texture = ExtResource("1_dftwm")
 metadata/_edit_lock_ = true
 
-[node name="Pins2" type="Sprite2D" parent="Board"]
+[node name="Pins2" type="Sprite2D" parent="Board/BackBoard"]
 position = Vector2(0, 340)
 texture = ExtResource("3_70rig")
 
-[node name="AllPins" type="GridContainer" parent="."]
-layout_mode = 0
-offset_left = 408.0
-offset_top = 216.0
-offset_right = 884.0
-offset_bottom = 541.0
+[node name="CenterContainer" type="CenterContainer" parent="Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AllPins" type="GridContainer" parent="Board/CenterContainer"]
+layout_mode = 2
 columns = 10
 script = ExtResource("3_esa40")
 
-[node name="Pins" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_right")]
+[node name="Pins" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -43,11 +54,11 @@ script = ExtResource("4_vv2uv")
 pin_down = NodePath("../Pins11")
 pin_right = NodePath("../Pins2")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins2" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
+[node name="Pins2" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -59,11 +70,11 @@ pin_up = NodePath("../Pins")
 pin_down = NodePath("../Pins21")
 pin_right = NodePath("../Pins12")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins2"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins2"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins3" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
+[node name="Pins3" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -75,11 +86,11 @@ pin_up = NodePath("../Pins11")
 pin_down = NodePath("../Pins31")
 pin_right = NodePath("../Pins22")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins3"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins3"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins4" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
+[node name="Pins4" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -91,11 +102,11 @@ pin_up = NodePath("../Pins21")
 pin_down = NodePath("../Pins41")
 pin_right = NodePath("../Pins32")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins4"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins4"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins5" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
+[node name="Pins5" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -107,11 +118,11 @@ pin_up = NodePath("../Pins31")
 pin_down = NodePath("../Pins51")
 pin_right = NodePath("../Pins42")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins5"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins5"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins6" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
+[node name="Pins6" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -123,11 +134,11 @@ pin_up = NodePath("../Pins41")
 pin_down = NodePath("../Pins61")
 pin_right = NodePath("../Pins52")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins6"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins6"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins7" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_right")]
+[node name="Pins7" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -138,11 +149,11 @@ row_col = Vector2(0, 6)
 pin_up = NodePath("../Pins51")
 pin_right = NodePath("../Pins62")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins7"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins7"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins8" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins8" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -152,11 +163,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(0, 7)
 pin_up = NodePath("../Pins61")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins8"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins8"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins9" type="MarginContainer" parent="AllPins"]
+[node name="Pins9" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -165,11 +176,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(0, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins9"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins9"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins10" type="MarginContainer" parent="AllPins"]
+[node name="Pins10" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -178,11 +189,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(0, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins10"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins10"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins11" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins11" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -194,11 +205,11 @@ pin_down = NodePath("../Pins12")
 pin_left = NodePath("../Pins")
 pin_right = NodePath("../Pins3")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins11"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins11"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins12" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins12" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -211,11 +222,11 @@ pin_down = NodePath("../Pins22")
 pin_left = NodePath("../Pins11")
 pin_right = NodePath("../Pins13")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins12"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins12"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins13" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins13" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -228,11 +239,11 @@ pin_down = NodePath("../Pins32")
 pin_left = NodePath("../Pins21")
 pin_right = NodePath("../Pins23")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins13"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins13"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins14" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins14" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -245,11 +256,11 @@ pin_down = NodePath("../Pins42")
 pin_left = NodePath("../Pins31")
 pin_right = NodePath("../Pins33")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins14"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins14"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins15" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins15" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -262,11 +273,11 @@ pin_down = NodePath("../Pins52")
 pin_left = NodePath("../Pins41")
 pin_right = NodePath("../Pins43")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins15"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins15"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins16" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins16" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -279,11 +290,11 @@ pin_down = NodePath("../Pins62")
 pin_left = NodePath("../Pins51")
 pin_right = NodePath("../Pins53")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins16"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins16"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins17" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins17" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -295,11 +306,11 @@ pin_up = NodePath("../Pins52")
 pin_left = NodePath("../Pins61")
 pin_right = NodePath("../Pins63")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins17"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins17"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins18" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins18" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -309,11 +320,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(1, 7)
 pin_up = NodePath("../Pins62")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins18"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins18"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins19" type="MarginContainer" parent="AllPins"]
+[node name="Pins19" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -322,11 +333,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(1, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins19"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins19"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins20" type="MarginContainer" parent="AllPins"]
+[node name="Pins20" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -335,11 +346,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(1, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins20"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins20"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins21" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins21" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -351,11 +362,11 @@ pin_down = NodePath("../Pins13")
 pin_left = NodePath("../Pins2")
 pin_right = NodePath("../Pins4")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins21"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins21"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins22" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins22" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -368,11 +379,11 @@ pin_down = NodePath("../Pins23")
 pin_left = NodePath("../Pins12")
 pin_right = NodePath("../Pins14")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins22"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins22"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins23" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins23" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -385,11 +396,11 @@ pin_down = NodePath("../Pins33")
 pin_left = NodePath("../Pins22")
 pin_right = NodePath("../Pins24")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins23"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins23"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins24" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins24" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -402,11 +413,11 @@ pin_down = NodePath("../Pins43")
 pin_left = NodePath("../Pins32")
 pin_right = NodePath("../Pins34")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins24"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins24"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins25" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins25" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -419,11 +430,11 @@ pin_down = NodePath("../Pins53")
 pin_left = NodePath("../Pins42")
 pin_right = NodePath("../Pins44")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins25"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins25"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins26" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins26" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -436,11 +447,11 @@ pin_down = NodePath("../Pins63")
 pin_left = NodePath("../Pins52")
 pin_right = NodePath("../Pins54")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins26"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins26"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins27" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins27" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -452,11 +463,11 @@ pin_up = NodePath("../Pins53")
 pin_left = NodePath("../Pins62")
 pin_right = NodePath("../Pins64")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins27"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins27"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins28" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins28" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -466,11 +477,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(2, 7)
 pin_up = NodePath("../Pins63")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins28"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins28"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins29" type="MarginContainer" parent="AllPins"]
+[node name="Pins29" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -479,11 +490,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(2, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins29"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins29"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins30" type="MarginContainer" parent="AllPins"]
+[node name="Pins30" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -492,11 +503,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(2, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins30"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins30"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins31" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins31" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -508,11 +519,11 @@ pin_down = NodePath("../Pins14")
 pin_left = NodePath("../Pins3")
 pin_right = NodePath("../Pins5")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins31"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins31"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins32" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins32" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -525,11 +536,11 @@ pin_down = NodePath("../Pins24")
 pin_left = NodePath("../Pins13")
 pin_right = NodePath("../Pins15")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins32"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins32"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins33" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins33" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -542,11 +553,11 @@ pin_down = NodePath("../Pins34")
 pin_left = NodePath("../Pins23")
 pin_right = NodePath("../Pins25")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins33"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins33"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins34" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins34" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -559,11 +570,11 @@ pin_down = NodePath("../Pins44")
 pin_left = NodePath("../Pins33")
 pin_right = NodePath("../Pins35")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins34"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins34"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins35" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins35" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -576,11 +587,11 @@ pin_down = NodePath("../Pins54")
 pin_left = NodePath("../Pins43")
 pin_right = NodePath("../Pins45")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins35"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins35"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins36" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins36" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -593,11 +604,11 @@ pin_down = NodePath("../Pins64")
 pin_left = NodePath("../Pins53")
 pin_right = NodePath("../Pins55")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins36"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins36"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins37" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins37" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -609,11 +620,11 @@ pin_up = NodePath("../Pins54")
 pin_left = NodePath("../Pins63")
 pin_right = NodePath("../Pins65")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins37"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins37"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins38" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins38" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -623,11 +634,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(3, 7)
 pin_up = NodePath("../Pins64")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins38"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins38"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins39" type="MarginContainer" parent="AllPins"]
+[node name="Pins39" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -636,11 +647,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(3, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins39"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins39"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins40" type="MarginContainer" parent="AllPins"]
+[node name="Pins40" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -649,11 +660,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(3, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins40"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins40"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins41" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins41" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -665,11 +676,11 @@ pin_down = NodePath("../Pins15")
 pin_left = NodePath("../Pins4")
 pin_right = NodePath("../Pins6")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins41"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins41"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins42" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins42" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -682,11 +693,11 @@ pin_down = NodePath("../Pins25")
 pin_left = NodePath("../Pins14")
 pin_right = NodePath("../Pins16")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins42"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins42"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins43" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins43" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -699,11 +710,11 @@ pin_down = NodePath("../Pins35")
 pin_left = NodePath("../Pins24")
 pin_right = NodePath("../Pins26")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins43"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins43"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins44" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins44" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -716,11 +727,11 @@ pin_down = NodePath("../Pins45")
 pin_left = NodePath("../Pins34")
 pin_right = NodePath("../Pins36")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins44"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins44"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins45" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins45" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -733,11 +744,11 @@ pin_down = NodePath("../Pins55")
 pin_left = NodePath("../Pins44")
 pin_right = NodePath("../Pins46")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins45"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins45"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins46" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins46" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -750,11 +761,11 @@ pin_down = NodePath("../Pins65")
 pin_left = NodePath("../Pins54")
 pin_right = NodePath("../Pins56")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins46"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins46"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins47" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins47" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -766,11 +777,11 @@ pin_up = NodePath("../Pins55")
 pin_left = NodePath("../Pins64")
 pin_right = NodePath("../Pins66")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins47"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins47"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins48" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins48" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -780,11 +791,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(4, 7)
 pin_up = NodePath("../Pins65")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins48"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins48"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins49" type="MarginContainer" parent="AllPins"]
+[node name="Pins49" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -793,11 +804,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(4, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins49"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins49"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins50" type="MarginContainer" parent="AllPins"]
+[node name="Pins50" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -806,11 +817,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(4, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins50"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins50"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins51" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins51" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -822,11 +833,11 @@ pin_down = NodePath("../Pins16")
 pin_left = NodePath("../Pins5")
 pin_right = NodePath("../Pins7")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins51"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins51"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins52" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins52" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -839,11 +850,11 @@ pin_down = NodePath("../Pins26")
 pin_left = NodePath("../Pins15")
 pin_right = NodePath("../Pins17")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins52"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins52"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins53" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins53" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -856,11 +867,11 @@ pin_down = NodePath("../Pins36")
 pin_left = NodePath("../Pins25")
 pin_right = NodePath("../Pins27")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins53"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins53"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins54" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins54" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -873,11 +884,11 @@ pin_down = NodePath("../Pins46")
 pin_left = NodePath("../Pins35")
 pin_right = NodePath("../Pins37")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins54"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins54"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins55" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins55" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -890,11 +901,11 @@ pin_down = NodePath("../Pins56")
 pin_left = NodePath("../Pins45")
 pin_right = NodePath("../Pins47")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins55"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins55"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins56" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins56" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -907,11 +918,11 @@ pin_down = NodePath("../Pins66")
 pin_left = NodePath("../Pins55")
 pin_right = NodePath("../Pins57")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins56"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins56"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins57" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins57" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -923,11 +934,11 @@ pin_up = NodePath("../Pins56")
 pin_left = NodePath("../Pins65")
 pin_right = NodePath("../Pins67")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins57"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins57"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins58" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins58" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -937,11 +948,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(5, 7)
 pin_up = NodePath("../Pins66")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins58"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins58"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins59" type="MarginContainer" parent="AllPins"]
+[node name="Pins59" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -950,11 +961,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(5, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins59"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins59"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins60" type="MarginContainer" parent="AllPins"]
+[node name="Pins60" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -963,11 +974,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(5, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins60"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins60"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins61" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
+[node name="Pins61" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -979,11 +990,11 @@ pin_down = NodePath("../Pins17")
 pin_left = NodePath("../Pins6")
 pin_right = NodePath("../Pins8")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins61"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins61"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins62" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins62" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -996,11 +1007,11 @@ pin_down = NodePath("../Pins27")
 pin_left = NodePath("../Pins16")
 pin_right = NodePath("../Pins18")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins62"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins62"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins63" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins63" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1013,11 +1024,11 @@ pin_down = NodePath("../Pins37")
 pin_left = NodePath("../Pins26")
 pin_right = NodePath("../Pins28")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins63"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins63"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins64" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins64" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1030,11 +1041,11 @@ pin_down = NodePath("../Pins47")
 pin_left = NodePath("../Pins36")
 pin_right = NodePath("../Pins38")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins64"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins64"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins65" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins65" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1047,11 +1058,11 @@ pin_down = NodePath("../Pins57")
 pin_left = NodePath("../Pins46")
 pin_right = NodePath("../Pins48")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins65"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins65"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins66" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
+[node name="Pins66" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_down", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1064,11 +1075,11 @@ pin_down = NodePath("../Pins67")
 pin_left = NodePath("../Pins56")
 pin_right = NodePath("../Pins58")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins66"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins66"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins67" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
+[node name="Pins67" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up", "pin_left", "pin_right")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1080,11 +1091,11 @@ pin_up = NodePath("../Pins57")
 pin_left = NodePath("../Pins66")
 pin_right = NodePath("../Pins68")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins67"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins67"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins68" type="MarginContainer" parent="AllPins" node_paths=PackedStringArray("pin_up")]
+[node name="Pins68" type="MarginContainer" parent="Board/CenterContainer/AllPins" node_paths=PackedStringArray("pin_up")]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1094,11 +1105,11 @@ script = ExtResource("4_vv2uv")
 row_col = Vector2(6, 7)
 pin_up = NodePath("../Pins67")
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins68"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins68"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins69" type="MarginContainer" parent="AllPins"]
+[node name="Pins69" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1107,11 +1118,11 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(6, 8)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins69"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins69"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins70" type="MarginContainer" parent="AllPins"]
+[node name="Pins70" type="MarginContainer" parent="Board/CenterContainer/AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -1120,6 +1131,6 @@ theme_override_constants/margin_bottom = 5
 script = ExtResource("4_vv2uv")
 row_col = Vector2(6, 9)
 
-[node name="Pins" type="TextureRect" parent="AllPins/Pins70"]
+[node name="Pins" type="TextureRect" parent="Board/CenterContainer/AllPins/Pins70"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
