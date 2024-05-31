@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://h7dfsb1u48ik"]
+
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_k0sie"]
+
+[node name="SceneIntro" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.00351917, 0.00351917, 0.00351917, 1)
+position = Vector2(680, 384)
+scale = Vector2(2.65625, 1.5)
+texture = ExtResource("1_k0sie")
