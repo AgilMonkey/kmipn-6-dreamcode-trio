@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://prcbfpb2sos5"]
+[gd_scene load_steps=3 format=3 uid="uid://prcbfpb2sos5"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
+[ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7vs15")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -90,3 +92,5 @@ theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
 text = "Keluar
 "
+
+[connection signal="button_down" from="Main/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
