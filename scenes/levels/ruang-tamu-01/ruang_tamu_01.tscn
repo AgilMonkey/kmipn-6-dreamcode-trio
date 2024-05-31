@@ -69,9 +69,8 @@ shape = SubResource("RectangleShape2D_5kwsy")
 
 [node name="Area2DToKamarAndika" type="Area2D" parent="."]
 position = Vector2(704, 496)
-collision_layer = 2
+collision_layer = 10
 collision_mask = 2
-monitorable = false
 script = ExtResource("2_qhi1o")
 
 [node name="Square" type="Sprite2D" parent="Area2DToKamarAndika"]
@@ -107,9 +106,8 @@ position = Vector2(704, 665)
 
 [node name="Area2DToDapur" type="Area2D" parent="."]
 position = Vector2(976, 496)
-collision_layer = 2
+collision_layer = 10
 collision_mask = 2
-monitorable = false
 script = ExtResource("2_qhi1o")
 
 [node name="Square" type="Sprite2D" parent="Area2DToDapur"]
@@ -136,14 +134,16 @@ position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
+[node name="InteractIcon" parent="Area2DToDapur" instance=ExtResource("5_72kql")]
+position = Vector2(0, -136)
+
 [node name="DapurPos" type="Marker2D" parent="."]
 position = Vector2(954, 665)
 
 [node name="Area2DToLuarRumahAndika" type="Area2D" parent="."]
 position = Vector2(1832, 512)
-collision_layer = 2
+collision_layer = 10
 collision_mask = 2
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToLuarRumahAndika"]
 position = Vector2(0, 48)
@@ -189,8 +189,12 @@ metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
+[connection signal="interacting_this" from="Area2DToKamarAndika" to="Area2DToKamarAndika/InteractIcon" method="interact"]
 [connection signal="on_change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]
+[connection signal="stop_interacting_this" from="Area2DToKamarAndika" to="Area2DToKamarAndika/InteractIcon" method="uninteract"]
 [connection signal="body_entered" from="Area2DToDapur" to="Area2DToDapur" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToDapur" to="Area2DToDapur" method="_on_body_exited"]
+[connection signal="interacting_this" from="Area2DToDapur" to="Area2DToDapur/InteractIcon" method="interact"]
 [connection signal="on_change_scene" from="Area2DToDapur" to="." method="_on_area_2d_to_dapur_on_change_scene"]
+[connection signal="stop_interacting_this" from="Area2DToDapur" to="Area2DToDapur/InteractIcon" method="uninteract"]
 [connection signal="body_entered" from="Area2DToLuarRumahAndika" to="." method="_on_area_2d_to_luar_rumah_andika_body_entered"]

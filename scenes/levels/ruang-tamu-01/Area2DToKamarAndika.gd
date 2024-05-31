@@ -1,5 +1,7 @@
 extends Area2D
 
+signal interacting_this
+signal stop_interacting_this
 var can_interact: bool = false
 
 signal on_change_scene
@@ -15,3 +17,4 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	can_interact = false
+
