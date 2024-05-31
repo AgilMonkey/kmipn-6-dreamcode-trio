@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://gxvnoob7qh73"]
+[gd_scene load_steps=45 format=3 uid="uid://gxvnoob7qh73"]
 
 [ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
 [ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
@@ -47,6 +47,22 @@ height = 229.193
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_esl25"]
 radius = 62.4578
 height = 160.25
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n70my"]
+radius = 35.7546
+height = 256.573
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jcrn1"]
+radius = 35.75
+height = 256.57
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v2h1y"]
+radius = 7.85274
+height = 29.0865
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s75ux"]
+radius = 7.70181
+height = 29.0636
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1wh1"]
 radius = 104.732
@@ -323,13 +339,53 @@ collision_mask = 8
 rotation = 0.435559
 shape = SubResource("CapsuleShape2D_esl25")
 
-[node name="Egg" type="Node2D" parent="Food"]
+[node name="Egg2Clip" type="Sprite2D" parent="Food"]
+position = Vector2(66.1041, -125.176)
+scale = Vector2(1, 1)
 
-[node name="Egg2" type="Sprite2D" parent="Food/Egg"]
+[node name="Egg2" parent="Food/Egg2Clip" instance=ExtResource("3_fp883")]
+position = Vector2(-66.1041, -15.4712)
+scale = Vector2(1, 1)
+
+[node name="Sprite" parent="Food/Egg2Clip/Egg2" index="0"]
 texture = ExtResource("8_gkxau")
+region_rect = Rect2(851, 309, 220, 259)
 
-[node name="Egg1" type="Sprite2D" parent="Food/Egg"]
+[node name="CollisionShape2D" parent="Food/Egg2Clip/Egg2" index="1"]
+position = Vector2(-15.4712, -18.2841)
+rotation = 0.653928
+shape = SubResource("CapsuleShape2D_n70my")
+
+[node name="CollisionShape2D" parent="Food/Egg2Clip/Egg2/AreaCheck" index="0"]
+position = Vector2(-15.471, -18.284)
+rotation = 0.654498
+shape = SubResource("CapsuleShape2D_jcrn1")
+
+[node name="Egg1Clip" type="Sprite2D" parent="Food"]
+position = Vector2(66.1041, -125.176)
+scale = Vector2(1, 1)
+
+[node name="Egg1" parent="Food/Egg1Clip" instance=ExtResource("3_fp883")]
+position = Vector2(1.40649, 0)
+
+[node name="Sprite" parent="Food/Egg1Clip/Egg1" index="0"]
 texture = ExtResource("9_xxh1c")
+region_rect = Rect2(931, 340, 196, 227)
+
+[node name="CollisionShape2D" parent="Food/Egg1Clip/Egg1" index="1"]
+position = Vector2(2.81294, 18.2841)
+rotation = 0.765464
+scale = Vector2(7.21491, 6.98195)
+shape = SubResource("CapsuleShape2D_v2h1y")
+
+[node name="CollisionShape2D" parent="Food/Egg1Clip/Egg1/AreaCheck" index="0"]
+position = Vector2(2.813, 18.284)
+rotation = 0.7662
+scale = Vector2(7.215, 6.982)
+shape = SubResource("CapsuleShape2D_s75ux")
+
+[node name="Egg" type="Node2D" parent="Food"]
+position = Vector2(66.1041, -125.176)
 
 [node name="Water" type="Node2D" parent="Food"]
 
@@ -447,4 +503,6 @@ autoplay = "start_game"
 
 [editable path="Food/Sausage1Clip/Sausage1"]
 [editable path="Food/Sausage2Clip/Sausage2"]
+[editable path="Food/Egg2Clip/Egg2"]
+[editable path="Food/Egg1Clip/Egg1"]
 [editable path="Tangan"]
