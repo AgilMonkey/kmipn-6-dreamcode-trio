@@ -8,10 +8,10 @@ var pins: Array
 func _init():
 	pins = get_children()
 	rows = len(pins) / columns
-	set_pin_script(true)
+	set_pin_script()
 
 
-func set_pin_script(new_value):
+func set_pin_script():
 	pins = get_children()
 	for p in pins:
 		p.set_script(load("res://scenes/minigame-soldering/pin.gd"))
