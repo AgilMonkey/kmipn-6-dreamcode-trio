@@ -37,6 +37,7 @@ position = Vector2(496, 635)
 position = Vector2(184, 680)
 
 [node name="PrototypeGameplayBox" parent="." instance=ExtResource("4_kmrm7")]
+visible = false
 
 [connection signal="_on_quitted" from="PrototypeGameplayBox" to="Player" method="_on_minigame_quitted"]
 [connection signal="_on_started" from="PrototypeGameplayBox" to="Player" method="_on_minigame_started"]
