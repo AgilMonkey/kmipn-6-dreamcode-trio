@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnnadwqgs0iwg"]
+[gd_scene load_steps=5 format=3 uid="uid://bnnadwqgs0iwg"]
 
 [ext_resource type="Texture2D" uid="uid://ck2l73embhevx" path="res://assets/3.9 - Minigame IoT  soldering/board.svg" id="1_dftwm"]
 [ext_resource type="Texture2D" uid="uid://dubi1w4hslu5v" path="res://assets/3.9 - Minigame IoT  soldering/board1.png" id="3_70rig"]
+[ext_resource type="Script" path="res://scenes/minigame-soldering/AllPins.gd" id="3_esa40"]
 [ext_resource type="Texture2D" uid="uid://dpsicbeiv1olp" path="res://assets/3.9 - Minigame IoT  soldering/pins.png" id="3_mf4ol"]
 
 [node name="MinigameSoldering" type="Control"]
@@ -22,780 +23,781 @@ metadata/_edit_lock_ = true
 position = Vector2(0, 340)
 texture = ExtResource("3_70rig")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="AllPins" type="GridContainer" parent="."]
 layout_mode = 0
 offset_left = 408.0
 offset_top = 216.0
 offset_right = 884.0
 offset_bottom = 541.0
 columns = 10
+script = ExtResource("3_esa40")
 
-[node name="Pins" type="MarginContainer" parent="GridContainer"]
+[node name="Pins" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins2" type="MarginContainer" parent="GridContainer"]
+[node name="Pins2" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins2"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins2"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins3" type="MarginContainer" parent="GridContainer"]
+[node name="Pins3" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins3"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins3"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins4" type="MarginContainer" parent="GridContainer"]
+[node name="Pins4" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins4"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins4"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins5" type="MarginContainer" parent="GridContainer"]
+[node name="Pins5" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins5"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins5"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins6" type="MarginContainer" parent="GridContainer"]
+[node name="Pins6" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins6"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins6"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins7" type="MarginContainer" parent="GridContainer"]
+[node name="Pins7" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins7"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins7"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins8" type="MarginContainer" parent="GridContainer"]
+[node name="Pins8" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins8"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins8"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins9" type="MarginContainer" parent="GridContainer"]
+[node name="Pins9" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins9"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins9"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins10" type="MarginContainer" parent="GridContainer"]
+[node name="Pins10" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins10"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins10"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins11" type="MarginContainer" parent="GridContainer"]
+[node name="Pins11" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins11"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins11"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins12" type="MarginContainer" parent="GridContainer"]
+[node name="Pins12" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins12"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins12"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins13" type="MarginContainer" parent="GridContainer"]
+[node name="Pins13" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins13"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins13"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins14" type="MarginContainer" parent="GridContainer"]
+[node name="Pins14" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins14"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins14"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins15" type="MarginContainer" parent="GridContainer"]
+[node name="Pins15" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins15"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins15"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins16" type="MarginContainer" parent="GridContainer"]
+[node name="Pins16" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins16"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins16"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins17" type="MarginContainer" parent="GridContainer"]
+[node name="Pins17" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins17"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins17"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins18" type="MarginContainer" parent="GridContainer"]
+[node name="Pins18" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins18"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins18"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins19" type="MarginContainer" parent="GridContainer"]
+[node name="Pins19" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins19"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins19"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins20" type="MarginContainer" parent="GridContainer"]
+[node name="Pins20" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins20"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins20"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins21" type="MarginContainer" parent="GridContainer"]
+[node name="Pins21" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins21"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins21"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins22" type="MarginContainer" parent="GridContainer"]
+[node name="Pins22" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins22"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins22"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins23" type="MarginContainer" parent="GridContainer"]
+[node name="Pins23" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins23"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins23"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins24" type="MarginContainer" parent="GridContainer"]
+[node name="Pins24" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins24"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins24"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins25" type="MarginContainer" parent="GridContainer"]
+[node name="Pins25" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins25"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins25"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins26" type="MarginContainer" parent="GridContainer"]
+[node name="Pins26" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins26"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins26"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins27" type="MarginContainer" parent="GridContainer"]
+[node name="Pins27" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins27"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins27"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins28" type="MarginContainer" parent="GridContainer"]
+[node name="Pins28" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins28"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins28"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins29" type="MarginContainer" parent="GridContainer"]
+[node name="Pins29" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins29"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins29"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins30" type="MarginContainer" parent="GridContainer"]
+[node name="Pins30" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins30"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins30"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins31" type="MarginContainer" parent="GridContainer"]
+[node name="Pins31" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins31"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins31"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins32" type="MarginContainer" parent="GridContainer"]
+[node name="Pins32" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins32"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins32"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins33" type="MarginContainer" parent="GridContainer"]
+[node name="Pins33" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins33"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins33"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins34" type="MarginContainer" parent="GridContainer"]
+[node name="Pins34" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins34"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins34"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins35" type="MarginContainer" parent="GridContainer"]
+[node name="Pins35" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins35"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins35"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins36" type="MarginContainer" parent="GridContainer"]
+[node name="Pins36" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins36"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins36"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins37" type="MarginContainer" parent="GridContainer"]
+[node name="Pins37" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins37"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins37"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins38" type="MarginContainer" parent="GridContainer"]
+[node name="Pins38" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins38"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins38"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins39" type="MarginContainer" parent="GridContainer"]
+[node name="Pins39" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins39"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins39"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins40" type="MarginContainer" parent="GridContainer"]
+[node name="Pins40" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins40"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins40"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins41" type="MarginContainer" parent="GridContainer"]
+[node name="Pins41" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins41"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins41"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins42" type="MarginContainer" parent="GridContainer"]
+[node name="Pins42" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins42"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins42"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins43" type="MarginContainer" parent="GridContainer"]
+[node name="Pins43" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins43"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins43"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins44" type="MarginContainer" parent="GridContainer"]
+[node name="Pins44" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins44"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins44"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins45" type="MarginContainer" parent="GridContainer"]
+[node name="Pins45" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins45"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins45"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins46" type="MarginContainer" parent="GridContainer"]
+[node name="Pins46" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins46"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins46"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins47" type="MarginContainer" parent="GridContainer"]
+[node name="Pins47" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins47"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins47"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins48" type="MarginContainer" parent="GridContainer"]
+[node name="Pins48" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins48"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins48"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins49" type="MarginContainer" parent="GridContainer"]
+[node name="Pins49" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins49"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins49"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins50" type="MarginContainer" parent="GridContainer"]
+[node name="Pins50" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins50"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins50"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins51" type="MarginContainer" parent="GridContainer"]
+[node name="Pins51" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins51"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins51"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins52" type="MarginContainer" parent="GridContainer"]
+[node name="Pins52" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins52"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins52"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins53" type="MarginContainer" parent="GridContainer"]
+[node name="Pins53" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins53"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins53"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins54" type="MarginContainer" parent="GridContainer"]
+[node name="Pins54" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins54"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins54"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins55" type="MarginContainer" parent="GridContainer"]
+[node name="Pins55" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins55"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins55"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins56" type="MarginContainer" parent="GridContainer"]
+[node name="Pins56" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins56"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins56"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins57" type="MarginContainer" parent="GridContainer"]
+[node name="Pins57" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins57"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins57"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins58" type="MarginContainer" parent="GridContainer"]
+[node name="Pins58" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins58"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins58"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins59" type="MarginContainer" parent="GridContainer"]
+[node name="Pins59" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins59"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins59"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins60" type="MarginContainer" parent="GridContainer"]
+[node name="Pins60" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins60"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins60"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins61" type="MarginContainer" parent="GridContainer"]
+[node name="Pins61" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins61"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins61"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins62" type="MarginContainer" parent="GridContainer"]
+[node name="Pins62" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins62"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins62"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins63" type="MarginContainer" parent="GridContainer"]
+[node name="Pins63" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins63"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins63"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins64" type="MarginContainer" parent="GridContainer"]
+[node name="Pins64" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins64"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins64"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins65" type="MarginContainer" parent="GridContainer"]
+[node name="Pins65" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins65"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins65"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins66" type="MarginContainer" parent="GridContainer"]
+[node name="Pins66" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins66"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins66"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins67" type="MarginContainer" parent="GridContainer"]
+[node name="Pins67" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins67"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins67"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins68" type="MarginContainer" parent="GridContainer"]
+[node name="Pins68" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins68"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins68"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins69" type="MarginContainer" parent="GridContainer"]
+[node name="Pins69" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins69"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins69"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
 
-[node name="Pins70" type="MarginContainer" parent="GridContainer"]
+[node name="Pins70" type="MarginContainer" parent="AllPins"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Pins" type="TextureRect" parent="GridContainer/Pins70"]
+[node name="Pins" type="TextureRect" parent="AllPins/Pins70"]
 layout_mode = 2
 texture = ExtResource("3_mf4ol")
