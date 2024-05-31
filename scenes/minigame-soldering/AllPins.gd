@@ -1,12 +1,20 @@
+@tool
 extends GridContainer
 
 var rows: int
-
 var pins: Array
 
 
-func _ready():
+func _init():
 	pins = get_children()
+	rows = len(pins) / columns
+	set_pin_script(true)
+
+
+func set_pin_script(new_value):
+	pins = get_children()
+	for p in pins:
+		p.set_script(load("res://scenes/minigame-soldering/pin.gd"))
 	rows = len(pins) / columns
 
 

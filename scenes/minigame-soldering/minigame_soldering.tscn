@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnnadwqgs0iwg"]
+[gd_scene load_steps=6 format=3 uid="uid://bnnadwqgs0iwg"]
 
 [ext_resource type="Texture2D" uid="uid://ck2l73embhevx" path="res://assets/3.9 - Minigame IoT  soldering/board.svg" id="1_dftwm"]
 [ext_resource type="Texture2D" uid="uid://dubi1w4hslu5v" path="res://assets/3.9 - Minigame IoT  soldering/board1.png" id="3_70rig"]
 [ext_resource type="Script" path="res://scenes/minigame-soldering/AllPins.gd" id="3_esa40"]
 [ext_resource type="Texture2D" uid="uid://dpsicbeiv1olp" path="res://assets/3.9 - Minigame IoT  soldering/pins.png" id="3_mf4ol"]
+[ext_resource type="Script" path="res://scenes/minigame-soldering/pin.gd" id="4_vv2uv"]
 
 [node name="MinigameSoldering" type="Control"]
 layout_mode = 3
@@ -38,6 +39,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins"]
 layout_mode = 2
@@ -49,6 +51,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins2"]
 layout_mode = 2
@@ -60,6 +63,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins3"]
 layout_mode = 2
@@ -71,6 +75,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins4"]
 layout_mode = 2
@@ -82,6 +87,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins5"]
 layout_mode = 2
@@ -93,6 +99,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins6"]
 layout_mode = 2
@@ -104,6 +111,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins7"]
 layout_mode = 2
@@ -115,6 +123,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins8"]
 layout_mode = 2
@@ -126,6 +135,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins9"]
 layout_mode = 2
@@ -137,6 +147,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins10"]
 layout_mode = 2
@@ -148,6 +159,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins11"]
 layout_mode = 2
@@ -159,6 +171,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins12"]
 layout_mode = 2
@@ -170,6 +183,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins13"]
 layout_mode = 2
@@ -181,6 +195,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins14"]
 layout_mode = 2
@@ -192,6 +207,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins15"]
 layout_mode = 2
@@ -203,6 +219,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins16"]
 layout_mode = 2
@@ -214,6 +231,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins17"]
 layout_mode = 2
@@ -225,6 +243,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins18"]
 layout_mode = 2
@@ -236,6 +255,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins19"]
 layout_mode = 2
@@ -247,6 +267,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins20"]
 layout_mode = 2
@@ -258,6 +279,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins21"]
 layout_mode = 2
@@ -269,6 +291,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins22"]
 layout_mode = 2
@@ -280,6 +303,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins23"]
 layout_mode = 2
@@ -291,6 +315,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins24"]
 layout_mode = 2
@@ -302,6 +327,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins25"]
 layout_mode = 2
@@ -313,6 +339,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins26"]
 layout_mode = 2
@@ -324,6 +351,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins27"]
 layout_mode = 2
@@ -335,6 +363,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins28"]
 layout_mode = 2
@@ -346,6 +375,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins29"]
 layout_mode = 2
@@ -357,6 +387,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins30"]
 layout_mode = 2
@@ -368,6 +399,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins31"]
 layout_mode = 2
@@ -379,6 +411,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins32"]
 layout_mode = 2
@@ -390,6 +423,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins33"]
 layout_mode = 2
@@ -401,6 +435,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins34"]
 layout_mode = 2
@@ -412,6 +447,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins35"]
 layout_mode = 2
@@ -423,6 +459,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins36"]
 layout_mode = 2
@@ -434,6 +471,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins37"]
 layout_mode = 2
@@ -445,6 +483,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins38"]
 layout_mode = 2
@@ -456,6 +495,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins39"]
 layout_mode = 2
@@ -467,6 +507,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins40"]
 layout_mode = 2
@@ -478,6 +519,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins41"]
 layout_mode = 2
@@ -489,6 +531,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins42"]
 layout_mode = 2
@@ -500,6 +543,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins43"]
 layout_mode = 2
@@ -511,6 +555,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins44"]
 layout_mode = 2
@@ -522,6 +567,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins45"]
 layout_mode = 2
@@ -533,6 +579,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins46"]
 layout_mode = 2
@@ -544,6 +591,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins47"]
 layout_mode = 2
@@ -555,6 +603,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins48"]
 layout_mode = 2
@@ -566,6 +615,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins49"]
 layout_mode = 2
@@ -577,6 +627,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins50"]
 layout_mode = 2
@@ -588,6 +639,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins51"]
 layout_mode = 2
@@ -599,6 +651,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins52"]
 layout_mode = 2
@@ -610,6 +663,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins53"]
 layout_mode = 2
@@ -621,6 +675,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins54"]
 layout_mode = 2
@@ -632,6 +687,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins55"]
 layout_mode = 2
@@ -643,6 +699,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins56"]
 layout_mode = 2
@@ -654,6 +711,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins57"]
 layout_mode = 2
@@ -665,6 +723,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins58"]
 layout_mode = 2
@@ -676,6 +735,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins59"]
 layout_mode = 2
@@ -687,6 +747,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins60"]
 layout_mode = 2
@@ -698,6 +759,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins61"]
 layout_mode = 2
@@ -709,6 +771,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins62"]
 layout_mode = 2
@@ -720,6 +783,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins63"]
 layout_mode = 2
@@ -731,6 +795,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins64"]
 layout_mode = 2
@@ -742,6 +807,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins65"]
 layout_mode = 2
@@ -753,6 +819,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins66"]
 layout_mode = 2
@@ -764,6 +831,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins67"]
 layout_mode = 2
@@ -775,6 +843,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins68"]
 layout_mode = 2
@@ -786,6 +855,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins69"]
 layout_mode = 2
@@ -797,6 +867,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("4_vv2uv")
 
 [node name="Pins" type="TextureRect" parent="AllPins/Pins70"]
 layout_mode = 2
