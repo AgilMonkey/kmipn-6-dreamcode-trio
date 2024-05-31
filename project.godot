@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Projek-kmipn-6-dreamcode"
-run/main_scene="res://scenes/levels/kamar-andika-01/kamar_andika_01.tscn"
+run/main_scene="res://scenes/levels/main-menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 

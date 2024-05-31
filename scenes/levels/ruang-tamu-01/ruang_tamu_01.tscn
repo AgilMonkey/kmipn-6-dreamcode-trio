@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwlisj3ch1c44"]
+[gd_scene load_steps=15 format=3 uid="uid://dwlisj3ch1c44"]
 
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.gd" id="1_l1k5o"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/Area2DToKamarAndika.gd" id="2_qhi1o"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="3_4juw4"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_3cl1m"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="5_72kql"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_le5lx"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_1bgrd"]
 
@@ -16,7 +17,7 @@ size = Vector2(2312, 237.304)
 size = Vector2(160, 960)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5a68g"]
-radius = 112.285
+radius = 96.0
 
 [sub_resource type="Resource" id="Resource_dhdlo"]
 script = ExtResource("7_1bgrd")
@@ -96,6 +97,10 @@ Pencet 'Z'"
 position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
+
+[node name="InteractIcon" parent="Area2DToKamarAndika" instance=ExtResource("5_72kql")]
+visible = false
+position = Vector2(0, -136)
 
 [node name="KamarAndikaPos" type="Marker2D" parent="."]
 position = Vector2(704, 665)
