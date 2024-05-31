@@ -14,7 +14,7 @@ func _ready():
 
 func grab(grabber: Node2D):
 	grabbed.emit(self)
-	
+
 func release(grabber: Node2D):
 	released.emit(self)
 

@@ -1,21 +1,13 @@
-[gd_scene load_steps=45 format=3 uid="uid://gxvnoob7qh73"]
+[gd_scene load_steps=33 format=3 uid="uid://gxvnoob7qh73"]
 
 [ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
 [ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
 [ext_resource type="Texture2D" uid="uid://b8s1vkliy2vuf" path="res://assets/1.6 - Minigame memakan makanan/piring.png" id="2_75sqk"]
-[ext_resource type="Texture2D" uid="uid://bayo7ofu3mjsk" path="res://assets/1.6 - Minigame memakan makanan/nasi3.png" id="3_06w3k"]
 [ext_resource type="PackedScene" uid="uid://ckoidmc18bccv" path="res://scenes/1.6 - Minigame memakan makanan/Food.tscn" id="3_fp883"]
-[ext_resource type="Texture2D" uid="uid://bkpxsojcul1kv" path="res://assets/1.6 - Minigame memakan makanan/nasi2.png" id="4_umbpg"]
-[ext_resource type="Texture2D" uid="uid://cjeylnud2jjyw" path="res://assets/1.6 - Minigame memakan makanan/nasi1.png" id="5_oiww5"]
-[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/Sausage1.gd" id="6_5bqhq"]
 [ext_resource type="Texture2D" uid="uid://de6ogyyvgsxd5" path="res://assets/1.6 - Minigame memakan makanan/sosis1.png" id="7_ttgjg"]
 [ext_resource type="Texture2D" uid="uid://d3x0044jhjkqa" path="res://assets/1.6 - Minigame memakan makanan/sosis2.png" id="7_wj8dm"]
 [ext_resource type="Texture2D" uid="uid://dr1r51u3kxq2m" path="res://assets/1.6 - Minigame memakan makanan/telur2.png" id="8_gkxau"]
 [ext_resource type="Texture2D" uid="uid://caeju6adkku2j" path="res://assets/1.6 - Minigame memakan makanan/telur1.png" id="9_xxh1c"]
-[ext_resource type="Texture2D" uid="uid://dit66oyjweo7x" path="res://assets/1.6 - Minigame memakan makanan/gelas.png" id="10_ypysn"]
-[ext_resource type="Texture2D" uid="uid://bvwiiex05vfy4" path="res://assets/1.6 - Minigame memakan makanan/air1.png" id="11_ecbvl"]
-[ext_resource type="Texture2D" uid="uid://i11dndk3b5fb" path="res://assets/1.6 - Minigame memakan makanan/air2.png" id="12_y5eji"]
-[ext_resource type="PackedScene" uid="uid://c8aj6axlfxms5" path="res://scenes/1.6 - Minigame memakan makanan/vegetable.tscn" id="14_3ekcv"]
 [ext_resource type="Texture2D" uid="uid://d4dcxo1h2yv82" path="res://assets/1.6 - Minigame memakan makanan/background hitam.svg" id="15_xrxpe"]
 [ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="21_aapbp"]
 [ext_resource type="Texture2D" uid="uid://b5mn6x0ew7yep" path="res://assets/3.8 - Minigame vending machine/tangan2.svg" id="22_pyw83"]
@@ -36,18 +28,6 @@ height = 81.0344
 radius = 31.8605
 height = 314.282
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_20b10"]
-radius = 55.7665
-height = 215.059
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_de02a"]
-radius = 51.7659
-height = 229.193
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_esl25"]
-radius = 62.4578
-height = 160.25
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n70my"]
 radius = 35.7546
 height = 256.573
@@ -63,9 +43,6 @@ height = 29.0865
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s75ux"]
 radius = 7.70181
 height = 29.0636
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_t1wh1"]
-radius = 104.732
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cp76"]
 size = Vector2(1366, 162.331)
@@ -262,7 +239,6 @@ scale = Vector2(0.711, 0.711)
 
 [node name="Sausage1" parent="Food/Sausage1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-258.79, -185.654)
-script = ExtResource("6_5bqhq")
 
 [node name="Sprite" parent="Food/Sausage1Clip/Sausage1" index="0"]
 texture = ExtResource("7_ttgjg")
@@ -303,41 +279,6 @@ shape = SubResource("CapsuleShape2D_sy334")
 position = Vector2(4.21941, 4.21941)
 rotation = 0.763718
 shape = SubResource("CapsuleShape2D_hjo1u")
-
-[node name="Rice" type="Node2D" parent="Food"]
-
-[node name="Rice3Clip" type="Sprite2D" parent="Food/Rice"]
-texture = ExtResource("3_06w3k")
-
-[node name="Rice3Area" type="Area2D" parent="Food/Rice/Rice3Clip"]
-position = Vector2(-140, 130)
-rotation = 0.23911
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice3Clip/Rice3Area"]
-shape = SubResource("CapsuleShape2D_20b10")
-
-[node name="Rice2Clip" type="Sprite2D" parent="Food/Rice"]
-position = Vector2(0, 7.03235)
-texture = ExtResource("4_umbpg")
-
-[node name="Rice2Area" type="Area2D" parent="Food/Rice/Rice2Clip"]
-position = Vector2(-50, 140)
-rotation = 0.359538
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice2Clip/Rice2Area"]
-shape = SubResource("CapsuleShape2D_de02a")
-
-[node name="Rice1Clip" type="Sprite2D" parent="Food/Rice"]
-texture = ExtResource("5_oiww5")
-
-[node name="Rice1Area" type="Area2D" parent="Food/Rice/Rice1Clip"]
-position = Vector2(43.6006, 165.963)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Rice/Rice1Clip/Rice1Area"]
-rotation = 0.435559
-shape = SubResource("CapsuleShape2D_esl25")
 
 [node name="Egg2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(66.1041, -125.176)
@@ -383,38 +324,6 @@ position = Vector2(2.813, 18.284)
 rotation = 0.7662
 scale = Vector2(7.215, 6.982)
 shape = SubResource("CapsuleShape2D_s75ux")
-
-[node name="Egg" type="Node2D" parent="Food"]
-position = Vector2(66.1041, -125.176)
-
-[node name="Water" type="Node2D" parent="Food"]
-
-[node name="WaterEmpty" type="Sprite2D" parent="Food/Water"]
-texture = ExtResource("10_ypysn")
-
-[node name="Water2" type="Sprite2D" parent="Food/Water"]
-texture = ExtResource("12_y5eji")
-
-[node name="Water1" type="Sprite2D" parent="Food/Water"]
-texture = ExtResource("11_ecbvl")
-
-[node name="WaterArea" type="Area2D" parent="Food/Water"]
-position = Vector2(620, -70)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Food/Water/WaterArea"]
-shape = SubResource("CircleShape2D_t1wh1")
-
-[node name="Vegetable2" parent="Food" instance=ExtResource("14_3ekcv")]
-position = Vector2(157.524, 74.5428)
-rotation = 0.0689027
-scale = Vector2(1.40647, 1.40647)
-
-[node name="Vegetable" parent="Food" instance=ExtResource("14_3ekcv")]
-position = Vector2(199.719, -14.0647)
-rotation = -0.626602
-scale = Vector2(1.40647, 1.40647)
 
 [node name="BlackBar" type="Sprite2D" parent="."]
 visible = false

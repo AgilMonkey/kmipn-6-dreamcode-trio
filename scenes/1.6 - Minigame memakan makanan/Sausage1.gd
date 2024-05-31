@@ -10,7 +10,6 @@ signal released(object: RigidBody2D)
 	#normal_col_mask = collision_mask
 
 func grab(grabber: Node2D):
-	print("Sausage 1 grabable")
 	grabbed.emit(self)
 
 func release(grabber: Node2D):
