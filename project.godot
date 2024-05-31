@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*res://scenes/autoloads/level_manager.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
