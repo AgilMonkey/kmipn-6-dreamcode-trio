@@ -11,6 +11,8 @@ var dialogic_layout = null
 
 func _ready():
 	LevelManager.changing_scene_started.connect(func(): active_areas = [])
+	SceneTransition.transition_started.connect(func(): can_interact = false)
+	SceneTransition.transition_ended.connect(func(): can_interact = true)
 
 
 func register_area(area: InteractArea):
@@ -27,7 +29,6 @@ func unregister_area(area: InteractArea):
 
 
 func _process(delta):
-	#print(active_areas)
 	if active_areas.size() > 0 and can_interact:
 		var last_active_area = active_areas[0]
 		active_areas.sort_custom(_sort_by_distance_to_player)

@@ -19,16 +19,12 @@ func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
 	Dialogic.timeline_ended.connect(dialogue_stop)
 	
-	smoothing.teleport(	)
+	smoothing.teleport()
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
-	## Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		#velocity.y = JUMP_VELOCITY
 
 	if direction:
 		velocity.x = direction.x * speed

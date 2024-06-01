@@ -151,7 +151,7 @@ debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 position = Vector2(1536, 665)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(909, 390)
+position = Vector2(595, 389)
 limit_left = -88
 limit_top = -280
 limit_right = 1592
@@ -162,7 +162,7 @@ position_smoothing_speed = 100.0
 script = ExtResource("5_3cl1m")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(909, 390)
+position = Vector2(595, 389)
 script = ExtResource("6_le5lx")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -174,7 +174,7 @@ draw_limits = true
 limit_target = NodePath("../RoomArea/CollisionShape2D")
 
 [node name="Player" parent="." instance=ExtResource("3_4juw4")]
-position = Vector2(992, 665)
+position = Vector2(576, 664)
 
 [node name="RoomArea" type="Area2D" parent="."]
 

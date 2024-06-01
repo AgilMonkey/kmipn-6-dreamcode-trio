@@ -21,5 +21,6 @@ func transition_middle():
 	await get_tree().create_timer(0.4).timeout
 	current_transition.end_animation()
 
+
 func end_transition():
 	transition_ended.emit()
