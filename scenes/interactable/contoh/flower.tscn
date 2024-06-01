@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4xvt2gimfp7j"]
 
 [ext_resource type="Texture2D" uid="uid://cyd18qo0qf8na" path="res://assets/kenney_abstract-platformer/PNG/Other/plantGreen_6.png" id="1_4oyck"]
-[ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interactable.tscn" id="2_njpsi"]
+[ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="2_njpsi"]
 [ext_resource type="Script" path="res://scenes/interactable/contoh/flower_interact.gd" id="3_20pdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7mbo1"]
