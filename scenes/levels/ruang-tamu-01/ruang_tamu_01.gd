@@ -17,12 +17,10 @@ func _on_area_2d_to_kamar_andika_on_change_scene():
 	LevelManager.from = "RuangTamu"
 	$Player.set_process_input(false)
 	$Player.direction = Vector2.ZERO
-	SceneTransition.start_transition("FadeToBlack")
-	await SceneTransition.transition_in_middle
-	get_tree().call_deferred("change_scene_to_packed", scene_kamar_andika)
+	LevelManager.change_scene_with_transition(scene_kamar_andika)
 
 
-func _on_area_2d_to_dapur_on_change_scene():
+func _on_area_2d_to_dapur_on_change_scene(body):
 	LevelManager.from = "RuangTamu"
 	$Player.set_process_input(false)
 	$Player.direction = Vector2.ZERO
@@ -33,6 +31,4 @@ func _on_area_2d_to_luar_rumah_andika_body_entered(body):
 	LevelManager.from = "RuangTamu"
 	$Player.set_process_input(false)
 	$Player.direction = Vector2.ZERO
-	SceneTransition.start_transition("FadeToBlack")
-	await SceneTransition.transition_in_middle
-	get_tree().call_deferred("change_scene_to_packed", scene_luar_rumah_andika)
+	LevelManager.change_scene_with_transition(scene_luar_rumah_andika)

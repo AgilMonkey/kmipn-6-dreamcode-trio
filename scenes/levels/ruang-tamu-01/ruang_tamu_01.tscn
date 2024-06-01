@@ -12,10 +12,10 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_1bgrd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
-size = Vector2(2312, 237.304)
+size = Vector2(2528, 237.304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kwsy"]
-size = Vector2(160, 960)
+size = Vector2(160, 1024)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5a68g"]
 radius = 96.0
@@ -53,20 +53,14 @@ scale = Vector2(3.65625, 0.303521)
 texture = ExtResource("2_bchjv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(140, 0)
+position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_yjopp")
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 352)
 
-[node name="Sprite2D" type="Sprite2D" parent="Wall"]
-modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(-96, 0)
-scale = Vector2(0.65625, 1.84375)
-texture = ExtResource("2_bchjv")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-8, 0)
+position = Vector2(-480, 32)
 shape = SubResource("RectangleShape2D_5kwsy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
@@ -110,8 +104,8 @@ position = Vector2(0, -153)
 position = Vector2(740, 665)
 
 [node name="Area2DToDapur" type="Area2D" parent="."]
-position = Vector2(1832, 512)
-collision_layer = 10
+position = Vector2(-304, 512)
+collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToDapur"]
@@ -120,7 +114,7 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="DapurPos" type="Marker2D" parent="."]
-position = Vector2(1536, 665)
+position = Vector2(104, 665)
 
 [node name="Area2DToLuarRumahAndika" type="Area2D" parent="."]
 position = Vector2(1832, 512)
@@ -172,5 +166,5 @@ metadata/_edit_lock_ = true
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
 [connection signal="change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]
-[connection signal="body_entered" from="Area2DToDapur" to="." method="_on_area_2d_to_luar_rumah_andika_body_entered"]
+[connection signal="body_entered" from="Area2DToDapur" to="." method="_on_area_2d_to_dapur_on_change_scene"]
 [connection signal="body_entered" from="Area2DToLuarRumahAndika" to="." method="_on_area_2d_to_luar_rumah_andika_body_entered"]
