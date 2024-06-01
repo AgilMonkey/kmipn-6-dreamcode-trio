@@ -76,6 +76,16 @@ window/stretch/aspect="ignore"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/smoothing/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "blue",
+"res://scenes/autoloads/": "yellow",
+"res://scenes/levels/": "teal",
+"res://scenes/testing/": "gray",
+"res://scenes/tools/": "purple"
+}
+
 [input]
 
 ui_accept={
