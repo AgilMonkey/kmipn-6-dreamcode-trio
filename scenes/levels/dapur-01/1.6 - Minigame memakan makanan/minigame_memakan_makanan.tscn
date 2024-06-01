@@ -538,6 +538,31 @@ libraries = {
 }
 autoplay = "start_game"
 
+[node name="Tutorial" type="ColorRect" parent="."]
+offset_left = 998.0
+offset_top = 8.0
+offset_right = 1336.0
+offset_bottom = 288.0
+
+[node name="Label" type="Label" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = -9.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Z -> Mengambil makanan
+Panah -> Gerak tangan
+
+Ambil makanan dan tarik kebawah untuk memakannya"
+autowrap_mode = 2
+
 [connection signal="grabbed" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_grabbed"]
 [connection signal="released" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_released"]
 [connection signal="grabbed" from="Food/Sausage2Clip/Sausage2" to="." method="_on_sausage_2_grabbed"]
