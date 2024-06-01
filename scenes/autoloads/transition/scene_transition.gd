@@ -7,6 +7,8 @@ signal transition_started
 signal transition_in_middle
 signal transition_ended
 
+const FADE_TO_BLACK = "FadeToBlack"
+
 
 func start_transition(trans_name: String):
 	current_transition = find_child(trans_name)
