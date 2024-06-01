@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c02gsg1f7ra7j" path="res://addons/2d_shapes/Ellipse.svg" id="4_mxnek"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13gpq"]
-radius = 64.4981
+radius = 97.3242
 
 [node name="MinigameMakanInteractable" type="Node2D"]
 script = ExtResource("1_octr3")
