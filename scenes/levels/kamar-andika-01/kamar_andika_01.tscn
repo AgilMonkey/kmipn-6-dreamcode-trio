@@ -112,7 +112,7 @@ region_enabled = true
 region_rect = Rect2(37, 0, 1834, 169)
 
 [node name="Player" parent="." instance=ExtResource("2_dkl6q")]
-position = Vector2(512, 682)
+position = Vector2(721, 683)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
