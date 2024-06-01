@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://prcbfpb2sos5"]
+[gd_scene load_steps=27 format=3 uid="uid://prcbfpb2sos5"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
 [ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
@@ -16,6 +16,35 @@
 [ext_resource type="Texture2D" uid="uid://e15bq1jdgdjn" path="res://assets/1.1 Menu/LOGO Exit.png" id="14_3x8yb"]
 [ext_resource type="Texture2D" uid="uid://dm2q1ru2rcomb" path="res://assets/1.1 Menu/LOGO Play.png" id="15_cat7k"]
 [ext_resource type="Texture2D" uid="uid://dk6a2cwrpg6i7" path="res://assets/1.1 Menu/LOGO setting.png" id="16_yxuea"]
+[ext_resource type="Texture2D" uid="uid://l8ptoaexx5ae" path="res://assets/1.1 Menu/Setting/Contoh Back.png" id="17_d4gal"]
+[ext_resource type="Texture2D" uid="uid://ccq86qysnjr18" path="res://assets/1.1 Menu/contoh tombol setting.png" id="17_r7y6w"]
+[ext_resource type="Texture2D" uid="uid://bk7y2ptlt027t" path="res://assets/1.1 Menu/Setting/Icon Suara.png" id="18_y37hs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vlb2"]
+atlas = ExtResource("18_y37hs")
+region = Rect2(1069, 430, 99, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urb46"]
+atlas = ExtResource("17_d4gal")
+region = Rect2(1080, 795, 239, 81)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guowu"]
+texture = SubResource("AtlasTexture_urb46")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lojyr"]
+load_path = "res://.godot/imported/Contoh Back.png-9b84827f05e7f883cbb9a08ca3d5f744.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gthsr"]
+atlas = SubResource("CompressedTexture2D_lojyr")
+region = Rect2(1080, 795, 239, 81)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it16r"]
+texture = SubResource("AtlasTexture_gthsr")
+modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k3pi"]
+texture = SubResource("AtlasTexture_urb46")
+modulate_color = Color(0.385493, 0.385492, 0.385492, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -276,25 +305,64 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Title" type="TextureRect" parent="Opsi"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = -24.0
+offset_right = 2215.0
+offset_bottom = 1056.0
+scale = Vector2(0.484172, 0.484172)
+texture = ExtResource("17_r7y6w")
+
+[node name="SoundIcon" type="TextureRect" parent="Opsi"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 270.0
+offset_right = 794.0
+offset_bottom = 315.0
+texture = SubResource("AtlasTexture_1vlb2")
+expand_mode = 1
+
 [node name="BackMenuButton" type="Button" parent="Opsi"]
-custom_minimum_size = Vector2(258, 50)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -467.0
-offset_top = -280.0
-offset_right = -209.0
-offset_bottom = -212.59
+offset_left = -625.0
+offset_top = -248.0
+offset_right = -475.0
+offset_bottom = -197.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_guowu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_it16r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1k3pi")
+
+[node name="HSlider" type="HSlider" parent="Opsi"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 277.0
+offset_right = 1045.0
+offset_bottom = 297.0
 theme = ExtResource("12_d4ebp")
+
+[node name="CheckBox" type="CheckBox" parent="Opsi"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 346.0
+offset_right = 944.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.310617, 0.310617, 0.310617, 1)
+theme_override_colors/font_hover_color = Color(0.162066, 0.162066, 0.162066, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_7a8rw")
-theme_override_font_sizes/font_size = 30
-text = "Kembali "
+text = "Fullscreen"
 
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Main" method="hide"]

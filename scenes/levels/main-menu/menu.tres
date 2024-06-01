@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://5t7yg2sk5h4e"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://5t7yg2sk5h4e"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_kvt7m"]
 [ext_resource type="Texture2D" uid="uid://dmy0v8b1ft6fd" path="res://assets/1.1 Menu/Kotak tombol.svg" id="1_wd1vy"]
@@ -74,6 +74,21 @@ expand_margin_bottom = 5.0
 region_rect = Rect2(1086, 245, 458, 124)
 modulate_color = Color(0.230315, 0.230315, 0.230315, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2vsy"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yne02"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqep3"]
+content_margin_top = 20.0
+border_color = Color(0.6, 0.6, 0.6, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
@@ -98,3 +113,6 @@ Button/styles/focus = SubResource("StyleBoxFlat_f8p63")
 Button/styles/hover = SubResource("StyleBoxTexture_uti5d")
 Button/styles/normal = SubResource("StyleBoxTexture_fdv2t")
 Button/styles/pressed = SubResource("StyleBoxTexture_g1x80")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_q2vsy")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_yne02")
+HSlider/styles/slider = SubResource("StyleBoxFlat_uqep3")
