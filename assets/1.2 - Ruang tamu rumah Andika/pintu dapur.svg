@@ -1,0 +1,17 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #3a3c40;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Pintu_Dapur" data-name="Pintu Dapur">
+    <rect class="cls-1" x="52.063" y="515.156" width="20.938" height="428.844"/>
+    <path class="cls-2" d="M52.056,515.16S50.24,491.961,60,489c0,0,11.842-5.337,13,26.16"/>
+  </g>
+</svg>
