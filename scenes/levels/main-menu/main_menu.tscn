@@ -1,7 +1,176 @@
-[gd_scene load_steps=3 format=3 uid="uid://prcbfpb2sos5"]
+[gd_scene load_steps=35 format=3 uid="uid://prcbfpb2sos5"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
 [ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
+[ext_resource type="Texture2D" uid="uid://dpnk6gwebunec" path="res://assets/1.1 Menu/Meja Background.png" id="2_yoqq3"]
+[ext_resource type="Texture2D" uid="uid://ckby7idjkw4io" path="res://assets/1.1 Menu/Buku1.png" id="3_nrmqw"]
+[ext_resource type="Texture2D" uid="uid://bg8tkbj706xwl" path="res://assets/1.1 Menu/Coretan Buku.png" id="4_7qnaa"]
+[ext_resource type="Texture2D" uid="uid://cajb7i4npurk0" path="res://assets/1.1 Menu/Gambar2.png" id="5_134qt"]
+[ext_resource type="Texture2D" uid="uid://5fkuxta38ax8" path="res://assets/1.1 Menu/Gambar1.png" id="5_dbw7j"]
+[ext_resource type="Texture2D" uid="uid://cbjtpq3vhfncq" path="res://assets/1.1 Menu/Laptop1.svg" id="7_tu64o"]
+[ext_resource type="Texture2D" uid="uid://3um54oltt83g" path="res://assets/1.1 Menu/Penghapus1.svg" id="8_upt6l"]
+[ext_resource type="Texture2D" uid="uid://dgjt8fc0ldlm0" path="res://assets/1.1 Menu/Pulpen1.svg" id="9_pbciq"]
+[ext_resource type="Texture2D" uid="uid://dy361mi32rk1" path="res://assets/kenney_cursor-pack/PNG/Outline/Double/hand_point.png" id="11_l60pu"]
+[ext_resource type="Theme" uid="uid://5t7yg2sk5h4e" path="res://scenes/levels/main-menu/menu.tres" id="12_d4ebp"]
+[ext_resource type="Texture2D" uid="uid://bte8x3xyer3r3" path="res://assets/1.1 Menu/LOGO About.png" id="13_kugli"]
+[ext_resource type="Texture2D" uid="uid://e15bq1jdgdjn" path="res://assets/1.1 Menu/LOGO Exit.png" id="14_3x8yb"]
+[ext_resource type="Texture2D" uid="uid://dm2q1ru2rcomb" path="res://assets/1.1 Menu/LOGO Play.png" id="15_cat7k"]
+[ext_resource type="Texture2D" uid="uid://dk6a2cwrpg6i7" path="res://assets/1.1 Menu/LOGO setting.png" id="16_yxuea"]
+[ext_resource type="Texture2D" uid="uid://l8ptoaexx5ae" path="res://assets/1.1 Menu/Setting/Contoh Back.png" id="17_d4gal"]
+[ext_resource type="Texture2D" uid="uid://ccq86qysnjr18" path="res://assets/1.1 Menu/contoh tombol setting.png" id="17_r7y6w"]
+[ext_resource type="Texture2D" uid="uid://bk7y2ptlt027t" path="res://assets/1.1 Menu/Setting/Icon Suara.png" id="18_y37hs"]
+[ext_resource type="Texture2D" uid="uid://csllwlrsth5ud" path="res://assets/kenney_cursor-pack/Vector/Outline/cross_large.svg" id="20_yriv4"]
+[ext_resource type="Texture2D" uid="uid://fwmvb55p6u8x" path="res://assets/kenney_cursor-pack/Vector/Outline/cross_small.svg" id="21_ox4fi"]
+[ext_resource type="Texture2D" uid="uid://duvuu56jput7s" path="res://assets/logo/logo Putih_.png" id="22_n6fua"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vlb2"]
+atlas = ExtResource("18_y37hs")
+region = Rect2(1069, 430, 99, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urb46"]
+atlas = ExtResource("17_d4gal")
+region = Rect2(1080, 795, 239, 81)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guowu"]
+texture = SubResource("AtlasTexture_urb46")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lojyr"]
+load_path = "res://.godot/imported/Contoh Back.png-9b84827f05e7f883cbb9a08ca3d5f744.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gthsr"]
+atlas = SubResource("CompressedTexture2D_lojyr")
+region = Rect2(1080, 795, 239, 81)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it16r"]
+texture = SubResource("AtlasTexture_gthsr")
+modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k3pi"]
+texture = SubResource("AtlasTexture_urb46")
+modulate_color = Color(0.385493, 0.385492, 0.385492, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqgva"]
+bg_color = Color(0.886262, 0.886262, 0.886261, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shqkx"]
+atlas = ExtResource("22_n6fua")
+region = Rect2(136, 128, 208, 144)
+
+[sub_resource type="Animation" id="Animation_m5w6c"]
+resource_name = "start"
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AboutPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(426, 840), Vector2(426, 109)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AboutPanel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.662745)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mfm7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AboutPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(426, 125)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AboutPanel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_42lhv"]
+_data = {
+"RESET": SubResource("Animation_mfm7a"),
+"start": SubResource("Animation_m5w6c")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,14 +181,102 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vs15")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.529066, 0.529067, 0.529067, 1)
+texture = ExtResource("2_yoqq3")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Buku" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 32.0
+offset_right = -57.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nrmqw")
+expand_mode = 1
+
+[node name="Buku2" type="TextureRect" parent="Background/Buku"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -114.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7qnaa")
+expand_mode = 1
+
+[node name="Buku4" type="TextureRect" parent="Background/Buku/Buku2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 32.0
+offset_right = -13.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_134qt")
+expand_mode = 1
+
+[node name="Buku3" type="TextureRect" parent="Background/Buku/Buku2/Buku4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -16.0
+offset_right = 66.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_dbw7j")
+expand_mode = 1
+
+[node name="Laptop" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -693.0
+offset_top = -456.0
+offset_right = 692.0
+offset_bottom = 456.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_tu64o")
+expand_mode = 1
+
+[node name="Penghapus" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -184.0
+offset_right = 1904.0
+offset_bottom = 896.0
+texture = ExtResource("8_upt6l")
+
+[node name="Penghapus2" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = -448.0
+offset_top = -240.0
+offset_right = 1472.0
+offset_bottom = 840.0
+texture = ExtResource("9_pbciq")
 
 [node name="Main" type="Control" parent="."]
 layout_mode = 1
@@ -28,69 +285,322 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="Title" type="Label" parent="Main"]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 176.0
-offset_right = 509.0
-offset_bottom = 264.0
-theme_override_fonts/font = ExtResource("1_7a8rw")
-theme_override_font_sizes/font_size = 60
-text = "Andika Diary"
+[node name="Pointer" type="Control" parent="Main"]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="Main"]
+[node name="PointerGfx" type="TextureRect" parent="Main/Pointer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -32.0
+offset_right = 46.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.93445
+texture = ExtResource("11_l60pu")
+
+[node name="MenuPivot" type="Control" parent="Main"]
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 28.0
+offset_right = 44.0
+offset_bottom = 68.0
+rotation = -0.0685354
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="Main/MenuPivot"]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -534.0
-offset_top = 216.0
-offset_right = -276.0
-offset_bottom = 476.0
+offset_left = 747.0
+offset_top = 236.0
+offset_right = 1014.0
+offset_bottom = 564.0
 grow_horizontal = 0
 theme_override_constants/separation = 20
+alignment = 1
 
-[node name="LanjutkanButton" type="Button" parent="Main/ButtonsContainer"]
+[node name="LanjutkanButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 visible = false
 custom_minimum_size = Vector2(258, 50)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
 text = "Lanjutkan"
 
-[node name="GameBaruButton" type="Button" parent="Main/ButtonsContainer"]
+[node name="GameBaruButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
 text = "Mulai Game Baru"
 
-[node name="OpsiButton" type="Button" parent="Main/ButtonsContainer"]
+[node name="OpsiButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
 text = "Opsi"
 
-[node name="TentangButton" type="Button" parent="Main/ButtonsContainer"]
+[node name="TentangButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
-text = "Tentang"
+text = "Tentang "
 
-[node name="KeluarButton" type="Button" parent="Main/ButtonsContainer"]
+[node name="KeluarButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
-text = "Keluar
-"
+text = "Keluar "
 
-[connection signal="button_down" from="Main/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
+[node name="AboutIcon" type="TextureRect" parent="Main/MenuPivot"]
+layout_mode = 0
+offset_left = -153.0
+offset_top = -39.0
+offset_right = 1767.0
+offset_bottom = 1041.0
+scale = Vector2(0.755909, 0.733281)
+mouse_filter = 2
+texture = ExtResource("13_kugli")
+
+[node name="ExitIcon" type="TextureRect" parent="Main/MenuPivot"]
+layout_mode = 0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 1717.0
+offset_bottom = 976.0
+scale = Vector2(0.732035, 0.72297)
+mouse_filter = 2
+texture = ExtResource("14_3x8yb")
+expand_mode = 1
+
+[node name="PlayIcon" type="TextureRect" parent="Main/MenuPivot"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 64.0
+offset_right = 1707.0
+offset_bottom = 1060.0
+scale = Vector2(0.739796, 0.739796)
+mouse_filter = 2
+texture = ExtResource("15_cat7k")
+expand_mode = 1
+
+[node name="SettingIcon" type="TextureRect" parent="Main/MenuPivot"]
+layout_mode = 0
+offset_left = -161.0
+offset_top = -13.0
+offset_right = 1610.0
+offset_bottom = 983.0
+scale = Vector2(0.826973, 0.826973)
+mouse_filter = 2
+texture = ExtResource("16_yxuea")
+expand_mode = 1
+
+[node name="Opsi" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="TextureRect" parent="Opsi"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = -24.0
+offset_right = 2215.0
+offset_bottom = 1056.0
+scale = Vector2(0.484172, 0.484172)
+texture = ExtResource("17_r7y6w")
+
+[node name="SoundIcon" type="TextureRect" parent="Opsi"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 270.0
+offset_right = 794.0
+offset_bottom = 315.0
+texture = SubResource("AtlasTexture_1vlb2")
+expand_mode = 1
+
+[node name="BackMenuButton" type="Button" parent="Opsi"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -625.0
+offset_top = -248.0
+offset_right = -475.0
+offset_bottom = -197.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_guowu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_it16r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1k3pi")
+
+[node name="VolumeSlider" type="HSlider" parent="Opsi"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 277.0
+offset_right = 1045.0
+offset_bottom = 297.0
+theme = ExtResource("12_d4ebp")
+value = 100.0
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="Opsi"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 346.0
+offset_right = 944.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.310617, 0.310617, 0.310617, 1)
+theme_override_colors/font_hover_color = Color(0.162066, 0.162066, 0.162066, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_7a8rw")
+text = "Fullscreen"
+
+[node name="Tentang" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="ColorRect" parent="Tentang"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AboutPanel" type="Panel" parent="Tentang"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -259.0
+offset_right = 261.0
+offset_bottom = 351.999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tqgva")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Tentang/AboutPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -251.5
+offset_right = 198.0
+offset_bottom = 251.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tentang/AboutPanel/ScrollContainer"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme_override_constants/separation = 4315
+
+[node name="Label" type="Label" parent="Tentang/AboutPanel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "TENTANG
+Nama Tim: RiverCode
+Kampus: Politeknik Negeri Banjarmasin
+
+- Muhammad Agil Fadilah
+- M. Habibie Nugraha
+- Muhammad Azhim Nugroho
+
+Dibuat untuk kompetisi KMIPN VI"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Logo" type="TextureRect" parent="Tentang/AboutPanel"]
+modulate = Color(0.886275, 0.886275, 0.886275, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = 53.5
+offset_right = 102.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_shqkx")
+
+[node name="TextureButton" type="TextureButton" parent="Tentang/AboutPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_top = 15.0
+offset_right = -13.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("20_yriv4")
+texture_pressed = ExtResource("21_ox4fi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tentang"]
+libraries = {
+"": SubResource("AnimationLibrary_42lhv")
+}
+
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Main" method="hide"]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Opsi" method="show"]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/TentangButton" to="Tentang/AnimationPlayer" method="play" binds= ["start"]]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/KeluarButton" to="." method="_on_keluar_button_button_down"]
+[connection signal="button_down" from="Opsi/BackMenuButton" to="Main" method="show"]
+[connection signal="button_down" from="Opsi/BackMenuButton" to="Opsi" method="hide"]
+[connection signal="button_down" from="Tentang/AboutPanel/TextureButton" to="Tentang/AnimationPlayer" method="play_backwards" binds= ["start"]]
