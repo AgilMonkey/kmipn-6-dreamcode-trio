@@ -7,7 +7,7 @@ class_name Interactable
 
 var is_interacting := false
 
-@export var interact_icon: Sprite2D
+var interact_icon: Node2D
 
 
 func _ready():
@@ -26,8 +26,16 @@ func interact():
 
 
 func _on_area_entered(area):
-	if interact_icon: interact_icon.show()
+	print("AAA")
 
 
 func _on_area_exited(area):
-	if interact_icon: interact_icon.hide()
+	pass
+
+
+func _on_body_entered(body):
+	print("AAA")
+
+
+func _on_body_exited(body):
+	pass # Replace with function body.

@@ -4,11 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="2_n4ft6"]
 
 [node name="InteractArea" type="Area2D"]
-collision_layer = 8
-collision_mask = 8
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_ejm47")
 
 [node name="InteractIcon" parent="." instance=ExtResource("2_n4ft6")]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
