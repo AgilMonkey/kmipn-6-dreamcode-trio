@@ -1,11 +1,22 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var current_transition
+
+signal transition_started
+signal transition_in_middle
+signal transition_ended
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func start_transition(trans_name: String):
+	current_transition = find_child(trans_name)
+	current_transition.begin_animation()
+	transition_started.emit()
+
+
+func transition_middle():
+	await get_tree().create_timer(1.0).timeout
+	current_transition.end_animation()
+
+func  end_transition():
+	transition_ended.emit()
