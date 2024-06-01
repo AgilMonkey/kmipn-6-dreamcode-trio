@@ -17,6 +17,11 @@ func _ready():
 	# I'm to lazy so just set flip automically
 	var win_size = DisplayServer.window_get_size() as Vector2
 	$Player.flip_h(win_size.x/2 < $Player.global_position.x)
+	
+	# Quick dirty check to get out after eating
+	if Dialogic.VAR.sudah_makan:
+		$KeluarBelumMakan.process_mode = Node.PROCESS_MODE_DISABLED
+		$Area2DToLuarRumahAndika.process_mode = Node.PROCESS_MODE_INHERIT
 
 
 func _on_area_2d_to_kamar_andika_on_change_scene():

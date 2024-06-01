@@ -16,7 +16,7 @@ signal minigame_selesai
 @onready var vegetable_2_return_pos: Vector2 = $Food/Vegetable2Clip/Vegetable2.global_position
 
 var food_to_follow = null
-var food_count = 9
+var food_count = 1
 
 func selesaikan_game():
 	minigame_selesai.emit()
