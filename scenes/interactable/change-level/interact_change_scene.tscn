@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://lupynadexn8r"]
+
+[ext_resource type="Script" path="res://scenes/interactable/change-level/interact_change_scene.gd" id="1_gjdt5"]
+
+[node name="InteractChangeScene" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gjdt5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

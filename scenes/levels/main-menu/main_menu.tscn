@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://prcbfpb2sos5"]
+
+[ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
+[ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vs15")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529066, 0.529067, 0.529067, 1)
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 176.0
+offset_right = 509.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 60
+text = "Andika Diary"
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="Main"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -534.0
+offset_top = 216.0
+offset_right = -276.0
+offset_bottom = 476.0
+grow_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="LanjutkanButton" type="Button" parent="Main/ButtonsContainer"]
+visible = false
+custom_minimum_size = Vector2(258, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 30
+text = "Lanjutkan"
+
+[node name="GameBaruButton" type="Button" parent="Main/ButtonsContainer"]
+custom_minimum_size = Vector2(258, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 30
+text = "Mulai Game Baru"
+
+[node name="OpsiButton" type="Button" parent="Main/ButtonsContainer"]
+custom_minimum_size = Vector2(258, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 30
+text = "Opsi"
+
+[node name="TentangButton" type="Button" parent="Main/ButtonsContainer"]
+custom_minimum_size = Vector2(258, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 30
+text = "Tentang"
+
+[node name="KeluarButton" type="Button" parent="Main/ButtonsContainer"]
+custom_minimum_size = Vector2(258, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7a8rw")
+theme_override_font_sizes/font_size = 30
+text = "Keluar
+"
+
+[connection signal="button_down" from="Main/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]

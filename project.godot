@@ -11,24 +11,28 @@ config_version=5
 [application]
 
 config/name="Projek-kmipn-6-dreamcode"
-run/main_scene="res://scenes/levels/prototype level 1/prototype_level_01.tscn"
+run/main_scene="res://scenes/levels/main-menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-LevelManager="*res://scenes/autoloads/level_manager.tscn"
+LevelManager="*res://scenes/autoloads/level-manager/level_manager.tscn"
+InteractManager="*res://scenes/autoloads/interact-manager/interact_manager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+SceneTransition="*res://scenes/autoloads/transition/scene_transition.tscn"
 
 [dialogic]
 
 directories/dch_directory={
+"Andika": "res://dialogic-stuff/characters/Andika.dch",
 "flower": "res://dialogic-stuff/characters/flower.dch",
 "test_mc": "res://dialogic-stuff/characters/test_mc.dch"
 }
 directories/dtl_directory={
 "box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
+"komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
 variables={}

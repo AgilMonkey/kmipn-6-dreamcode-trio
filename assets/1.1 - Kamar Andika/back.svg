@@ -1,0 +1,21 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #88584c;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #38333e;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g>
+      <path class="cls-1" d="M-3,945l1924,1,1,139L-3,1082V945Z"/>
+      <rect class="cls-2" x="-31" y="-55" width="90" height="1111"/>
+      <rect class="cls-2" x="1867" y="-40" width="114" height="597"/>
+    </g>
+  </g>
+</svg>

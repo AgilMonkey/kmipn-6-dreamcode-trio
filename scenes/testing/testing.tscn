@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://boaj6qp2a7r41"]
+[gd_scene load_steps=8 format=3 uid="uid://boaj6qp2a7r41"]
 
 [ext_resource type="Script" path="res://scenes/testing/testing.gd" id="1_35fbk"]
 [ext_resource type="Texture2D" uid="uid://dcuv013erp1xw" path="res://assets/kenney_abstract-platformer/PNG/Tiles/Green tiles/tileGreen_05.png" id="2_bj7wr"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="4_6mu3t"]
-[ext_resource type="PackedScene" uid="uid://b4xvt2gimfp7j" path="res://scenes/interactable/contoh/flower.tscn" id="4_uhqjw"]
+[ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="4_4747t"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="5_8orjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcy38"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67lli"]
+size = Vector2(96, 112)
 
 [node name="Testing" type="Node"]
 script = ExtResource("1_35fbk")
@@ -16,9 +20,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Level2D" instance=ExtResource("4_6mu3t")]
 position = Vector2(416, 632)
-
-[node name="Flower" parent="Level2D" instance=ExtResource("4_uhqjw")]
-position = Vector2(928, 640)
 
 [node name="Ground" type="StaticBody2D" parent="Level2D"]
 position = Vector2(717, 701)
@@ -30,3 +31,21 @@ texture = ExtResource("2_bj7wr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/Ground"]
 shape = SubResource("RectangleShape2D_wcy38")
+
+[node name="InteractArea" parent="Level2D" instance=ExtResource("4_4747t")]
+position = Vector2(600, 536)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/InteractArea"]
+shape = SubResource("RectangleShape2D_67lli")
+
+[node name="InteractIcon" parent="Level2D/InteractArea" instance=ExtResource("5_8orjb")]
+position = Vector2(0, -104)
+
+[node name="InteractArea2" parent="Level2D" instance=ExtResource("4_4747t")]
+position = Vector2(720, 536)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/InteractArea2"]
+shape = SubResource("RectangleShape2D_67lli")
+
+[node name="InteractIcon" parent="Level2D/InteractArea2" instance=ExtResource("5_8orjb")]
+position = Vector2(0, -104)

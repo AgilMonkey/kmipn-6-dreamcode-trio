@@ -1,0 +1,51 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #77675c;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #9e8a6c;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #775e4e;
+      }
+
+      .cls-5 {
+        fill: #6da0bd;
+      }
+
+      .cls-6 {
+        fill: #9089a3;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #6d6b71;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g id="Lemari">
+      <path class="cls-1" d="M676.576,753.4l138.339-1C823.634,752.341,827,752,827,752l-3,196-124-4Z"/>
+      <path class="cls-2" d="M670,947.01L676.576,754.5l138.169-2.2L812.551,947.01H670Z"/>
+      <path class="cls-3" d="M674.383,799.6H814.745V804H674.383v-4.4Z"/>
+      <path id="Rectangle_14_copy" data-name="Rectangle 14 copy" class="cls-3" d="M673.287,845.806H813.648v4.4H673.287v-4.4Z"/>
+      <rect id="Rectangle_14_copy_3" data-name="Rectangle 14 copy 3" class="cls-4" x="674.375" y="896.406" width="140.375" height="4.406"/>
+      <path id="Rectangle_14_copy_2" data-name="Rectangle 14 copy 2" class="cls-3" d="M673.287,942.61H813.648v4.4H673.287v-4.4Z"/>
+      <path class="cls-1" d="M673.714,753.414l2.864,0.129L672.859,947l-2.863-.13Z"/>
+      <path class="cls-5" d="M685,753l75.01-.1L746.774,706H696.035Z"/>
+      <path class="cls-6" d="M711,753l-13.862-47L686,753h25Z"/>
+      <path class="cls-7" d="M765,753V741h47v12H765Z"/>
+      <rect class="cls-8" x="730" y="781" width="30" height="6"/>
+      <rect id="Rectangle_16_copy" data-name="Rectangle 16 copy" class="cls-8" x="730" y="832" width="30" height="6"/>
+      <rect id="Rectangle_16_copy_2" data-name="Rectangle 16 copy 2" class="cls-8" x="730" y="882" width="30" height="6"/>
+      <rect id="Rectangle_16_copy_3" data-name="Rectangle 16 copy 3" class="cls-8" x="730" y="929" width="30" height="6"/>
+    </g>
+  </g>
+</svg>
