@@ -9,6 +9,11 @@ var can_interact = true
 var dialogic_layout = null
 
 
+func _ready():
+	SceneTransition.transition_started.connect(func(): can_interact = false)
+	SceneTransition.transition_ended.connect(func(): can_interact = true)
+
+
 func register_area(area: InteractArea):
 	active_areas.push_back(area)
 	
