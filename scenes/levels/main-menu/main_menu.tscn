@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://prcbfpb2sos5"]
+[gd_scene load_steps=11 format=3 uid="uid://prcbfpb2sos5"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
 [ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
+[ext_resource type="Texture2D" uid="uid://dpnk6gwebunec" path="res://assets/1.1 Menu/Meja Background.png" id="2_yoqq3"]
+[ext_resource type="Texture2D" uid="uid://ckby7idjkw4io" path="res://assets/1.1 Menu/Buku1.png" id="3_nrmqw"]
+[ext_resource type="Texture2D" uid="uid://bg8tkbj706xwl" path="res://assets/1.1 Menu/Coretan Buku.png" id="4_7qnaa"]
+[ext_resource type="Texture2D" uid="uid://cajb7i4npurk0" path="res://assets/1.1 Menu/Gambar2.png" id="5_134qt"]
+[ext_resource type="Texture2D" uid="uid://5fkuxta38ax8" path="res://assets/1.1 Menu/Gambar1.png" id="5_dbw7j"]
+[ext_resource type="Texture2D" uid="uid://cbjtpq3vhfncq" path="res://assets/1.1 Menu/Laptop1.svg" id="7_tu64o"]
+[ext_resource type="Texture2D" uid="uid://3um54oltt83g" path="res://assets/1.1 Menu/Penghapus1.svg" id="8_upt6l"]
+[ext_resource type="Texture2D" uid="uid://dgjt8fc0ldlm0" path="res://assets/1.1 Menu/Pulpen1.svg" id="9_pbciq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,14 +20,102 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vs15")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.529066, 0.529067, 0.529067, 1)
+texture = ExtResource("2_yoqq3")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Buku" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 32.0
+offset_right = -57.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nrmqw")
+expand_mode = 1
+
+[node name="Buku2" type="TextureRect" parent="Background/Buku"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -114.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7qnaa")
+expand_mode = 1
+
+[node name="Buku4" type="TextureRect" parent="Background/Buku/Buku2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 32.0
+offset_right = -13.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_134qt")
+expand_mode = 1
+
+[node name="Buku3" type="TextureRect" parent="Background/Buku/Buku2/Buku4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -16.0
+offset_right = 66.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_dbw7j")
+expand_mode = 1
+
+[node name="Laptop" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -693.0
+offset_top = -456.0
+offset_right = 692.0
+offset_bottom = 456.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_tu64o")
+expand_mode = 1
+
+[node name="Penghapus" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -184.0
+offset_right = 1904.0
+offset_bottom = 896.0
+texture = ExtResource("8_upt6l")
+
+[node name="Penghapus2" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = -448.0
+offset_top = -240.0
+offset_right = 1472.0
+offset_bottom = 840.0
+texture = ExtResource("9_pbciq")
 
 [node name="Main" type="Control" parent="."]
 layout_mode = 1
@@ -28,16 +124,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Title" type="Label" parent="Main"]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 176.0
-offset_right = 509.0
-offset_bottom = 264.0
-theme_override_fonts/font = ExtResource("1_7a8rw")
-theme_override_font_sizes/font_size = 60
-text = "Andika Diary"
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="Main"]
 layout_mode = 1
