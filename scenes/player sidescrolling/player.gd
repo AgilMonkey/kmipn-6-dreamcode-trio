@@ -19,7 +19,7 @@ func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
 	Dialogic.timeline_ended.connect(dialogue_stop)
 	
-	smoothing.teleport()
+	smoothing.teleport(	)
 
 func _physics_process(delta):
 	# Add the gravity.
