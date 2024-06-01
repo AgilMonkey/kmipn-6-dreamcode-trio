@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dbciaxfp3jdr5" path="res://assets/1.2 - Ruang tamu rumah Andika/Lampu.svg" id="23_ih67q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mrqde"]
-radius = 66.5033
+radius = 107.749
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
 size = Vector2(2528, 245.766)
@@ -162,6 +162,7 @@ region_enabled = true
 region_rect = Rect2(273, 198, 303, 644)
 
 [node name="InteractDialogue" parent="AyahAndika" instance=ExtResource("17_by32x")]
+timeline_path = "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AyahAndika/InteractDialogue"]
 shape = SubResource("CircleShape2D_mrqde")
@@ -169,6 +170,9 @@ debug_color = Color(0.721859, 0.475684, 0.144176, 0.42)
 
 [node name="InteractIcon" parent="AyahAndika/InteractDialogue" instance=ExtResource("5_72kql")]
 position = Vector2(0, -164)
+
+[node name="AyahAndikaSpeechBuble" type="Node2D" parent="AyahAndika"]
+position = Vector2(49.4442, -122.861)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(704, 784)
@@ -288,6 +292,7 @@ position = Vector2(-1.51024, 395.462)
 scale = Vector2(0.0832928, 1.05483)
 texture = ExtResource("2_bchjv")
 
+[connection signal="dialogue_started" from="AyahAndika/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
 [connection signal="change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]

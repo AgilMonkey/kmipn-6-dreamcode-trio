@@ -4,6 +4,8 @@ extends Node2D
 @onready var scene_dapur: PackedScene = preload("res://scenes/levels/dapur-01/dapur_01.tscn")
 @onready var scene_luar_rumah_andika: PackedScene = preload("res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.tscn")
 
+@onready var ayah_andika_buble = $AyahAndika/AyahAndikaSpeechBuble 
+
 
 func _ready():
 	var from_pos: Node2D = get_node(LevelManager.from + "Pos")
@@ -33,3 +35,6 @@ func _on_area_2d_to_luar_rumah_andika_change_scene():
 	$Player.direction = Vector2.ZERO
 	LevelManager.change_scene_with_transition(scene_luar_rumah_andika)
 
+
+func _on_interact_dialogue_dialogue_started(layout):
+	layout.register_character(load("res://dialogic-stuff/characters/Ayah.dch"), ayah_andika_buble)
