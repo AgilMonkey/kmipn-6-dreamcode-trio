@@ -493,8 +493,8 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(33.8986, -107.324)
-rotation = -0.291313
+position = Vector2(29.6621, -106.188)
+rotation = -0.148597
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -502,8 +502,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(23.2461, -132.353)
-rotation = -0.294505
+position = Vector2(22.6778, -132.477)
+rotation = -0.151789
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -518,7 +518,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -208.033)
+position = Vector2(-4.25413, -211.484)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -556,16 +556,16 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-40.3334, -103.159)
-rotation = 0.20519
+position = Vector2(-37.3087, -102.03)
+rotation = 0.104521
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3611, -132.536)
-rotation = 0.20519
+position = Vector2(-26.3594, -132.662)
+rotation = 0.104521
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
@@ -608,7 +608,7 @@ remote_path = NodePath("../../../../../SpriteContainer/Tubuh/Kepala")
 [node name="LeftShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(-31.8558, -55.6886)
 rotation = 0.0896672
-scale = Vector2(0.999832, 0.999832)
+scale = Vector2(0.999831, 0.999831)
 rest = Transform2D(0.995983, 0.0895471, -0.0895471, 0.995983, -31.8558, -55.6886)
 auto_calculate_length_and_angle = false
 length = 32.0925
@@ -639,7 +639,7 @@ bone_angle = 0.0
 
 [node name="RightShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(19.5854, -59.4641)
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, 19.5854, -59.4641)
 auto_calculate_length_and_angle = false
 length = 35.573
@@ -739,6 +739,9 @@ bone_angle = 0.0
 position = Vector2(0, -112)
 shape = SubResource("CapsuleShape2D_lvp4u")
 
+[node name="TextBubblePivot" type="Node2D" parent="."]
+position = Vector2(56, -192)
+
 [node name="InteractNode" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
@@ -748,9 +751,6 @@ script = ExtResource("3_4n47d")
 position = Vector2(0, -112)
 shape = SubResource("CapsuleShape2D_lvp4u")
 debug_color = Color(0, 0.6, 0.701961, 0)
-
-[node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
-position = Vector2(56, -192)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
