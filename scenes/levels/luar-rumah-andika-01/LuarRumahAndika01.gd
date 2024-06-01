@@ -6,9 +6,17 @@ var scene_ruang_tamu: String = "res://scenes/levels/ruang-tamu-01/ruang_tamu_01.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var from_pos: Node2D = get_node(LevelManager.from + "Pos")
+	
+	var from_pos: Node2D
+	var from_nodes = get_tree().get_nodes_in_group("from")
+	
+	for node in from_nodes:
+		if node.name == LevelManager.from + "Pos":
+			from_pos = node
+			break
+	
 	if from_pos != null:
-		$Player.position = from_pos.position
+		$Player.global_position = from_pos.global_position
 		$Player.smoothing.teleport()
 
 
