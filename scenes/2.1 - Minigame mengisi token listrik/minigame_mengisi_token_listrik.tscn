@@ -1,0 +1,221 @@
+[gd_scene load_steps=25 format=3 uid="uid://hqn85c8x3b7h"]
+
+[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/minigame_mengisi_token_listrik.gd" id="1_ktepa"]
+[ext_resource type="Texture2D" uid="uid://j8ihq5mottew" path="res://assets/2.1 - Minigame mengisi token listrik/tokenlistrik1.png" id="2_5gbap"]
+[ext_resource type="Texture2D" uid="uid://cu1ujg7krq6rv" path="res://assets/2.1 - Minigame mengisi token listrik/tempatenter.png" id="3_14wip"]
+[ext_resource type="Texture2D" uid="uid://c1j8dqe177pwe" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala1.png" id="4_pool2"]
+[ext_resource type="Texture2D" uid="uid://ncngblpnmatu" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala2.png" id="5_eui72"]
+[ext_resource type="Texture2D" uid="uid://6m6n5sn603hu" path="res://assets/2.1 - Minigame mengisi token listrik/0.png" id="6_qqrmd"]
+[ext_resource type="Texture2D" uid="uid://c5dblf1lfmxyy" path="res://assets/2.1 - Minigame mengisi token listrik/1.png" id="7_b56ob"]
+[ext_resource type="Texture2D" uid="uid://lvxjwtmnss70" path="res://assets/2.1 - Minigame mengisi token listrik/2.png" id="8_onwmj"]
+[ext_resource type="Texture2D" uid="uid://dljh61hniynrw" path="res://assets/2.1 - Minigame mengisi token listrik/3.png" id="9_au7w4"]
+[ext_resource type="Texture2D" uid="uid://dnu0w4wib80aq" path="res://assets/2.1 - Minigame mengisi token listrik/4.png" id="10_dnwcx"]
+[ext_resource type="Texture2D" uid="uid://bev0lfmhufy1h" path="res://assets/2.1 - Minigame mengisi token listrik/5.png" id="11_1oxef"]
+[ext_resource type="Texture2D" uid="uid://cdvt80hwciswc" path="res://assets/2.1 - Minigame mengisi token listrik/6.png" id="12_phuqa"]
+[ext_resource type="Texture2D" uid="uid://b10grmkv5i7vx" path="res://assets/2.1 - Minigame mengisi token listrik/7.png" id="13_fneca"]
+[ext_resource type="Texture2D" uid="uid://csb467ydgqt60" path="res://assets/2.1 - Minigame mengisi token listrik/8.png" id="14_cokbj"]
+[ext_resource type="Texture2D" uid="uid://bveva7rpjc80b" path="res://assets/2.1 - Minigame mengisi token listrik/9.png" id="15_ijhkp"]
+[ext_resource type="Texture2D" uid="uid://bs1oq6ko6q1th" path="res://assets/2.1 - Minigame mengisi token listrik/tombolback.png" id="16_1pcc4"]
+[ext_resource type="Texture2D" uid="uid://dm6jl6skh05s4" path="res://assets/2.1 - Minigame mengisi token listrik/tombolenter.png" id="17_74ojk"]
+[ext_resource type="PackedScene" uid="uid://duwp2pyscq4nd" path="res://scenes/2.1 - Minigame mengisi token listrik/number_pad/button.tscn" id="19_44s70"]
+[ext_resource type="PackedScene" uid="uid://bpioa6v4mpus7" path="res://scenes/2.1 - Minigame mengisi token listrik/hand_pointing/hand_pointing.tscn" id="21_83p73"]
+[ext_resource type="Texture2D" uid="uid://c5qvf20oy86h1" path="res://assets/2.1 - Minigame mengisi token listrik/tangan1.svg" id="21_bnt5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bvif"]
+size = Vector2(194, 831)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l1hx"]
+size = Vector2(169.999, 1537.5)
+
+[sub_resource type="Animation" id="Animation_cnbh1"]
+resource_name = "start_game"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HandPointing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(793, 920), Vector2(832, 584)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HandPointing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}, {
+"args": [true],
+"method": &"set_process_input"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HandPointing/HandSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_bnt5c")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4us8e"]
+_data = {
+"start_game": SubResource("Animation_cnbh1")
+}
+
+[node name="minigame-mengisi-token-listrik" type="Node2D"]
+script = ExtResource("1_ktepa")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(143, 96)
+scale = Vector2(0.711, 0.711)
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = -201.125
+offset_top = -135.021
+offset_right = -161.125
+offset_bottom = -95.0211
+scale = Vector2(48.0271, 27.0031)
+color = Color(0.952941, 0.952941, 0.952941, 1)
+
+[node name="Tokenlistrik1" type="Sprite2D" parent="Background"]
+position = Vector2(759, 397)
+texture = ExtResource("2_5gbap")
+
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = 293.952
+offset_top = -81.5752
+offset_right = 333.952
+offset_bottom = -41.5752
+color = Color(0.952941, 0.952941, 0.952941, 1)
+
+[node name="Tokenlistrik2" type="Sprite2D" parent="Background"]
+position = Vector2(312.236, -73.1364)
+texture = ExtResource("2_5gbap")
+region_enabled = true
+region_rect = Rect2(446.729, 167.835, 132.424, 274.823)
+
+[node name="Tempatenter" type="Sprite2D" parent="Background"]
+position = Vector2(759, 401)
+texture = ExtResource("3_14wip")
+
+[node name="Tombolnyala1" type="Sprite2D" parent="Background"]
+position = Vector2(759, 401)
+texture = ExtResource("4_pool2")
+
+[node name="Tombolnyala2" type="Sprite2D" parent="Background"]
+position = Vector2(759, 401)
+texture = ExtResource("5_eui72")
+
+[node name="NumberPad" type="Node2D" parent="."]
+position = Vector2(143, 92)
+scale = Vector2(0.711, 0.711)
+
+[node name="0" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("6_qqrmd")
+
+[node name="1" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("7_b56ob")
+
+[node name="2" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("8_onwmj")
+
+[node name="3" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("9_au7w4")
+
+[node name="4" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("10_dnwcx")
+
+[node name="5" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("11_1oxef")
+
+[node name="6" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("12_phuqa")
+
+[node name="7" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("13_fneca")
+
+[node name="8" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("14_cokbj")
+
+[node name="9" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("15_ijhkp")
+
+[node name="TombolBack" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("16_1pcc4")
+
+[node name="TombolEnter" type="Sprite2D" parent="NumberPad"]
+position = Vector2(759, 401)
+texture = ExtResource("17_74ojk")
+
+[node name="Button" parent="." instance=ExtResource("19_44s70")]
+position = Vector2(145, 268)
+
+[node name="ButtonArea" parent="Button" index="0"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="TanganBorder" type="StaticBody2D" parent="."]
+position = Vector2(3, 3)
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(14, 388)
+shape = SubResource("RectangleShape2D_6bvif")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(1360, 373)
+shape = SubResource("RectangleShape2D_6bvif")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(684, -18)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_8l1hx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(691, 823)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_8l1hx")
+
+[node name="HandPointing" parent="." instance=ExtResource("21_83p73")]
+position = Vector2(793, 920)
+collision_layer = 24
+collision_mask = 24
+
+[node name="PressArea" parent="HandPointing" index="2"]
+collision_layer = 32
+
+[node name="AnimationMinigame" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4us8e")
+}
+autoplay = "start_game"
+
+[editable path="Button"]
+[editable path="HandPointing"]
