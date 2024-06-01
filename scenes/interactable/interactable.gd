@@ -7,7 +7,7 @@ class_name InteractArea
 
 var is_interacting := false
 
-var interact_icon: Node2D
+var interact_icon: InteractIcon
 
 
 func _ready():
@@ -34,8 +34,10 @@ func _on_area_exited(area):
 
 
 func _on_body_entered(body):
-	print("AAA")
+	if interact_icon:
+		interact_icon.interact()
 
 
 func _on_body_exited(body):
-	pass # Replace with function body.
+	if interact_icon:
+		interact_icon.uninteract()

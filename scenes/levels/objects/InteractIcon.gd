@@ -2,6 +2,9 @@ extends Node2D
 class_name InteractIcon
 
 
+@onready var animation_player := $AnimationPlayer
+
+
 func _ready():
 	hide()
 	var p = get_parent()
@@ -10,8 +13,8 @@ func _ready():
 
 
 func interact():
-	show()
+	animation_player.play("start")
 
 
 func uninteract():
-	hide()
+	animation_player.play("end")
