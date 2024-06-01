@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckoidmc18bccv"]
+
+[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/Food.gd" id="1_u7naa"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qrpyx"]
+
+[node name="Food" type="RigidBody2D"]
+y_sort_enabled = true
+collision_layer = 25
+collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_qrpyx")
+gravity_scale = 0.0
+freeze_mode = 1
+script = ExtResource("1_u7naa")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+region_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AreaCheck" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCheck"]
+
+[connection signal="grabbed" from="." to="." method="_on_grabbed"]
+[connection signal="released" from="." to="." method="_on_released"]
