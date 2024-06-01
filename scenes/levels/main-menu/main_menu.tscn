@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://prcbfpb2sos5"]
+[gd_scene load_steps=35 format=3 uid="uid://prcbfpb2sos5"]
 
 [ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_7a8rw"]
 [ext_resource type="Script" path="res://scenes/levels/main-menu/main_menu.gd" id="1_7vs15"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://l8ptoaexx5ae" path="res://assets/1.1 Menu/Setting/Contoh Back.png" id="17_d4gal"]
 [ext_resource type="Texture2D" uid="uid://ccq86qysnjr18" path="res://assets/1.1 Menu/contoh tombol setting.png" id="17_r7y6w"]
 [ext_resource type="Texture2D" uid="uid://bk7y2ptlt027t" path="res://assets/1.1 Menu/Setting/Icon Suara.png" id="18_y37hs"]
+[ext_resource type="Texture2D" uid="uid://csllwlrsth5ud" path="res://assets/kenney_cursor-pack/Vector/Outline/cross_large.svg" id="20_yriv4"]
+[ext_resource type="Texture2D" uid="uid://fwmvb55p6u8x" path="res://assets/kenney_cursor-pack/Vector/Outline/cross_small.svg" id="21_ox4fi"]
+[ext_resource type="Texture2D" uid="uid://duvuu56jput7s" path="res://assets/logo/logo Putih_.png" id="22_n6fua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vlb2"]
 atlas = ExtResource("18_y37hs")
@@ -45,6 +48,129 @@ modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k3pi"]
 texture = SubResource("AtlasTexture_urb46")
 modulate_color = Color(0.385493, 0.385492, 0.385492, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqgva"]
+bg_color = Color(0.886262, 0.886262, 0.886261, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shqkx"]
+atlas = ExtResource("22_n6fua")
+region = Rect2(136, 128, 208, 144)
+
+[sub_resource type="Animation" id="Animation_m5w6c"]
+resource_name = "start"
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AboutPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(426, 840), Vector2(426, 109)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AboutPanel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.662745)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mfm7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AboutPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(426, 125)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AboutPanel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_42lhv"]
+_data = {
+"RESET": SubResource("Animation_mfm7a"),
+"start": SubResource("Animation_m5w6c")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -153,7 +279,6 @@ offset_bottom = 840.0
 texture = ExtResource("9_pbciq")
 
 [node name="Main" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -297,6 +422,7 @@ texture = ExtResource("16_yxuea")
 expand_mode = 1
 
 [node name="Opsi" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -341,15 +467,16 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_guowu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_it16r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1k3pi")
 
-[node name="HSlider" type="HSlider" parent="Opsi"]
+[node name="VolumeSlider" type="HSlider" parent="Opsi"]
 layout_mode = 0
 offset_left = 814.0
 offset_top = 277.0
 offset_right = 1045.0
 offset_bottom = 297.0
 theme = ExtResource("12_d4ebp")
+value = 100.0
 
-[node name="CheckBox" type="CheckBox" parent="Opsi"]
+[node name="FullscreenCheckBox" type="CheckBox" parent="Opsi"]
 layout_mode = 0
 offset_left = 837.0
 offset_top = 346.0
@@ -364,9 +491,116 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_7a8rw")
 text = "Fullscreen"
 
+[node name="Tentang" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="ColorRect" parent="Tentang"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AboutPanel" type="Panel" parent="Tentang"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -259.0
+offset_right = 261.0
+offset_bottom = 351.999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tqgva")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Tentang/AboutPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -251.5
+offset_right = 198.0
+offset_bottom = 251.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tentang/AboutPanel/ScrollContainer"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme_override_constants/separation = 4315
+
+[node name="Label" type="Label" parent="Tentang/AboutPanel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "TENTANG
+Nama Tim: RiverCode
+Kampus: Politeknik Negeri Banjarmasin
+
+- Muhammad Agil Fadilah
+- M. Habibie Nugraha
+- Muhammad Azhim Nugroho
+
+Dibuat untuk kompetisi KMIPN VI"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Logo" type="TextureRect" parent="Tentang/AboutPanel"]
+modulate = Color(0.886275, 0.886275, 0.886275, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = 53.5
+offset_right = 102.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_shqkx")
+
+[node name="TextureButton" type="TextureButton" parent="Tentang/AboutPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_top = 15.0
+offset_right = -13.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("20_yriv4")
+texture_pressed = ExtResource("21_ox4fi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tentang"]
+libraries = {
+"": SubResource("AnimationLibrary_42lhv")
+}
+
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Main" method="hide"]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Opsi" method="show"]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/TentangButton" to="Tentang/AnimationPlayer" method="play" binds= ["start"]]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/KeluarButton" to="." method="_on_keluar_button_button_down"]
 [connection signal="button_down" from="Opsi/BackMenuButton" to="Main" method="show"]
 [connection signal="button_down" from="Opsi/BackMenuButton" to="Opsi" method="hide"]
+[connection signal="button_down" from="Tentang/AboutPanel/TextureButton" to="Tentang/AnimationPlayer" method="play_backwards" binds= ["start"]]
