@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 var current_transition
@@ -15,7 +15,8 @@ func start_transition(trans_name: String):
 
 
 func transition_middle():
-	await get_tree().create_timer(1.0).timeout
+	transition_in_middle.emit()
+	await get_tree().create_timer(0.4).timeout
 	current_transition.end_animation()
 
 func  end_transition():

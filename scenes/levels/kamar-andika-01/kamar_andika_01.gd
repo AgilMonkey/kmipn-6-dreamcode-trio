@@ -10,4 +10,6 @@ func _ready():
 
 func _on_area_2d_ke_ruang_tamu_body_entered(body):
 	LevelManager.from = "KamarAndika"
+	SceneTransition.start_transition("FadeToBlack")
+	await SceneTransition.transition_in_middle
 	get_tree().change_scene_to_file(scene_ruang_tamu)
