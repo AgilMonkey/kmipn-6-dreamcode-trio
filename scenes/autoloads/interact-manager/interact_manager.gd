@@ -54,6 +54,7 @@ func _input(event):
 			can_interact = false
 			
 			active_areas[0].hide_interact_icon()
+			active_areas[0].interacted.emit()
 			await active_areas[0].interact.call()
 			
 			can_interact = true

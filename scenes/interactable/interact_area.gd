@@ -7,8 +7,11 @@ class_name InteractArea
 
 
 var is_interacting := false
+var interacted_count := 0
 
 var interact_icon: InteractIcon
+
+signal interacted
 
 
 ## Callable ini nanti akan di overwrite sama interaksi kalian sendiri
@@ -16,21 +19,22 @@ var interact: Callable = func():
 	print("Interacting with " + name)
 
 
-func _ready():
+func _init():
 	Dialogic.timeline_started.connect(func(): is_interacting = true)
 	Dialogic.timeline_ended.connect(func(): is_interacting = false)
+	
+	interacted.connect(add_interacted_count)
 
 
-func _process(delta):
-	pass
-	#visible = not is_interacting 
+func add_interacted_count():
+	interacted_count += 1
 
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	InteractManager.register_area(self)
 
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	InteractManager.unregister_area(self)
 
 

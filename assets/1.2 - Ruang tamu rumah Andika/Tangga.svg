@@ -1,0 +1,62 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #97856f;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #9f8c75;
+      }
+
+      .cls-3 {
+        fill: #88776a;
+      }
+
+      .cls-4 {
+        fill: #7f6152;
+      }
+
+      .cls-5 {
+        fill: #9c7964;
+      }
+
+      .cls-6 {
+        fill: #a07c6a;
+      }
+
+      .cls-7 {
+        fill: #ad8974;
+      }
+    </style>
+  </defs>
+  <g id="Tangga">
+    <path class="cls-1" d="M1516,947.005L844,946l1-486.99"/>
+    <path class="cls-2" d="M1516,944L844,455.607l1,32.959L1472,944h44Z"/>
+    <path class="cls-3" d="M1561,944V919.034l6-1-1-13.983-77-1-1-37.953h6v-15.98l-81-3-1-32.959,5-1V797.185h-80V758.233h7V744.25l-83-1,1-41.948h6V689.318l-83-1V651.365h8l-1-12.984-81-2V599.429h8V586.445l-81-1V539.5h8V526.519H964V480.576h9V467.592l-75-1V425.644h6V413.658H844l1,44.945L1515,944h46Z"/>
+    <g>
+      <g>
+        <rect id="Rectangle_22_copy_5" data-name="Rectangle 22 copy 5" class="cls-4" x="869" y="314" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_4" data-name="Rectangle 22 copy 4" class="cls-4" x="983" y="397" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_2" data-name="Rectangle 22 copy 2" class="cls-4" x="1109" y="484" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_3" data-name="Rectangle 22 copy 3" class="cls-4" x="1242" y="581" width="11" height="34"/>
+        <rect id="Rectangle_22_copy" data-name="Rectangle 22 copy" class="cls-4" x="1385" y="684" width="11" height="34"/>
+        <rect class="cls-4" x="1524" y="785" width="11" height="34"/>
+      </g>
+      <g id="Group_9_copy" data-name="Group 9 copy">
+        <rect id="Rectangle_22_copy_5-2" data-name="Rectangle 22 copy 5" class="cls-5" x="875" y="229" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_4-2" data-name="Rectangle 22 copy 4" class="cls-5" x="989" y="312" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_2-2" data-name="Rectangle 22 copy 2" class="cls-5" x="1115" y="399" width="11" height="34"/>
+        <rect id="Rectangle_22_copy_3-2" data-name="Rectangle 22 copy 3" class="cls-5" x="1248" y="496" width="11" height="34"/>
+        <rect id="Rectangle_22_copy-2" data-name="Rectangle 22 copy" class="cls-5" x="1391" y="599" width="11" height="34"/>
+        <rect class="cls-5" x="1530" y="700" width="11" height="34"/>
+      </g>
+      <path class="cls-6" d="M1573,784.2l-1,47.941L832,307.789V257.851Z"/>
+      <path id="Shape_37_copy" data-name="Shape 37 copy" class="cls-7" d="M1573,693.313l-1,47.941L832,216.9V166.963Z"/>
+    </g>
+  </g>
+</svg>

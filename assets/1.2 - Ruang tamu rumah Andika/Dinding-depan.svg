@@ -1,0 +1,31 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2d3c50;
+      }
+
+      .cls-2 {
+        fill: #162937;
+      }
+
+      .cls-3 {
+        fill: #2b434b;
+      }
+
+      .cls-4 {
+        fill: #3a5862;
+      }
+    </style>
+  </defs>
+  <g id="DIn">
+    <g id="Lantai">
+      <rect class="cls-1" x="-5" y="944" width="1930" height="53"/>
+    </g>
+    <rect class="cls-2" x="-27" y="79" width="56" height="909"/>
+    <rect class="cls-2" x="-236" y="-9" width="2235" height="150"/>
+    <rect class="cls-3" x="1893" y="141" width="34" height="358"/>
+    <rect class="cls-3" x="29" y="141" width="23" height="803"/>
+    <rect class="cls-4" x="29" y="141" width="1891" height="22"/>
+  </g>
+</svg>

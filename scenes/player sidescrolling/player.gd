@@ -55,6 +55,13 @@ func _input(event):
 		interact_node.interact()
 
 
+func flip_h(flipped: bool):
+	if flipped:
+		$GfxPlayer.scale.x = -1
+	else:
+		$GfxPlayer.scale.x = 1
+
+
 func dialogue_start():
 	set_process_input(false)
 	direction = Vector2.ZERO
