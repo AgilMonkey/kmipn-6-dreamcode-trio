@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dwlisj3ch1c44"]
+[gd_scene load_steps=30 format=3 uid="uid://dwlisj3ch1c44"]
 
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.gd" id="1_l1k5o"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
@@ -18,9 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://bh82m7y4245nq" path="res://assets/1.2 - Ruang tamu rumah Andika/Dinding-hiasan.png" id="14_rjfvt"]
 [ext_resource type="Texture2D" uid="uid://bn4d407ihsc4f" path="res://assets/1.2 - Ruang tamu rumah Andika/Gambar.svg" id="15_3mg1q"]
 [ext_resource type="Texture2D" uid="uid://calyxoag25ex5" path="res://assets/1.2 - Ruang tamu rumah Andika/background hitam.svg" id="16_5rew2"]
+[ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="17_by32x"]
 [ext_resource type="Texture2D" uid="uid://7fo8ylks7smh" path="res://assets/1.2 - Ruang tamu rumah Andika/meja.svg" id="21_jsdjg"]
 [ext_resource type="Texture2D" uid="uid://dr4oelhilkaww" path="res://assets/1.2 - Ruang tamu rumah Andika/Pintu-Keluar-Rumah.svg" id="22_8jtj8"]
+[ext_resource type="Texture2D" uid="uid://cfifwuj367s11" path="res://assets/Karakter Ayah Andika - Duduk.svg" id="22_15u17"]
 [ext_resource type="Texture2D" uid="uid://dbciaxfp3jdr5" path="res://assets/1.2 - Ruang tamu rumah Andika/Lampu.svg" id="23_ih67q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrqde"]
+radius = 66.5033
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
 size = Vector2(2528, 245.766)
@@ -49,6 +54,8 @@ scale = Vector2(1.35, 1.14074)
 texture = ExtResource("2_kvcuq")
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Tangga" type="Sprite2D" parent="Background"]
 position = Vector2(166.296, 3.78327)
@@ -145,12 +152,31 @@ texture = ExtResource("16_5rew2")
 region_enabled = true
 region_rect = Rect2(0, 988, 1920, 92)
 
+[node name="AyahAndika" type="Node2D" parent="."]
+position = Vector2(363.065, 515.367)
+
+[node name="AyahAndikaSprite" type="Sprite2D" parent="AyahAndika"]
+scale = Vector2(0.39393, 0.393929)
+texture = ExtResource("22_15u17")
+region_enabled = true
+region_rect = Rect2(273, 198, 303, 644)
+
+[node name="InteractDialogue" parent="AyahAndika" instance=ExtResource("17_by32x")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AyahAndika/InteractDialogue"]
+shape = SubResource("CircleShape2D_mrqde")
+debug_color = Color(0.721859, 0.475684, 0.144176, 0.42)
+
+[node name="InteractIcon" parent="AyahAndika/InteractDialogue" instance=ExtResource("5_72kql")]
+position = Vector2(0, -164)
+
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(704, 784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(32, -4.23077)
 shape = SubResource("RectangleShape2D_yjopp")
+metadata/_edit_lock_ = true
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 352)
