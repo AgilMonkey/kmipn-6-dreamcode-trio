@@ -1,0 +1,66 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #382622;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #301f1b;
+      }
+
+      .cls-3 {
+        fill: #bdb66d;
+      }
+
+      .cls-4 {
+        fill: #a38997;
+      }
+
+      .cls-5 {
+        fill: #50954f;
+      }
+
+      .cls-6 {
+        fill: #c2be63;
+      }
+
+      .cls-7 {
+        fill: #6a694e;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g id="Meja2">
+      <path class="cls-1" d="M246,945V737L67,734l3,211H246Z"/>
+      <path class="cls-2" d="M54,734l223,4v16L55,751Z"/>
+      <path class="cls-3" d="M85,734l13-56h35l9,57Z"/>
+      <path class="cls-4" d="M107,734l-8-56L87,734h20Z"/>
+      <path class="cls-5" d="M142,710.25s-4.4-11.1,13-22.8c0,0,4.065-10.674-8-13.881,0,0-16.381.037-13-25.778,0,0,.007-8.857,5-10.906,0,0,4.481-2.917,6,12.889,0,0,2.076,9.139,8,4.958,0,0,.9-24.375,1-25.778s13.848-11.51,35-.992c0,0,1,25.085,2,32.718,0,0,5.212,7.136,7-4.957l1-9.914s8.619-8.174,16,0c0,0,2.479,19.78-2,28.752,0,0-5.8,6.351-19,4.957,0,0-5.192,8.085,4,7.932,0,0,12.313-3.1,8,12.888,0,0-3.382,6.562-1,8.924Z"/>
+      <g>
+        <path class="cls-6" d="M189,696l2-7v7h-2Z"/>
+        <path class="cls-6" d="M167,689v-4l1,4h-1Z"/>
+        <path class="cls-6" d="M180,671l2-5v5h-2Z"/>
+        <path class="cls-6" d="M146,666v-5l2,4Z"/>
+        <path class="cls-6" d="M203,678v4l-4-5Z"/>
+        <path class="cls-6" d="M152,674l-4,2h5Z"/>
+        <path class="cls-6" d="M143,648l1-5,1,6Z"/>
+        <path class="cls-6" d="M180,631l1-3-3,3h2Z"/>
+        <path class="cls-6" d="M165,640c0.349-3.378,1-4,1-4v4h-1Z"/>
+        <path class="cls-6" d="M156,701v-5l2,4Z"/>
+        <path class="cls-6" d="M201,649l-1-6,3,5Z"/>
+        <path class="cls-6" d="M210,659l2-5v5h-2Z"/>
+        <path class="cls-6" d="M166,625v-4l2,4h-2Z"/>
+        <path class="cls-6" d="M186,639l7-11-3,12Z"/>
+        <path class="cls-6" d="M160,637l-3-5,1,6Z"/>
+        <path class="cls-6" d="M139,641l-2-5v5h2Z"/>
+        <path class="cls-6" d="M211,645l3-5-1,6Z"/>
+      </g>
+      <path class="cls-7" d="M129,710l87-2-17,29H146Z"/>
+    </g>
+  </g>
+</svg>

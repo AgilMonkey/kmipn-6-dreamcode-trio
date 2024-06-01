@@ -1,0 +1,39 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333546;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #70738a;
+      }
+
+      .cls-3 {
+        fill: #4a4d5f;
+      }
+
+      .cls-4 {
+        fill: #525569;
+      }
+
+      .cls-5 {
+        fill: #61657d;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g id="Tempat_Tidur_copy" data-name="Tempat Tidur copy">
+      <path id="Shape_41_copy" data-name="Shape 41 copy" class="cls-1" d="M796.155,944.67L798.11,829l390.92,2.659V946Z"/>
+      <path id="Shape_43_copy" data-name="Shape 43 copy" class="cls-2" d="M1158.04,797l-4.99-88-300.912-3-8,87,19,1Z"/>
+      <path id="Shape_44_copy_3" data-name="Shape 44 copy 3" class="cls-3" d="M1127.05,791s-7.8-25.61-16.99-31l-59.98-8-3,41Z"/>
+      <path id="Shape_44_copy_2" data-name="Shape 44 copy 2" class="cls-3" d="M1127.05,791s-7.8-25.61-16.99-31l-59.98-8-3,41Z"/>
+      <path id="Shape_46_copy" data-name="Shape 46 copy" class="cls-4" d="M952.107,728.957s-20.963-5.817-32.99-.985c0,0-15.271,14.749-21.993,36.457l-4,13.8-5,5.912,9,0.985,25.992,0.985,14,0.986,24.992,1.97-2-17.736Z"/>
+      <path id="Shape_45_copy" data-name="Shape 45 copy" class="cls-5" d="M1051.11,794s4.82-53.874-7-70.112l-8-9.888s-75.609,1.445-86,10.787c0,0-14.1,52.511,5,68.314Z"/>
+    </g>
+  </g>
+</svg>
