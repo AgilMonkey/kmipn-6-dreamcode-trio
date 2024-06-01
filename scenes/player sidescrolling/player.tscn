@@ -493,8 +493,8 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(29.6621, -106.188)
-rotation = -0.148597
+position = Vector2(32.6261, -106.915)
+rotation = -0.247847
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -502,8 +502,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(22.6778, -132.477)
-rotation = -0.151789
+position = Vector2(23.0712, -132.382)
+rotation = -0.251039
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -518,7 +518,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -211.484)
+position = Vector2(-4.25413, -209.084)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -556,16 +556,16 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-37.3087, -102.03)
-rotation = 0.104521
+position = Vector2(-39.4245, -102.783)
+rotation = 0.17453
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3594, -132.662)
-rotation = 0.104521
+position = Vector2(-26.3592, -132.575)
+rotation = 0.17453
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
@@ -740,7 +740,7 @@ position = Vector2(0, -112)
 shape = SubResource("CapsuleShape2D_lvp4u")
 
 [node name="TextBubblePivot" type="Node2D" parent="."]
-position = Vector2(56, -192)
+position = Vector2(-1.67667, -194.973)
 
 [node name="InteractNode" type="Area2D" parent="."]
 collision_layer = 8
