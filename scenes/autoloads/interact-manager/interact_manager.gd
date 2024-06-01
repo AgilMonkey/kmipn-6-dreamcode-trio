@@ -9,6 +9,12 @@ var can_interact = true
 var dialogic_layout = null
 
 
+func _ready():
+	LevelManager.changing_scene_started.connect(func(): active_areas = [])
+	SceneTransition.transition_started.connect(func(): can_interact = false)
+	SceneTransition.transition_ended.connect(func(): can_interact = true)
+
+
 func register_area(area: InteractArea):
 	active_areas.push_back(area)
 	
@@ -18,6 +24,8 @@ func register_area(area: InteractArea):
 func unregister_area(area: InteractArea):
 	area.hide_interact_icon()
 	active_areas.erase(area)
+	#if area.name == "Area2DToDapur":
+		#print(active_areas)
 
 
 func _process(delta):

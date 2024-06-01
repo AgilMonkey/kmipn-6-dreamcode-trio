@@ -26,10 +26,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	## Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		#velocity.y = JUMP_VELOCITY
-
 	if direction:
 		velocity.x = direction.x * speed
 		gfx_player.scale.x = -1 if direction.x <= 0 else 1

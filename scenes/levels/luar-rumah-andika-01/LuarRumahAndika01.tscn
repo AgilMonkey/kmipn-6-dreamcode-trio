@@ -93,10 +93,10 @@ position = Vector2(0, -80)
 position = Vector2(-22, 208)
 
 [node name="Player" parent="." instance=ExtResource("2_vqacv")]
-position = Vector2(688, 664)
+position = Vector2(560, 664)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(688, 384)
+position = Vector2(560, 384)
 script = ExtResource("3_omytb")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -106,7 +106,7 @@ follow_damping = true
 draw_limits = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(688, 384)
+position = Vector2(560, 384)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("3_lykbd")

@@ -16,4 +16,6 @@ func tunggu_input():
 
 
 func end_intro():
+	SceneTransition.start_transition(SceneTransition.FADE_TO_BLACK)
+	await SceneTransition.transition_in_middle
 	get_tree().change_scene_to_file("res://scenes/levels/kamar-andika-01/kamar_andika_01.tscn")

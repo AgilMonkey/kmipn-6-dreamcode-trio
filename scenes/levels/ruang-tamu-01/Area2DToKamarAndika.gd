@@ -6,8 +6,14 @@ var can_interact: bool = false
 
 signal on_change_scene
 
+
+func _ready():
+	can_interact = false
+
+
 func _input(event):
 	if Input.is_action_just_pressed("interact") and can_interact:
+		can_interact = false
 		on_change_scene.emit()
 
 
