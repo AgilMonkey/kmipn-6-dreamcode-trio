@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://0xmmdcr30fx7"]
 
-[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/minigame_mencari_barang.gd" id="1_q14on"]
 [ext_resource type="Texture2D" uid="uid://d0ccyfundu2l5" path="res://assets/2.3 - Minigame mencari barang/Background taman.png" id="2_bjbie"]
 [ext_resource type="Texture2D" uid="uid://dwa2bthjiigo3" path="res://assets/2.3 - Minigame mencari barang/Background Jalan.png" id="3_h5dkx"]
 [ext_resource type="Texture2D" uid="uid://kq08bs50e7g6" path="res://assets/2.3 - Minigame mencari barang/Background Hitam.png" id="4_4l3he"]
@@ -29,8 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://dkj3417k026h" path="res://assets/2.3 - Minigame mencari barang/Kotak1.png" id="27_160ea"]
 [ext_resource type="Texture2D" uid="uid://ct3xfnjhsusqd" path="res://assets/2.3 - Minigame mencari barang/kotak2.png" id="28_vpt8n"]
 [ext_resource type="Texture2D" uid="uid://6h63vg0kcv3h" path="res://assets/kenney_cursor-pack/Vector/Outline/hand_small_point.svg" id="30_e2mtx"]
-[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/ObjectiveButtonArea.gd" id="30_u45go"]
-[ext_resource type="Script" path="res://scenes/2.3 - Minigame mencari barang/HandCursor.gd" id="30_vlods"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/ObjectiveButtonArea.gd" id="30_u45go"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/HandCursor.gd" id="30_vlods"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ckue"]
 size = Vector2(67, 58)
