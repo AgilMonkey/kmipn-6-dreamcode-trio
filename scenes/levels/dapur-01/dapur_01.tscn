@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpfr0gavm0tp8"]
+
+[ext_resource type="Script" path="res://scenes/levels/dapur-01/dapur_01.gd" id="1_d6p53"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_k53kt"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_j5mvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unkw3"]
+size = Vector2(2064, 237.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eh48"]
+size = Vector2(240, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dc0rl"]
+size = Vector2(304, 336)
+
+[node name="Dapur01" type="Node2D"]
+script = ExtResource("1_d6p53")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="Lantai" type="Sprite2D" parent="Ground"]
+modulate = Color(0.988235, 0.92549, 0.819608, 1)
+position = Vector2(0, -22.6518)
+scale = Vector2(2.84289, 0.375)
+texture = ExtResource("1_k53kt")
+
+[node name="Back" type="Sprite2D" parent="Ground"]
+modulate = Color(0.176471, 0.117647, 0.184314, 1)
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(2.84289, 0.303521)
+texture = ExtResource("1_k53kt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-248.221, 0)
+shape = SubResource("RectangleShape2D_unkw3")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 352)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall"]
+modulate = Color(0.176471, 0.117647, 0.184314, 1)
+position = Vector2(1416, 0)
+scale = Vector2(0.46875, 1.84375)
+texture = ExtResource("1_k53kt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1416, 0)
+shape = SubResource("RectangleShape2D_5eh48")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-600, 64)
+shape = SubResource("RectangleShape2D_5eh48")
+
+[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
+position = Vector2(-352, 536)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="Label" type="Label" parent="Area2DKeRuangTamu"]
+offset_left = 384.0
+offset_top = -56.0
+offset_right = 808.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "<- Ke ruang tamu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
+shape = SubResource("RectangleShape2D_dc0rl")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
+
+[node name="RuangTamuPos" type="Marker2D" parent="."]
+position = Vector2(96, 672)
+
+[node name="Player" parent="." instance=ExtResource("2_j5mvm")]
+position = Vector2(520, 672)
+
+[connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]

@@ -1,16 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=20 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_4n47d"]
 [ext_resource type="Script" path="res://addons/smoothing/smoothing_2d.gd" id="4_nn2kx"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
-radius = 56.0
-height = 224.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dax35"]
-radius = 128.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv5pg"]
 atlas = ExtResource("2_5ax5e")
@@ -25,6 +18,157 @@ atlas = ExtResource("2_5ax5e")
 region = Rect2(641, 0, 54, 142)
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_a0wte"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp4u"]
+radius = 56.0
+height = 224.0
+
+[sub_resource type="Animation" id="Animation_ur5ki"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31.8558, -55.6886)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0896672]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19.5854, -59.4641)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -64.4973)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 12.6046)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10.75, 12.1326)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -16.534)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_hg6eq"]
 resource_name = "idle"
@@ -166,153 +310,6 @@ tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_ur5ki"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-31.8558, -55.6886)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftShoulder:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0896672]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(19.5854, -59.4641)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightShoulder:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -64.4973)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/Head:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-20, 12.6046)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/LeftThigh:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(10.75, 12.1326)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body/RightThigh:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -16.534)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("GfxPlayer/Smoothing2D/Skeleton2D/Base/Body:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -487,23 +484,6 @@ collision_layer = 3
 script = ExtResource("1_sf4uv")
 speed = 450.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -112)
-shape = SubResource("CapsuleShape2D_lvp4u")
-
-[node name="InteractNode" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("3_4n47d")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNode"]
-position = Vector2(0, -104)
-shape = SubResource("CircleShape2D_dax35")
-debug_color = Color(0.870588, 0.72549, 0.145098, 0.419608)
-
-[node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
-position = Vector2(56, -192)
-
 [node name="GfxPlayer" type="Node2D" parent="."]
 position = Vector2(0, 0.836143)
 
@@ -513,8 +493,8 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(31.5066, -106.603)
-rotation = -0.21007
+position = Vector2(33.7538, -107.275)
+rotation = -0.286335
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -522,8 +502,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(22.9204, -132.414)
-rotation = -0.213262
+position = Vector2(23.2261, -132.356)
+rotation = -0.289527
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -538,7 +518,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -209.997)
+position = Vector2(-4.25413, -208.153)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -576,17 +556,17 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-38.6254, -102.479)
-rotation = 0.147883
-scale = Vector2(0.365937, 0.365937)
+position = Vector2(-40.2299, -103.115)
+rotation = 0.201679
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3586, -132.608)
-rotation = 0.147883
-scale = Vector2(0.365937, 0.365937)
+position = Vector2(-26.3608, -132.541)
+rotation = 0.201679
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)
@@ -628,7 +608,7 @@ remote_path = NodePath("../../../../../SpriteContainer/Tubuh/Kepala")
 [node name="LeftShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(-31.8558, -55.6886)
 rotation = 0.0896672
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(0.995983, 0.0895471, -0.0895471, 0.995983, -31.8558, -55.6886)
 auto_calculate_length_and_angle = false
 length = 32.0925
@@ -659,7 +639,7 @@ bone_angle = 0.0
 
 [node name="RightShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(19.5854, -59.4641)
-scale = Vector2(0.999828, 0.999828)
+scale = Vector2(0.999827, 0.999827)
 rest = Transform2D(1, 0, 0, 1, 19.5854, -59.4641)
 auto_calculate_length_and_angle = false
 length = 35.573
@@ -755,6 +735,23 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -112)
+shape = SubResource("CapsuleShape2D_lvp4u")
+
+[node name="InteractNode" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_4n47d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNode"]
+position = Vector2(0, -112)
+shape = SubResource("CapsuleShape2D_lvp4u")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TextBubblePivot" type="Node2D" parent="InteractNode"]
+position = Vector2(56, -192)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7m2tu")
@@ -766,3 +763,6 @@ tree_root = SubResource("AnimationNodeStateMachine_i134l")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/idle = true
 parameters/conditions/is_moving = false
+
+[connection signal="area_entered" from="InteractNode" to="InteractNode" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractNode" to="InteractNode" method="_on_area_exited"]

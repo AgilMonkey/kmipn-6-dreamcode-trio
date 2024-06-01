@@ -1,0 +1,290 @@
+[gd_scene load_steps=12 format=3 uid="uid://h7dfsb1u48ik"]
+
+[ext_resource type="Script" path="res://scenes/levels/scene-intro/scene_intro.gd" id="1_66y3k"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_k0sie"]
+[ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="2_4qe8o"]
+[ext_resource type="Texture2D" uid="uid://cmdlck0qxjns8" path="res://assets/Simple Shapes/Triangle.png" id="3_mkder"]
+
+[sub_resource type="Animation" id="Animation_ae35e"]
+resource_name = "default"
+length = 1.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segitiga:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.666033, 1),
+"transitions": PackedFloat32Array(0.5, 2, 1, 2),
+"update": 0,
+"values": [Vector2(81, 8), Vector2(72, 8), Vector2(72.9924, 8), Vector2(81, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segitiga:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.666033, 1),
+"transitions": PackedFloat32Array(0.5, 2, 1, 2),
+"update": 0,
+"values": [1.5708, 1.5708, 1.5708, 1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_tuedw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segitiga:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(81, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segitiga:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2bcou"]
+_data = {
+"RESET": SubResource("Animation_tuedw"),
+"default": SubResource("Animation_ae35e")
+}
+
+[sub_resource type="Animation" id="Animation_e65ny"]
+resource_name = "start_intro"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotUI/TextContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotUI/PressAnyKey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1, 3.6, 4.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"tunggu_input"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0i7vo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotUI/TextContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotUI/PressAnyKey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ia6ri"]
+resource_name = "end_intro"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotUI/TextContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotUI/PressAnyKey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"end_intro"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sy1u4"]
+_data = {
+"RESET": SubResource("Animation_0i7vo"),
+"end_intro": SubResource("Animation_ia6ri"),
+"start_intro": SubResource("Animation_e65ny")
+}
+
+[node name="SceneIntro" type="Node2D"]
+script = ExtResource("1_66y3k")
+
+[node name="NotUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1368.0
+offset_bottom = 768.0
+
+[node name="TextureRect" type="TextureRect" parent="NotUI"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k0sie")
+expand_mode = 1
+
+[node name="TextContainer" type="MarginContainer" parent="NotUI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="TextIntro" type="Label" parent="NotUI/TextContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_4qe8o")
+theme_override_font_sizes/font_size = 30
+text = "Untuk Andika
+
+Bagaimana kabar Andika? Apakah Andika makan dengan benar? Alhamdullilah nenek sehat walafiat. Nenek dengar Andika masuk SMK ya? Nenek kurang mengerti apa bedanya SMK dengan SMA, tetapi nenek akan selalu mendukung Andika.
+
+Semoga sehat selalu.
+- Nenek
+
+Catatan: Kata Kai beritahu kalau ada cewek yang Andika suka"
+autowrap_mode = 2
+
+[node name="PressAnyKey" type="Control" parent="NotUI"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 656.0
+offset_top = 688.0
+offset_right = 704.0
+offset_bottom = 728.0
+
+[node name="TextIntro" type="Label" parent="NotUI/PressAnyKey"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 104.0
+offset_top = -50.0
+offset_right = 685.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_4qe8o")
+theme_override_font_sizes/font_size = 35
+text = "Pencet tombol apapun untuk lanjut"
+vertical_alignment = 1
+
+[node name="Segitiga" type="TextureRect" parent="NotUI/PressAnyKey"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 81.0
+offset_top = -12.0
+offset_right = 111.0
+offset_bottom = 14.0
+grow_vertical = 2
+rotation = 1.5708
+texture = ExtResource("3_mkder")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NotUI/PressAnyKey"]
+libraries = {
+"": SubResource("AnimationLibrary_2bcou")
+}
+autoplay = "default"
+
+[node name="AnimationIntro" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sy1u4")
+}
+autoplay = "start_intro"
+
+[node name="AnimasikanYDisini" type="Node2D" parent="."]
+
+[node name="Tangan" type="Node2D" parent="AnimasikanYDisini"]

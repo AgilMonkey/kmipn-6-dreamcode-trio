@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://tg2jxwer64kt"]
+
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_wcpsw"]
+[ext_resource type="Texture2D" uid="uid://yaw1wvqwss2o" path="res://assets/kenney_abstract-platformer/PNG/Backgrounds/set3_tiles.png" id="2_neh3t"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_vqacv"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_lykbd"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_omytb"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_h3xh2"]
+[ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/Area2DToKamarAndika.gd" id="7_avohi"]
+[ext_resource type="Texture2D" uid="uid://cmdlck0qxjns8" path="res://assets/Simple Shapes/Triangle.png" id="8_40esk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
+size = Vector2(2192, 245.304)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jar6p"]
+radius = 112.285
+
+[sub_resource type="Resource" id="Resource_iexpf"]
+script = ExtResource("4_h3xh2")
+duration = 0.0
+transition = 0
+ease = 2
+
+[node name="LuarRumahAndika01" type="Node2D"]
+script = ExtResource("1_qcla1")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.198949, 0.543665, 0.68872, 1)
+position = Vector2(519.89, 392.674)
+scale = Vector2(6.31293, 2.12237)
+texture = ExtResource("1_wcpsw")
+
+[node name="Set3Tiles" type="Sprite2D" parent="."]
+position = Vector2(144, 304)
+texture = ExtResource("2_neh3t")
+
+[node name="Set3Tiles2" type="Sprite2D" parent="."]
+position = Vector2(1328, 448)
+texture = ExtResource("2_neh3t")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="Lantai" type="Sprite2D" parent="Ground"]
+modulate = Color(0.374139, 0.374139, 0.374139, 1)
+position = Vector2(0, -46.652)
+scale = Vector2(4.28211, 0.40625)
+texture = ExtResource("1_wcpsw")
+
+[node name="Back" type="Sprite2D" parent="Ground"]
+modulate = Color(0.20871, 0.20871, 0.20871, 1)
+position = Vector2(0, -12.4753)
+scale = Vector2(4.28211, 0.352253)
+texture = ExtResource("1_wcpsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-0.221008, -4)
+shape = SubResource("RectangleShape2D_4ni88")
+
+[node name="Area2DToRuangTamu" type="Area2D" parent="."]
+position = Vector2(776, 456)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource("7_avohi")
+
+[node name="Square" type="Sprite2D" parent="Area2DToRuangTamu"]
+scale = Vector2(0.1875, 0.1875)
+texture = ExtResource("1_wcpsw")
+
+[node name="Triangle" type="Sprite2D" parent="Area2DToRuangTamu/Square"]
+position = Vector2(0, -512)
+scale = Vector2(1.72973, 1.72973)
+texture = ExtResource("8_40esk")
+
+[node name="Label" type="Label" parent="Area2DToRuangTamu/Square/Triangle"]
+offset_left = -394.667
+offset_top = 468.667
+offset_right = 419.333
+offset_bottom = 616.667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Balik ke rumah
+Pencet 'Z'"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToRuangTamu"]
+position = Vector2(0, 48)
+shape = SubResource("CircleShape2D_jar6p")
+debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
+
+[node name="RuangTamuPos" type="Marker2D" parent="."]
+position = Vector2(754, 664)
+
+[node name="Player" parent="." instance=ExtResource("2_vqacv")]
+position = Vector2(688, 664)
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(688, 384)
+script = ExtResource("3_omytb")
+follow_mode = 2
+follow_target = NodePath("../Player")
+tween_resource = SubResource("Resource_iexpf")
+follow_offset = Vector2(0, -280)
+follow_damping = true
+draw_limits = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(688, 384)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("3_lykbd")
+
+[connection signal="body_entered" from="Area2DToRuangTamu" to="Area2DToRuangTamu" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2DToRuangTamu" to="Area2DToRuangTamu" method="_on_body_exited"]
+[connection signal="on_change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
