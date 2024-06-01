@@ -1,0 +1,39 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b4a390;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #5c554d;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #363636;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #474038;
+      }
+
+      .cls-4 {
+        fill: #f3eaea;
+      }
+    </style>
+  </defs>
+  <g id="main_menu_Copy_2" data-name="main menu Copy 2">
+    <g id="penghapus">
+      <path class="cls-1" d="M183,801l-3,10-44,69L69,855l2-19Z"/>
+      <path class="cls-2" d="M166,795l-53-22L73,817l57,26Z"/>
+      <path class="cls-3" d="M131,843l1,24m36-72,1,23-37,50L72,841V819l59,24Z"/>
+      <path class="cls-4" d="M169,818l13-19s0.93-14.316-3-21l-11,16Zm-56-46s11.79-14.644,17-18c0,0,40.955-4.906,49,23l-13,18Z"/>
+    </g>
+  </g>
+</svg>
