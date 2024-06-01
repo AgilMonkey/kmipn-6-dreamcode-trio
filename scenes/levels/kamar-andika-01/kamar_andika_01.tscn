@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6kf16uesqcve"]
+[gd_scene load_steps=25 format=3 uid="uid://c6kf16uesqcve"]
 
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_fcpmb"]
 [ext_resource type="Script" path="res://scenes/levels/kamar-andika-01/kamar_andika_01.gd" id="1_kf1ef"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://bjiwq8x0reiqq" path="res://assets/1.1 - Kamar Andika/Lemari.svg" id="16_6mvle"]
 [ext_resource type="Texture2D" uid="uid://bnwru0553xi82" path="res://assets/1.1 - Kamar Andika/Lemari2.svg" id="17_kxj4e"]
 [ext_resource type="Texture2D" uid="uid://bvugfncjku3ke" path="res://assets/1.1 - Kamar Andika/Pintu.svg" id="18_edxoq"]
+[ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="19_qqmpe"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="20_2nbd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgygd"]
 size = Vector2(1840, 226.304)
@@ -27,6 +29,9 @@ size = Vector2(304, 336)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lol5s"]
 size = Vector2(80, 960)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tkuqq"]
+radius = 73.0616
 
 [node name="KamarAndika01" type="Node2D"]
 script = ExtResource("1_kf1ef")
@@ -177,5 +182,15 @@ modulate = Color(1, 1, 1, 0.2)
 position = Vector2(693.333, 386)
 scale = Vector2(0.722222, 0.722222)
 texture = ExtResource("7_m8wiy")
+
+[node name="InteractDialogue" parent="." instance=ExtResource("19_qqmpe")]
+position = Vector2(234, 549)
+timeline_path = "res://scenes/levels/kamar-andika-01/komputer_interact.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDialogue"]
+shape = SubResource("CircleShape2D_tkuqq")
+
+[node name="InteractIcon" parent="InteractDialogue" instance=ExtResource("20_2nbd7")]
+position = Vector2(0, -147)
 
 [connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]
