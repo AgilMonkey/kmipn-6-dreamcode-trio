@@ -1,5 +1,5 @@
 extends Area2D
-class_name Interactable
+class_name InteractArea
 ## Sebuah base class buat semua objek yang akan berinteraksi dengan player
 ##
 ## Nanti akan di referensi oleh benda lain agar bisa diinteraksikan. Interaksi

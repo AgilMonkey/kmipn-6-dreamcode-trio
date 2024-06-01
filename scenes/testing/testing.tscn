@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://boaj6qp2a7r41"]
+[gd_scene load_steps=8 format=3 uid="uid://boaj6qp2a7r41"]
 
 [ext_resource type="Script" path="res://scenes/testing/testing.gd" id="1_35fbk"]
 [ext_resource type="Texture2D" uid="uid://dcuv013erp1xw" path="res://assets/kenney_abstract-platformer/PNG/Tiles/Green tiles/tileGreen_05.png" id="2_bj7wr"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="4_6mu3t"]
 [ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="4_4747t"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="5_8orjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcy38"]
 size = Vector2(128, 128)
@@ -36,3 +37,5 @@ position = Vector2(600, 536)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/InteractArea"]
 shape = SubResource("RectangleShape2D_67lli")
+
+[node name="InteractIcon2" parent="Level2D/InteractArea" instance=ExtResource("5_8orjb")]
