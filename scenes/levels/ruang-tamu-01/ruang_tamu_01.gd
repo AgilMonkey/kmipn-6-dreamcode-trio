@@ -13,6 +13,10 @@ func _ready():
 		$Player.position = from_pos.position
 		$PhantomCamera2D.position.x = $Player.position.x
 	$Player.smoothing.teleport()
+	
+	# I'm to lazy so just set flip automically
+	var win_size = DisplayServer.window_get_size() as Vector2
+	$Player.flip_h(win_size.x/2 < $Player.global_position.x)
 
 
 func _on_area_2d_to_kamar_andika_on_change_scene():
