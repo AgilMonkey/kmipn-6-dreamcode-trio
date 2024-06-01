@@ -111,6 +111,9 @@ texture = ExtResource("3_qqht0")
 region_enabled = true
 region_rect = Rect2(37, 0, 1834, 169)
 
+[node name="Player" parent="." instance=ExtResource("2_dkl6q")]
+position = Vector2(512, 682)
+
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
 
@@ -121,7 +124,6 @@ scale = Vector2(0.722222, 0.722222)
 texture = ExtResource("4_ddrd3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-visible = false
 position = Vector2(190.779, 5.5)
 shape = SubResource("RectangleShape2D_lgygd")
 
@@ -151,10 +153,7 @@ shape = SubResource("RectangleShape2D_otely")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
 [node name="RuangTamuPos" type="Marker2D" parent="."]
-position = Vector2(1256, 672)
-
-[node name="Player" parent="." instance=ExtResource("2_dkl6q")]
-position = Vector2(512, 682)
+position = Vector2(1254, 682)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 352)
