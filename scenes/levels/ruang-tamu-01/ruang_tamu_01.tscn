@@ -98,8 +98,7 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="InteractIcon" parent="Area2DToKamarAndika" instance=ExtResource("5_72kql")]
-visible = false
-position = Vector2(0, -136)
+position = Vector2(0, -153)
 
 [node name="KamarAndikaPos" type="Marker2D" parent="."]
 position = Vector2(704, 665)
@@ -135,7 +134,7 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="InteractIcon" parent="Area2DToDapur" instance=ExtResource("5_72kql")]
-position = Vector2(0, -136)
+position = Vector2(0, -153)
 
 [node name="DapurPos" type="Marker2D" parent="."]
 position = Vector2(954, 665)
