@@ -32,7 +32,7 @@ scale = Vector2(2.84289, 0.303521)
 texture = ExtResource("1_k53kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(-248.221, 0)
+position = Vector2(119.779, 0)
 shape = SubResource("RectangleShape2D_unkw3")
 
 [node name="Wall" type="StaticBody2D" parent="."]
@@ -40,20 +40,20 @@ position = Vector2(0, 352)
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall"]
 modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(1416, 0)
+position = Vector2(-24, 0)
 scale = Vector2(0.46875, 1.84375)
 texture = ExtResource("1_k53kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(1416, 0)
+position = Vector2(-24, 0)
 shape = SubResource("RectangleShape2D_5eh48")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-600, 64)
+position = Vector2(1872, 64)
 shape = SubResource("RectangleShape2D_5eh48")
 
 [node name="Area2DKeRuangTamu" type="Area2D" parent="."]
-position = Vector2(-352, 536)
+position = Vector2(1632, 536)
 collision_layer = 2
 collision_mask = 2
 monitorable = false
@@ -72,7 +72,7 @@ shape = SubResource("RectangleShape2D_dc0rl")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
 [node name="RuangTamuPos" type="Marker2D" parent="."]
-position = Vector2(96, 672)
+position = Vector2(1272, 672)
 
 [node name="Player" parent="." instance=ExtResource("2_j5mvm")]
 position = Vector2(520, 672)

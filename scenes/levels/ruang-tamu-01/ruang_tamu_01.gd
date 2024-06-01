@@ -27,8 +27,9 @@ func _on_area_2d_to_dapur_on_change_scene(body):
 	LevelManager.change_scene_with_transition(scene_dapur)
 
 
-func _on_area_2d_to_luar_rumah_andika_body_entered(body):
+func _on_area_2d_to_luar_rumah_andika_change_scene():
 	LevelManager.from = "RuangTamu"
 	$Player.set_process_input(false)
 	$Player.direction = Vector2.ZERO
 	LevelManager.change_scene_with_transition(scene_luar_rumah_andika)
+

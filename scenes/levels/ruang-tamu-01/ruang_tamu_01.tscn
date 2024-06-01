@@ -194,17 +194,21 @@ debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 position = Vector2(104, 665)
 
 [node name="Area2DToLuarRumahAndika" type="Area2D" parent="."]
-position = Vector2(1832, 512)
-collision_layer = 10
+position = Vector2(1319.72, 512)
+collision_layer = 2
 collision_mask = 2
+script = ExtResource("3_yskcc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToLuarRumahAndika"]
 position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
+[node name="InteractIcon" parent="Area2DToLuarRumahAndika" instance=ExtResource("5_72kql")]
+position = Vector2(0, -40)
+
 [node name="LuarRumahAndikaPos" type="Marker2D" parent="."]
-position = Vector2(1536, 665)
+position = Vector2(1249.36, 656.425)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
@@ -244,8 +248,24 @@ shape = SubResource("RectangleShape2D_vc66s")
 debug_color = Color(0, 0.6, 0.701961, 0)
 metadata/_edit_lock_ = true
 
+[node name="Foreground" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Foreground"]
+self_modulate = Color(0.168627, 0.262745, 0.294118, 1)
+position = Vector2(9.24769, 391.712)
+scale = Vector2(0.103789, 1.04018)
+texture = ExtResource("2_bchjv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground"]
+self_modulate = Color(0.0862745, 0.160784, 0.215686, 1)
+position = Vector2(-1.51024, 395.462)
+scale = Vector2(0.0832928, 1.05483)
+texture = ExtResource("2_bchjv")
+
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
 [connection signal="change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]
 [connection signal="body_entered" from="Area2DToDapur" to="." method="_on_area_2d_to_dapur_on_change_scene"]
-[connection signal="body_entered" from="Area2DToLuarRumahAndika" to="." method="_on_area_2d_to_luar_rumah_andika_body_entered"]
+[connection signal="body_entered" from="Area2DToLuarRumahAndika" to="Area2DToLuarRumahAndika" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2DToLuarRumahAndika" to="Area2DToLuarRumahAndika" method="_on_body_exited"]
+[connection signal="change_scene" from="Area2DToLuarRumahAndika" to="." method="_on_area_2d_to_luar_rumah_andika_change_scene"]
