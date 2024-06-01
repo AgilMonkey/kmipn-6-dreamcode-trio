@@ -12,7 +12,6 @@ func register_area(area: InteractArea):
 	active_areas.push_back(area)
 	
 	active_areas.sort_custom(_sort_by_distance_to_player)
-	active_areas[0].show_interact_icon()
 
 
 func unregister_area(area: InteractArea):
@@ -22,17 +21,22 @@ func unregister_area(area: InteractArea):
 
 func _process(delta):
 	if active_areas.size() > 0 and can_interact:
+		var last_active_area = active_areas[0]
 		active_areas.sort_custom(_sort_by_distance_to_player)
+		
+		if last_active_area != active_areas[0]:
+			last_active_area.hide_interact_icon()
+		active_areas[0].show_interact_icon()
 
 
 func _sort_by_distance_to_player(area1, area2):
-	if not player:
-		return
+	if player == null:
+		return false
 	
 	var area1_to_player = player.global_position.distance_to(area1.global_position)
 	var area2_to_player = player.global_position.distance_to(area2.global_position)
 	
-	return
+	return area1_to_player < area2_to_player
 
 
 func _input(event):

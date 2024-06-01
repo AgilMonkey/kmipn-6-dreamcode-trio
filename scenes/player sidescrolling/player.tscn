@@ -493,18 +493,18 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(29.2103, -106.105)
-rotation = -0.13366
-scale = Vector2(0.365938, 0.365938)
+position = Vector2(33.8986, -107.324)
+rotation = -0.291313
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(22.6194, -132.495)
-rotation = -0.136852
-scale = Vector2(0.365938, 0.365938)
+position = Vector2(23.2461, -132.353)
+rotation = -0.294505
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
 flip_h = true
@@ -518,7 +518,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -211.845)
+position = Vector2(-4.25413, -208.033)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -556,16 +556,16 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-36.9859, -101.929)
-rotation = 0.0939849
+position = Vector2(-40.3334, -103.159)
+rotation = 0.20519
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.36, -132.675)
-rotation = 0.0939849
+position = Vector2(-26.3611, -132.536)
+rotation = 0.20519
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
@@ -639,7 +639,7 @@ bone_angle = 0.0
 
 [node name="RightShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(19.5854, -59.4641)
-scale = Vector2(0.99983, 0.99983)
+scale = Vector2(0.999829, 0.999829)
 rest = Transform2D(1, 0, 0, 1, 19.5854, -59.4641)
 auto_calculate_length_and_angle = false
 length = 35.573

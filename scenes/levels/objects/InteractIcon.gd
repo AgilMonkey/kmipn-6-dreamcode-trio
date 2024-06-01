@@ -2,6 +2,8 @@ extends Node2D
 class_name InteractIcon
 
 
+var animation_pos := 0
+
 @onready var animation_player := $AnimationPlayer
 
 
@@ -12,9 +14,12 @@ func _ready():
 		p.interact_icon = self
 
 
+func _process(delta):
+	animation_pos = animation_player.current_animation_position
+
 
 func interact():
-	if animation_player.current_animation_position == animation_player.current_animation_length:
+	if animation_player.current_animation_position == 0.25:
 		return
 	
 	animation_player.play("start")
