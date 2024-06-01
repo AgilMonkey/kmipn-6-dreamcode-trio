@@ -59,7 +59,7 @@ shape = SubResource("RectangleShape2D_4ni88")
 
 [node name="Area2DToRuangTamu" type="Area2D" parent="."]
 position = Vector2(776, 456)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 monitorable = false
 
