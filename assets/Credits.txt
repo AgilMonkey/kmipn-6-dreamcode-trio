@@ -1,2 +1,3 @@
 Cursor Pack (1.0) by Kenney (www.kenney.nl)
+Input Prompts (1.1a) by Kenney (www.kenney.nl)
 Klee One Font - Copyright 2020 The Klee Project Authors (https://github.com/fontworks-fonts/Klee)
