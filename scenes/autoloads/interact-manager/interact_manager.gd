@@ -6,6 +6,7 @@ var player:
 
 var active_areas: Array[InteractArea] = []
 var can_interact = true
+var dialogic_layout = null
 
 
 func register_area(area: InteractArea):

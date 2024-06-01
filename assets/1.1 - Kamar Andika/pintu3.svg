@@ -1,0 +1,36 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #58575c;
+      }
+
+      .cls-2 {
+        fill: #4c4c52;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #a08b7a;
+      }
+
+      .cls-4 {
+        fill: #bea897;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g id="Pintu">
+      <rect class="cls-1" x="1667" y="557" width="233" height="391"/>
+      <path class="cls-2" d="M1690.48,575.06h77.67V733.988h-77.67V575.06Z"/>
+      <path id="Rectangle_22_copy" data-name="Rectangle 22 copy" class="cls-2" d="M1786,575h78.01v158.99H1786V575Z"/>
+      <path id="Rectangle_22_copy_3" data-name="Rectangle 22 copy 3" class="cls-2" d="M1690.48,767.4h77.67V930.843h-77.67V767.4Z"/>
+      <path id="Rectangle_22_copy_2" data-name="Rectangle 22 copy 2" class="cls-2" d="M1786,766.993h78.01V930H1786V766.993Z"/>
+      <path class="cls-3" d="M1694.09,745.727h24.95V754.4h-24.95v-8.675Z"/>
+      <path class="cls-4" d="M1689.87,743.921h8.45a3,3,0,0,1,3,3v9.352a3,3,0,0,1-3,3h-8.45a3,3,0,0,1-3-3v-9.352A3,3,0,0,1,1689.87,743.921Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a45e64;
+      }
+
+      .cls-2 {
+        fill: #8096c5;
+      }
+
+      .cls-3 {
+        fill: #2f3b5d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g id="Jendela">
+      <rect class="cls-1" x="387" y="401" width="251" height="277"/>
+      <rect class="cls-2" x="401" y="543" width="222" height="121"/>
+      <path id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-3" d="M401,421H507V534H401V421Zm118,0H623V534H519V421Z"/>
+    </g>
+  </g>
+</svg>

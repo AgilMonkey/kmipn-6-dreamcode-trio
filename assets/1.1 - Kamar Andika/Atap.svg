@@ -1,0 +1,45 @@
+<svg id="sketsa" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: #162937;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #0d0d0d;
+      }
+
+      .cls-3 {
+        fill: #17232b;
+      }
+
+      .cls-4 {
+        fill: #282828;
+      }
+
+      .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Warna">
+    <g>
+      <rect class="cls-1" x="905" y="107" width="108" height="42"/>
+      <rect class="cls-1" x="289" y="81" width="226" height="54"/>
+      <rect class="cls-2" x="580" y="77" width="89" height="55"/>
+      <rect class="cls-3" x="445" y="99" width="103" height="35"/>
+      <rect class="cls-3" x="311" y="106" width="70" height="24"/>
+      <rect class="cls-3" x="1581" y="83" width="173" height="52"/>
+      <rect class="cls-4" x="1435" y="107" width="154" height="32"/>
+      <rect class="cls-2" x="658" y="102" width="78" height="33"/>
+      <path id="Rectangle_27_copy_3" data-name="Rectangle 27 copy 3" class="cls-5" d="M1049.99,138.592l343.29-149.26,12.73,29.4L1062.72,168Z"/>
+      <path id="Rectangle_27_copy_2" data-name="Rectangle 27 copy 2" class="cls-5" d="M1092.82,121.947L751.724-26.005,738.993,3.331l341.1,147.953Z"/>
+      <path class="cls-6" d="M905.164,138.327L1248.65-10.693l12.73,29.356L917.9,167.683Z"/>
+      <rect class="cls-1" x="1268" y="93" width="77" height="37"/>
+      <path id="Rectangle_27_copy" data-name="Rectangle 27 copy" class="cls-6" d="M948.014,121.709L606.731-26.005,593.993,3.284,935.277,151Z"/>
+      <rect class="cls-2" x="45" y="126" width="1826" height="43"/>
+      <path class="cls-6" d="M1867,121s-554.5-57.75-782-73,786-29,786-29Z"/>
+      <path class="cls-6" d="M794,45S356.121,67.441,60,126L37,101V34Z"/>
+    </g>
+  </g>
+</svg>

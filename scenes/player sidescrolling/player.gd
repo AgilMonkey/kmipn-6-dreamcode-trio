@@ -13,6 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var gfx_player = $GfxPlayer
 @onready var smoothing := $GfxPlayer/Smoothing2D
 @onready var animation_tree = $AnimationTree
+@onready var text_bubble_pivot = $TextBubblePivot
 
 func _ready():
 	Dialogic.timeline_started.connect(dialogue_start)
