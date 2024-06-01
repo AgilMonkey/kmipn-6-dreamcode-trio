@@ -95,6 +95,7 @@ region_rect = Rect2(0, 0, 1920, 997)
 [node name="Tambahan" type="Sprite2D" parent="Background/Dinding-depan"]
 position = Vector2(237.429, 363.218)
 scale = Vector2(1.06218, 1.06877)
+texture = ExtResource("2_bchjv")
 
 [node name="Gambar" type="Sprite2D" parent="Background"]
 position = Vector2(45.1852, -9.64285)
