@@ -203,7 +203,7 @@ size_flags_vertical = 3
 theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
-text = "Opsi"
+text = "Opsii"
 
 [node name="TentangButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
@@ -212,7 +212,7 @@ size_flags_vertical = 3
 theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
-text = "Tentang"
+text = "Tentang "
 
 [node name="KeluarButton" type="Button" parent="Main/MenuPivot/ButtonsContainer"]
 custom_minimum_size = Vector2(258, 50)
@@ -221,8 +221,7 @@ size_flags_vertical = 3
 theme = ExtResource("12_d4ebp")
 theme_override_fonts/font = ExtResource("1_7a8rw")
 theme_override_font_sizes/font_size = 30
-text = "Keluar
-"
+text = "Keluar "
 
 [node name="AboutIcon" type="TextureRect" parent="Main/MenuPivot"]
 layout_mode = 0
@@ -279,3 +278,4 @@ mouse_filter = 2
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/GameBaruButton" to="." method="_on_game_baru_button_button_down"]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Main" method="hide"]
 [connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/OpsiButton" to="Opsi" method="show"]
+[connection signal="button_down" from="Main/MenuPivot/ButtonsContainer/KeluarButton" to="." method="_on_keluar_button_button_down"]
