@@ -15,7 +15,8 @@ func _ready():
 
 
 func _process(delta):
-	animation_pos = animation_player.current_animation_position
+	if animation_player.current_animation != "":
+		animation_pos = animation_player.current_animation_position
 
 
 func interact():
