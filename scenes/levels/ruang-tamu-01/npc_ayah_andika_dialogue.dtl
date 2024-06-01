@@ -1,10 +1,20 @@
+if {ayah_andika_count} > 0:
+	jump selesai1
+
 Ayah: Pagi Dika
 Andika: Pagi yah
 Ayah: Mau pergi sekolah kan? Di dapur ada makanan
 Andika: Iya yah
 Ayah: Dapur tau kan dimana tempatnya ?
 - Iyalah
-	Ayah: Oh bagus bagus, becanda doang ayah
+	Ayah: Hehe tahu kok, becanda doang ayah
 - Uh...
 	Ayah: ...Beneran ?
-	Ayah: Lewat aja terus sebelah kiri disini.
+	Ayah: Lewat aja terus sebelah kiri disini
+set {ayah_andika_count} += 1
+
+[end_timeline]
+
+label selesai1
+Ayah: Makan dulu Dik, baru pergi
+[end_timeline]

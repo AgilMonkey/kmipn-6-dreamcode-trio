@@ -38,7 +38,9 @@ directories/dtl_directory={
 "npc_ayah_andika_dialogue": "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
-variables={}
+variables={
+"ayah_andika_count": 0
+}
 layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]
 layout/default_style="res://dialogic-stuff/bubble style/bubble_style.tres"
 text/letter_speed=0.01
