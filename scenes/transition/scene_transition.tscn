@@ -1,4 +1,61 @@
-[gd_scene format=3 uid="uid://dm41oxdpp22wt"]
+[gd_scene load_steps=7 format=3 uid="uid://dm41oxdpp22wt"]
+
+[ext_resource type="Script" path="res://scenes/transition/scene_transition.gd" id="1_ffkmw"]
+[ext_resource type="Script" path="res://scenes/transition/transition.gd" id="2_vhvhu"]
+
+[sub_resource type="Animation" id="Animation_qce8u"]
+resource_name = "begin"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lm21w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dmm2k"]
+resource_name = "end"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqo75"]
+_data = {
+"RESET": SubResource("Animation_lm21w"),
+"begin": SubResource("Animation_qce8u"),
+"end": SubResource("Animation_dmm2k")
+}
 
 [node name="SceneTransition" type="Control"]
 layout_mode = 3
@@ -7,3 +64,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ffkmw")
+metadata/_edit_lock_ = true
+
+[node name="FadeToBlack" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_vhvhu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeToBlack"]
+libraries = {
+"": SubResource("AnimationLibrary_dqo75")
+}
