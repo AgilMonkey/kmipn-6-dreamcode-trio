@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://gxvnoob7qh73"]
+[gd_scene load_steps=49 format=3 uid="uid://gxvnoob7qh73"]
 
 [ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
 [ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b1f4h6qqjutbd" path="res://assets/1.6 - Minigame memakan makanan/sayur1.png" id="12_nucvp"]
 [ext_resource type="Texture2D" uid="uid://rumr81m4uap6" path="res://assets/1.6 - Minigame memakan makanan/sayur2.png" id="13_fooqg"]
 [ext_resource type="Texture2D" uid="uid://d4dcxo1h2yv82" path="res://assets/1.6 - Minigame memakan makanan/background hitam.svg" id="15_xrxpe"]
+[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/tangan.gd" id="16_6lkrg"]
 [ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="21_aapbp"]
 [ext_resource type="Texture2D" uid="uid://b5mn6x0ew7yep" path="res://assets/3.8 - Minigame vending machine/tangan2.svg" id="22_pyw83"]
 [ext_resource type="Texture2D" uid="uid://chlmpgpgu6ilx" path="res://assets/3.8 - Minigame vending machine/tangan1.svg" id="23_4rhke"]
@@ -24,9 +25,10 @@ height = 129.354
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a8t8y"]
 radius = 8.08849
-height = 209.005
+height = 253.445
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sy334"]
+radius = 9.11414
 height = 81.0344
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjo1u"]
@@ -42,20 +44,20 @@ radius = 35.75
 height = 256.57
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v2h1y"]
-radius = 7.85274
-height = 29.0865
+radius = 6.11514
+height = 22.8451
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s75ux"]
-radius = 7.70181
-height = 29.0636
+radius = 5.51791
+height = 20.5078
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fort1"]
 radius = 22.711
-height = 230.271
+height = 1143.9
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwybk"]
 radius = 22.71
-height = 230.27
+height = 1128.32
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yifie"]
 radius = 8.9774
@@ -136,72 +138,13 @@ tracks/1/keys = {
 "values": [ExtResource("22_pyw83")]
 }
 
-[sub_resource type="Animation" id="Animation_b1ax8"]
-resource_name = "get_kaleng"
-length = 2.5
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tangan")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"set_process_input"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BotolClip/Botol:freeze")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Tangan/TanganSprite:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_pyw83")]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"tween_tangan_ke_bawah"
-}, {
-"args": [],
-"method": &"selesaikan_game"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_vgqjs"]
 resource_name = "start_game"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BotolClip/Botol:freeze")
+tracks/0/path = NodePath("Food/Sausage1Clip/Sausage1:freeze")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -252,10 +195,57 @@ tracks/3/keys = {
 "values": [ExtResource("23_4rhke")]
 }
 
+[sub_resource type="Animation" id="Animation_b1ax8"]
+resource_name = "get_food"
+length = 2.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tangan")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan/TanganSprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_pyw83")]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}, {
+"args": [],
+"method": &"selesaikan_game"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8410x"]
 _data = {
 "RESET": SubResource("Animation_ikgiu"),
-"get_kaleng": SubResource("Animation_b1ax8"),
+"get_food": SubResource("Animation_b1ax8"),
 "start_game": SubResource("Animation_vgqjs")
 }
 
@@ -265,6 +255,7 @@ script = ExtResource("1_nc0lm")
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(683, 384)
 scale = Vector2(0.711, 0.711)
+metadata/_edit_group_ = true
 
 [node name="Table" type="Sprite2D" parent="Background"]
 texture = ExtResource("1_updoi")
@@ -277,18 +268,20 @@ position = Vector2(683, 384)
 scale = Vector2(0.711, 0.711)
 
 [node name="Sausage1Clip" type="Sprite2D" parent="Food"]
+scale = Vector2(1, 1)
 
 [node name="Sausage1" parent="Food/Sausage1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-258.79, -185.654)
 
 [node name="Sprite" parent="Food/Sausage1Clip/Sausage1" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("7_ttgjg")
 region_rect = Rect2(574.01, 243.187, 266.2, 251.559)
 
 [node name="CollisionShape2D" parent="Food/Sausage1Clip/Sausage1" index="1"]
 position = Vector2(2.81299, 2.81299)
 rotation = 0.811578
-scale = Vector2(3.454, 1.504)
+scale = Vector2(2.743, 0.793)
 shape = SubResource("CapsuleShape2D_qjnw3")
 
 [node name="AreaCheck" parent="Food/Sausage1Clip/Sausage1" index="2"]
@@ -298,27 +291,30 @@ collision_mask = 17
 [node name="CollisionShape2D" parent="Food/Sausage1Clip/Sausage1/AreaCheck" index="0"]
 position = Vector2(2.81294, 2.81294)
 rotation = 0.811651
-scale = Vector2(3.45448, 1.50413)
+scale = Vector2(2.70768, 0.796757)
 shape = SubResource("CapsuleShape2D_a8t8y")
 
 [node name="Sausage2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-191.28, -127.989)
+scale = Vector2(1, 1)
 
 [node name="Sausage2" parent="Food/Sausage2Clip" instance=ExtResource("3_fp883")]
 
 [node name="Sprite" parent="Food/Sausage2Clip/Sausage2" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("7_wj8dm")
 region_rect = Rect2(649.351, 293.392, 251.465, 257.059)
 
 [node name="CollisionShape2D" parent="Food/Sausage2Clip/Sausage2" index="1"]
-position = Vector2(2.81294, 7.03235)
-rotation = 3.88618
-scale = Vector2(-3.11391, 2.14821)
+position = Vector2(1.40664, 7.03261)
+rotation = 3.90655
+scale = Vector2(-2.403, 1.437)
 shape = SubResource("CapsuleShape2D_sy334")
 
 [node name="CollisionShape2D" parent="Food/Sausage2Clip/Sausage2/AreaCheck" index="0"]
 position = Vector2(4.21941, 4.21941)
 rotation = 0.763718
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CapsuleShape2D_hjo1u")
 
 [node name="Egg2Clip" type="Sprite2D" parent="Food"]
@@ -327,20 +323,22 @@ scale = Vector2(1, 1)
 
 [node name="Egg2" parent="Food/Egg2Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-66.1041, -15.4712)
-scale = Vector2(1, 1)
 
 [node name="Sprite" parent="Food/Egg2Clip/Egg2" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("8_gkxau")
 region_rect = Rect2(851, 309, 220, 259)
 
 [node name="CollisionShape2D" parent="Food/Egg2Clip/Egg2" index="1"]
-position = Vector2(-15.4712, -18.2841)
+position = Vector2(-9.84532, -14.0649)
 rotation = 0.653928
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CapsuleShape2D_n70my")
 
 [node name="CollisionShape2D" parent="Food/Egg2Clip/Egg2/AreaCheck" index="0"]
-position = Vector2(-15.471, -18.284)
+position = Vector2(-9.84512, -14.0648)
 rotation = 0.654498
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CapsuleShape2D_jcrn1")
 
 [node name="Egg1Clip" type="Sprite2D" parent="Food"]
@@ -351,40 +349,43 @@ scale = Vector2(1, 1)
 position = Vector2(1.40649, 0)
 
 [node name="Sprite" parent="Food/Egg1Clip/Egg1" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("9_xxh1c")
 region_rect = Rect2(931, 340, 196, 227)
 
 [node name="CollisionShape2D" parent="Food/Egg1Clip/Egg1" index="1"]
-position = Vector2(2.81294, 18.2841)
+position = Vector2(1.40647, 12.6579)
 rotation = 0.765464
-scale = Vector2(7.21491, 6.98195)
+scale = Vector2(6.504, 6.271)
 shape = SubResource("CapsuleShape2D_v2h1y")
 
 [node name="CollisionShape2D" parent="Food/Egg1Clip/Egg1/AreaCheck" index="0"]
-position = Vector2(2.813, 18.284)
+position = Vector2(1.40644, 12.6579)
 rotation = 0.7662
 scale = Vector2(7.215, 6.982)
 shape = SubResource("CapsuleShape2D_s75ux")
 
 [node name="Rice3Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-142.053, 123.769)
+scale = Vector2(1, 1)
 
 [node name="Rice3" parent="Food/Rice3Clip" instance=ExtResource("3_fp883")]
 
 [node name="Sprite" parent="Food/Rice3Clip/Rice3" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("3_06w3k")
 region_rect = Rect2(738.461, 543.355, 184.545, 253.636)
 
 [node name="CollisionShape2D" parent="Food/Rice3Clip/Rice3" index="1"]
 position = Vector2(-9.84529, -2.81294)
 rotation = 0.28581
-scale = Vector2(2.14578, 0.813475)
+scale = Vector2(1.435, 0.102)
 shape = SubResource("CapsuleShape2D_fort1")
 
 [node name="CollisionShape2D" parent="Food/Rice3Clip/Rice3/AreaCheck" index="0"]
 position = Vector2(-9.845, -2.813)
 rotation = 0.286234
-scale = Vector2(2.146, 0.813)
+scale = Vector2(1.435, 0.102)
 shape = SubResource("CapsuleShape2D_rwybk")
 
 [node name="Rice2Clip" type="Sprite2D" parent="Food"]
@@ -394,19 +395,20 @@ scale = Vector2(1, 1)
 [node name="Rice2" parent="Food/Rice2Clip" instance=ExtResource("3_fp883")]
 
 [node name="Sprite" parent="Food/Rice2Clip/Rice2" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("4_umbpg")
 region_rect = Rect2(837.289, 552.826, 200.826, 248.76)
 
 [node name="CollisionShape2D" parent="Food/Rice2Clip/Rice2" index="1"]
-position = Vector2(-25.3164, -1.40647)
+position = Vector2(-14.0647, 1.40613)
 rotation = 0.422286
-scale = Vector2(4.3105, 2.27743)
+scale = Vector2(3.6, 1.566)
 shape = SubResource("CapsuleShape2D_yifie")
 
 [node name="CollisionShape2D" parent="Food/Rice2Clip/Rice2/AreaCheck" index="0"]
-position = Vector2(-25.3164, -1.40646)
+position = Vector2(-14.0647, 1.40614)
 rotation = 0.431187
-scale = Vector2(4.31, 2.277)
+scale = Vector2(3.599, 1.566)
 shape = SubResource("CapsuleShape2D_cpmca")
 
 [node name="Rice1Clip" type="Sprite2D" parent="Food"]
@@ -416,36 +418,40 @@ scale = Vector2(1, 1)
 [node name="Rice1" parent="Food/Rice1Clip" instance=ExtResource("3_fp883")]
 
 [node name="Sprite" parent="Food/Rice1Clip/Rice1" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("5_oiww5")
 region_rect = Rect2(901.656, 589.038, 204.358, 206.612)
 
 [node name="CollisionShape2D" parent="Food/Rice1Clip/Rice1" index="1"]
 position = Vector2(1.38818, 2.49329)
 rotation = 0.604995
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CapsuleShape2D_l2j3w")
 
 [node name="CollisionShape2D" parent="Food/Rice1Clip/Rice1/AreaCheck" index="0"]
 position = Vector2(1.40647, 2.81294)
 rotation = 0.605629
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CapsuleShape2D_488rf")
 
 [node name="Vegetable1Clip" type="Sprite2D" parent="Food"]
-position = Vector2(119.55, 42.1941)
+position = Vector2(119.55, 42.194)
 scale = Vector2(1, 1)
 
 [node name="Vegetable1" parent="Food/Vegetable1Clip" instance=ExtResource("3_fp883")]
-scale = Vector2(1, 1)
 
 [node name="Sprite" parent="Food/Vegetable1Clip/Vegetable1" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("12_nucvp")
 region_rect = Rect2(1015.45, 544.546, 143.636, 110.909)
 
 [node name="CollisionShape2D" parent="Food/Vegetable1Clip/Vegetable1" index="1"]
 rotation = 1.24111
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CircleShape2D_n6uew")
 
 [node name="CollisionShape2D" parent="Food/Vegetable1Clip/Vegetable1/AreaCheck" index="0"]
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CircleShape2D_und0a")
 
 [node name="Vegetable2Clip" type="Sprite2D" parent="Food"]
@@ -455,13 +461,16 @@ scale = Vector2(1, 1)
 [node name="Vegetable2" parent="Food/Vegetable2Clip" instance=ExtResource("3_fp883")]
 
 [node name="Sprite" parent="Food/Vegetable2Clip/Vegetable2" index="0"]
+scale = Vector2(0.711, 0.711)
 texture = ExtResource("13_fooqg")
 region_rect = Rect2(1078.18, 453.637, 115.454, 127.273)
 
 [node name="CollisionShape2D" parent="Food/Vegetable2Clip/Vegetable2" index="1"]
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CircleShape2D_847kk")
 
 [node name="CollisionShape2D" parent="Food/Vegetable2Clip/Vegetable2/AreaCheck" index="0"]
+scale = Vector2(0.711, 0.711)
 shape = SubResource("CircleShape2D_ho23h")
 
 [node name="BlackBar" type="Sprite2D" parent="."]
@@ -474,7 +483,7 @@ texture = ExtResource("15_xrxpe")
 visible = false
 position = Vector2(22, 36)
 collision_layer = 16
-collision_mask = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EatZone"]
 position = Vector2(661, 650)
@@ -523,15 +532,11 @@ position = Vector2(734.25, -18.0003)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_1g05k")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="TanganBorder"]
-position = Vector2(690, 878)
-rotation = 1.57079
-shape = SubResource("RectangleShape2D_1g05k")
-
 [node name="Tangan" parent="." instance=ExtResource("21_aapbp")]
 position = Vector2(793, 851)
 rotation = -0.415388
 collision_mask = 32
+script = ExtResource("16_6lkrg")
 
 [node name="TanganSprite" parent="Tangan" index="0"]
 texture = ExtResource("22_pyw83")
@@ -560,8 +565,6 @@ autoplay = "start_game"
 [connection signal="released" from="Food/Vegetable1Clip/Vegetable1" to="." method="_on_vegetable_1_released"]
 [connection signal="grabbed" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_vegetable_2_grabbed"]
 [connection signal="released" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_vegetable_2_released"]
-[connection signal="area_entered" from="Tangan/GrabArea" to="Tangan" method="_on_grab_area_area_entered"]
-[connection signal="body_entered" from="Tangan/GrabArea" to="Tangan" method="_on_grab_area_body_entered"]
 
 [editable path="Food/Sausage1Clip/Sausage1"]
 [editable path="Food/Sausage2Clip/Sausage2"]

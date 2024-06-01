@@ -16,7 +16,7 @@ func grab(grabber: Node2D):
 	grabbed.emit(self)
 
 func release(grabber: Node2D):
-	released.emit(self)	
+	released.emit(self)
 
 func _on_grabbed(object):
 	collision_mask = grabbed_col_mask
