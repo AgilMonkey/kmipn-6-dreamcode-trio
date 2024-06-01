@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dwlisj3ch1c44"]
+[gd_scene load_steps=31 format=3 uid="uid://dwlisj3ch1c44"]
 
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.gd" id="1_l1k5o"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
@@ -26,6 +26,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mrqde"]
 radius = 107.749
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwcqt"]
+radius = 93.3099
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
 size = Vector2(2528, 245.766)
@@ -161,18 +164,29 @@ texture = ExtResource("22_15u17")
 region_enabled = true
 region_rect = Rect2(273, 198, 303, 644)
 
-[node name="InteractDialogue" parent="AyahAndika" instance=ExtResource("17_by32x")]
+[node name="InteractAyahAndika" parent="AyahAndika" instance=ExtResource("17_by32x")]
 timeline_path = "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AyahAndika/InteractDialogue"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AyahAndika/InteractAyahAndika"]
 shape = SubResource("CircleShape2D_mrqde")
 debug_color = Color(0.721859, 0.475684, 0.144176, 0.42)
 
-[node name="InteractIcon" parent="AyahAndika/InteractDialogue" instance=ExtResource("5_72kql")]
+[node name="InteractIcon" parent="AyahAndika/InteractAyahAndika" instance=ExtResource("5_72kql")]
 position = Vector2(0, -164)
 
 [node name="AyahAndikaSpeechBuble" type="Node2D" parent="AyahAndika"]
 position = Vector2(49.4442, -122.861)
+
+[node name="JamDialogue" parent="." instance=ExtResource("17_by32x")]
+position = Vector2(568.476, 536.694)
+timeline_path = "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JamDialogue"]
+shape = SubResource("CircleShape2D_iwcqt")
+debug_color = Color(0.730841, 0.465239, 0.235755, 0.42)
+
+[node name="InteractIcon" parent="JamDialogue" instance=ExtResource("5_72kql")]
+position = Vector2(-42.6536, -333.371)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(704, 784)
@@ -292,7 +306,7 @@ position = Vector2(-1.51024, 395.462)
 scale = Vector2(0.0832928, 1.05483)
 texture = ExtResource("2_bchjv")
 
-[connection signal="dialogue_started" from="AyahAndika/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
+[connection signal="dialogue_started" from="AyahAndika/InteractAyahAndika" to="." method="_on_interact_dialogue_dialogue_started"]
 [connection signal="body_entered" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToKamarAndika" to="Area2DToKamarAndika" method="_on_body_exited"]
 [connection signal="change_scene" from="Area2DToKamarAndika" to="." method="_on_area_2d_to_kamar_andika_on_change_scene"]

@@ -33,6 +33,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
+"dialogue_jam": "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl",
 "komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",
 "npc_ayah_andika_dialogue": "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
