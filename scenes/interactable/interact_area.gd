@@ -10,6 +10,11 @@ var is_interacting := false
 var interact_icon: InteractIcon
 
 
+## Callable ini nanti akan di overwrite sama interaksi kalian sendiri
+var interact: Callable = func():
+	print("Interacting with " + name)
+
+
 func _ready():
 	Dialogic.timeline_started.connect(func(): is_interacting = true)
 	Dialogic.timeline_ended.connect(func(): is_interacting = false)
@@ -19,10 +24,6 @@ func _ready():
 
 func _process(delta):
 	visible = not is_interacting 
-
-## Fungsi ini nanti akan di overwrite sama interaksi kalian sendiri
-func interact():
-	print("Interacting with " + name)
 
 
 func _on_area_entered(area):
@@ -34,10 +35,12 @@ func _on_area_exited(area):
 
 
 func _on_body_entered(body):
-	if interact_icon:
-		interact_icon.interact()
+	pass
+	#if interact_icon:
+		#interact_icon.interact()
 
 
 func _on_body_exited(body):
-	if interact_icon:
-		interact_icon.uninteract()
+	pass
+	#if interact_icon:
+		#interact_icon.uninteract()
