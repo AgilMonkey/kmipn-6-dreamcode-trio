@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=15 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_wcpsw"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_vqacv"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_lykbd"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_omytb"]
+[ext_resource type="PackedScene" uid="uid://lupynadexn8r" path="res://scenes/interactable/change-level/interact_change_scene.tscn" id="4_db4xs"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_h3xh2"]
+[ext_resource type="Script" path="res://scenes/interactable/change-level/interact_change_scene.gd" id="4_hlttf"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="6_1ll6f"]
 [ext_resource type="Texture2D" uid="uid://cmdlck0qxjns8" path="res://assets/Simple Shapes/Triangle.png" id="8_40esk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
@@ -57,11 +60,14 @@ texture = ExtResource("1_wcpsw")
 position = Vector2(-0.221008, -4)
 shape = SubResource("RectangleShape2D_4ni88")
 
-[node name="Area2DToRuangTamu" type="Area2D" parent="."]
+[node name="Area2DToRuangTamuaa" type="Area2D" parent="."]
 position = Vector2(776, 456)
 collision_layer = 0
 collision_mask = 2
-monitorable = false
+script = ExtResource("4_hlttf")
+
+[node name="Area2DToRuangTamu" parent="." instance=ExtResource("4_db4xs")]
+position = Vector2(776, 456)
 
 [node name="Square" type="Sprite2D" parent="Area2DToRuangTamu"]
 scale = Vector2(0.1875, 0.1875)
@@ -87,6 +93,9 @@ position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_jar6p")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
+[node name="InteractIcon" parent="Area2DToRuangTamu" instance=ExtResource("6_1ll6f")]
+position = Vector2(0, -80)
+
 [node name="RuangTamuPos" type="Marker2D" parent="."]
 position = Vector2(754, 664)
 
@@ -108,3 +117,6 @@ position = Vector2(688, 384)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("3_lykbd")
+
+[connection signal="change_scene" from="Area2DToRuangTamuaa" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
+[connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
