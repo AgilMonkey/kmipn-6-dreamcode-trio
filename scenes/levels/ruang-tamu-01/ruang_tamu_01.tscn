@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.gd" id="1_l1k5o"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
 [ext_resource type="Texture2D" uid="uid://chhba2yb7lxvq" path="res://assets/1.2 - Ruang tamu rumah Andika/background.png" id="2_kvcuq"]
-[ext_resource type="Texture2D" uid="uid://cmdlck0qxjns8" path="res://assets/Simple Shapes/Triangle.png" id="2_q1xqj"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="3_4juw4"]
 [ext_resource type="Script" path="res://scenes/interactable/change-level/interact_change_scene.gd" id="3_yskcc"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_3cl1m"]
@@ -12,7 +11,6 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_1bgrd"]
 [ext_resource type="Texture2D" uid="uid://qptgq44rifgk" path="res://assets/1.2 - Ruang tamu rumah Andika/kursi sova.svg" id="8_dbb23"]
 [ext_resource type="Texture2D" uid="uid://djuaddabtrs60" path="res://assets/1.2 - Ruang tamu rumah Andika/JAM.svg" id="8_xn7o3"]
-[ext_resource type="Texture2D" uid="uid://c0y60s4xw0je8" path="res://assets/1.2 - Ruang tamu rumah Andika/Contoh.png" id="11_1s5ce"]
 [ext_resource type="Texture2D" uid="uid://cwvuptrvy6t4s" path="res://assets/1.2 - Ruang tamu rumah Andika/dinding2.svg" id="11_5xu0c"]
 [ext_resource type="Texture2D" uid="uid://bdjptiff0j0wr" path="res://assets/1.2 - Ruang tamu rumah Andika/Tangga.svg" id="12_nrpec"]
 [ext_resource type="Texture2D" uid="uid://6pud1wfjbh52" path="res://assets/1.2 - Ruang tamu rumah Andika/pintu dapur.svg" id="12_rad5l"]
@@ -21,9 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://bn4d407ihsc4f" path="res://assets/1.2 - Ruang tamu rumah Andika/Gambar.svg" id="15_3mg1q"]
 [ext_resource type="Texture2D" uid="uid://calyxoag25ex5" path="res://assets/1.2 - Ruang tamu rumah Andika/background hitam.svg" id="16_5rew2"]
 [ext_resource type="Texture2D" uid="uid://7fo8ylks7smh" path="res://assets/1.2 - Ruang tamu rumah Andika/meja.svg" id="21_jsdjg"]
+[ext_resource type="Texture2D" uid="uid://dr4oelhilkaww" path="res://assets/1.2 - Ruang tamu rumah Andika/Pintu-Keluar-Rumah.svg" id="22_8jtj8"]
+[ext_resource type="Texture2D" uid="uid://dbciaxfp3jdr5" path="res://assets/1.2 - Ruang tamu rumah Andika/Lampu.svg" id="23_ih67q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjopp"]
-size = Vector2(2528, 237.304)
+size = Vector2(2528, 245.766)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kwsy"]
 size = Vector2(160, 1024)
@@ -71,6 +71,11 @@ texture = ExtResource("14_rjfvt")
 region_enabled = true
 region_rect = Rect2(850, 916, 1049, 29)
 
+[node name="Gambar" type="Sprite2D" parent="Background"]
+position = Vector2(45.1852, -9.64285)
+scale = Vector2(0.547325, 0.647727)
+texture = ExtResource("15_3mg1q")
+
 [node name="KursiSova" type="Sprite2D" parent="Background"]
 position = Vector2(-134.074, 134.671)
 scale = Vector2(0.525723, 0.630822)
@@ -85,6 +90,27 @@ texture = ExtResource("21_jsdjg")
 region_enabled = true
 region_rect = Rect2(1062, 767, 294, 178)
 
+[node name="Lampu" type="Sprite2D" parent="Background"]
+position = Vector2(449.729, 106.566)
+scale = Vector2(0.52705, 0.623734)
+texture = ExtResource("23_ih67q")
+region_enabled = true
+region_rect = Rect2(1754, 534, 105, 410)
+
+[node name="Pintu-keluar-rumah" type="Sprite2D" parent="Background"]
+position = Vector2(536.32, 95.0125)
+scale = Vector2(0.531571, 0.629084)
+texture = ExtResource("22_8jtj8")
+region_enabled = true
+region_rect = Rect2(1882, 498, 38, 447)
+
+[node name="PintuDapur" type="Sprite2D" parent="Background"]
+position = Vector2(-437.778, 82.6169)
+scale = Vector2(0.917108, 0.668063)
+texture = ExtResource("12_rad5l")
+region_enabled = true
+region_rect = Rect2(52, 488, 21, 456)
+
 [node name="Dinding-depan" type="Sprite2D" parent="Background"]
 position = Vector2(38.8658, -42.7354)
 scale = Vector2(0.528911, 0.622077)
@@ -93,14 +119,10 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1920, 997)
 
 [node name="Tambahan" type="Sprite2D" parent="Background/Dinding-depan"]
-position = Vector2(237.429, 363.218)
-scale = Vector2(1.06218, 1.06877)
+modulate = Color(0.0862745, 0.160784, 0.215686, 1)
+position = Vector2(-986.741, 520.739)
+scale = Vector2(0.218316, 0.419559)
 texture = ExtResource("2_bchjv")
-
-[node name="Gambar" type="Sprite2D" parent="Background"]
-position = Vector2(45.1852, -9.64285)
-scale = Vector2(0.547325, 0.647727)
-texture = ExtResource("15_3mg1q")
 
 [node name="Jam" type="Sprite2D" parent="Background"]
 position = Vector2(-77.7778, -133.247)
@@ -108,13 +130,6 @@ scale = Vector2(0.511784, 0.605667)
 texture = ExtResource("8_xn7o3")
 region_enabled = true
 region_rect = Rect2(671, 267, 110, 110)
-
-[node name="PintuDapur" type="Sprite2D" parent="Background"]
-position = Vector2(-437.778, 84.3701)
-scale = Vector2(0.917108, 0.675752)
-texture = ExtResource("12_rad5l")
-region_enabled = true
-region_rect = Rect2(52, 488, 21, 456)
 
 [node name="BackgroundHitam" type="Sprite2D" parent="Background"]
 position = Vector2(82.963, -326.104)
@@ -130,34 +145,14 @@ texture = ExtResource("16_5rew2")
 region_enabled = true
 region_rect = Rect2(0, 988, 1920, 92)
 
-[node name="Contoh" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(683.556, 385)
-scale = Vector2(0.712963, 0.709259)
-texture = ExtResource("11_1s5ce")
-
 [node name="Ground" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2(704, 784)
 
-[node name="Lantai" type="Sprite2D" parent="Ground"]
-modulate = Color(0.988235, 0.92549, 0.819608, 1)
-position = Vector2(-48, -42.6989)
-scale = Vector2(3.65625, 0.296691)
-texture = ExtResource("2_bchjv")
-
-[node name="Back" type="Sprite2D" parent="Ground"]
-modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(-48, -6.10352e-05)
-scale = Vector2(3.65625, 0.303521)
-texture = ExtResource("2_bchjv")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(32, 0)
+position = Vector2(32, -4.23077)
 shape = SubResource("RectangleShape2D_yjopp")
 
 [node name="Wall" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2(0, 352)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
@@ -165,34 +160,14 @@ position = Vector2(-480, 32)
 shape = SubResource("RectangleShape2D_5kwsy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
-position = Vector2(1976, 0)
+position = Vector2(1417.97, 26.8438)
 shape = SubResource("RectangleShape2D_5kwsy")
 
 [node name="Area2DToKamarAndika" type="Area2D" parent="."]
-visible = false
-position = Vector2(740, 496)
+position = Vector2(954.299, 496)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_yskcc")
-
-[node name="Square" type="Sprite2D" parent="Area2DToKamarAndika"]
-scale = Vector2(0.1875, 0.1875)
-texture = ExtResource("2_bchjv")
-
-[node name="Triangle" type="Sprite2D" parent="Area2DToKamarAndika/Square"]
-position = Vector2(0, -512)
-scale = Vector2(1.72973, 1.72973)
-texture = ExtResource("2_q1xqj")
-
-[node name="Label" type="Label" parent="Area2DToKamarAndika/Square/Triangle"]
-offset_left = -394.667
-offset_top = 468.667
-offset_right = 419.333
-offset_bottom = 616.667
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 100
-text = "Ke ruang andika
-Pencet 'Z'"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToKamarAndika"]
 position = Vector2(0, 48)
@@ -200,14 +175,12 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="InteractIcon" parent="Area2DToKamarAndika" instance=ExtResource("5_72kql")]
-position = Vector2(0, -153)
+position = Vector2(12.6991, -100.508)
 
 [node name="KamarAndikaPos" type="Marker2D" parent="."]
-visible = false
-position = Vector2(740, 665)
+position = Vector2(1071.63, 656.425)
 
 [node name="Area2DToDapur" type="Area2D" parent="."]
-visible = false
 position = Vector2(-304, 512)
 collision_layer = 2
 collision_mask = 2
@@ -218,11 +191,9 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="DapurPos" type="Marker2D" parent="."]
-visible = false
 position = Vector2(104, 665)
 
 [node name="Area2DToLuarRumahAndika" type="Area2D" parent="."]
-visible = false
 position = Vector2(1832, 512)
 collision_layer = 10
 collision_mask = 2
@@ -233,12 +204,11 @@ shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
 [node name="LuarRumahAndikaPos" type="Marker2D" parent="."]
-visible = false
 position = Vector2(1536, 665)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
-position = Vector2(595, 389)
+position = Vector2(595, 381.425)
 enabled = false
 limit_left = -88
 limit_top = -280
@@ -251,7 +221,7 @@ script = ExtResource("5_3cl1m")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 visible = false
-position = Vector2(595, 389)
+position = Vector2(595, 381.425)
 script = ExtResource("6_le5lx")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -263,8 +233,7 @@ draw_limits = true
 limit_target = NodePath("../RoomArea/CollisionShape2D")
 
 [node name="Player" parent="." instance=ExtResource("3_4juw4")]
-visible = false
-position = Vector2(576, 664)
+position = Vector2(576, 656.425)
 
 [node name="RoomArea" type="Area2D" parent="."]
 visible = false
