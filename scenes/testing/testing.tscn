@@ -40,3 +40,12 @@ shape = SubResource("RectangleShape2D_67lli")
 
 [node name="InteractIcon" parent="Level2D/InteractArea" instance=ExtResource("5_8orjb")]
 position = Vector2(0, -104)
+
+[node name="InteractArea2" parent="Level2D" instance=ExtResource("4_4747t")]
+position = Vector2(720, 536)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level2D/InteractArea2"]
+shape = SubResource("RectangleShape2D_67lli")
+
+[node name="InteractIcon" parent="Level2D/InteractArea2" instance=ExtResource("5_8orjb")]
+position = Vector2(0, -104)

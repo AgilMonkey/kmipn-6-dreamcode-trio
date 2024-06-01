@@ -12,9 +12,14 @@ func _ready():
 		p.interact_icon = self
 
 
+
 func interact():
+	if animation_player.current_animation_position == animation_player.current_animation_length:
+		return
+	
 	animation_player.play("start")
 
 
 func uninteract():
-	animation_player.play("end")
+	if animation_player.current_animation_position > 0:
+		animation_player.play_backwards("start")

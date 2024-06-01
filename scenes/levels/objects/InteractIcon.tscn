@@ -169,6 +169,7 @@ _data = {
 }
 
 [node name="InteractIcon" type="Node2D"]
+position = Vector2(88, 56)
 script = ExtResource("2_7k6gx")
 
 [node name="Gfx" type="Node2D" parent="."]

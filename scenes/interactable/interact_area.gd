@@ -5,6 +5,7 @@ class_name InteractArea
 ## Nanti akan di referensi oleh benda lain agar bisa diinteraksikan. Interaksi
 ## bisa dialog, event, dll.
 
+
 var is_interacting := false
 
 var interact_icon: InteractIcon
@@ -18,29 +19,26 @@ var interact: Callable = func():
 func _ready():
 	Dialogic.timeline_started.connect(func(): is_interacting = true)
 	Dialogic.timeline_ended.connect(func(): is_interacting = false)
-	area_entered.connect(_on_area_entered)
-	area_exited.connect(_on_area_exited)
 
 
 func _process(delta):
-	visible = not is_interacting 
-
-
-func _on_area_entered(area):
-	print("AAA")
-
-
-func _on_area_exited(area):
 	pass
+	#visible = not is_interacting 
 
 
 func _on_body_entered(body):
-	pass
-	#if interact_icon:
-		#interact_icon.interact()
+	InteractManager.register_area(self)
 
 
 func _on_body_exited(body):
-	pass
-	#if interact_icon:
-		#interact_icon.uninteract()
+	InteractManager.unregister_area(self)
+
+
+func show_interact_icon():
+	if interact_icon:
+		interact_icon.interact()
+
+
+func hide_interact_icon():
+	if interact_icon:
+		interact_icon.uninteract()

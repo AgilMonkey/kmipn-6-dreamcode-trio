@@ -493,8 +493,8 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(29.8051, -106.216)
-rotation = -0.153334
+position = Vector2(29.2103, -106.105)
+rotation = -0.13366
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -502,8 +502,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(22.6963, -132.472)
-rotation = -0.156526
+position = Vector2(22.6194, -132.495)
+rotation = -0.136852
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -518,7 +518,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -211.369)
+position = Vector2(-4.25413, -211.845)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -556,16 +556,16 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-37.4108, -102.062)
-rotation = 0.107862
+position = Vector2(-36.9859, -101.929)
+rotation = 0.0939849
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3593, -132.658)
-rotation = 0.107862
+position = Vector2(-26.36, -132.675)
+rotation = 0.0939849
 scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
