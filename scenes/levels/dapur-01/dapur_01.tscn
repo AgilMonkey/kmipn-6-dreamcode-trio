@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpfr0gavm0tp8"]
+[gd_scene load_steps=9 format=3 uid="uid://dpfr0gavm0tp8"]
 
 [ext_resource type="Script" path="res://scenes/levels/dapur-01/dapur_01.gd" id="1_d6p53"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_k53kt"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_j5mvm"]
+[ext_resource type="PackedScene" uid="uid://gxvnoob7qh73" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/minigame_memakan_makanan.tscn" id="4_80gkd"]
+[ext_resource type="PackedScene" uid="uid://c2fr1xssc6f4j" path="res://scenes/levels/dapur-01/minigame_makan_interactable.tscn" id="4_rp6qa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unkw3"]
 size = Vector2(2064, 237.304)
@@ -77,4 +79,50 @@ position = Vector2(1272, 672)
 [node name="Player" parent="." instance=ExtResource("2_j5mvm")]
 position = Vector2(520, 672)
 
+[node name="MinigameMakanInteractable" parent="." instance=ExtResource("4_rp6qa")]
+position = Vector2(688, 568)
+
+[node name="Game" type="ColorRect" parent="."]
+process_mode = 4
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 1344.0
+offset_bottom = 744.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Game/MarginContainer"]
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Game/MarginContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1288, 680)
+size_2d_override = Vector2i(1366, 768)
+size_2d_override_stretch = true
+render_target_update_mode = 0
+
+[node name="minigame_memakan_makanan" parent="Game/MarginContainer/SubViewportContainer/SubViewport" instance=ExtResource("4_80gkd")]
+unique_name_in_owner = true
+
 [connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]
+[connection signal="start_minigame" from="MinigameMakanInteractable" to="." method="_on_minigame_makan_interactable_start_minigame"]

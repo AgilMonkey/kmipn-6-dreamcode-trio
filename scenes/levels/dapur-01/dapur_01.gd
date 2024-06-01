@@ -20,3 +20,11 @@ func _on_area_2d_ke_ruang_tamu_body_entered(body):
 	SceneTransition.start_transition("FadeToBlack")
 	await SceneTransition.transition_in_middle
 	get_tree().change_scene_to_file(scene_ruang_tamu)
+
+
+func _on_minigame_makan_interactable_start_minigame(node):
+	$Player.set_process_input(false)
+	$Game.visible = true
+	$Game.process_mode = Node.PROCESS_MODE_INHERIT
+	await %minigame_memakan_makanan.minigame_selesai
+	node.stop_minigame.emit()

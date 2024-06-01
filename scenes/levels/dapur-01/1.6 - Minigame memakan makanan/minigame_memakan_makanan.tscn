@@ -138,6 +138,53 @@ tracks/1/keys = {
 "values": [ExtResource("22_pyw83")]
 }
 
+[sub_resource type="Animation" id="Animation_b1ax8"]
+resource_name = "get_food"
+length = 2.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tangan")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan/TanganSprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_pyw83")]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}, {
+"args": [],
+"method": &"selesaikan_game"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_vgqjs"]
 resource_name = "start_game"
 length = 1.5
@@ -195,53 +242,6 @@ tracks/3/keys = {
 "values": [ExtResource("23_4rhke")]
 }
 
-[sub_resource type="Animation" id="Animation_b1ax8"]
-resource_name = "get_food"
-length = 2.5
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tangan")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"set_process_input"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tangan/TanganSprite:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_pyw83")]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"tween_tangan_ke_bawah"
-}, {
-"args": [],
-"method": &"selesaikan_game"
-}]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8410x"]
 _data = {
 "RESET": SubResource("Animation_ikgiu"),
@@ -268,7 +268,6 @@ position = Vector2(683, 384)
 scale = Vector2(0.711, 0.711)
 
 [node name="Sausage1Clip" type="Sprite2D" parent="Food"]
-scale = Vector2(1, 1)
 
 [node name="Sausage1" parent="Food/Sausage1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-258.79, -185.654)
@@ -296,7 +295,6 @@ shape = SubResource("CapsuleShape2D_a8t8y")
 
 [node name="Sausage2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-191.28, -127.989)
-scale = Vector2(1, 1)
 
 [node name="Sausage2" parent="Food/Sausage2Clip" instance=ExtResource("3_fp883")]
 
@@ -319,7 +317,6 @@ shape = SubResource("CapsuleShape2D_hjo1u")
 
 [node name="Egg2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(63.2911, -102.672)
-scale = Vector2(1, 1)
 
 [node name="Egg2" parent="Food/Egg2Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-66.1041, -15.4712)
@@ -343,7 +340,6 @@ shape = SubResource("CapsuleShape2D_jcrn1")
 
 [node name="Egg1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(63.2911, -102.672)
-scale = Vector2(1, 1)
 
 [node name="Egg1" parent="Food/Egg1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(1.40649, 0)
@@ -367,7 +363,6 @@ shape = SubResource("CapsuleShape2D_s75ux")
 
 [node name="Rice3Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-142.053, 123.769)
-scale = Vector2(1, 1)
 
 [node name="Rice3" parent="Food/Rice3Clip" instance=ExtResource("3_fp883")]
 
@@ -390,7 +385,6 @@ shape = SubResource("CapsuleShape2D_rwybk")
 
 [node name="Rice2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-37.9747, 130.802)
-scale = Vector2(1, 1)
 
 [node name="Rice2" parent="Food/Rice2Clip" instance=ExtResource("3_fp883")]
 
@@ -413,7 +407,6 @@ shape = SubResource("CapsuleShape2D_cpmca")
 
 [node name="Rice1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(23.91, 147.679)
-scale = Vector2(1, 1)
 
 [node name="Rice1" parent="Food/Rice1Clip" instance=ExtResource("3_fp883")]
 
@@ -436,7 +429,6 @@ shape = SubResource("CapsuleShape2D_488rf")
 
 [node name="Vegetable1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(119.55, 42.194)
-scale = Vector2(1, 1)
 
 [node name="Vegetable1" parent="Food/Vegetable1Clip" instance=ExtResource("3_fp883")]
 
@@ -456,7 +448,6 @@ shape = SubResource("CircleShape2D_und0a")
 
 [node name="Vegetable2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(181.435, -39.3812)
-scale = Vector2(1, 1)
 
 [node name="Vegetable2" parent="Food/Vegetable2Clip" instance=ExtResource("3_fp883")]
 
