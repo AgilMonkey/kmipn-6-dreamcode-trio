@@ -1,10 +1,10 @@
 [gd_scene load_steps=49 format=3 uid="uid://gxvnoob7qh73"]
 
-[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
+[ext_resource type="Script" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
 [ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
 [ext_resource type="Texture2D" uid="uid://b8s1vkliy2vuf" path="res://assets/1.6 - Minigame memakan makanan/piring.png" id="2_75sqk"]
 [ext_resource type="Texture2D" uid="uid://bayo7ofu3mjsk" path="res://assets/1.6 - Minigame memakan makanan/nasi3.png" id="3_06w3k"]
-[ext_resource type="PackedScene" uid="uid://ckoidmc18bccv" path="res://scenes/1.6 - Minigame memakan makanan/Food.tscn" id="3_fp883"]
+[ext_resource type="PackedScene" uid="uid://ckoidmc18bccv" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/Food.tscn" id="3_fp883"]
 [ext_resource type="Texture2D" uid="uid://bkpxsojcul1kv" path="res://assets/1.6 - Minigame memakan makanan/nasi2.png" id="4_umbpg"]
 [ext_resource type="Texture2D" uid="uid://cjeylnud2jjyw" path="res://assets/1.6 - Minigame memakan makanan/nasi1.png" id="5_oiww5"]
 [ext_resource type="Texture2D" uid="uid://de6ogyyvgsxd5" path="res://assets/1.6 - Minigame memakan makanan/sosis1.png" id="7_ttgjg"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b1f4h6qqjutbd" path="res://assets/1.6 - Minigame memakan makanan/sayur1.png" id="12_nucvp"]
 [ext_resource type="Texture2D" uid="uid://rumr81m4uap6" path="res://assets/1.6 - Minigame memakan makanan/sayur2.png" id="13_fooqg"]
 [ext_resource type="Texture2D" uid="uid://d4dcxo1h2yv82" path="res://assets/1.6 - Minigame memakan makanan/background hitam.svg" id="15_xrxpe"]
-[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/tangan.gd" id="16_6lkrg"]
+[ext_resource type="Script" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/tangan.gd" id="16_6lkrg"]
 [ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="21_aapbp"]
 [ext_resource type="Texture2D" uid="uid://b5mn6x0ew7yep" path="res://assets/3.8 - Minigame vending machine/tangan2.svg" id="22_pyw83"]
 [ext_resource type="Texture2D" uid="uid://chlmpgpgu6ilx" path="res://assets/3.8 - Minigame vending machine/tangan1.svg" id="23_4rhke"]
@@ -138,6 +138,53 @@ tracks/1/keys = {
 "values": [ExtResource("22_pyw83")]
 }
 
+[sub_resource type="Animation" id="Animation_b1ax8"]
+resource_name = "get_food"
+length = 2.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tangan")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan/TanganSprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_pyw83")]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}, {
+"args": [],
+"method": &"selesaikan_game"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_vgqjs"]
 resource_name = "start_game"
 length = 1.5
@@ -195,53 +242,6 @@ tracks/3/keys = {
 "values": [ExtResource("23_4rhke")]
 }
 
-[sub_resource type="Animation" id="Animation_b1ax8"]
-resource_name = "get_food"
-length = 2.5
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tangan")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"set_process_input"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tangan/TanganSprite:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_pyw83")]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"tween_tangan_ke_bawah"
-}, {
-"args": [],
-"method": &"selesaikan_game"
-}]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8410x"]
 _data = {
 "RESET": SubResource("Animation_ikgiu"),
@@ -268,7 +268,6 @@ position = Vector2(683, 384)
 scale = Vector2(0.711, 0.711)
 
 [node name="Sausage1Clip" type="Sprite2D" parent="Food"]
-scale = Vector2(1, 1)
 
 [node name="Sausage1" parent="Food/Sausage1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-258.79, -185.654)
@@ -296,7 +295,6 @@ shape = SubResource("CapsuleShape2D_a8t8y")
 
 [node name="Sausage2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-191.28, -127.989)
-scale = Vector2(1, 1)
 
 [node name="Sausage2" parent="Food/Sausage2Clip" instance=ExtResource("3_fp883")]
 
@@ -319,7 +317,6 @@ shape = SubResource("CapsuleShape2D_hjo1u")
 
 [node name="Egg2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(63.2911, -102.672)
-scale = Vector2(1, 1)
 
 [node name="Egg2" parent="Food/Egg2Clip" instance=ExtResource("3_fp883")]
 position = Vector2(-66.1041, -15.4712)
@@ -343,7 +340,6 @@ shape = SubResource("CapsuleShape2D_jcrn1")
 
 [node name="Egg1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(63.2911, -102.672)
-scale = Vector2(1, 1)
 
 [node name="Egg1" parent="Food/Egg1Clip" instance=ExtResource("3_fp883")]
 position = Vector2(1.40649, 0)
@@ -367,7 +363,6 @@ shape = SubResource("CapsuleShape2D_s75ux")
 
 [node name="Rice3Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-142.053, 123.769)
-scale = Vector2(1, 1)
 
 [node name="Rice3" parent="Food/Rice3Clip" instance=ExtResource("3_fp883")]
 
@@ -390,7 +385,6 @@ shape = SubResource("CapsuleShape2D_rwybk")
 
 [node name="Rice2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(-37.9747, 130.802)
-scale = Vector2(1, 1)
 
 [node name="Rice2" parent="Food/Rice2Clip" instance=ExtResource("3_fp883")]
 
@@ -413,7 +407,6 @@ shape = SubResource("CapsuleShape2D_cpmca")
 
 [node name="Rice1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(23.91, 147.679)
-scale = Vector2(1, 1)
 
 [node name="Rice1" parent="Food/Rice1Clip" instance=ExtResource("3_fp883")]
 
@@ -436,7 +429,6 @@ shape = SubResource("CapsuleShape2D_488rf")
 
 [node name="Vegetable1Clip" type="Sprite2D" parent="Food"]
 position = Vector2(119.55, 42.194)
-scale = Vector2(1, 1)
 
 [node name="Vegetable1" parent="Food/Vegetable1Clip" instance=ExtResource("3_fp883")]
 
@@ -456,7 +448,6 @@ shape = SubResource("CircleShape2D_und0a")
 
 [node name="Vegetable2Clip" type="Sprite2D" parent="Food"]
 position = Vector2(181.435, -39.3812)
-scale = Vector2(1, 1)
 
 [node name="Vegetable2" parent="Food/Vegetable2Clip" instance=ExtResource("3_fp883")]
 
@@ -546,6 +537,31 @@ libraries = {
 "": SubResource("AnimationLibrary_8410x")
 }
 autoplay = "start_game"
+
+[node name="Tutorial" type="ColorRect" parent="."]
+offset_left = 998.0
+offset_top = 8.0
+offset_right = 1336.0
+offset_bottom = 288.0
+
+[node name="Label" type="Label" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = -9.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Z -> Mengambil makanan
+Panah -> Gerak tangan
+
+Ambil makanan dan tarik kebawah untuk memakannya"
+autowrap_mode = 2
 
 [connection signal="grabbed" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_grabbed"]
 [connection signal="released" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_released"]

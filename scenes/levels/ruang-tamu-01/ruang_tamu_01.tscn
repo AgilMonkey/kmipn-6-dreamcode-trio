@@ -237,16 +237,16 @@ debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 [node name="DapurPos" type="Marker2D" parent="."]
 position = Vector2(104, 665)
 
-[node name="InteractDialogue" parent="." instance=ExtResource("17_by32x")]
+[node name="KeluarBelumMakan" parent="." instance=ExtResource("17_by32x")]
 position = Vector2(1319.72, 512)
 timeline_path = "res://scenes/levels/ruang-tamu-01/dialog_belum_makan.dtl"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDialogue"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeluarBelumMakan"]
 position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_5a68g")
 debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
 
-[node name="InteractIcon" parent="InteractDialogue" instance=ExtResource("5_72kql")]
+[node name="InteractIcon" parent="KeluarBelumMakan" instance=ExtResource("5_72kql")]
 position = Vector2(0, -40)
 
 [node name="Area2DToLuarRumahAndika" type="Area2D" parent="."]

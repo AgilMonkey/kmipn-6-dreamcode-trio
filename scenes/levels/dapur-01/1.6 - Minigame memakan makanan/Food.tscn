@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckoidmc18bccv"]
 
-[ext_resource type="Script" path="res://scenes/1.6 - Minigame memakan makanan/Food.gd" id="1_u7naa"]
+[ext_resource type="Script" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/Food.gd" id="1_u7naa"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qrpyx"]
 

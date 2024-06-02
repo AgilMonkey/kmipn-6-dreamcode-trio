@@ -150,6 +150,11 @@ dialogic_default_action={
 2d_physics/layer_5="object"
 2d_physics/layer_6="tangan"
 
+[phantom_camera]
+
+updater/enable_updater=false
+updater/show_new_release_info_on_editor_launch_in_output=false
+
 [physics]
 
 common/physics_ticks_per_second=70
