@@ -12,7 +12,7 @@ func _ready():
 	
 	if from_pos != null:
 		$Player.global_position = from_pos.global_position
-		$Player.smoothing.teleport()q
+		$Player.smoothing.teleport()
 
 
 func _on_area_2d_ke_luar_rumah_2_body_entered(body):
