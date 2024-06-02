@@ -39,5 +39,6 @@ func _on_interact_minigame_isi_token_listrk_interacted(node):
 	$Player.set_process_input(true)
 	$MinigameStuff.visible = false
 	%"minigame-mengisi-token-listrik".process_mode = Node.PROCESS_MODE_DISABLED
+	%"minigame-mengisi-token-listrik".hide()
 	Dialogic.VAR.sudah_isi_token = true
 	node.stop_minigame.emit()

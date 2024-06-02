@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=49 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://b15d6og2idb47" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/pintu.png" id="39_oom8r"]
 [ext_resource type="PackedScene" uid="uid://hqn85c8x3b7h" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.tscn" id="39_qnq23"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
+[ext_resource type="PackedScene" uid="uid://0xmmdcr30fx7" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/minigame_mencari_barang.tscn" id="41_s0jp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
 size = Vector2(2640, 261.304)
@@ -307,6 +308,10 @@ render_target_update_mode = 0
 
 [node name="minigame-mengisi-token-listrik" parent="MinigameStuff/Minigames/MinigamePanel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("39_qnq23")]
 unique_name_in_owner = true
+process_mode = 4
+visible = false
+
+[node name="minigame_mencari_barang" parent="MinigameStuff/Minigames/MinigamePanel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("41_s0jp2")]
 process_mode = 4
 visible = false
 
