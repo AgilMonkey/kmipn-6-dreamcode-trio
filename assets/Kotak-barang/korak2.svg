@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2321" height="1080" viewBox="0 0 2321 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7c99c;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #d6a576;
+      }
+
+      .cls-3 {
+        fill: #836447;
+      }
+    </style>
+  </defs>
+  <g id="Kotak">
+    <g>
+      <path class="cls-1" d="M1321.04,475l86.91,76.248-6.1,8.536-88.9-74.687Z"/>
+      <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-1" d="M1308.91,499.233l-76.76,51.833,6.8,8.769L1317,507.311Z"/>
+      <path class="cls-2" d="M1232.15,550.837h175.42V683H1232.15V550.837Z"/>
+      <path class="cls-3" d="M1294.77,586.068h52.54v12.116h-52.54V586.068Z"/>
+    </g>
+  </g>
+</svg>

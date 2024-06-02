@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2321" height="1080" viewBox="0 0 2321 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6805b;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #c59465;
+      }
+
+      .cls-3 {
+        fill: #5f4225;
+      }
+
+      .cls-4 {
+        fill: #f7c99c;
+      }
+
+      .cls-5 {
+        fill: #d6a576;
+      }
+
+      .cls-6 {
+        fill: #836447;
+      }
+
+      .cls-7 {
+        fill: #ecbf94;
+      }
+
+      .cls-8 {
+        fill: #967351;
+      }
+    </style>
+  </defs>
+  <g id="Kotak">
+    <g>
+      <path class="cls-1" d="M1371.08,560.4h137.87V680.99H1371.08V560.4Z"/>
+      <path class="cls-2" d="M1373.54,555.741H1513v18.231H1373.54V555.741Z"/>
+      <path class="cls-3" d="M1407.93,596.165h48.49v12.117h-48.49V596.165Z"/>
+    </g>
+    <g>
+      <path class="cls-4" d="M1321.04,475l86.91,76.248-6.1,8.536-88.9-74.687Z"/>
+      <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-4" d="M1308.91,499.233l-76.76,51.833,6.8,8.769L1317,507.311Z"/>
+      <path class="cls-5" d="M1232.15,550.837h175.42V683H1232.15V550.837Z"/>
+      <path class="cls-6" d="M1294.77,586.068h52.54v12.116h-52.54V586.068Z"/>
+    </g>
+    <g id="Group_9_copy" data-name="Group 9 copy">
+      <path class="cls-5" d="M1028.16,557.915H1190.4V678.483H1028.16V557.915Z"/>
+      <path class="cls-7" d="M1024,553.757h170.56v18.709H1024V553.757Z"/>
+      <path class="cls-8" d="M1082.22,595.31h56.21V605.7h-56.21V595.31Z"/>
+    </g>
+  </g>
+</svg>

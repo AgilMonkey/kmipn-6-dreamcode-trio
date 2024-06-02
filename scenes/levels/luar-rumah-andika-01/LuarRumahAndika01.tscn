@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=52 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -28,9 +28,11 @@
 [ext_resource type="Texture2D" uid="uid://dl0jauix7fal6" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman2.png" id="24_w3j3l"]
 [ext_resource type="Texture2D" uid="uid://cbvb4eoauh56i" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman3.png" id="25_obas3"]
 [ext_resource type="Texture2D" uid="uid://bscu4jfgbdgo1" path="res://assets/2.2 - Tampilan di luar rumah Andika/tiang listrik.svg" id="26_3h1le"]
+[ext_resource type="Texture2D" uid="uid://bfrk4bcj6ugux" path="res://assets/Karakter/Karakter Pak RT.svg" id="31_semja"]
 [ext_resource type="Texture2D" uid="uid://2kxwv5euvoov" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Rumah Pak RT.svg" id="32_7tjrp"]
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/InteractMinigameIsiTokenListrk.gd" id="33_ifb8h"]
 [ext_resource type="Texture2D" uid="uid://gar1mo8av7mq" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Jendela dan AC.png" id="33_itv6i"]
+[ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="34_dfpbd"]
 [ext_resource type="Texture2D" uid="uid://be2fa7gyiaec5" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/pinttu Pak RT.png" id="34_pudcw"]
 [ext_resource type="Texture2D" uid="uid://el17qi12nd5q" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Pintu Hiasan.png" id="35_2ke3f"]
 [ext_resource type="Texture2D" uid="uid://2qo8f7rnhygo" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/AC-contoh.png" id="36_matia"]
@@ -41,6 +43,9 @@
 [ext_resource type="PackedScene" uid="uid://hqn85c8x3b7h" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.tscn" id="39_qnq23"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 [ext_resource type="PackedScene" uid="uid://0xmmdcr30fx7" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/minigame_mencari_barang.tscn" id="41_s0jp2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xx887"]
+radius = 72.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
 size = Vector2(2640, 261.304)
@@ -171,6 +176,28 @@ texture = ExtResource("17_yq62p")
 [node name="BackgroundHitam2" type="Sprite2D" parent="AllSprites"]
 scale = Vector2(1.24, 1)
 texture = ExtResource("18_2c3wk")
+
+[node name="KarakterPakRt" type="Node2D" parent="."]
+position = Vector2(1016, 528)
+
+[node name="KarakterPakRtSprite" type="Sprite2D" parent="KarakterPakRt"]
+scale = Vector2(0.384036, 0.385852)
+texture = ExtResource("31_semja")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(250, 203, 332, 622)
+
+[node name="InteractDialogue" parent="KarakterPakRt" instance=ExtResource("34_dfpbd")]
+timeline_path = "res://scenes/levels/luar-rumah-andika-01/Dialog/dialog_pak_rt.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KarakterPakRt/InteractDialogue"]
+shape = SubResource("CircleShape2D_xx887")
+
+[node name="InteractIcon" parent="KarakterPakRt/InteractDialogue" instance=ExtResource("6_1ll6f")]
+position = Vector2(0, -152)
+
+[node name="PakRtBuble" type="Node2D" parent="KarakterPakRt"]
+position = Vector2(0, -80)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
@@ -315,5 +342,6 @@ visible = false
 process_mode = 4
 visible = false
 
+[connection signal="dialogue_started" from="KarakterPakRt/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
 [connection signal="start_minigame" from="InteractMinigameIsiTokenListrk" to="." method="_on_interact_minigame_isi_token_listrk_interacted"]

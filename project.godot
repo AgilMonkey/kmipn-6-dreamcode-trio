@@ -27,6 +27,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Andika": "res://dialogic-stuff/characters/Andika.dch",
 "Ayah": "res://dialogic-stuff/characters/Ayah.dch",
+"PakRt": "res://dialogic-stuff/characters/PakRt.dch",
 "flower": "res://dialogic-stuff/characters/flower.dch",
 "test_mc": "res://dialogic-stuff/characters/test_mc.dch"
 }
@@ -35,6 +36,7 @@ directories/dtl_directory={
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "dialog_belum_makan": "res://scenes/levels/ruang-tamu-01/dialog_belum_makan.dtl",
 "dialog_lemari_es": "res://scenes/levels/dapur-01/dialog_lemari_es.dtl",
+"dialog_pak_rt": "res://scenes/levels/luar-rumah-andika-01/Dialog/dialog_pak_rt.dtl",
 "dialog_panci": "res://scenes/levels/dapur-01/dialog_panci.dtl",
 "dialogue_jam": "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl",
 "komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",

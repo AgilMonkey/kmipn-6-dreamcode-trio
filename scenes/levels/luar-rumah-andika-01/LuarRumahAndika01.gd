@@ -42,3 +42,7 @@ func _on_interact_minigame_isi_token_listrk_interacted(node):
 	%"minigame-mengisi-token-listrik".hide()
 	Dialogic.VAR.sudah_isi_token = true
 	node.stop_minigame.emit()
+
+
+func _on_interact_dialogue_dialogue_started(layout):
+		layout.register_character(load("res://dialogic-stuff/characters/PakRt.dch"), $KarakterPakRt/PakRtBuble)
