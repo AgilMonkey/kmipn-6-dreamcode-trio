@@ -47,3 +47,7 @@ func _on_area_2d_to_luar_rumah_andika_change_scene():
 
 func _on_interact_dialogue_dialogue_started(layout):
 	layout.register_character(load("res://dialogic-stuff/characters/Ayah.dch"), ayah_andika_buble)
+
+
+func _on_area_hp_ibu_area_entered(area):
+	pass # Replace with function body.
