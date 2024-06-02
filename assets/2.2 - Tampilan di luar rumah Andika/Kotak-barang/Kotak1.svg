@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2321" height="1080" viewBox="0 0 2321 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d6a576;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #ecbf94;
+      }
+
+      .cls-3 {
+        fill: #967351;
+      }
+    </style>
+  </defs>
+  <g id="Kotak">
+    <g id="Group_9_copy" data-name="Group 9 copy">
+      <path class="cls-1" d="M1028.16,557.915H1190.4V678.483H1028.16V557.915Z"/>
+      <path class="cls-2" d="M1024,553.757h170.56v18.709H1024V553.757Z"/>
+      <path class="cls-3" d="M1082.22,595.31h56.21V605.7h-56.21V595.31Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=40 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_wcpsw"]
+[ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
 [ext_resource type="Texture2D" uid="uid://yaw1wvqwss2o" path="res://assets/kenney_abstract-platformer/PNG/Backgrounds/set3_tiles.png" id="2_neh3t"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_vqacv"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_lykbd"]
@@ -10,6 +11,31 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_h3xh2"]
 [ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="6_1ll6f"]
 [ext_resource type="Texture2D" uid="uid://cmdlck0qxjns8" path="res://assets/Simple Shapes/Triangle.png" id="8_40esk"]
+[ext_resource type="Texture2D" uid="uid://dpqoo7c73542f" path="res://assets/2.2 - Tampilan di luar rumah Andika/Bangunan bayangan.png" id="11_caemv"]
+[ext_resource type="Texture2D" uid="uid://curmmhas2q3gp" path="res://assets/2.2 - Tampilan di luar rumah Andika/Background.png" id="11_d4r1a"]
+[ext_resource type="Texture2D" uid="uid://7yo061s0w373" path="res://assets/2.2 - Tampilan di luar rumah Andika/AC-Samping1.png" id="12_cg3np"]
+[ext_resource type="Texture2D" uid="uid://dght4pafyp5t0" path="res://assets/2.2 - Tampilan di luar rumah Andika/awan.png" id="13_mp5gj"]
+[ext_resource type="Texture2D" uid="uid://b6sv0y8twhhdn" path="res://assets/2.2 - Tampilan di luar rumah Andika/hiasan jalan rumah andika.jpg.png" id="15_5ncfw"]
+[ext_resource type="Texture2D" uid="uid://ccew4kdpxj1h2" path="res://assets/2.2 - Tampilan di luar rumah Andika/AC-samping2.png" id="15_6umgj"]
+[ext_resource type="Texture2D" uid="uid://cxchqpmryg8s7" path="res://assets/2.2 - Tampilan di luar rumah Andika/AC-Samping3.png" id="16_5bfpg"]
+[ext_resource type="Texture2D" uid="uid://ba8ynkele1m07" path="res://assets/2.2 - Tampilan di luar rumah Andika/hiasan jalan rumah pak RT.jpg.png" id="16_fa5yt"]
+[ext_resource type="Texture2D" uid="uid://ckfn83v51hfu5" path="res://assets/2.2 - Tampilan di luar rumah Andika/Jalan-untuk Mobil.svg" id="17_f208n"]
+[ext_resource type="Texture2D" uid="uid://cgwslcf5oiypc" path="res://assets/2.2 - Tampilan di luar rumah Andika/background hitam.png" id="17_yq62p"]
+[ext_resource type="Texture2D" uid="uid://betb2bw2dpy0r" path="res://assets/2.2 - Tampilan di luar rumah Andika/background hitam.svg" id="18_2c3wk"]
+[ext_resource type="Texture2D" uid="uid://bykbso10tpg53" path="res://assets/2.2 - Tampilan di luar rumah Andika/Jalan-untuk pejalan kaki.svg" id="18_ding4"]
+[ext_resource type="Texture2D" uid="uid://csrqcjtsqnoia" path="res://assets/2.2 - Tampilan di luar rumah Andika/pagar2.png" id="19_r8fjy"]
+[ext_resource type="Texture2D" uid="uid://bfh5wojsp4p8k" path="res://assets/2.2 - Tampilan di luar rumah Andika/Pagar.png" id="20_ogfih"]
+[ext_resource type="Texture2D" uid="uid://c42psn3vah15u" path="res://assets/2.2 - Tampilan di luar rumah Andika/Pohon.png" id="21_t3oh5"]
+[ext_resource type="Texture2D" uid="uid://dkndyautdej21" path="res://assets/2.2 - Tampilan di luar rumah Andika/Taman-jalan.svg" id="22_arfbr"]
+[ext_resource type="Texture2D" uid="uid://dj5l62hbe0eyy" path="res://assets/2.2 - Tampilan di luar rumah Andika/Tanaman1.png" id="23_767m8"]
+[ext_resource type="Texture2D" uid="uid://d1han51r3722n" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Biru.svg" id="24_f1bd5"]
+[ext_resource type="Texture2D" uid="uid://dl0jauix7fal6" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman2.png" id="24_w3j3l"]
+[ext_resource type="Texture2D" uid="uid://cbvb4eoauh56i" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman3.png" id="25_obas3"]
+[ext_resource type="Texture2D" uid="uid://blbu4a0cq5taj" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Hijau.svg" id="25_pjyma"]
+[ext_resource type="Texture2D" uid="uid://bscu4jfgbdgo1" path="res://assets/2.2 - Tampilan di luar rumah Andika/tiang listrik.svg" id="26_3h1le"]
+[ext_resource type="Texture2D" uid="uid://cb4nyyljdt2km" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Kuning.svg" id="26_y3dmn"]
+[ext_resource type="Texture2D" uid="uid://bswnmybwrslbk" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Merah.svg" id="27_qikwi"]
+[ext_resource type="Texture2D" uid="uid://b5npdp6gmy8p6" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Ungu.svg" id="28_jh2a1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
 size = Vector2(2192, 245.304)
@@ -27,20 +53,24 @@ ease = 2
 script = ExtResource("1_qcla1")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(0.198949, 0.543665, 0.68872, 1)
 position = Vector2(519.89, 392.674)
 scale = Vector2(6.31293, 2.12237)
 texture = ExtResource("1_wcpsw")
 
 [node name="Set3Tiles" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(144, 304)
 texture = ExtResource("2_neh3t")
 
 [node name="Set3Tiles2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1328, 448)
 texture = ExtResource("2_neh3t")
 
 [node name="Ground" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(688.221, 790.652)
 
 [node name="Lantai" type="Sprite2D" parent="Ground"]
@@ -60,6 +90,7 @@ position = Vector2(-0.221008, -4)
 shape = SubResource("RectangleShape2D_4ni88")
 
 [node name="Area2DToRuangTamu" parent="." instance=ExtResource("4_db4xs")]
+visible = false
 position = Vector2(776, 456)
 
 [node name="Square" type="Sprite2D" parent="Area2DToRuangTamu"]
@@ -93,9 +124,11 @@ position = Vector2(0, -80)
 position = Vector2(-22, 208)
 
 [node name="Player" parent="." instance=ExtResource("2_vqacv")]
+visible = false
 position = Vector2(560, 664)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+visible = false
 position = Vector2(560, 384)
 script = ExtResource("3_omytb")
 follow_mode = 2
@@ -106,9 +139,93 @@ follow_damping = true
 draw_limits = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2(560, 384)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("3_lykbd")
+
+[node name="ContohTampilan" type="Sprite2D" parent="."]
+position = Vector2(64, 1384)
+texture = ExtResource("2_fbuos")
+
+[node name="All" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="All"]
+texture = ExtResource("11_d4r1a")
+
+[node name="Awan" type="Sprite2D" parent="All"]
+texture = ExtResource("13_mp5gj")
+
+[node name="Ac-samping1" type="Sprite2D" parent="All"]
+texture = ExtResource("12_cg3np")
+
+[node name="Ac-samping2" type="Sprite2D" parent="All"]
+texture = ExtResource("15_6umgj")
+
+[node name="Ac-samping3" type="Sprite2D" parent="All"]
+texture = ExtResource("16_5bfpg")
+
+[node name="BangunanBayangan" type="Sprite2D" parent="All"]
+texture = ExtResource("11_caemv")
+
+[node name="HiasanJalanRumahAndika_jpg" type="Sprite2D" parent="All"]
+texture = ExtResource("15_5ncfw")
+
+[node name="HiasanJalanRumahPakRt_jpg" type="Sprite2D" parent="All"]
+texture = ExtResource("16_fa5yt")
+
+[node name="Jalan-untukMobil" type="Sprite2D" parent="All"]
+texture = ExtResource("17_f208n")
+
+[node name="Jalan-untukPejalanKaki" type="Sprite2D" parent="All"]
+texture = ExtResource("18_ding4")
+
+[node name="MobilBiru" type="Sprite2D" parent="All"]
+texture = ExtResource("24_f1bd5")
+
+[node name="MobilHijau" type="Sprite2D" parent="All"]
+texture = ExtResource("25_pjyma")
+
+[node name="MobilKuning" type="Sprite2D" parent="All"]
+texture = ExtResource("26_y3dmn")
+
+[node name="MobilMerah" type="Sprite2D" parent="All"]
+texture = ExtResource("27_qikwi")
+
+[node name="MobilUngu" type="Sprite2D" parent="All"]
+texture = ExtResource("28_jh2a1")
+
+[node name="Pagar2" type="Sprite2D" parent="All"]
+texture = ExtResource("19_r8fjy")
+
+[node name="Pagar" type="Sprite2D" parent="All"]
+texture = ExtResource("20_ogfih")
+
+[node name="Pohon" type="Sprite2D" parent="All"]
+texture = ExtResource("21_t3oh5")
+
+[node name="Taman-jalan" type="Sprite2D" parent="All"]
+texture = ExtResource("22_arfbr")
+
+[node name="TiangListrik" type="Sprite2D" parent="All"]
+texture = ExtResource("26_3h1le")
+
+[node name="Tanaman1" type="Sprite2D" parent="All"]
+texture = ExtResource("23_767m8")
+
+[node name="Tanaman2" type="Sprite2D" parent="All"]
+texture = ExtResource("24_w3j3l")
+
+[node name="Tanaman3" type="Sprite2D" parent="All"]
+texture = ExtResource("25_obas3")
+
+[node name="BackgroundHitam" type="Sprite2D" parent="All"]
+scale = Vector2(1.24, 1)
+texture = ExtResource("17_yq62p")
+
+[node name="BackgroundHitam2" type="Sprite2D" parent="All"]
+scale = Vector2(1.24, 1)
+texture = ExtResource("18_2c3wk")
 
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
