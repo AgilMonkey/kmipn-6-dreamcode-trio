@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://de5fxnerw0y8f"]
+[gd_scene load_steps=27 format=3 uid="uid://de5fxnerw0y8f"]
 
 [ext_resource type="Texture2D" uid="uid://8jhcg5nqewpg" path="res://assets/3.3 - Ruang kelas Andika/background hitam.png" id="1_3gjeb"]
 [ext_resource type="Texture2D" uid="uid://8cn6kfceojbn" path="res://assets/3.3 - Ruang kelas Andika/background hitam.svg" id="2_0k05e"]
@@ -15,25 +15,26 @@
 [ext_resource type="Texture2D" uid="uid://oemkl5gb48xh" path="res://assets/3.3 - Ruang kelas Andika/Lantai-atap.svg" id="13_r0arr"]
 [ext_resource type="Texture2D" uid="uid://dfhj7m6g8mh2n" path="res://assets/3.3 - Ruang kelas Andika/Laptop.svg" id="14_x1yxy"]
 [ext_resource type="Texture2D" uid="uid://b0hwfatpfbsgj" path="res://assets/3.3 - Ruang kelas Andika/Meja1.svg" id="15_q6hkw"]
+[ext_resource type="Texture2D" uid="uid://dg6jufgkklnjr" path="res://assets/Karakter/Karakter Teman - Duduk .svg" id="16_ocpqs"]
 [ext_resource type="Texture2D" uid="uid://qxt6a50jsi30" path="res://assets/3.3 - Ruang kelas Andika/Meja2.svg" id="16_rm2oa"]
 [ext_resource type="Texture2D" uid="uid://c63hdk2jwjb0j" path="res://assets/3.3 - Ruang kelas Andika/Meja3.svg" id="17_76yv3"]
 [ext_resource type="Texture2D" uid="uid://jamrg7tjvxf6" path="res://assets/3.3 - Ruang kelas Andika/Meja4.svg" id="18_wvgqw"]
 [ext_resource type="Texture2D" uid="uid://dvwsgrkd2xgmx" path="res://assets/3.3 - Ruang kelas Andika/Meja-Guru.svg" id="19_6uph2"]
+[ext_resource type="Texture2D" uid="uid://bn8qfajm4bu54" path="res://assets/Karakter/Karakter NPC Duduk .svg" id="19_ilej6"]
 [ext_resource type="Texture2D" uid="uid://c6j7j5xepa2bi" path="res://assets/3.3 - Ruang kelas Andika/pintu.svg" id="20_rqug8"]
 [ext_resource type="Texture2D" uid="uid://doyqh3grufg1b" path="res://assets/3.3 - Ruang kelas Andika/Proyektor.svg" id="21_gq8yc"]
+[ext_resource type="Texture2D" uid="uid://imjypjh8pw1l" path="res://assets/Karakter/Karakter Andika-Duduk.svg" id="22_paoud"]
+[ext_resource type="Texture2D" uid="uid://chkhjw3ka4h5m" path="res://assets/Karakter/Karakter Guru - Duduk .svg" id="23_tyjl8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yoh60"]
 size = Vector2(3179, 237.304)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujfdo"]
-size = Vector2(280, 960)
 
 [node name="RuangKelasAndika" type="Node2D"]
 position = Vector2(735, 386)
 scale = Vector2(0.711, 0.711)
 
 [node name="BackSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 2.8129)
+position = Vector2(-111.111, 2.8129)
 
 [node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
@@ -92,9 +93,24 @@ visible = false
 position = Vector2(-2, -2.99994)
 texture = ExtResource("14_x1yxy")
 
+[node name="KarakterAndika-duduk" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-111.111, 275.668)
+scale = Vector2(0.556684, 0.556684)
+texture = ExtResource("22_paoud")
+
+[node name="KarakterTeman-Duduk" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-842.475, 286.92)
+scale = Vector2(0.517422, 0.517422)
+texture = ExtResource("16_ocpqs")
+
 [node name="Meja1" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
 texture = ExtResource("15_q6hkw")
+
+[node name="KarakterNpcDuduk" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-482.419, 286.92)
+scale = Vector2(0.503981, 0.503981)
+texture = ExtResource("19_ilej6")
 
 [node name="Meja2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
@@ -107,6 +123,11 @@ texture = ExtResource("17_76yv3")
 [node name="Meja4" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
 texture = ExtResource("18_wvgqw")
+
+[node name="KarakterGuru-Duduk" type="Sprite2D" parent="BackSprite"]
+position = Vector2(879.043, 241.913)
+scale = Vector2(0.540343, 0.540343)
+texture = ExtResource("23_tyjl8")
 
 [node name="Meja-guru" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
@@ -129,11 +150,3 @@ shape = SubResource("RectangleShape2D_yoh60")
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(-898.093, 97.0464)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-139.882, 0)
-shape = SubResource("RectangleShape2D_ujfdo")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
-position = Vector2(1924.82, -12)
-shape = SubResource("RectangleShape2D_ujfdo")
