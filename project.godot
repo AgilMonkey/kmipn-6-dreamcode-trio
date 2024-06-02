@@ -48,6 +48,7 @@ variables={
 "ingatkan_ayah_buang_sampah": false,
 "is_new_game": true,
 "sudah_bayar_token_listrik": false,
+"sudah_bicara_dengan_mamah": false,
 "sudah_makan": false
 }
 layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]
@@ -74,6 +75,7 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
