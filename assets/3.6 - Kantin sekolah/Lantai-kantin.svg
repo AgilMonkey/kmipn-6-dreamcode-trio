@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7b4a3c;
+      }
+    </style>
+  </defs>
+  <g id="Lantai">
+    <rect class="cls-1" x="-4" y="945" width="1939" height="135"/>
+    <rect class="cls-1" x="1890" y="92" width="35" height="855"/>
+  </g>
+</svg>

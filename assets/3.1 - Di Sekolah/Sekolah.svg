@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2454" height="1080" viewBox="0 0 2454 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7f829c;
+      }
+
+      .cls-1, .cls-11, .cls-17, .cls-19, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #4b4e6e;
+      }
+
+      .cls-3 {
+        fill: #cbcdda;
+      }
+
+      .cls-4, .cls-8 {
+        fill: #dceeee;
+      }
+
+      .cls-10, .cls-5 {
+        fill: #9e6a5c;
+      }
+
+      .cls-6 {
+        fill: #c0ccca;
+      }
+
+      .cls-7, .cls-9 {
+        fill: #745a51;
+      }
+
+      .cls-11 {
+        fill: #9fa2ac;
+      }
+
+      .cls-12 {
+        fill: #bcd1d1;
+      }
+
+      .cls-13 {
+        fill: #323440;
+      }
+
+      .cls-14 {
+        fill: #30323d;
+      }
+
+      .cls-15 {
+        fill: #2b2d34;
+      }
+
+      .cls-16 {
+        fill: #9ab090;
+      }
+
+      .cls-17 {
+        fill: #8ba085;
+      }
+
+      .cls-18, .cls-19 {
+        fill: #667463;
+      }
+
+      .cls-20 {
+        fill: #adbfa3;
+      }
+
+      .cls-21 {
+        fill: #b9ccae;
+      }
+
+      .cls-22 {
+        fill: #96ac8d;
+      }
+
+      .cls-23 {
+        fill: #9db092;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1662,332l2,25-66,46,3,21,13,54,61,7s-11.71,14.166-15,14-82-3-82-3l-3-173,106-3Z"/>
+  <path class="cls-2" d="M1664,355l-19,8-15-7v16l-26,11-10-2-2,13-15,7v22l17-8,1,71,78-3Z"/>
+  <path class="cls-1" d="M1540,334l-27,30-4,130h30Z"/>
+  <path class="cls-3" d="M1578,335V496l-40-1-1-161Z"/>
+  <path class="cls-3" d="M1487,388l-1,110,22-3,4-133Z"/>
+  <g>
+    <path class="cls-1" d="M1466,410l21-25-1,106-22,3Z"/>
+    <path class="cls-3" d="M1447,429l19-20-2,84h-16l-2-1Z"/>
+    <path class="cls-1" d="M1429,446v45l16,2,1-64Z"/>
+    <path class="cls-3" d="M1414,461v30l14,2,1-50Z"/>
+    <path class="cls-1" d="M1397,478l1,15,17,1-2-34Z"/>
+    <path class="cls-2" d="M1359,482l33-1,146-144-11-1-43,26Z"/>
+    <g>
+      <path class="cls-4" d="M1368,393.088l20-14.936v56.756l84-83.641,64-37.838-116-12.945Z"/>
+      <path class="cls-5" d="M1417,187l-83,209,37-4,88-154Z"/>
+      <path class="cls-6" d="M1505,325l-34,25L1340,485l19-1,125-121,62-40Z"/>
+      <path id="Shape_30_copy" data-name="Shape 30 copy" class="cls-7" d="M1435.17,185.989l-84.49,206.066,20.17,1.462,3.53-6.289,88.47-180.295Z"/>
+    </g>
+  </g>
+  <g id="Group_12_copy" data-name="Group 12 copy">
+    <path class="cls-1" d="M836.725,330.625l-2.076,25.954,68.52,47.756-3.115,21.8-13.5,56.061-63.329,7.268S835.384,504.172,838.8,504s85.13-3.115,85.13-3.115l3.115-179.6L817,318.166Z"/>
+    <path class="cls-2" d="M834.649,354.5l19.725,8.305,15.573-7.267v16.611l26.993,11.42,10.381-2.077,2.077,13.5,15.572,7.268V425.1l-17.649-8.306L906.283,490.5l-80.978-3.115Z"/>
+    <path class="cls-1" d="M963.383,332.7l28.031,31.145,4.152,134.963H964.421Z"/>
+    <path class="cls-3" d="M923.932,333.084L919,609.162l56,15.932L966.5,332.05Z"/>
+    <path class="cls-3" d="M1018.41,387.872l1.03,113.713-22.835-3.1L992.452,361Z"/>
+    <g>
+      <path class="cls-1" d="M1040.21,410.1l-21.8-25.785,1.03,109.33,22.84,3.094Z"/>
+      <path class="cls-3" d="M1059.93,429.692l-19.72-20.628,2.07,86.639h16.62l2.07-1.032Z"/>
+      <path class="cls-1" d="M1078.62,447.226V493.64l-16.61,2.063-1.04-66.011Z"/>
+      <path class="cls-3" d="M1094.19,462.7V493.64l-14.53,2.063-1.04-51.571Z"/>
+      <path class="cls-1" d="M1111.84,480.231L1110.8,495.7l-17.65,1.031,2.08-35.068Z"/>
+      <path class="cls-2" d="M1151.29,484.357l-34.26-1.031L965.459,334.8l11.42-1.032,44.641,26.817Z"/>
+      <g>
+        <path class="cls-4" d="M1141.95,393.592l-20.76-15.471v58.791l-87.21-86.639-66.444-39.194,120.424-13.408Z"/>
+        <path class="cls-5" d="M1091.08,180.089L1181,403l-37-5-96.52-165.309Z"/>
+        <path class="cls-7" d="M1068,202l100,199-20,3-4-6L1042,225Z"/>
+        <path class="cls-6" d="M999.719,322.425l35.3,25.785,136,139.241-19.73-1.031-129.77-124.8-64.366-41.256Z"/>
+      </g>
+    </g>
+  </g>
+  <rect class="cls-8" x="-54" y="180" width="888" height="408"/>
+  <rect class="cls-8" x="1662" y="177" width="806" height="409"/>
+  <rect class="cls-9" x="-111" y="154" width="2592" height="38"/>
+  <rect class="cls-10" x="-76" y="10" width="2568" height="150"/>
+  <path class="cls-5" d="M1515,366"/>
+  <path class="cls-11" d="M1018,618l-1,49-262,2-5-175,185-1,2,124Z"/>
+  <rect class="cls-12" x="815" y="667" width="296" height="164"/>
+  <rect class="cls-13" x="969" y="491" width="729" height="348"/>
+  <rect id="Rectangle_5_copy" data-name="Rectangle 5 copy" class="cls-13" x="755" y="491" width="107" height="349"/>
+  <g>
+    <g>
+      <rect class="cls-14" x="1679" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy" data-name="Rectangle 6 copy" class="cls-14" x="1644" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3" data-name="Rectangle 6 copy 3" class="cls-14" x="1609" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_2" data-name="Rectangle 6 copy 2" class="cls-14" x="1574" y="491" width="18" height="349"/>
+    </g>
+    <rect class="cls-15" x="751" y="831" width="946" height="14"/>
+    <g id="Group_3_copy" data-name="Group 3 copy">
+      <rect class="cls-14" x="1540" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy-2" data-name="Rectangle 6 copy" class="cls-14" x="1505" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3-2" data-name="Rectangle 6 copy 3" class="cls-14" x="1470" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_2-2" data-name="Rectangle 6 copy 2" class="cls-14" x="1435" y="491" width="18" height="349"/>
+    </g>
+    <g id="Group_3_copy_2" data-name="Group 3 copy 2">
+      <rect class="cls-14" x="1400" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy-3" data-name="Rectangle 6 copy" class="cls-14" x="1365" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3-3" data-name="Rectangle 6 copy 3" class="cls-14" x="1330" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_2-3" data-name="Rectangle 6 copy 2" class="cls-14" x="1295" y="491" width="18" height="349"/>
+    </g>
+    <g id="Group_3_copy_3" data-name="Group 3 copy 3">
+      <rect class="cls-14" x="1260" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy-4" data-name="Rectangle 6 copy" class="cls-14" x="1225" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3-4" data-name="Rectangle 6 copy 3" class="cls-14" x="1190" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_2-4" data-name="Rectangle 6 copy 2" class="cls-14" x="1155" y="491" width="18" height="349"/>
+    </g>
+    <g id="Group_3_copy_5" data-name="Group 3 copy 5">
+      <rect class="cls-14" x="834" y="490" width="18" height="349"/>
+      <rect id="Rectangle_6_copy-5" data-name="Rectangle 6 copy" class="cls-14" x="799" y="490" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3-5" data-name="Rectangle 6 copy 3" class="cls-14" x="764" y="490" width="18" height="349"/>
+    </g>
+    <g id="Group_3_copy_4" data-name="Group 3 copy 4">
+      <rect class="cls-14" x="1120" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy-6" data-name="Rectangle 6 copy" class="cls-14" x="1085" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_3-6" data-name="Rectangle 6 copy 3" class="cls-14" x="1050" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_2-5" data-name="Rectangle 6 copy 2" class="cls-14" x="1015" y="491" width="18" height="349"/>
+      <rect id="Rectangle_6_copy_4" data-name="Rectangle 6 copy 4" class="cls-14" x="981" y="491" width="18" height="349"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-16" x="1933" y="469" width="521" height="389"/>
+      <rect id="Rectangle_14_copy" data-name="Rectangle 14 copy" class="cls-16" x="-3" y="472" width="521" height="389"/>
+      <path class="cls-17" d="M1841,449.2h92V861h-92V449.2Z"/>
+      <path id="Rectangle_12_copy" data-name="Rectangle 12 copy" class="cls-17" d="M518,445h92V858.9H518V445Z"/>
+    </g>
+    <g>
+      <rect class="cls-18" x="2027" y="543" width="40.66" height="203"/>
+      <path id="Rectangle_13_copy" data-name="Rectangle 13 copy" class="cls-19" d="M2126.2,546h40.66V749H2126.2V546Z"/>
+      <path id="Rectangle_13_copy_2" data-name="Rectangle 13 copy 2" class="cls-19" d="M2225.99,546H2267V749h-41.01V546Z"/>
+      <rect id="Rectangle_13_copy_3" data-name="Rectangle 13 copy 3" class="cls-18" x="2319.34" y="546" width="40.66" height="203"/>
+    </g>
+    <g id="Group_7_copy_3" data-name="Group 7 copy 3">
+      <rect class="cls-18" x="2424" y="546" width="40.66" height="203"/>
+      <path id="Rectangle_13_copy-2" data-name="Rectangle 13 copy" class="cls-19" d="M2523.2,549h40.66V752H2523.2V549Z"/>
+      <path id="Rectangle_13_copy_2-2" data-name="Rectangle 13 copy 2" class="cls-19" d="M2622.99,549H2664V752h-41.01V549Z"/>
+      <rect id="Rectangle_13_copy_3-2" data-name="Rectangle 13 copy 3" class="cls-18" x="2716.34" y="549" width="40.66" height="203"/>
+    </g>
+    <g id="Group_7_copy" data-name="Group 7 copy">
+      <rect class="cls-18" x="91" y="546" width="40.656" height="203"/>
+      <path id="Rectangle_13_copy-3" data-name="Rectangle 13 copy" class="cls-19" d="M190.2,549h40.664V752H190.2V549Z"/>
+      <path id="Rectangle_13_copy_2-3" data-name="Rectangle 13 copy 2" class="cls-19" d="M289.99,549H331V752H289.99V549Z"/>
+      <rect id="Rectangle_13_copy_3-3" data-name="Rectangle 13 copy 3" class="cls-18" x="383.344" y="549" width="40.656" height="203"/>
+    </g>
+    <g id="Group_7_copy_2" data-name="Group 7 copy 2">
+      <rect class="cls-18" x="-296" y="543" width="40.656" height="203"/>
+      <path id="Rectangle_13_copy-4" data-name="Rectangle 13 copy" class="cls-19" d="M-196.8,546h40.664V749H-196.8V546Z"/>
+      <path id="Rectangle_13_copy_2-4" data-name="Rectangle 13 copy 2" class="cls-19" d="M-97.01,546H-56V749H-97.01V546Z"/>
+      <rect id="Rectangle_13_copy_3-4" data-name="Rectangle 13 copy 3" class="cls-18" x="-3.656" y="546" width="40.656" height="203"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-20" x="746" y="188" width="994" height="147"/>
+    <rect class="cls-21" x="1697" y="184" width="149" height="677"/>
+    <rect id="Rectangle_8_copy" data-name="Rectangle 8 copy" class="cls-21" x="606" y="184" width="149" height="677"/>
+    <rect class="cls-22" x="649" y="85" width="1178" height="75"/>
+    <rect class="cls-23" x="542" y="132" width="1356" height="56"/>
+  </g>
+</svg>

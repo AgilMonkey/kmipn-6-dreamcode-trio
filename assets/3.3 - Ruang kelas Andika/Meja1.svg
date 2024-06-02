@@ -1,0 +1,28 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #775c4e;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #9e856c;
+      }
+
+      .cls-3 {
+        fill: #c29878;
+      }
+    </style>
+  </defs>
+  <g id="Meja">
+    <g id="Meja-2" data-name="Meja">
+      <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-1" d="M1170.42,960V858H1148.9V960h21.52Zm-145.49,0V858h-21.51V960h21.51Z"/>
+      <path class="cls-2" d="M1184,869l-0.23-87.182H1194l-1.02-15.809-213.933,1.976L979,785l10.283-.218L989,870h4Z"/>
+      <path class="cls-3" d="M1192.98,766.009L1193,784l-215,1V767Z"/>
+    </g>
+  </g>
+</svg>

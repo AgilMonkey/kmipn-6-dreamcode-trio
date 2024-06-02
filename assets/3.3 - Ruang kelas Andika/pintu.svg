@@ -1,0 +1,38 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f4f5;
+      }
+
+      .cls-2 {
+        fill: #7c8abb;
+      }
+
+      .cls-3 {
+        fill: #bbceee;
+      }
+
+      .cls-4 {
+        fill: #56535f;
+      }
+
+      .cls-5 {
+        fill: #c6d7f4;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Pintu">
+    <rect class="cls-1" x="1278" y="550" width="264" height="410"/>
+    <rect class="cls-2" x="1285" y="560" width="249" height="399"/>
+    <rect class="cls-3" x="1315" y="598" width="87" height="165"/>
+    <rect class="cls-4" x="1316" y="778" width="42" height="11"/>
+    <rect class="cls-4" x="1316" y="779" width="16" height="16"/>
+    <g>
+      <path class="cls-5" d="M1343.02,712.8l23.34-57.373,5.43,2.194-23.34,57.373Z"/>
+      <path class="cls-5" d="M1369.8,693.022l15.85-38.97,4.34,1.755-15.85,38.971Z"/>
+      <path class="cls-5" d="M1332,688.876L1352.69,638l4.35,1.755-20.7,50.878Z"/>
+    </g>
+  </g>
+</svg>

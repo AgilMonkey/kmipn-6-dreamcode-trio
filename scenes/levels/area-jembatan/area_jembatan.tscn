@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://cm878fu3uube6"]
+
+[ext_resource type="Texture2D" uid="uid://yvg8snwatesn" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Awan.png" id="1_v8wbk"]
+[ext_resource type="Texture2D" uid="uid://da8gttr7jnmys" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/background hitam.png" id="2_pd148"]
+[ext_resource type="Texture2D" uid="uid://m8gvdqfp6ht8" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/background hitam.svg" id="3_ybho4"]
+[ext_resource type="Texture2D" uid="uid://dwqtmh68e1831" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Jalan Mobil.svg" id="4_xa5qq"]
+[ext_resource type="Texture2D" uid="uid://dfcayo5nlvihn" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Jalan-Kaki.svg" id="5_i3jcd"]
+[ext_resource type="Texture2D" uid="uid://cndd16ct08riq" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Jembatan.svg" id="6_k5rb8"]
+[ext_resource type="Texture2D" uid="uid://knjnjdmjo33l" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Lampu.svg" id="7_601xw"]
+[ext_resource type="Texture2D" uid="uid://4bmiseqqkqjf" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Langit.png" id="8_fq6u1"]
+[ext_resource type="Texture2D" uid="uid://cfwpre6vnyhji" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/sungai.png" id="9_kc7iu"]
+[ext_resource type="Texture2D" uid="uid://c4s1amqwns4a5" path="res://assets/4.1 - Perjalanan Pulang Andika ingin melewati jembatan/Contoh.png" id="10_jiqe1"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="11_ufpjw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srsaf"]
+size = Vector2(3179, 237.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic4db"]
+size = Vector2(280, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66igb"]
+size = Vector2(304, 336)
+
+[node name="AreaJembatan" type="Node2D"]
+
+[node name="BackSprite" type="Sprite2D" parent="."]
+position = Vector2(872, 383)
+scale = Vector2(0.711, 0.711)
+
+[node name="Awan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("1_v8wbk")
+
+[node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("2_pd148")
+
+[node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("3_ybho4")
+
+[node name="JalanMobil" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("4_xa5qq")
+
+[node name="Jalan-kaki" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("5_i3jcd")
+
+[node name="Jembatan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("6_k5rb8")
+
+[node name="Lampu" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("7_601xw")
+
+[node name="Langit" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("8_fq6u1")
+
+[node name="Sungai" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+texture = ExtResource("9_kc7iu")
+
+[node name="Contoh" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-1, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("10_jiqe1")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(174.279, 0.348022)
+shape = SubResource("RectangleShape2D_srsaf")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-591, 0)
+shape = SubResource("RectangleShape2D_ic4db")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(2319, -12)
+shape = SubResource("RectangleShape2D_ic4db")
+
+[node name="Player" parent="." instance=ExtResource("11_ufpjw")]
+position = Vector2(520, 672)
+
+[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
+position = Vector2(-295, 504)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
+shape = SubResource("RectangleShape2D_66igb")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
+
+[node name="Area2DKeRuangTamu2" type="Area2D" parent="."]
+position = Vector2(2033, 504)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu2"]
+shape = SubResource("RectangleShape2D_66igb")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)

@@ -1,0 +1,51 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6f7375;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #90979d;
+      }
+
+      .cls-3 {
+        fill: #b6c4c5;
+      }
+
+      .cls-4 {
+        fill: #30393e;
+      }
+
+      .cls-5 {
+        fill: #2a3237;
+      }
+
+      .cls-6 {
+        fill: #3b464c;
+      }
+
+      .cls-7 {
+        fill: #2a2835;
+      }
+    </style>
+  </defs>
+  <g id="Tempat_Guru" data-name="Tempat Guru">
+    <g id="Meja_Guru" data-name="Meja Guru">
+      <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-1" d="M1822.01,936V823h-23.06V936h23.06Zm-155.95,0V823H1643V936h23.06Z"/>
+      <path class="cls-2" d="M1846.51,836.115l-0.27-77.122H1858l-1.17-13.985-245.78,1.748-0.06,15.052,11.82-.193L1622.48,837h4.6Z"/>
+      <path class="cls-3" d="M1856.83,745.009L1856.85,763,1610,764V746Z"/>
+    </g>
+    <g>
+      <rect class="cls-4" x="1684" y="609" width="17" height="135"/>
+      <rect class="cls-5" x="1699" y="616" width="9" height="99"/>
+      <rect class="cls-4" x="1658" y="732" width="70" height="12"/>
+      <rect class="cls-6" x="1707" y="596" width="12" height="125"/>
+      <path class="cls-7" d="M1684,702s-45.15-4.034-48,43h7s5.77-40.389,42-36"/>
+    </g>
+  </g>
+</svg>

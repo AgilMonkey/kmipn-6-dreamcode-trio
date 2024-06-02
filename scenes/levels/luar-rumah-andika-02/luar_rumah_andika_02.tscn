@@ -1,0 +1,250 @@
+[gd_scene load_steps=41 format=3 uid="uid://c8b5qw385j1nc"]
+
+[ext_resource type="Texture2D" uid="uid://cttjbs0pii0gq" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Contoh.png" id="1_id4op"]
+[ext_resource type="Texture2D" uid="uid://bomsjvoejtn1w" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/awan1.png" id="2_dhnbf"]
+[ext_resource type="Texture2D" uid="uid://cga78fo6tc0fs" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/awan2.png" id="3_qkl4k"]
+[ext_resource type="Texture2D" uid="uid://bpiptxu66lgx4" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/awan.png" id="4_xq0v3"]
+[ext_resource type="Texture2D" uid="uid://o6b52cklxpoj" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Background1.png" id="5_ovl0h"]
+[ext_resource type="Texture2D" uid="uid://bltnik8xk3odn" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Background2.png" id="6_oesdl"]
+[ext_resource type="Texture2D" uid="uid://be0nplqkt1r8" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/background hitam.png" id="7_3hw2l"]
+[ext_resource type="Texture2D" uid="uid://3yxo8m8hkinu" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/background hitam.svg" id="8_rayd7"]
+[ext_resource type="Texture2D" uid="uid://bpeegbp43wbd4" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/background kota bayangan1.png" id="9_phu7w"]
+[ext_resource type="Texture2D" uid="uid://bhyj7bw83m8md" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/background kota bayangan.png" id="10_b04j4"]
+[ext_resource type="Texture2D" uid="uid://byic4l4e3g15n" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Background.png" id="11_05ytm"]
+[ext_resource type="Texture2D" uid="uid://cnmsklxwt3pjg" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Hiasan Jalan taman1.png" id="12_gj7js"]
+[ext_resource type="Texture2D" uid="uid://bekom1eudjb3b" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Hiasan Jalan taman.png" id="13_aa5dn"]
+[ext_resource type="Texture2D" uid="uid://bv0xn0korkbfp" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Jalan kaki.svg" id="14_4uga1"]
+[ext_resource type="Texture2D" uid="uid://wo0r7xoqm0aw" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/jalan mobil.svg" id="15_vfgvp"]
+[ext_resource type="Texture2D" uid="uid://brholhu6o52e6" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/kabel1.svg" id="16_bh4cn"]
+[ext_resource type="Texture2D" uid="uid://c6nhlj44myq3u" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/kabel2.svg" id="17_rbg6h"]
+[ext_resource type="Texture2D" uid="uid://de2ysg3viaxn6" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Kabel3.svg" id="18_a5b1x"]
+[ext_resource type="Texture2D" uid="uid://bcxsdk6iow37l" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/lampu Jalan.svg" id="19_2e1vb"]
+[ext_resource type="Texture2D" uid="uid://cn1vpbmj7uhtx" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Papan Hati-hati.png" id="20_58ott"]
+[ext_resource type="Texture2D" uid="uid://cw2aun1l4ut7j" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Papan Hati-hati.svg" id="21_ifvwa"]
+[ext_resource type="Texture2D" uid="uid://cd3k8hdrvarxm" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Pembatas-kayu2.png" id="22_y5hxf"]
+[ext_resource type="Texture2D" uid="uid://clt07q8gb341e" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Pembatas-kayu.png" id="23_0ag0v"]
+[ext_resource type="Texture2D" uid="uid://dg0vb664pvxu4" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah0.png" id="24_24xp5"]
+[ext_resource type="Texture2D" uid="uid://tw0me3ml7nlj" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah0.svg" id="25_pe7x1"]
+[ext_resource type="Texture2D" uid="uid://bjin8cy0arnn8" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah1.png" id="26_oxnni"]
+[ext_resource type="Texture2D" uid="uid://bgd5qe5elcaic" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah1.svg" id="27_gbwxf"]
+[ext_resource type="Texture2D" uid="uid://dmb0cul2cnrqu" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah2.png" id="28_6dkvx"]
+[ext_resource type="Texture2D" uid="uid://d3hwe0kxx5ved" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Rumah0/Rumah2.svg" id="29_0ql6h"]
+[ext_resource type="Texture2D" uid="uid://cddbgo5r0powi" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Taman-jalan.svg" id="30_45u7l"]
+[ext_resource type="Texture2D" uid="uid://sl1nm8aay1ju" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang hati-hati (Tidak bisa lewat).svg" id="31_kd8vg"]
+[ext_resource type="Texture2D" uid="uid://dm05xetcrhqdy" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Tiang Lampu.svg" id="32_hsdjy"]
+[ext_resource type="Texture2D" uid="uid://cxee8syj32046" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik1.svg" id="33_x7qs1"]
+[ext_resource type="Texture2D" uid="uid://ru4crjh6eb3q" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik2.svg" id="34_6o35h"]
+[ext_resource type="Texture2D" uid="uid://ngvs250qpcob" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik3.svg" id="35_kffil"]
+[ext_resource type="Texture2D" uid="uid://cok5ypvpr22cn" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik.svg" id="36_qisx7"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="37_3om7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6wwa"]
+size = Vector2(2591, 237.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1fk1"]
+size = Vector2(280, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28jjp"]
+size = Vector2(304, 336)
+
+[node name="LuarRumahAndika02" type="Node2D"]
+
+[node name="BackSprite" type="Sprite2D" parent="."]
+position = Vector2(872, 385)
+scale = Vector2(0.711, 0.711)
+
+[node name="Background1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("5_ovl0h")
+
+[node name="Awan1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("2_dhnbf")
+
+[node name="Awan2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("3_qkl4k")
+
+[node name="Awan" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+texture = ExtResource("4_xq0v3")
+
+[node name="Background2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("6_oesdl")
+
+[node name="BackgroundKotaBayangan1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("9_phu7w")
+
+[node name="BackgroundKotaBayangan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("10_b04j4")
+
+[node name="Background" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+texture = ExtResource("11_05ytm")
+
+[node name="Rumah0" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("24_24xp5")
+
+[node name="Rumah1" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("25_pe7x1")
+
+[node name="Rumah2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("26_oxnni")
+
+[node name="Rumah3" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("27_gbwxf")
+
+[node name="Rumah4" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("28_6dkvx")
+
+[node name="Rumah5" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("29_0ql6h")
+
+[node name="HiasanJalanTaman1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(1.40637, 1.40647)
+texture = ExtResource("12_gj7js")
+
+[node name="HiasanJalanTaman" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("13_aa5dn")
+
+[node name="JalanKaki" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("14_4uga1")
+
+[node name="JalanMobil" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("15_vfgvp")
+
+[node name="Kabel1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("16_bh4cn")
+
+[node name="Kabel2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("17_rbg6h")
+
+[node name="Kabel3" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("18_a5b1x")
+
+[node name="PapanHati-hati2" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+texture = ExtResource("21_ifvwa")
+
+[node name="Pembatas-kayu2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("22_y5hxf")
+
+[node name="Pembatas-kayu" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("23_0ag0v")
+
+[node name="Taman-jalan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("30_45u7l")
+
+[node name="TiangHati-hati(tidakBisaLewat)" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("31_kd8vg")
+
+[node name="Tiang-listrik1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("33_x7qs1")
+
+[node name="Tiang-listrik2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("34_6o35h")
+
+[node name="Tiang-listrik3" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("35_kffil")
+
+[node name="Tiang-listrik" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+texture = ExtResource("36_qisx7")
+
+[node name="LampuJalan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("19_2e1vb")
+
+[node name="TiangLampu" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("32_hsdjy")
+
+[node name="PapanHati-hati" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("20_58ott")
+
+[node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(872.011, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("7_3hw2l")
+
+[node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-261.603, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("8_rayd7")
+
+[node name="Contoh" type="Sprite2D" parent="BackSprite"]
+position = Vector2(0, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("1_id4op")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(468.279, 0.348022)
+shape = SubResource("RectangleShape2D_c6wwa")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_r1fk1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(2311, -12)
+shape = SubResource("RectangleShape2D_r1fk1")
+
+[node name="Player" parent="." instance=ExtResource("37_3om7h")]
+position = Vector2(520, 672)
+
+[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
+visible = false
+position = Vector2(2015, 507)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
+shape = SubResource("RectangleShape2D_28jjp")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)

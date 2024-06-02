@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2450" height="1080" viewBox="2 0 2450 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f635e;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #a0bd9e;
+      }
+
+      .cls-3 {
+        fill: #a28a48;
+      }
+    </style>
+  </defs>
+  <g id="Group_19_copy" data-name="Group 19 copy">
+    <path class="cls-1" d="M293,162H257v11h36V162Z"/>
+    <path id="Shape_89_copy" data-name="Shape 89 copy" class="cls-1" d="M292,236H256v11h36V236Z"/>
+    <path class="cls-2" d="M259,151l-2,115-54,2-9-7-6-1V149h69"/>
+    <path class="cls-1" d="M188,233v28l6,1,8,6,55-2,2-116H192l58,4-2,15-9,84-18-6c-6.184,1.687-14,3-14,3l-4,4h-5l-6-2Z"/>
+    <path class="cls-3" d="M568-60"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e3e8f7;
+        stroke: #7b4a3c;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #d2d9e5;
+      }
+    </style>
+  </defs>
+  <g id="Background">
+    <path class="cls-1" d="M-28-31H1934V1123H-28V-31Z"/>
+  </g>
+  <rect class="cls-2" x="516" y="240" width="1268" height="709"/>
+</svg>

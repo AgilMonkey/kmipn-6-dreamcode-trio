@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=3 uid="uid://cpbcvrvjle2hb"]
+
+[ext_resource type="Texture2D" uid="uid://dilo15ju817nx" path="res://assets/3.1 - Di Sekolah/Sekolah.svg" id="1_gsgjk"]
+[ext_resource type="Texture2D" uid="uid://cq0x62vy6f7v1" path="res://assets/3.1 - Di Sekolah/background-SEKOLAH.png" id="2_kjfls"]
+[ext_resource type="Texture2D" uid="uid://b7tbv1vu7t62s" path="res://assets/3.1 - Di Sekolah/Papan-Sekolah.png" id="3_uvl30"]
+[ext_resource type="Texture2D" uid="uid://d0ss4am5dl0mt" path="res://assets/3.1 - Di Sekolah/Nama-Sekolak-SMK.png" id="4_28352"]
+[ext_resource type="Texture2D" uid="uid://bn8ug0atcux7n" path="res://assets/3.1 - Di Sekolah/Jalan-KAKI.svg" id="5_anmtm"]
+[ext_resource type="Texture2D" uid="uid://7nrhiqnf4yu" path="res://assets/3.1 - Di Sekolah/Jalan-Mobil.svg" id="6_vvdh5"]
+[ext_resource type="Texture2D" uid="uid://0jc441t30d6v" path="res://assets/3.1 - Di Sekolah/Tiang-Jalan.png" id="7_t4lxh"]
+[ext_resource type="Texture2D" uid="uid://b1ffay7ywvrid" path="res://assets/3.1 - Di Sekolah/background hitam.png" id="8_mx7ko"]
+[ext_resource type="Texture2D" uid="uid://wfph63pmdqf2" path="res://assets/3.1 - Di Sekolah/background hitam.svg" id="9_oyr6s"]
+[ext_resource type="Texture2D" uid="uid://dbv8t51a34d7l" path="res://assets/3.1 - Di Sekolah/Contoh.png" id="10_rsm0c"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="11_kahml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71je0"]
+size = Vector2(3179, 237.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1gst"]
+size = Vector2(280, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e61pw"]
+size = Vector2(304, 336)
+
+[node name="DiSekolah" type="Node2D"]
+
+[node name="BackSprite" type="Sprite2D" parent="."]
+position = Vector2(532, 224)
+scale = Vector2(0.711, 0.711)
+
+[node name="Sekolah" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("1_gsgjk")
+
+[node name="Background-sekolah" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kjfls")
+
+[node name="Papan-sekolah" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("3_uvl30")
+
+[node name="Nama-sekolak-smk" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("4_28352")
+
+[node name="Jalan-kaki" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("5_anmtm")
+
+[node name="Jalan-mobil" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("6_vvdh5")
+
+[node name="Tiang-jalan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+texture = ExtResource("7_t4lxh")
+
+[node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-410.689, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("8_mx7ko")
+
+[node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(1731.36, 225)
+scale = Vector2(1, 1)
+texture = ExtResource("9_oyr6s")
+
+[node name="Contoh" type="Sprite2D" parent="BackSprite"]
+position = Vector2(478, 225)
+texture = ExtResource("10_rsm0c")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(174.279, 0.348022)
+shape = SubResource("RectangleShape2D_71je0")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-591, 0)
+shape = SubResource("RectangleShape2D_r1gst")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1828, -12)
+shape = SubResource("RectangleShape2D_r1gst")
+
+[node name="Player" parent="." instance=ExtResource("11_kahml")]
+position = Vector2(520, 672)
+
+[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
+position = Vector2(-295, 504)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
+shape = SubResource("RectangleShape2D_e61pw")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)

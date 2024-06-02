@@ -1,0 +1,164 @@
+[gd_scene load_steps=25 format=3 uid="uid://de5fxnerw0y8f"]
+
+[ext_resource type="Texture2D" uid="uid://8jhcg5nqewpg" path="res://assets/3.3 - Ruang kelas Andika/background hitam.png" id="1_3gjeb"]
+[ext_resource type="Texture2D" uid="uid://8cn6kfceojbn" path="res://assets/3.3 - Ruang kelas Andika/background hitam.svg" id="2_0k05e"]
+[ext_resource type="Texture2D" uid="uid://bavvqembwhguy" path="res://assets/3.3 - Ruang kelas Andika/Contoh.png" id="3_t8te5"]
+[ext_resource type="Texture2D" uid="uid://d0i6hd74c7sfp" path="res://assets/3.3 - Ruang kelas Andika/contoh.svg" id="4_cgqt2"]
+[ext_resource type="Texture2D" uid="uid://daswrr0ibqakr" path="res://assets/3.3 - Ruang kelas Andika/Guru- Kursi.svg" id="5_gw3gw"]
+[ext_resource type="Texture2D" uid="uid://cwssrt1je4rh5" path="res://assets/3.3 - Ruang kelas Andika/hiasan lantai.svg" id="6_k2fi5"]
+[ext_resource type="Texture2D" uid="uid://cf6qpbt0r0nxk" path="res://assets/3.3 - Ruang kelas Andika/Hiasan.svg" id="7_5of57"]
+[ext_resource type="Texture2D" uid="uid://b18w4fr7ud6yf" path="res://assets/3.3 - Ruang kelas Andika/Jendela.svg" id="8_2cfxi"]
+[ext_resource type="Texture2D" uid="uid://2q5iqo2fb84x" path="res://assets/3.3 - Ruang kelas Andika/Kursi1.svg" id="9_0mk4c"]
+[ext_resource type="Texture2D" uid="uid://bax8u4i2ut28y" path="res://assets/3.3 - Ruang kelas Andika/Kursi2.svg" id="10_ctwp7"]
+[ext_resource type="Texture2D" uid="uid://b6wlfcfc4ngr7" path="res://assets/3.3 - Ruang kelas Andika/kursi3.svg" id="11_tend5"]
+[ext_resource type="Texture2D" uid="uid://27c73wpsfn2t" path="res://assets/3.3 - Ruang kelas Andika/Lampu.svg" id="12_lrasu"]
+[ext_resource type="Texture2D" uid="uid://oemkl5gb48xh" path="res://assets/3.3 - Ruang kelas Andika/Lantai-atap.svg" id="13_r0arr"]
+[ext_resource type="Texture2D" uid="uid://dfhj7m6g8mh2n" path="res://assets/3.3 - Ruang kelas Andika/Laptop.svg" id="14_x1yxy"]
+[ext_resource type="Texture2D" uid="uid://b0hwfatpfbsgj" path="res://assets/3.3 - Ruang kelas Andika/Meja1.svg" id="15_q6hkw"]
+[ext_resource type="Texture2D" uid="uid://qxt6a50jsi30" path="res://assets/3.3 - Ruang kelas Andika/Meja2.svg" id="16_rm2oa"]
+[ext_resource type="Texture2D" uid="uid://c63hdk2jwjb0j" path="res://assets/3.3 - Ruang kelas Andika/Meja3.svg" id="17_76yv3"]
+[ext_resource type="Texture2D" uid="uid://jamrg7tjvxf6" path="res://assets/3.3 - Ruang kelas Andika/Meja4.svg" id="18_wvgqw"]
+[ext_resource type="Texture2D" uid="uid://dvwsgrkd2xgmx" path="res://assets/3.3 - Ruang kelas Andika/Meja-Guru.svg" id="19_6uph2"]
+[ext_resource type="Texture2D" uid="uid://c6j7j5xepa2bi" path="res://assets/3.3 - Ruang kelas Andika/pintu.svg" id="20_rqug8"]
+[ext_resource type="Texture2D" uid="uid://doyqh3grufg1b" path="res://assets/3.3 - Ruang kelas Andika/Proyektor.svg" id="21_gq8yc"]
+[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="22_frokw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yoh60"]
+size = Vector2(3179, 237.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujfdo"]
+size = Vector2(280, 960)
+
+[node name="RuangKelasAndika" type="Node2D"]
+position = Vector2(735, 386)
+scale = Vector2(0.711, 0.711)
+
+[node name="BackSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 2.8129)
+
+[node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("1_3gjeb")
+
+[node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("2_0k05e")
+
+[node name="Contoh" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("3_t8te5")
+
+[node name="Contoh2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("4_cgqt2")
+
+[node name="Guru-Kursi" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("5_gw3gw")
+
+[node name="HiasanLantai" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("6_k2fi5")
+
+[node name="Hiasan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("7_5of57")
+
+[node name="Jendela" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("8_2cfxi")
+
+[node name="Kursi1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("9_0mk4c")
+
+[node name="Kursi2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("10_ctwp7")
+
+[node name="Kursi3" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("11_tend5")
+
+[node name="Lampu" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("12_lrasu")
+
+[node name="Lantai-atap" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("13_r0arr")
+
+[node name="Laptop" type="Sprite2D" parent="BackSprite"]
+visible = false
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("14_x1yxy")
+
+[node name="Meja1" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("15_q6hkw")
+
+[node name="Meja2" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("16_rm2oa")
+
+[node name="Meja3" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("17_76yv3")
+
+[node name="Meja4" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("18_wvgqw")
+
+[node name="Meja-guru" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("19_6uph2")
+
+[node name="Pintu" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("20_rqug8")
+
+[node name="Proyektor" type="Sprite2D" parent="BackSprite"]
+position = Vector2(-2, -2.99994)
+scale = Vector2(1, 1)
+texture = ExtResource("21_gq8yc")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(-209.872, 535.698)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(174.279, 0.348022)
+shape = SubResource("RectangleShape2D_yoh60")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-898.093, 97.0464)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-139.882, 0)
+shape = SubResource("RectangleShape2D_ujfdo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1924.82, -12)
+shape = SubResource("RectangleShape2D_ujfdo")
+
+[node name="Player" parent="." instance=ExtResource("22_frokw")]
+position = Vector2(-378.093, 417.046)

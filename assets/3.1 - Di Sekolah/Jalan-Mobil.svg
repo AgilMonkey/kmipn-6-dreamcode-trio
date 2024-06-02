@@ -1,0 +1,22 @@
+<svg id="jalan_mobil" data-name="jalan mobil" xmlns="http://www.w3.org/2000/svg" width="2454" height="1080" viewBox="0 0 2454 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #302f36;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #25242d;
+      }
+    </style>
+  </defs>
+  <g id="jalan">
+    <path class="cls-1" d="M24,890H-3v25l657-3,24-22H24Z"/>
+    <path id="Shape_11_copy" data-name="Shape 11 copy" class="cls-1" d="M2424.77,890H2454v25l-713-3-20-22h703.77Z"/>
+  </g>
+  <path class="cls-2" d="M-3,1023l2457,2V912H-3v111Z"/>
+</svg>

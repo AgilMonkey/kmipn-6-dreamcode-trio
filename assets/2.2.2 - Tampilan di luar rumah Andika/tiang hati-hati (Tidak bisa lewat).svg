@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2454" height="1080" viewBox="0 0 2454 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #303739;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #c0c043;
+      }
+    </style>
+  </defs>
+  <g id="Folder_1" data-name="Folder 1">
+    <g id="papan">
+      <path class="cls-1" d="M48.979,901l3-187h-17l-3,187h17Z"/>
+      <path class="cls-2" d="M51.979,734s5.27,1.992,3,14c0,0-31.067,7.394-64.01,9l-1-15Z"/>
+      <path id="Shape_38_copy" data-name="Shape 38 copy" class="cls-2" d="M50.557,820.012s4.154,3.854-2.514,14.1c0,0-31.743-5.014-63.038-16.1l4.757-14.261Z"/>
+    </g>
+  </g>
+</svg>
