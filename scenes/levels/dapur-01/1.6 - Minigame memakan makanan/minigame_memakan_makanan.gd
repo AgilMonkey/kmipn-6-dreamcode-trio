@@ -7,7 +7,8 @@ signal minigame_selesai
 # Dictionary to store initial positions of 'Food' node children
 var initial_positions := {}
 
-var food_count = 9
+var food_count = 0
+const food_count_max = 1
 
 var first_grab_pressed = false
 var first_move_pressed = false
@@ -93,6 +94,10 @@ func _on_animation_finished(anim_name):
 		print($Tangan.get_children())
 		$Tangan.get_child(-1).queue_free()
 		anim_minigame.play("start_game")
+		
+		food_count += 1
+		if food_count >= food_count_max:
+			selesaikan_game()
 	
 	# animasi tutorial
 	elif anim_name == "actual_start_game":
@@ -104,6 +109,6 @@ func _on_food_grabbed(object):
 	food_grabbed(object)
 
 func _on_food_released(object: RigidBody2D):
-	food_release(object, initial_positions[object.name])	
+	food_release(object, initial_positions[object.name])
 
 
