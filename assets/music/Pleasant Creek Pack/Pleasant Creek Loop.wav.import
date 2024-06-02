@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://7oxycpbbidfm"
-path="res://.godot/imported/Pleasant Creek Loop.wav-42812fdb206fb000f05a522e58e050b2.sample"
+path="res://.godot/imported/Pleasant Creek Loop.wav-0682741d5947178d21507d1a0747c03c.sample"
 
 [deps]
 
-source_file="res://assets/Pleasant Creek Pack/Pleasant Creek Loop.wav"
-dest_files=["res://.godot/imported/Pleasant Creek Loop.wav-42812fdb206fb000f05a522e58e050b2.sample"]
+source_file="res://assets/music/Pleasant Creek Pack/Pleasant Creek Loop.wav"
+dest_files=["res://.godot/imported/Pleasant Creek Loop.wav-0682741d5947178d21507d1a0747c03c.sample"]
 
 [params]
 

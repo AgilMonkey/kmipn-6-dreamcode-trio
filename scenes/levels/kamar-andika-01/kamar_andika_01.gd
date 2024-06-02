@@ -4,6 +4,9 @@ var scene_ruang_tamu: String = "res://scenes/levels/ruang-tamu-01/ruang_tamu_01.
 
 
 func _ready():
+	MusicManager.volume = -10
+	MusicManager.play(MusicManager.pleasant_creek_bgm)
+	
 	var from_pos: Node2D = get_node(LevelManager.from + "Pos")
 	if from_pos != null:
 		$Player.position = from_pos.position
