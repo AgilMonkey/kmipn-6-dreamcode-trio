@@ -6,7 +6,7 @@ if {dapat_ingatkan_ayah_buang_sampah} == true and {ingatkan_ayah_buang_sampah} =
 	Ayah: Malas
 	Ayah: Hehe
 	Andika: ...
-	set {ingatkan_ayah_buang_sampah} == true
+	set {ingatkan_ayah_buang_sampah} = true
 	[end_timeline]
 
 if {ayah_andika_count} > 0 and {sudah_makan} == false:
