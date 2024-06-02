@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://chkhjw3ka4h5m" path="res://assets/Karakter/Karakter Guru - Duduk .svg" id="23_tyjl8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yoh60"]
-size = Vector2(3179, 237.304)
+size = Vector2(2160.34, 237.304)
 
 [node name="RuangKelasAndika" type="Node2D"]
 position = Vector2(735, 386)
@@ -94,8 +94,8 @@ position = Vector2(-2, -2.99994)
 texture = ExtResource("14_x1yxy")
 
 [node name="KarakterAndika-duduk" type="Sprite2D" parent="BackSprite"]
-position = Vector2(-111.111, 275.668)
-scale = Vector2(0.556684, 0.556684)
+position = Vector2(-102.578, 287.736)
+scale = Vector2(0.535191, 0.535191)
 texture = ExtResource("22_paoud")
 
 [node name="KarakterTeman-Duduk" type="Sprite2D" parent="BackSprite"]
@@ -145,7 +145,8 @@ texture = ExtResource("21_gq8yc")
 position = Vector2(-209.872, 535.698)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(174.279, 0.348022)
+position = Vector2(65.0055, 0.348022)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yoh60")
 
 [node name="Wall" type="StaticBody2D" parent="."]
