@@ -1,0 +1,19 @@
+<svg id="Robot" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Komen_Robot" data-name="Komen Robot">
+    <g id="Group_13_copy" data-name="Group 13 copy">
+      <path class="cls-1" d="M1229.54,775.308L1179,827l93.05-19.528Z"/>
+      <ellipse class="cls-2" cx="1391" cy="753.5" rx="175" ry="77.5"/>
+    </g>
+  </g>
+</svg>

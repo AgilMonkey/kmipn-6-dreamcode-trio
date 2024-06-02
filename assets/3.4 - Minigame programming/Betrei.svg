@@ -1,0 +1,33 @@
+<svg id="Robot" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #68787e;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #89a7a7;
+      }
+
+      .cls-3 {
+        fill: #d5d8d8;
+      }
+
+      .cls-4 {
+        fill: #d6c176;
+      }
+    </style>
+  </defs>
+  <g>
+    <path id="Rectangle_5_copy_3" data-name="Rectangle 5 copy 3" class="cls-1" d="M1476.25,402.18l24.31,0-0.04,7.482-24.31,0Z"/>
+    <path id="Rectangle_5_copy_4" data-name="Rectangle 5 copy 4" class="cls-1" d="M1476.03,318l23.97,0-0.05,7.982-23.96-.006Z"/>
+    <path id="Rectangle_5_copy_2" data-name="Rectangle 5 copy 2" class="cls-2" d="M1467.85,398.436l41.14,0-0.07,7.482-41.14,0Z"/>
+    <path id="Rectangle_5_copy" data-name="Rectangle 5 copy" class="cls-2" d="M1468.07,321.994l40.92,0-0.07,7.013-40.92,0Z"/>
+    <path class="cls-3" d="M1464.79,327.178l46.36,0.05-0.08,74.182-46.36-.05Z"/>
+    <path class="cls-4" d="M1492.78,332.717l-18.98,29.458,16.35,3.772L1482,393.009l21.93-30.289-17.17-6.758Z"/>
+  </g>
+</svg>

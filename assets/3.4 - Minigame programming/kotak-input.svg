@@ -1,0 +1,13 @@
+<svg id="Robot" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f2f2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Folder_9" data-name="Folder 9">
+    <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-1" d="M246,213.005l636,1.751V789l-636-1.751V213.005Z"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg id="Robot" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b6c91;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Folder_9" data-name="Folder 9">
+    <g id="Run">
+      <path class="cls-1" d="M413.926,822L413,915l175-1V822H413.926Z"/>
+      <path class="cls-2" d="M482.187,843.961l1,52.87,40.091-26.883Z"/>
+      <path class="cls-3" d="M460.04,837.766L459,906l78-2.766L534.92,835Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="Robot" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4d877f;
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Folder_9" data-name="Folder 9">
+    <g id="Replay">
+      <path class="cls-1" d="M719.5,824.5c26.51,0,48,20.6,48,46s-21.49,46-48,46-48-20.6-48-46S692.99,824.5,719.5,824.5Z"/>
+      <path class="cls-2" d="M738.5,880.5l6,4-10,11-14,5-14-2-7-7-6-10-2-10,3-12,8-8,8-5,13-2,8,1,2-9,12,18-16,13,1-12-7-3-12,2-9,8-2,9,2,8,6,8,12,4,9-4Z"/>
+    </g>
+  </g>
+</svg>
