@@ -2,6 +2,10 @@ extends Node2D
 
 
 
+var text_code: String
+
+
 
 func _on_jalankan_button_button_down():
-	pass # Replace with function body.
+	text_code = %CodeTextEdit.text
+	print(text_code)

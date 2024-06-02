@@ -71,6 +71,8 @@ texture = ExtResource("10_fot3u")
 region_enabled = true
 region_rect = Rect2(1464, 318, 48, 92)
 
+[node name="Area2DBatre" type="Area2D" parent="Sprites/ClipTurtle/Betrei"]
+
 [node name="Robot" type="Sprite2D" parent="Sprites/ClipTurtle"]
 position = Vector2(166.603, 185.863)
 scale = Vector2(1.01587, 0.876712)
