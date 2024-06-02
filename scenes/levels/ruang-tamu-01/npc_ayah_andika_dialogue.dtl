@@ -1,0 +1,42 @@
+if {dapat_ingatkan_ayah_buang_sampah} == true and {ingatkan_ayah_buang_sampah} == false:
+	Andika: Ayah kata Ibu jangan lupa buang sampah
+	Ayah: Oh, iya iya Dika
+	Andika: Kenapa gak sekarang aja?
+	Ayah: ...
+	Ayah: Malas
+	Ayah: Hehe
+	Andika: ...
+	set {ingatkan_ayah_buang_sampah} = true
+	[end_timeline]
+
+if {ayah_andika_count} > 0 and {sudah_makan} == false:
+	jump selesai1
+
+if {ayah_andika_count} == 0 and {sudah_makan} == true:
+	Ayah: Setidaknya bilang pagi dulu lah
+	Andika: Maak yah lagi kepepet ini
+	Ayah: Haha becanda, cepat pergi sana
+	set {ayah_andika_count} += 1
+	[end_timeline]
+
+if {sudah_makan}:
+	Ayah: Sudah makan kan ? Kalau gak pergi sekarang bakal terlambat loh ?
+	[end_timeline]
+
+Ayah: Pagi Dika
+Andika: Pagi yah
+Ayah: Mau pergi sekolah kan? Di dapur ada makanan
+Andika: Iya yah
+Ayah: Dapur tau kan dimana tempatnya ?
+- Iyalah
+	Ayah: Hehe tahu kok, becanda doang ayah
+- Uh...
+	Ayah: ...Beneran ?
+	Ayah: Lewat aja terus sebelah kiri disini
+set {ayah_andika_count} += 1
+
+[end_timeline]
+
+label selesai1
+Ayah: Makan dulu Dik, baru pergi
+[end_timeline]

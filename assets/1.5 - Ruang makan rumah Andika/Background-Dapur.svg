@@ -1,0 +1,20 @@
+<svg id="Dinding" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9fb7c4;
+      }
+
+      .cls-2 {
+        fill: #7f99aa;
+      }
+
+      .cls-3 {
+        fill: #8f96b9;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="-3" y="156" width="1923" height="834"/>
+  <rect class="cls-2" x="-19" y="180" width="200" height="782"/>
+  <rect class="cls-3" x="96" y="917" width="1793" height="29"/>
+</svg>

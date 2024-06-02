@@ -1,0 +1,33 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b6b6c8;
+      }
+
+      .cls-2 {
+        fill: #282745;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #343638;
+      }
+
+      .cls-4 {
+        fill: #eada9f;
+      }
+    </style>
+  </defs>
+  <g id="Lampu">
+    <rect class="cls-1" x="1754" y="880" width="25" height="29" rx="6" ry="6"/>
+    <path class="cls-2" d="M1759,885h16v9.993h-16V885Z"/>
+    <path class="cls-2" d="M1769,890s0.28,30.363,21,39l10,3-5.12,2.6-4.95-1.235s-25.99-6.6-24.93-42.368Z"/>
+    <path class="cls-3" d="M1805,627l-3,3-2,5,2,6,1,5,2,150s-8.44,6.928-1,15l1,5-2,3,1,110s-27.03,5.31-39,9l-8,6h102l-6-6-33-9V819l-2-3,1-5s4.67-8.2-1-15l-3-151,2-4,1-5-2-4-1-3v-2h-10Z"/>
+    <path class="cls-4" d="M1754,627l21-93,66,1,18,94Z"/>
+    <path class="cls-3" d="M1786,627l1,50s-9.21,6.161-2.82,9.611c0.25,0.134.52,0.264,0.82,0.389,7.94,3.351,10.06-5.49,9-8l-4-2-1-49Z"/>
+  </g>
+</svg>

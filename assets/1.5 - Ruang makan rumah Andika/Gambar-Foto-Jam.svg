@@ -1,0 +1,135 @@
+<svg id="Gambar" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6d4834;
+        stroke: #9f7050;
+      }
+
+      .cls-1, .cls-8 {
+        stroke-width: 6px;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 18px;
+        fill: #e4e4e4;
+        text-anchor: middle;
+        font-family: "Arial Rounded MT Bold";
+      }
+
+      .cls-3 {
+        fill: #8fa5ad;
+        stroke: #4f5c65;
+      }
+
+      .cls-3, .cls-5 {
+        stroke-width: 8px;
+      }
+
+      .cls-4 {
+        fill: #b27468;
+      }
+
+      .cls-5 {
+        fill: #99afcd;
+        stroke: #48546c;
+      }
+
+      .cls-6 {
+        fill: #43525d;
+      }
+
+      .cls-7 {
+        fill: #4e5b63;
+      }
+
+      .cls-8 {
+        fill: #b0c9d3;
+        stroke: #55667a;
+      }
+
+      .cls-9 {
+        fill: #3a434d;
+      }
+
+      .cls-10 {
+        fill: #b7905e;
+      }
+
+      .cls-11 {
+        fill: #b7705e;
+      }
+
+      .cls-12 {
+        fill: #90b4c5;
+        stroke: #5f7087;
+        stroke-width: 5px;
+      }
+
+      .cls-13 {
+        fill: #d4d1f5;
+      }
+
+      .cls-14 {
+        fill: #6f7c85;
+      }
+
+      .cls-15 {
+        fill: #da9797;
+      }
+
+      .cls-16 {
+        fill: #b1da97;
+      }
+
+      .cls-17 {
+        fill: #daad97;
+      }
+    </style>
+  </defs>
+  <g>
+    <g id="Image">
+      <path class="cls-1" d="M1657.51,290.661l89.96,6.2-7.98,115.217-89.96-6.206Z"/>
+      <text id="Dont_be_Sad" data-name="Dont  be Sad" class="cls-2" transform="matrix(1.287, 0.089, -0.097, 1.403, 1698.495, 323.942)"><tspan x="0">Dont </tspan><tspan x="0" dy="21.6">be</tspan><tspan x="0" dy="21.6">Sad</tspan></text>
+    </g>
+    <g id="gambar-2" data-name="gambar">
+      <path class="cls-3" d="M352.836,308.8l115.988-1.659,2.33,161.782-115.988,1.66Z"/>
+      <path class="cls-4" d="M413,339.939c18.778,0,34,19.228,34,42.946s-15.222,42.947-34,42.947-34-19.228-34-42.947S394.222,339.939,413,339.939Z"/>
+    </g>
+    <g id="Gambar-3" data-name="Gambar">
+      <path class="cls-5" d="M620.446,361.5l247.741-11.236,6.037,130.594L626.484,492.1Z"/>
+      <path class="cls-6" d="M719,447.805s27.177-30.93,63-4.994c0,0,32.553-31.082,69,6.991l20,26.967L630,487.755S659.363,410.676,719,447.805Z"/>
+      <path class="cls-6" d="M742,364.908c20.435,0,37,14.756,37,32.959s-16.565,32.959-37,32.959-37-14.756-37-32.959S721.565,364.908,742,364.908Z"/>
+      <path id="Ellipse_3_copy" data-name="Ellipse 3 copy" class="cls-6" d="M821,368.9c18.225,0,33,13.191,33,29.463s-14.775,29.464-33,29.464-33-13.192-33-29.464S802.775,368.9,821,368.9Z"/>
+      <path id="Ellipse_3_copy_2" data-name="Ellipse 3 copy 2" class="cls-6" d="M665.27,380.946c16.972,0,30.73,12.284,30.73,27.437s-13.758,27.437-30.73,27.437-30.73-12.284-30.73-27.437S648.3,380.946,665.27,380.946Z"/>
+    </g>
+    <g id="Jam">
+      <path class="cls-7" d="M970,490.751l-2-186.768,29,32.959,85,1,23-32.959,2,184.771Z"/>
+      <g id="Jam-2" data-name="Jam">
+        <circle class="cls-8" cx="1039.001" cy="409.672" r="57.689"/>
+        <path class="cls-9" d="M1036.78,368.812h5.55V419.6h-5.55v-50.79Z"/>
+        <path class="cls-9" d="M1005.73,415.39h36.6v4.431h-36.6V415.39Z"/>
+      </g>
+      <path class="cls-10" d="M980,471.775v5.993h22v-5.993H980Z"/>
+      <path id="Shape_28_copy" data-name="Shape 28 copy" class="cls-11" d="M980,462.786v5.993h22v-5.993H980Z"/>
+    </g>
+  </g>
+  <g>
+    <g id="gambar-4" data-name="gambar">
+      <path class="cls-12" d="M1360,458.865h312V647.713H1360V458.865Z"/>
+    </g>
+    <g>
+      <path id="Rectangle_12_copy_4" data-name="Rectangle 12 copy 4" class="cls-13" d="M1378,472.646l92.03-.1L1465.06,610.4l-89.1-.955Z"/>
+      <path id="Rectangle_12_copy_5" data-name="Rectangle 12 copy 5" class="cls-14" d="M1384.75,476.685l79.25-.049-2.05,70.855-78.96-.857Z"/>
+      <path id="Rectangle_12_copy_2" data-name="Rectangle 12 copy 2" class="cls-13" d="M1405.01,630.206l33.82-2.972,1.21,32.821-33.81,2.972Z"/>
+      <path id="Rectangle_12_copy_3" data-name="Rectangle 12 copy 3" class="cls-15" d="M1420.8,608.659l-45.79,5.075,3.23,28.551,45.79-5.076Z"/>
+      <path id="Rectangle_12_copy_8" data-name="Rectangle 12 copy 8" class="cls-16" d="M1668.01,602.382l-33.76,1.662L1632,649.283l33.75-1.662Z"/>
+      <path id="Rectangle_12_copy_7" data-name="Rectangle 12 copy 7" class="cls-13" d="M1587.22,501.2l33.8-3.008,1.22,33.122-33.8,3.008Z"/>
+      <path id="Rectangle_12_copy_6" data-name="Rectangle 12 copy 6" class="cls-17" d="M1538.86,547.354l-55.31-4.666-1.87,30.277,55.3,4.666Z"/>
+    </g>
+  </g>
+</svg>

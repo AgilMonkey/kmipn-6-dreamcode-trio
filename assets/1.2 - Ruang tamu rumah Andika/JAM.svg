@@ -1,0 +1,20 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bec5ee;
+        stroke: #55667a;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        fill: #3a434d;
+      }
+    </style>
+  </defs>
+  <g id="Jam">
+    <circle class="cls-1" cx="726" cy="322" r="52"/>
+    <rect class="cls-2" x="724" y="285" width="5" height="46"/>
+    <rect class="cls-2" x="696" y="327" width="33" height="4"/>
+  </g>
+</svg>

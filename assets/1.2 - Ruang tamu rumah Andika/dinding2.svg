@@ -1,0 +1,27 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #91bbba;
+      }
+
+      .cls-2 {
+        fill: #769aa2;
+      }
+
+      .cls-3 {
+        fill: #9ba2c7;
+      }
+
+      .cls-4 {
+        fill: #7f84a5;
+      }
+    </style>
+  </defs>
+  <g id="Dinding">
+    <rect class="cls-1" x="52" y="137" width="808" height="810"/>
+    <rect class="cls-2" x="52" y="160.969" width="96" height="782.031"/>
+    <rect id="Rectangle_25_copy" data-name="Rectangle 25 copy" class="cls-3" x="148" y="916" width="712" height="29"/>
+    <rect id="Rectangle_25_copy_2" data-name="Rectangle 25 copy 2" class="cls-4" x="73" y="916" width="75" height="29"/>
+  </g>
+</svg>

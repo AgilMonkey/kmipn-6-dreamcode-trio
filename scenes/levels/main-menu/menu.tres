@@ -1,0 +1,118 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://5t7yg2sk5h4e"]
+
+[ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="1_kvt7m"]
+[ext_resource type="Texture2D" uid="uid://dmy0v8b1ft6fd" path="res://assets/1.1 Menu/Kotak tombol.svg" id="1_wd1vy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meb64"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8p63"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uti5d"]
+texture = ExtResource("1_wd1vy")
+texture_margin_left = 10.7986
+texture_margin_top = 13.147
+texture_margin_right = 9.75424
+texture_margin_bottom = 10.2632
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1086, 245, 458, 124)
+modulate_color = Color(0.589096, 0.589096, 0.589096, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdv2t"]
+texture = ExtResource("1_wd1vy")
+texture_margin_left = 10.7986
+texture_margin_top = 13.147
+texture_margin_right = 9.75424
+texture_margin_bottom = 10.2632
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1086, 245, 458, 124)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1x80"]
+texture = ExtResource("1_wd1vy")
+texture_margin_left = 10.7986
+texture_margin_top = 13.147
+texture_margin_right = 9.75424
+texture_margin_bottom = 10.2632
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1086, 245, 458, 124)
+modulate_color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2vsy"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yne02"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqep3"]
+content_margin_top = 20.0
+border_color = Color(0.6, 0.6, 0.6, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 3
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_kvt7m")
+Button/styles/disabled = SubResource("StyleBoxFlat_meb64")
+Button/styles/focus = SubResource("StyleBoxFlat_f8p63")
+Button/styles/hover = SubResource("StyleBoxTexture_uti5d")
+Button/styles/normal = SubResource("StyleBoxTexture_fdv2t")
+Button/styles/pressed = SubResource("StyleBoxTexture_g1x80")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_q2vsy")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_yne02")
+HSlider/styles/slider = SubResource("StyleBoxFlat_uqep3")
