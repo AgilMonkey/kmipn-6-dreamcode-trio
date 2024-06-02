@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpbcvrvjle2hb"]
+[gd_scene load_steps=21 format=3 uid="uid://cpbcvrvjle2hb"]
 
 [ext_resource type="Texture2D" uid="uid://dilo15ju817nx" path="res://assets/3.1 - Di Sekolah/Sekolah.svg" id="1_gsgjk"]
 [ext_resource type="Script" path="res://scenes/levels/di-sekolah-01/di_sekolah.gd" id="1_tvi2s"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://wfph63pmdqf2" path="res://assets/3.1 - Di Sekolah/background hitam.svg" id="9_oyr6s"]
 [ext_resource type="Texture2D" uid="uid://dbv8t51a34d7l" path="res://assets/3.1 - Di Sekolah/Contoh.png" id="10_rsm0c"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="11_kahml"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_7tdnw"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_o0jpf"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_2kfrf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71je0"]
 size = Vector2(3179, 237.304)
@@ -21,6 +24,15 @@ size = Vector2(280, 960)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvjsg"]
 size = Vector2(376, 336)
+
+[sub_resource type="Resource" id="Resource_dfduf"]
+script = ExtResource("15_2kfrf")
+duration = 0.0
+transition = 0
+ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oahug"]
+size = Vector2(1712, 768)
 
 [node name="DiSekolah" type="Node2D"]
 script = ExtResource("1_tvi2s")
@@ -101,6 +113,40 @@ shape = SubResource("RectangleShape2D_bvjsg")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
 [node name="LuarRumah2Pos" type="Marker2D" parent="Area2DKeLuarRumah2" groups=["from"]]
-position = Vector2(344, 165)
+position = Vector2(416, 165)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(699, 384)
+limit_left = 16
+limit_top = 0
+limit_right = 1728
+limit_bottom = 768
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("13_7tdnw")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(699, 384)
+script = ExtResource("14_o0jpf")
+follow_mode = 2
+follow_target = NodePath("../Player")
+tween_resource = SubResource("Resource_dfduf")
+follow_offset = Vector2(0, -280)
+follow_damping = true
+draw_limits = true
+limit_target = NodePath("../RoomArea/CollisionShape2D")
+
+[node name="RoomArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea"]
+position = Vector2(872, 384)
+shape = SubResource("RectangleShape2D_oahug")
+debug_color = Color(0.0156863, 1, 0, 0)
 
 [connection signal="body_entered" from="Area2DKeLuarRumah2" to="." method="_on_area_2d_ke_luar_rumah_2_body_entered"]
