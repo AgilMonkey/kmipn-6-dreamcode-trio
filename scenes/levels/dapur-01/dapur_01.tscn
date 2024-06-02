@@ -1,37 +1,91 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpfr0gavm0tp8"]
+[gd_scene load_steps=20 format=3 uid="uid://dpfr0gavm0tp8"]
 
 [ext_resource type="Script" path="res://scenes/levels/dapur-01/dapur_01.gd" id="1_d6p53"]
-[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_k53kt"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="2_j5mvm"]
 [ext_resource type="PackedScene" uid="uid://gxvnoob7qh73" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/minigame_memakan_makanan.tscn" id="4_80gkd"]
 [ext_resource type="PackedScene" uid="uid://c2fr1xssc6f4j" path="res://scenes/levels/dapur-01/minigame_makan_interactable.tscn" id="4_rp6qa"]
+[ext_resource type="Texture2D" uid="uid://bkg8dkldiwgap" path="res://assets/1.5 - Ruang makan rumah Andika/Contoh.png" id="6_xdos5"]
+[ext_resource type="Texture2D" uid="uid://c7jk0datya3w8" path="res://assets/1.5 - Ruang makan rumah Andika/Background-Dapur.svg" id="6_yahl6"]
+[ext_resource type="Texture2D" uid="uid://frc0pg3jfxrc" path="res://assets/1.5 - Ruang makan rumah Andika/background hitam.png" id="7_dk2st"]
+[ext_resource type="Texture2D" uid="uid://h5oqi8pg56ks" path="res://assets/1.5 - Ruang makan rumah Andika/Perabotan.png" id="8_4218k"]
+[ext_resource type="Texture2D" uid="uid://br0s4cqtcjvy" path="res://assets/1.5 - Ruang makan rumah Andika/Meja kursi.svg" id="8_a2d7s"]
+[ext_resource type="Texture2D" uid="uid://b6xr31beoiixn" path="res://assets/1.5 - Ruang makan rumah Andika/Dinding-Luar.svg" id="8_wj2x0"]
+[ext_resource type="Texture2D" uid="uid://djsdkuvuuhyrw" path="res://assets/1.5 - Ruang makan rumah Andika/Lantai.svg" id="9_fxgq5"]
+[ext_resource type="Texture2D" uid="uid://q3ojl6yoyk5q" path="res://assets/1.5 - Ruang makan rumah Andika/Gambar-Foto-Jam.svg" id="11_h78yt"]
+[ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="11_yopp2"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="12_hbfmr"]
+[ext_resource type="Texture2D" uid="uid://bv4ggniq88ukn" path="res://assets/1.5 - Ruang makan rumah Andika/Pintu-keluar.svg" id="13_h37sw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unkw3"]
 size = Vector2(2064, 237.304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5eh48"]
-size = Vector2(240, 960)
+size = Vector2(280, 960)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc0rl"]
 size = Vector2(304, 336)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sigs"]
+radius = 96.0
+
 [node name="Dapur01" type="Node2D"]
 script = ExtResource("1_d6p53")
 
+[node name="BackSprite" type="Node2D" parent="."]
+
+[node name="Contoh" type="Sprite2D" parent="BackSprite"]
+visible = false
+modulate = Color(1, 1, 1, 0.654902)
+position = Vector2(684, 384)
+scale = Vector2(0.7125, 0.711111)
+texture = ExtResource("6_xdos5")
+
+[node name="Background-dapur" type="Sprite2D" parent="BackSprite"]
+position = Vector2(682.222, 385)
+scale = Vector2(0.714352, 0.709259)
+texture = ExtResource("6_yahl6")
+
+[node name="Perabotan" type="Sprite2D" parent="BackSprite"]
+position = Vector2(414.921, 403.467)
+scale = Vector2(0.724422, 0.72301)
+texture = ExtResource("8_4218k")
+
+[node name="Dinding-luar" type="Sprite2D" parent="BackSprite"]
+position = Vector2(684, 384)
+scale = Vector2(0.7125, 0.711111)
+texture = ExtResource("8_wj2x0")
+
+[node name="Gambar-foto-jam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(684, 384)
+scale = Vector2(0.7125, 0.711111)
+texture = ExtResource("11_h78yt")
+
+[node name="MejaKursi" type="Sprite2D" parent="BackSprite"]
+position = Vector2(1096, 576)
+scale = Vector2(0.716667, 0.716667)
+texture = ExtResource("8_a2d7s")
+region_enabled = true
+region_rect = Rect2(1267, 652, 543, 300)
+
+[node name="Pintu-keluar" type="Sprite2D" parent="BackSprite"]
+position = Vector2(1360, 512)
+scale = Vector2(0.761905, 0.738462)
+texture = ExtResource("13_h37sw")
+region_enabled = true
+region_rect = Rect2(1889, 535, 21, 455)
+
+[node name="Lantai" type="Sprite2D" parent="BackSprite"]
+position = Vector2(684, 386)
+scale = Vector2(0.7125, 0.707407)
+texture = ExtResource("9_fxgq5")
+
+[node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
+position = Vector2(684, 384)
+scale = Vector2(0.7125, 0.711111)
+texture = ExtResource("7_dk2st")
+
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
-
-[node name="Lantai" type="Sprite2D" parent="Ground"]
-modulate = Color(0.988235, 0.92549, 0.819608, 1)
-position = Vector2(0, -22.6518)
-scale = Vector2(2.84289, 0.375)
-texture = ExtResource("1_k53kt")
-
-[node name="Back" type="Sprite2D" parent="Ground"]
-modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(0, 6.10352e-05)
-scale = Vector2(2.84289, 0.303521)
-texture = ExtResource("1_k53kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(119.779, 0)
@@ -40,14 +94,8 @@ shape = SubResource("RectangleShape2D_unkw3")
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 352)
 
-[node name="Sprite2D" type="Sprite2D" parent="Wall"]
-modulate = Color(0.176471, 0.117647, 0.184314, 1)
-position = Vector2(-24, 0)
-scale = Vector2(0.46875, 1.84375)
-texture = ExtResource("1_k53kt")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-24, 0)
+position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_5eh48")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
@@ -64,11 +112,33 @@ monitorable = false
 shape = SubResource("RectangleShape2D_dc0rl")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
+[node name="DialogueLemariEs" parent="." instance=ExtResource("11_yopp2")]
+position = Vector2(752, 528)
+timeline_path = "res://scenes/levels/dapur-01/dialog_lemari_es.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueLemariEs"]
+shape = SubResource("CircleShape2D_0sigs")
+debug_color = Color(0.657367, 0.511717, 0.187459, 0.42)
+
+[node name="InteractIcon" parent="DialogueLemariEs" instance=ExtResource("12_hbfmr")]
+position = Vector2(0, -136)
+
+[node name="DialoguePanci" parent="." instance=ExtResource("11_yopp2")]
+position = Vector2(200, 528)
+timeline_path = "res://scenes/levels/dapur-01/dialog_panci.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialoguePanci"]
+shape = SubResource("CircleShape2D_0sigs")
+debug_color = Color(0.657367, 0.511717, 0.187459, 0.42)
+
+[node name="InteractIcon" parent="DialoguePanci" instance=ExtResource("12_hbfmr")]
+position = Vector2(-136, -96)
+
 [node name="RuangTamuPos" type="Marker2D" parent="."]
 position = Vector2(1272, 672)
 
 [node name="MinigameMakanInteractable" parent="." instance=ExtResource("4_rp6qa")]
-position = Vector2(688, 568)
+position = Vector2(1096, 552)
 
 [node name="Player" parent="." instance=ExtResource("2_j5mvm")]
 position = Vector2(520, 672)
