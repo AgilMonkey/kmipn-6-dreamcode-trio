@@ -12,33 +12,6 @@ var food_count = 9
 var first_grab_pressed = false
 var first_move_pressed = false
 
-func _input(event):
-	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		if not first_move_pressed:
-			handle_first_key_press(event)
-			#else:
-				#anim_minigame.play_backwards("tutorial_movement")
-				#anim_minigame.queue("grabbing_tutorial")
-		if not first_grab_pressed:
-			#anim_minigame.play_backwards("grabbing_tutorial")
-			handle_first_key_press(event)
-
-func handle_first_key_press(event):
-	#match event.scancode:
-		#KEY_A:
-			#print("You pressed A!")
-		#KEY_B:
-			#print("You pressed B!")
-			
-	if event.keycode == KEY_LEFT or event.keycode == KEY_RIGHT or event.keycode == KEY_UP or event.keycode == KEY_DOWN:
-		first_move_pressed = true
-		if anim_minigame.is_playing():
-			await anim_minigame.animation_finished
-			anim_minigame.play_backwards("tutorial_movement")
-			anim_minigame.queue("grabbing_tutorial")
-	elif event.keycode == KEY_Z:
-		anim_minigame.play_backwards("grabbing_tutorial")
-
 func _ready():
 	# Get the 'Food' node
 	var food = $Food
@@ -112,6 +85,7 @@ func tween_tangan_ke_bawah(object: RigidBody2D):
 	var to = Vector2($Tangan.global_position.x, 1080)
 	var tween = get_tree().create_tween()
 	tween.tween_property($Tangan, "global_position", to, 2)
+	#$Tutorials.visible = false
 
 # Handle the animation_finished signal	
 func _on_animation_finished(anim_name):
@@ -122,7 +96,9 @@ func _on_animation_finished(anim_name):
 	
 	# animasi tutorial
 	elif anim_name == "actual_start_game":
-		anim_minigame.play("tutorial_movement")
+		anim_minigame.queue("tutorial_movement")
+		anim_minigame.queue("grabbing_tutorial")
+		anim_minigame.queue("tutorial_eat")
 
 func _on_food_grabbed(object):
 	food_grabbed(object)
