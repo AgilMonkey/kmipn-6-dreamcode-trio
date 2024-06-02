@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://de5fxnerw0y8f"]
+[gd_scene load_steps=24 format=3 uid="uid://de5fxnerw0y8f"]
 
 [ext_resource type="Texture2D" uid="uid://8jhcg5nqewpg" path="res://assets/3.3 - Ruang kelas Andika/background hitam.png" id="1_3gjeb"]
 [ext_resource type="Texture2D" uid="uid://8cn6kfceojbn" path="res://assets/3.3 - Ruang kelas Andika/background hitam.svg" id="2_0k05e"]
@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://dvwsgrkd2xgmx" path="res://assets/3.3 - Ruang kelas Andika/Meja-Guru.svg" id="19_6uph2"]
 [ext_resource type="Texture2D" uid="uid://c6j7j5xepa2bi" path="res://assets/3.3 - Ruang kelas Andika/pintu.svg" id="20_rqug8"]
 [ext_resource type="Texture2D" uid="uid://doyqh3grufg1b" path="res://assets/3.3 - Ruang kelas Andika/Proyektor.svg" id="21_gq8yc"]
-[ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="22_frokw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yoh60"]
 size = Vector2(3179, 237.304)
@@ -38,108 +37,87 @@ position = Vector2(0, 2.8129)
 
 [node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("1_3gjeb")
 
 [node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("2_0k05e")
 
 [node name="Contoh" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("3_t8te5")
 
 [node name="Contoh2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("4_cgqt2")
 
 [node name="Guru-Kursi" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("5_gw3gw")
 
 [node name="HiasanLantai" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("6_k2fi5")
 
 [node name="Hiasan" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("7_5of57")
 
 [node name="Jendela" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("8_2cfxi")
 
 [node name="Kursi1" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("9_0mk4c")
 
 [node name="Kursi2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("10_ctwp7")
 
 [node name="Kursi3" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("11_tend5")
 
 [node name="Lampu" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("12_lrasu")
 
 [node name="Lantai-atap" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("13_r0arr")
 
 [node name="Laptop" type="Sprite2D" parent="BackSprite"]
 visible = false
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("14_x1yxy")
 
 [node name="Meja1" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("15_q6hkw")
 
 [node name="Meja2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("16_rm2oa")
 
 [node name="Meja3" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("17_76yv3")
 
 [node name="Meja4" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("18_wvgqw")
 
 [node name="Meja-guru" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("19_6uph2")
 
 [node name="Pintu" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("20_rqug8")
 
 [node name="Proyektor" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
-scale = Vector2(1, 1)
 texture = ExtResource("21_gq8yc")
 
 [node name="Ground" type="StaticBody2D" parent="."]
@@ -159,6 +137,3 @@ shape = SubResource("RectangleShape2D_ujfdo")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
 position = Vector2(1924.82, -12)
 shape = SubResource("RectangleShape2D_ujfdo")
-
-[node name="Player" parent="." instance=ExtResource("22_frokw")]
-position = Vector2(-378.093, 417.046)
