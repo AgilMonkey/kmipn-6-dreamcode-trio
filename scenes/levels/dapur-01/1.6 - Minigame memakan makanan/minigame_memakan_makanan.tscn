@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://gxvnoob7qh73"]
+[gd_scene load_steps=61 format=3 uid="uid://gxvnoob7qh73"]
 
 [ext_resource type="Script" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/minigame_memakan_makanan.gd" id="1_nc0lm"]
 [ext_resource type="Texture2D" uid="uid://ob67uoqck1jk" path="res://assets/1.6 - Minigame memakan makanan/Background meja.png" id="1_updoi"]
@@ -15,9 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://rumr81m4uap6" path="res://assets/1.6 - Minigame memakan makanan/sayur2.png" id="13_fooqg"]
 [ext_resource type="Texture2D" uid="uid://d4dcxo1h2yv82" path="res://assets/1.6 - Minigame memakan makanan/background hitam.svg" id="15_xrxpe"]
 [ext_resource type="Script" path="res://scenes/levels/dapur-01/1.6 - Minigame memakan makanan/tangan.gd" id="16_6lkrg"]
+[ext_resource type="Texture2D" uid="uid://bri31voyr6wlc" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Vector/keyboard_arrow_down.svg" id="19_rq5mi"]
+[ext_resource type="Texture2D" uid="uid://cn87rnxaplobr" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Vector/keyboard_arrow_left.svg" id="20_hi1bo"]
 [ext_resource type="PackedScene" uid="uid://dbjafnpmklodo" path="res://scenes/tangan/tangan.tscn" id="21_aapbp"]
+[ext_resource type="Texture2D" uid="uid://cgc3btaue35ns" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Vector/keyboard_arrow_right.svg" id="21_e4p35"]
+[ext_resource type="Texture2D" uid="uid://cup2gy822ac3t" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Vector/keyboard_arrow_up.svg" id="22_8fm80"]
 [ext_resource type="Texture2D" uid="uid://b5mn6x0ew7yep" path="res://assets/3.8 - Minigame vending machine/tangan2.svg" id="22_pyw83"]
 [ext_resource type="Texture2D" uid="uid://chlmpgpgu6ilx" path="res://assets/3.8 - Minigame vending machine/tangan1.svg" id="23_4rhke"]
+[ext_resource type="FontFile" uid="uid://c0ebip7pivdjd" path="res://assets/Klee_One/KleeOne-SemiBold.ttf" id="23_abk7g"]
+[ext_resource type="Texture2D" uid="uid://qvjtw5tojrix" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Vector/keyboard_z.svg" id="24_1cklm"]
+[ext_resource type="Texture2D" uid="uid://c7fsvgvsq3mjt" path="res://assets/kenney_game-icons/PNG/White/2x/arrowRight.png" id="25_mdkhg"]
+[ext_resource type="Texture2D" uid="uid://fwo04jveowp6" path="res://assets/kenney_game-icons/PNG/White/2x/arrowLeft.png" id="26_q0rff"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qjnw3"]
 radius = 8.05928
@@ -191,34 +199,22 @@ length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Food/Sausage1Clip/Sausage1:freeze")
+tracks/0/path = NodePath("Tangan:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tangan:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
-"transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(793, 851), Vector2(832, 584)]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Tangan")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -229,13 +225,155 @@ tracks/2/keys = {
 "method": &"set_process_input"
 }]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Tangan/TanganSprite:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tangan/TanganSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("23_4rhke")]
+}
+
+[sub_resource type="Animation" id="Animation_fwe44"]
+resource_name = "tutorial_eat"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorials/Eat/ArrowRight:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(529, 688), Vector2(509, 688), Vector2(529, 688)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tutorials/Eat/ArrowLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(809, 688), Vector2(829, 688), Vector2(809, 688)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tutorials/Eat:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uji25"]
+resource_name = "tutorial_movement"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorials/Movements:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tutorials/Movements:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l4388"]
+resource_name = "grabbing_tutorial"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorials/Grabbings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(11, 19), Vector2(11, -21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tutorials/Grabbings:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y5m3f"]
+resource_name = "actual_start_game"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tangan:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(793, 851), Vector2(832, 584)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tangan")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}, {
+"args": [true],
+"method": &"set_process_input"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tangan/TanganSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -245,8 +383,12 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8410x"]
 _data = {
 "RESET": SubResource("Animation_ikgiu"),
+"actual_start_game": SubResource("Animation_y5m3f"),
 "get_food": SubResource("Animation_b1ax8"),
-"start_game": SubResource("Animation_vgqjs")
+"grabbing_tutorial": SubResource("Animation_l4388"),
+"start_game": SubResource("Animation_vgqjs"),
+"tutorial_eat": SubResource("Animation_fwe44"),
+"tutorial_movement": SubResource("Animation_uji25")
 }
 
 [node name="minigame_memakan_makanan" type="Node2D"]
@@ -522,6 +664,11 @@ position = Vector2(734.25, -18.0003)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_1g05k")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TanganBorder"]
+position = Vector2(680, 853)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_1g05k")
+
 [node name="Tangan" parent="." instance=ExtResource("21_aapbp")]
 position = Vector2(793, 851)
 rotation = -0.415388
@@ -529,6 +676,7 @@ collision_mask = 32
 script = ExtResource("16_6lkrg")
 
 [node name="TanganSprite" parent="Tangan" index="0"]
+z_index = 1000
 texture = ExtResource("22_pyw83")
 
 [node name="AnimationMinigame" type="AnimationPlayer" parent="."]
@@ -537,49 +685,94 @@ libraries = {
 }
 autoplay = "start_game"
 
-[node name="Tutorial" type="ColorRect" parent="."]
-offset_left = 998.0
-offset_top = 8.0
-offset_right = 1336.0
-offset_bottom = 288.0
+[node name="Tutorials" type="Node2D" parent="."]
 
-[node name="Label" type="Label" parent="Tutorial"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 8.0
-offset_right = -9.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Z -> Mengambil makanan
-Panah -> Gerak tangan
+[node name="Movements" type="Node2D" parent="Tutorials"]
+position = Vector2(-1015, -140)
 
-Ambil makanan dan tarik kebawah untuk memakannya"
-autowrap_mode = 2
+[node name="Keys" type="Node2D" parent="Tutorials/Movements"]
+position = Vector2(562, 94)
+scale = Vector2(0.5, 0.5)
 
-[connection signal="grabbed" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_grabbed"]
-[connection signal="released" from="Food/Sausage1Clip/Sausage1" to="." method="_on_sausage_1_released"]
-[connection signal="grabbed" from="Food/Sausage2Clip/Sausage2" to="." method="_on_sausage_2_grabbed"]
-[connection signal="released" from="Food/Sausage2Clip/Sausage2" to="." method="_on_sausage_2_released"]
-[connection signal="grabbed" from="Food/Egg2Clip/Egg2" to="." method="_on_egg_2_grabbed"]
-[connection signal="released" from="Food/Egg2Clip/Egg2" to="." method="_on_egg_2_released"]
-[connection signal="grabbed" from="Food/Egg1Clip/Egg1" to="." method="_on_egg_1_grabbed"]
-[connection signal="released" from="Food/Egg1Clip/Egg1" to="." method="_on_egg_1_released"]
-[connection signal="grabbed" from="Food/Rice3Clip/Rice3" to="." method="_on_rice_3_grabbed"]
-[connection signal="released" from="Food/Rice3Clip/Rice3" to="." method="_on_rice_3_released"]
-[connection signal="grabbed" from="Food/Rice2Clip/Rice2" to="." method="_on_rice_2_grabbed"]
-[connection signal="released" from="Food/Rice2Clip/Rice2" to="." method="_on_rice_2_released"]
-[connection signal="grabbed" from="Food/Rice1Clip/Rice1" to="." method="_on_rice_1_grabbed"]
-[connection signal="released" from="Food/Rice1Clip/Rice1" to="." method="_on_rice_1_released"]
-[connection signal="grabbed" from="Food/Vegetable1Clip/Vegetable1" to="." method="_on_vegetable_1_grabbed"]
-[connection signal="released" from="Food/Vegetable1Clip/Vegetable1" to="." method="_on_vegetable_1_released"]
-[connection signal="grabbed" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_vegetable_2_grabbed"]
-[connection signal="released" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_vegetable_2_released"]
+[node name="KeyboardArrowDown" type="Sprite2D" parent="Tutorials/Movements/Keys"]
+position = Vector2(1070, 222)
+texture = ExtResource("19_rq5mi")
+
+[node name="KeyboardArrowLeft" type="Sprite2D" parent="Tutorials/Movements/Keys"]
+position = Vector2(1009, 222)
+texture = ExtResource("20_hi1bo")
+
+[node name="KeyboardArrowRight" type="Sprite2D" parent="Tutorials/Movements/Keys"]
+position = Vector2(1132, 222)
+texture = ExtResource("21_e4p35")
+
+[node name="KeyboardArrowUp" type="Sprite2D" parent="Tutorials/Movements/Keys"]
+position = Vector2(1071, 163)
+texture = ExtResource("22_8fm80")
+
+[node name="Label" type="Label" parent="Tutorials/Movements"]
+offset_left = 1172.0
+offset_top = 177.0
+offset_right = 1483.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("23_abk7g")
+text = "Gunakan tombol panah untuk bergerak."
+
+[node name="Grabbings" type="Node2D" parent="Tutorials"]
+position = Vector2(-1043, -259)
+
+[node name="KeyboardZ" type="Sprite2D" parent="Tutorials/Grabbings"]
+position = Vector2(1123, 385)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_1cklm")
+
+[node name="Label" type="Label" parent="Tutorials/Grabbings"]
+offset_left = 1198.0
+offset_top = 370.0
+offset_right = 1528.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("23_abk7g")
+text = "Tahan tombol Z untuk mengambil makanan."
+
+[node name="Eat" type="Node2D" parent="Tutorials"]
+
+[node name="ArrowRight" type="Sprite2D" parent="Tutorials/Eat"]
+visible = false
+position = Vector2(529, 688)
+texture = ExtResource("25_mdkhg")
+
+[node name="ArrowLeft" type="Sprite2D" parent="Tutorials/Eat"]
+visible = false
+position = Vector2(809, 688)
+texture = ExtResource("26_q0rff")
+
+[node name="Label" type="Label" parent="Tutorials/Eat"]
+offset_left = 65.0
+offset_top = 170.0
+offset_right = 395.0
+offset_bottom = 194.0
+theme_override_fonts/font = ExtResource("23_abk7g")
+text = "Tarik dan lepas di bawah untuk memakan!"
+
+[connection signal="grabbed" from="Food/Sausage1Clip/Sausage1" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Sausage1Clip/Sausage1" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Sausage2Clip/Sausage2" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Sausage2Clip/Sausage2" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Egg2Clip/Egg2" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Egg2Clip/Egg2" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Egg1Clip/Egg1" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Egg1Clip/Egg1" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Rice3Clip/Rice3" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Rice3Clip/Rice3" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Rice2Clip/Rice2" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Rice2Clip/Rice2" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Rice1Clip/Rice1" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Rice1Clip/Rice1" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Vegetable1Clip/Vegetable1" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Vegetable1Clip/Vegetable1" to="." method="_on_food_released"]
+[connection signal="grabbed" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_food_grabbed"]
+[connection signal="released" from="Food/Vegetable2Clip/Vegetable2" to="." method="_on_food_released"]
+[connection signal="animation_finished" from="AnimationMinigame" to="." method="_on_animation_finished"]
 
 [editable path="Food/Sausage1Clip/Sausage1"]
 [editable path="Food/Sausage2Clip/Sausage2"]

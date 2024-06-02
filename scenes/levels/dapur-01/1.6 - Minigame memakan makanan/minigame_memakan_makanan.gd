@@ -4,19 +4,43 @@ signal minigame_selesai
 
 @onready var anim_minigame = $AnimationMinigame
 
-# Lokasi setiap makanan
-@onready var sausage_1_return_pos: Vector2 = $Food/Sausage1Clip/Sausage1.global_position
-@onready var sausage_2_return_pos: Vector2 = $Food/Sausage2Clip/Sausage2.global_position
-@onready var egg_1_return_pos: Vector2 = $Food/Egg1Clip/Egg1.global_position
-@onready var egg_2_return_pos: Vector2 = $Food/Egg2Clip/Egg2.global_position
-@onready var rice_1_return_pos: Vector2 = $Food/Rice1Clip/Rice1.global_position
-@onready var rice_2_return_pos: Vector2 = $Food/Rice2Clip/Rice2.global_position
-@onready var rice_3_return_pos: Vector2 = $Food/Rice3Clip/Rice3.global_position
-@onready var vegetable_1_return_pos: Vector2 = $Food/Vegetable1Clip/Vegetable1.global_position
-@onready var vegetable_2_return_pos: Vector2 = $Food/Vegetable2Clip/Vegetable2.global_position
+# Dictionary to store initial positions of 'Food' node children
+var initial_positions := {}
 
-var food_to_follow = null
 var food_count = 9
+
+var first_grab_pressed = false
+var first_move_pressed = false
+
+func _ready():
+	# Get the 'Food' node
+	var food = $Food
+	# Iterate over its children
+	for child in food.get_children():
+		# Store initial positions of 'Food' node children
+		for grandchild in child.get_children():
+			initial_positions[grandchild.name] = grandchild.global_position
+
+			# Connect signals for child nodes of 'Food' node children
+			connect_child_signals(grandchild)
+
+	# Connect the animation_finished signal
+	anim_minigame.connect("animation_finished", Callable(self, "_on_animation_finished"))
+
+func connect_child_signals(grandchild):
+	if grandchild.has_signal("grabbed"):
+		grandchild.connect("grabbed", Callable(self, "_on_food_child_grabbed").bind(grandchild))
+	if grandchild.has_signal("released"):
+		grandchild.connect("released", Callable(self, "_on_food_child_released").bind(grandchild))
+
+# Handler function for 'grabbed' signal emitted by child nodes
+func _on_food_child_grabbed(child):
+	food_grabbed(child)
+
+# Handler function for 'released' signal emitted by child nodes
+func _on_food_child_released(child):
+	var return_pos = initial_positions[child.name]
+	food_release(child, return_pos)
 
 func selesaikan_game():
 	minigame_selesai.emit()
@@ -49,82 +73,37 @@ func food_release(object, return_pos):
 
 	var areas_accept = $EatZone.get_overlapping_bodies()
 	if len(areas_accept) > 0:
-		#print(len(areas_accept))
-		#print("on EatZone")
+		print(areas_accept)
+		tween_tangan_ke_bawah(object)
 		object.clip_children = 0
 		object.self_modulate = Color(1, 1, 1, 0)
-		tween_tangan_ke_bawah(object)
+		print("play 'get_food'")
 
 func tween_tangan_ke_bawah(object: RigidBody2D):
 	anim_minigame.play("get_food")
-	anim_minigame.queue("start_game")
-	food_to_follow = object
+	object.reparent($Tangan)
 	var to = Vector2($Tangan.global_position.x, 1080)
 	var tween = get_tree().create_tween()
 	tween.tween_property($Tangan, "global_position", to, 2)
-	tween.connect("finished", Callable(self, "_on_tangan_tween_completed"))
+	#$Tutorials.visible = false
 
-func _on_tangan_tween_completed():
-	food_to_follow = null
-	food_count -= 1
-	if food_count == 0:
-		minigame_selesai.emit()
-		print("Minigame selesai")
+# Handle the animation_finished signal	
+func _on_animation_finished(anim_name):
+	if anim_name == "get_food":
+		print($Tangan.get_children())
+		$Tangan.get_child(-1).queue_free()
+		anim_minigame.play("start_game")
+	
+	# animasi tutorial
+	elif anim_name == "actual_start_game":
+		anim_minigame.queue("tutorial_movement")
+		anim_minigame.queue("grabbing_tutorial")
+		anim_minigame.queue("tutorial_eat")
 
-func _process(delta):
-	if food_to_follow:
-		food_to_follow.global_position = $Tangan.global_position
-
-func _on_sausage_1_grabbed(object):
+func _on_food_grabbed(object):
 	food_grabbed(object)
 
-func _on_sausage_1_released(object: RigidBody2D):
-	food_release(object, sausage_1_return_pos)
+func _on_food_released(object: RigidBody2D):
+	food_release(object, initial_positions[object.name])	
 
-func _on_sausage_2_grabbed(object):
-	food_grabbed(object)
 
-func _on_sausage_2_released(object):
-	food_release(object, sausage_2_return_pos)
-
-func _on_egg_2_grabbed(object):
-	food_grabbed(object)
-
-func _on_egg_2_released(object):
-	food_release(object, egg_2_return_pos)
-
-func _on_egg_1_grabbed(object):
-	food_grabbed(object)
-
-func _on_egg_1_released(object):
-	food_release(object, egg_1_return_pos)
-
-func _on_rice_3_grabbed(object):
-	food_grabbed(object)
-
-func _on_rice_3_released(object):
-	food_release(object, rice_3_return_pos)
-
-func _on_rice_2_grabbed(object):
-	food_grabbed(object)
-
-func _on_rice_2_released(object):
-	food_release(object, rice_2_return_pos)
-
-func _on_rice_1_grabbed(object):
-	food_grabbed(object)
-
-func _on_rice_1_released(object):
-	food_release(object, rice_1_return_pos)
-
-func _on_vegetable_1_grabbed(object):
-	food_grabbed(object)
-
-func _on_vegetable_1_released(object):
-	food_release(object, vegetable_1_return_pos)
-
-func _on_vegetable_2_grabbed(object):
-	food_grabbed(object)
-
-func _on_vegetable_2_released(object):
-	food_release(object, vegetable_2_return_pos)
