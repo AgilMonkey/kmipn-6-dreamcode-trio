@@ -29,7 +29,9 @@ directories/dch_directory={
 "Andika": "res://dialogic-stuff/characters/Andika.dch",
 "Ayah": "res://dialogic-stuff/characters/Ayah.dch",
 "Bayu": "res://dialogic-stuff/characters/Bayu.dch",
+"Guru": "res://dialogic-stuff/characters/Guru.dch",
 "PakRt": "res://dialogic-stuff/characters/PakRt.dch",
+"Semuanya": "res://dialogic-stuff/characters/Semuanya.dch",
 "flower": "res://dialogic-stuff/characters/flower.dch",
 "test_mc": "res://dialogic-stuff/characters/test_mc.dch"
 }
@@ -37,6 +39,7 @@ directories/dtl_directory={
 "box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "dialog_belum_makan": "res://scenes/levels/ruang-tamu-01/dialog_belum_makan.dtl",
+"dialog_kelas": "res://scenes/levels/ruang-kelas-andika-01/dialog_kelas.dtl",
 "dialog_lemari_es": "res://scenes/levels/dapur-01/dialog_lemari_es.dtl",
 "dialog_pak_rt": "res://scenes/levels/luar-rumah-andika-01/Dialog/dialog_pak_rt.dtl",
 "dialog_panci": "res://scenes/levels/dapur-01/dialog_panci.dtl",

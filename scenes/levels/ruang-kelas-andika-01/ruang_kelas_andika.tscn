@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://de5fxnerw0y8f"]
+[gd_scene load_steps=28 format=3 uid="uid://de5fxnerw0y8f"]
 
+[ext_resource type="Script" path="res://scenes/levels/ruang-kelas-andika-01/ruang_kelas_andika.gd" id="1_3bk08"]
 [ext_resource type="Texture2D" uid="uid://8jhcg5nqewpg" path="res://assets/3.3 - Ruang kelas Andika/background hitam.png" id="1_3gjeb"]
 [ext_resource type="Texture2D" uid="uid://8cn6kfceojbn" path="res://assets/3.3 - Ruang kelas Andika/background hitam.svg" id="2_0k05e"]
 [ext_resource type="Texture2D" uid="uid://bavvqembwhguy" path="res://assets/3.3 - Ruang kelas Andika/Contoh.png" id="3_t8te5"]
@@ -32,9 +33,12 @@ size = Vector2(2160.34, 237.304)
 [node name="RuangKelasAndika" type="Node2D"]
 position = Vector2(735, 386)
 scale = Vector2(0.711, 0.711)
+script = ExtResource("1_3bk08")
 
 [node name="BackSprite" type="Sprite2D" parent="."]
 position = Vector2(-111.111, 2.8129)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-2, -2.99994)
@@ -148,3 +152,9 @@ position = Vector2(-209.872, 535.698)
 position = Vector2(65.0055, 0.348022)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yoh60")
+
+[node name="PakGuruPivot" type="Node2D" parent="."]
+position = Vector2(766.526, 120.956)
+
+[node name="SemuanyaPivot" type="Node2D" parent="."]
+position = Vector2(-111.111, 87.2011)
