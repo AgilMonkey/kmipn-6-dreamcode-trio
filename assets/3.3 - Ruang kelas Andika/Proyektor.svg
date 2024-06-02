@@ -1,0 +1,41 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1f2930;
+      }
+
+      .cls-2 {
+        fill: #4d5860;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #38434b;
+      }
+
+      .cls-4 {
+        fill: #2d353b;
+      }
+
+      .cls-5 {
+        fill: #9e4f5c;
+      }
+
+      .cls-6 {
+        fill: #272b2e;
+      }
+    </style>
+  </defs>
+  <g id="Proyektor">
+    <rect class="cls-1" x="1170" y="173" width="24" height="68"/>
+    <path class="cls-2" d="M1243.13,254l18.82,2.546-5.76,42.612-18.83-2.546Z"/>
+    <path class="cls-3" d="M1120.71,291.856l106.35,11.7-0.98,8.946-106.36-11.7Z"/>
+    <path class="cls-4" d="M1117.11,233.111l130.21,14.321-6.45,58.647-130.21-14.322Z"/>
+    <path class="cls-5" d="M1125.96,265.112l17.89,1.859-1.95,19.018-17.89-1.858Z"/>
+    <path class="cls-6" d="M1127.42,240.985l72.59,7.537-2.05,20.02-72.59-7.537Z"/>
+  </g>
+</svg>

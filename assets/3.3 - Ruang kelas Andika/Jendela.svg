@@ -1,0 +1,30 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f4f5;
+      }
+
+      .cls-2 {
+        fill: #bbceee;
+      }
+    </style>
+  </defs>
+  <g id="Jendela">
+    <g>
+      <rect class="cls-1" x="716" y="551" width="460" height="237"/>
+      <rect class="cls-2" x="725" y="560" width="213" height="216"/>
+      <rect id="Rectangle_27_copy" data-name="Rectangle 27 copy" class="cls-2" x="953" y="560" width="213" height="216"/>
+    </g>
+    <g id="Group_5_copy" data-name="Group 5 copy">
+      <rect class="cls-1" x="145" y="551" width="460" height="237"/>
+      <rect class="cls-2" x="154" y="560" width="213" height="216"/>
+      <rect id="Rectangle_27_copy-2" data-name="Rectangle 27 copy" class="cls-2" x="382" y="560" width="213" height="216"/>
+    </g>
+    <g id="Group_5_copy_2" data-name="Group 5 copy 2">
+      <rect class="cls-1" x="-422" y="549" width="460" height="237"/>
+      <rect class="cls-2" x="-413" y="558" width="213" height="216"/>
+      <rect id="Rectangle_27_copy-3" data-name="Rectangle 27 copy" class="cls-2" x="-185" y="558" width="213" height="216"/>
+    </g>
+  </g>
+</svg>

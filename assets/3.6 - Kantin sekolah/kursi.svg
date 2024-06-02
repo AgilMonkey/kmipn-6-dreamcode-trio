@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #59617f;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #3c4254;
+      }
+
+      .cls-3 {
+        fill: #5d79bf;
+      }
+
+      .cls-4 {
+        fill: #404860;
+      }
+    </style>
+  </defs>
+  <g id="Kursi">
+    <path class="cls-1" d="M-12,856l475.288-2.038c1.97-.194,6.923,12.844.619,21.038L-14,876Z"/>
+    <path id="Shape_8_copy" data-name="Shape 8 copy" class="cls-2" d="M8.63,893.028l387.345-2.034c1.606-.194,5.642,12.825.5,21.007L7,913Z"/>
+    <rect class="cls-3" x="-13" y="841" width="475.906" height="16"/>
+    <path class="cls-4" d="M387.922,875h21.995v75H387.922V875Z"/>
+    <path id="Rectangle_14_copy_2" data-name="Rectangle 14 copy 2" class="cls-4" d="M191.96,875h22v75h-22V875Z"/>
+    <path id="Rectangle_14_copy_3" data-name="Rectangle 14 copy 3" class="cls-4" d="M-4,876h22v75H-4V876Z"/>
+  </g>
+</svg>

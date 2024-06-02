@@ -1,0 +1,20 @@
+<svg id="Jalan" xmlns="http://www.w3.org/2000/svg" width="2454" height="1080" viewBox="0 0 2454 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3a42;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #575662;
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="612" y="870" width="1198" height="42"/>
+  <rect class="cls-2" x="755" y="845" width="942" height="15"/>
+  <path class="cls-3" d="M-2.622,891.353l-1.386-32.344,2472.618,0.647L2470,892Z"/>
+</svg>

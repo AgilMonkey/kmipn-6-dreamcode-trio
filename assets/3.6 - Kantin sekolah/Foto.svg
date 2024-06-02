@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e7f5e9;
+        stroke: #4b6e88;
+        stroke-width: 8px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #a9a8a2;
+      }
+
+      .cls-3 {
+        fill: #4f835f;
+      }
+
+      .cls-4 {
+        fill: #ffe48d;
+      }
+    </style>
+  </defs>
+  <g id="Gambar">
+    <g>
+      <path class="cls-1" d="M-23.108,351.987h413L389,706H-24Z"/>
+      <path class="cls-2" d="M385,638S317.505,511.254,127,511c0,0-87.1,2.548-95,60,0,0-2.767-54.1-55-71l11,202H387Z"/>
+      <path class="cls-3" d="M386,506.657s-78.848-63.264-94,43.075c0,0-83.893,57.526,26,98.171,0,0-181.308-55.354-205,23.04,0,0-67.485-36.452-76,22.038L45,704l342-2Z"/>
+      <ellipse class="cls-4" cx="134" cy="428" rx="52" ry="53"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg id="Teotoar" xmlns="http://www.w3.org/2000/svg" width="2454" height="1080" viewBox="0 0 2454 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2e2e33;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #e5e5f1;
+      }
+
+      .cls-3 {
+        fill: #25242d;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M92,913H-8v34l2462-4.154V911Z"/>
+  <rect class="cls-2" x="2321" y="911" width="133" height="23"/>
+  <rect id="Rectangle_11_copy" data-name="Rectangle 11 copy" class="cls-2" x="2054" y="911" width="133" height="23"/>
+  <rect id="Rectangle_11_copy_2" data-name="Rectangle 11 copy 2" class="cls-2" x="1782" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_3" data-name="Rectangle 11 copy 3" class="cls-2" x="1510" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_5" data-name="Rectangle 11 copy 5" class="cls-2" x="1224" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_4" data-name="Rectangle 11 copy 4" class="cls-2" x="952" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_7" data-name="Rectangle 11 copy 7" class="cls-2" x="655" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_6" data-name="Rectangle 11 copy 6" class="cls-2" x="383" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_9" data-name="Rectangle 11 copy 9" class="cls-2" x="127" y="913" width="133" height="21"/>
+  <rect id="Rectangle_11_copy_8" data-name="Rectangle 11 copy 8" class="cls-2" x="-145" y="913" width="133" height="21"/>
+  <path class="cls-3" d="M-3,1060.72L2454,1063V934H-3v126.72Z"/>
+</svg>

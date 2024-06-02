@@ -1,0 +1,34 @@
+<svg id="Folder_9" data-name="Folder 9" xmlns="http://www.w3.org/2000/svg" width="2064" height="1080" viewBox="0 0 2064 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #89755e;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #a9906f;
+      }
+
+      .cls-3 {
+        fill: #99876b;
+      }
+
+      .cls-4 {
+        fill: #ba9e73;
+      }
+    </style>
+  </defs>
+  <g id="kursi">
+    <g id="Kursi_copy_2" data-name="Kursi copy 2">
+      <path class="cls-1" d="M205.979,871h20.266v88H205.979V871Z"/>
+      <path id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-1" d="M102.72,871h20.266v88H102.72V871Z"/>
+      <rect class="cls-2" x="95" y="849" width="138" height="24"/>
+      <path id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-3" d="M96.93,723H114.3V849H96.93V723Z"/>
+      <path class="cls-4" d="M112.371,723h11.58v77h-11.58V723Z"/>
+    </g>
+  </g>
+</svg>
