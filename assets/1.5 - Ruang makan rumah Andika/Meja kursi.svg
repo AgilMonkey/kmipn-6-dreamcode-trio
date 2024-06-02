@@ -1,0 +1,121 @@
+<svg id="Gambar" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b2b23;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #6f432f;
+      }
+
+      .cls-3 {
+        fill: #4d2d20;
+      }
+
+      .cls-4 {
+        fill: #4c457f;
+      }
+
+      .cls-5 {
+        fill: #77aa30;
+      }
+
+      .cls-6 {
+        fill: #84cb41;
+      }
+
+      .cls-7 {
+        fill: #b9ab9d;
+      }
+
+      .cls-8 {
+        fill: #96361c;
+      }
+
+      .cls-9 {
+        fill: #333234;
+      }
+
+      .cls-10 {
+        fill: #3d8388;
+      }
+
+      .cls-11 {
+        fill: #c4eded;
+      }
+
+      .cls-12 {
+        fill: #ccd2d6;
+      }
+
+      .cls-13 {
+        fill: #872c0c;
+      }
+
+      .cls-14 {
+        fill: #bb6102;
+      }
+
+      .cls-15 {
+        fill: #505d64;
+      }
+    </style>
+  </defs>
+  <g id="Kursi">
+    <g id="Kursi-2" data-name="Kursi">
+      <path class="cls-1" d="M1371.96,859.128h19.53V943.4h-19.53V859.128Z"/>
+      <path id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-1" d="M1272.44,859.128h19.53V943.4h-19.53V859.128Z"/>
+      <path class="cls-2" d="M1267,840.475h132v24.8H1267v-24.8Z"/>
+      <path id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-3" d="M1269.98,719.781h20.03v121.2h-20.03v-121.2Z"/>
+      <path class="cls-2" d="M1285.99,719.787H1297v59.588h-11.01V719.787Z"/>
+    </g>
+    <g id="Kursi_copy" data-name="Kursi copy">
+      <path class="cls-1" d="M1711.01,868.181h-20V952h20V868.181Z"/>
+      <path id="Rectangle_3_copy-2" data-name="Rectangle 3 copy" class="cls-1" d="M1804.56,867.776h-19.53V952h19.53V867.776Z"/>
+      <path class="cls-2" d="M1810,847.25H1686v23.932h124V847.25Z"/>
+      <path id="Rectangle_3_copy_2-2" data-name="Rectangle 3 copy 2" class="cls-3" d="M1807.02,725.526h-20.03V847.045h20.03V725.526Z"/>
+      <path class="cls-2" d="M1791.01,725.532H1780v59.743h11.01V725.532Z"/>
+    </g>
+  </g>
+  <g id="Meja">
+    <g id="Meja-2" data-name="Meja">
+      <path class="cls-1" d="M1645,787.374h23V944.018h-23V787.374Z"/>
+      <path id="Rectangle_26_copy" data-name="Rectangle 26 copy" class="cls-1" d="M1424,786.376h23V943.02h-23V786.376Z"/>
+      <path class="cls-2" d="M1386,767.419h319a6,6,0,0,1,6,6v12.944a6,6,0,0,1-6,6H1386a6,6,0,0,1-6-6V773.419A6,6,0,0,1,1386,767.419Z"/>
+    </g>
+    <g id="Asset">
+      <g id="Bunga">
+        <path class="cls-4" d="M1572,766.733s-14.97-39.027,8-51.573V700.283h13l1,15.869s22.17,8.935,8,50.581h-30Z"/>
+        <path class="cls-5" d="M1577.27,699.578s-31.09-4.856-15-18.439c0,0-14.88-6.288,5.35-16.391,0,0,18.66-26.5,24.65-3.073,0,0,30.3-6.239,18.22,11.269,0,0,22.79,11.632-2.14,16.39C1608.35,689.334,1611.41,703.541,1577.27,699.578Z"/>
+        <path class="cls-6" d="M1591.2,659.812c5.92,0,10.72,4.229,10.72,9.445s-4.8,9.446-10.72,9.446-10.72-4.229-10.72-9.446S1585.28,659.812,1591.2,659.812Z"/>
+        <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-6" d="M1570.64,676.6c4.63,0,8.38,3.306,8.38,7.385s-3.75,7.385-8.38,7.385-8.37-3.307-8.37-7.385S1566.02,676.6,1570.64,676.6Z"/>
+        <path id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-6" d="M1607.64,675.12c4.54,0,8.22,3.154,8.22,7.044s-3.68,7.044-8.22,7.044-8.22-3.153-8.22-7.044S1603.1,675.12,1607.64,675.12Z"/>
+        <path id="Ellipse_1_copy_4" data-name="Ellipse 1 copy 4" class="cls-6" d="M1570.85,658.756c4.14,0,7.5,2.823,7.5,6.305s-3.36,6.3-7.5,6.3-7.5-2.823-7.5-6.3S1566.71,658.756,1570.85,658.756Z"/>
+        <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-6" d="M1584.78,680.8c5.33,0,9.65,3.762,9.65,8.4s-4.32,8.4-9.65,8.4-9.65-3.761-9.65-8.4S1579.45,680.8,1584.78,680.8Z"/>
+      </g>
+      <g>
+        <path class="cls-7" d="M1594,759.438h90v7.981h-90v-7.981Z"/>
+        <path class="cls-8" d="M1603,752.453h85v7.982h-85v-7.982Z"/>
+      </g>
+      <g>
+        <path class="cls-9" d="M1547,767.419V731.5h-38l-1,35.918h39Z"/>
+        <path class="cls-9" d="M1509,742.476h-8v12.971h8v5.986h-14V736.49h15"/>
+      </g>
+      <g id="Tissu">
+        <path id="b" class="cls-10" d="M1631,767.419l1-32.925h46v32.925"/>
+        <path class="cls-11" d="M1643.08,734.494L1642,716.485s4.76-18.2,19.41-19.9c0,0-3.66,10.279-1.08,12.322,0,0,8.88-3.275,7.55,7.583,0,0,4.76,6.588,0,10.426,0,0-2.33,5.041-2.16,7.583h-22.64Z"/>
+      </g>
+      <g>
+        <path class="cls-12" d="M1405,756.647s5.16-5.171,17-4.983l23,1,6,3.986-26,4.984Z"/>
+        <path class="cls-13" d="M1454,756.647l1-2.99,29-1.993-1,4.983h-29Z"/>
+        <path class="cls-14" d="M1412,755.651s15.22-11.224,30,0l2,2.99-24-1-8,1v-2.99Z"/>
+        <path class="cls-15" d="M1411,767.611l-10-10.964h87l-8,10.964h-69Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

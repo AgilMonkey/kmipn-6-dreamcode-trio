@@ -1,0 +1,12 @@
+<svg id="Pintu_Dapur" data-name="Pintu Dapur" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3a3c40;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1909.88,561.483H1889V990h20.88V561.483Z"/>
+  <path class="cls-1" d="M1909.88,561.483S1907.73,538.958,1898,536c0,0-7.28-6.55-9,25.483"/>
+</svg>
