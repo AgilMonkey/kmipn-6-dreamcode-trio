@@ -175,7 +175,7 @@ debug_color = Color(0.721859, 0.475684, 0.144176, 0.42)
 position = Vector2(0, -164)
 
 [node name="AyahAndikaSpeechBuble" type="Node2D" parent="AyahAndika"]
-position = Vector2(49.4442, -122.861)
+position = Vector2(1.38997, -100.169)
 
 [node name="JamDialogue" parent="." instance=ExtResource("17_by32x")]
 position = Vector2(568.476, 536.694)
