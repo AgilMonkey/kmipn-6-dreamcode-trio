@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dwlisj3ch1c44"]
+[gd_scene load_steps=34 format=3 uid="uid://dwlisj3ch1c44"]
 
 [ext_resource type="Script" path="res://scenes/levels/ruang-tamu-01/ruang_tamu_01.gd" id="1_l1k5o"]
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="2_bchjv"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dr4oelhilkaww" path="res://assets/1.2 - Ruang tamu rumah Andika/Pintu-Keluar-Rumah.svg" id="22_8jtj8"]
 [ext_resource type="Texture2D" uid="uid://cfifwuj367s11" path="res://assets/Karakter Ayah Andika - Duduk.svg" id="22_15u17"]
 [ext_resource type="Texture2D" uid="uid://dbciaxfp3jdr5" path="res://assets/1.2 - Ruang tamu rumah Andika/Lampu.svg" id="23_ih67q"]
+[ext_resource type="PackedScene" uid="uid://g805agceuw4a" path="res://scenes/levels/ruang-tamu-01/notif-ibu/pesan_dari_ibu.tscn" id="25_hyy02"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mrqde"]
 radius = 107.749
@@ -47,6 +48,19 @@ ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc66s"]
 size = Vector2(1680, 1056)
+
+[sub_resource type="GDScript" id="GDScript_joll7"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	if Dialogic.VAR.sudah_bicara_dengan_mamah:
+		queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d150r"]
+size = Vector2(200.687, 236.049)
 
 [node name="RuangTamu01" type="Node2D"]
 script = ExtResource("1_l1k5o")
@@ -294,7 +308,7 @@ draw_limits = true
 limit_target = NodePath("../RoomArea/CollisionShape2D")
 
 [node name="Player" parent="." instance=ExtResource("3_4juw4")]
-position = Vector2(576, 656.425)
+position = Vector2(135.028, 656.425)
 
 [node name="RoomArea" type="Area2D" parent="."]
 visible = false
@@ -304,6 +318,29 @@ position = Vector2(752, 248)
 shape = SubResource("RectangleShape2D_vc66s")
 debug_color = Color(0, 0.6, 0.701961, 0)
 metadata/_edit_lock_ = true
+
+[node name="AreaHpIbu" type="Area2D" parent="."]
+position = Vector2(610.802, 537.986)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = SubResource("GDScript_joll7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaHpIbu"]
+shape = SubResource("RectangleShape2D_d150r")
+debug_color = Color(0.896211, 0.196038, 0.623218, 0.42)
+
+[node name="PrototypeControl" type="Control" parent="AreaHpIbu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -610.0
+offset_top = -538.0
+offset_right = 758.0
+offset_bottom = 230.0
+metadata/_edit_lock_ = true
+
+[node name="PesanDariIbu" parent="AreaHpIbu/PrototypeControl" instance=ExtResource("25_hyy02")]
+layout_mode = 1
 
 [node name="Foreground" type="Node2D" parent="."]
 
@@ -327,3 +364,4 @@ texture = ExtResource("2_bchjv")
 [connection signal="body_entered" from="Area2DToLuarRumahAndika" to="Area2DToLuarRumahAndika" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2DToLuarRumahAndika" to="Area2DToLuarRumahAndika" method="_on_body_exited"]
 [connection signal="change_scene" from="Area2DToLuarRumahAndika" to="." method="_on_area_2d_to_luar_rumah_andika_change_scene"]
+[connection signal="body_entered" from="AreaHpIbu" to="." method="_on_area_hp_ibu_body_entered"]
