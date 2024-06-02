@@ -1,9 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://dss8y88t5p2ut"]
+[gd_scene load_steps=27 format=3 uid="uid://dss8y88t5p2ut"]
 
 [ext_resource type="Script" path="res://scenes/player sidescrolling/player.gd" id="1_sf4uv"]
 [ext_resource type="Texture2D" uid="uid://d081lp6ryfgxn" path="res://assets/Karakter Andika/Karakter Andika spreadsheet.svg" id="2_5ax5e"]
 [ext_resource type="Script" path="res://scenes/player sidescrolling/InteractNode.gd" id="3_4n47d"]
 [ext_resource type="Script" path="res://addons/smoothing/smoothing_2d.gd" id="4_nn2kx"]
+[ext_resource type="Script" path="res://scenes/player sidescrolling/FootstepPlayer.gd" id="5_6w6bd"]
+[ext_resource type="AudioStream" uid="uid://b1uvnie7qv0wt" path="res://assets/kenney_rpg-audio/Audio/footstep00.ogg" id="5_7i5f1"]
+[ext_resource type="AudioStream" uid="uid://dmrgpfp8t6x6d" path="res://assets/kenney_rpg-audio/Audio/footstep01.ogg" id="7_wkx1q"]
+[ext_resource type="AudioStream" uid="uid://c0gdw6h7jqjnq" path="res://assets/kenney_rpg-audio/Audio/footstep03.ogg" id="8_6pywk"]
+[ext_resource type="AudioStream" uid="uid://ckbw5dvomlfks" path="res://assets/kenney_rpg-audio/Audio/footstep04.ogg" id="9_rt374"]
+[ext_resource type="AudioStream" uid="uid://bpqfphym3gm8b" path="res://assets/kenney_rpg-audio/Audio/footstep05.ogg" id="10_afinh"]
+[ext_resource type="AudioStream" uid="uid://cfj76mbe3j4b" path="res://assets/kenney_rpg-audio/Audio/footstep06.ogg" id="11_u3hum"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv5pg"]
 atlas = ExtResource("2_5ax5e")
@@ -323,7 +330,7 @@ tracks/11/keys = {
 resource_name = "run"
 length = 0.7
 loop_mode = 1
-step = 0.175
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -444,6 +451,23 @@ tracks/9/keys = {
 "update": 0,
 "values": [0.0, 0.744281, 0.0, -0.427483, 0.0]
 }
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("FootstepPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_random_footstep"
+}, {
+"args": [],
+"method": &"play_random_footstep"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7m2tu"]
 _data = {
@@ -493,18 +517,18 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(31.9234, -106.714)
-rotation = -0.224089
-scale = Vector2(0.365937, 0.365937)
+position = Vector2(29.0249, -106.072)
+rotation = -0.127539
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
 flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(22.9762, -132.401)
-rotation = -0.227281
-scale = Vector2(0.365937, 0.365937)
+position = Vector2(22.5956, -132.503)
+rotation = -0.130731
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
 flip_h = true
@@ -518,7 +542,7 @@ region_enabled = true
 region_rect = Rect2(278, 16, 167, 252)
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -209.658)
+position = Vector2(-4.25413, -211.993)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -541,7 +565,7 @@ region_rect = Rect2(0, 276, 48, 108)
 
 [node name="KakiKiriBawah" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
 position = Vector2(-15.1487, -40.1621)
-scale = Vector2(0.365941, 0.365941)
+scale = Vector2(0.365942, 0.365942)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(8.85871, 46.215)
 region_enabled = true
@@ -549,24 +573,24 @@ region_rect = Rect2(113, 282, 65, 128)
 
 [node name="KakiKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
 position = Vector2(-14.5231, -70.0376)
-scale = Vector2(0.365941, 0.365941)
+scale = Vector2(0.365942, 0.365942)
 texture = ExtResource("2_5ax5e")
 offset = Vector2(0, 49.1142)
 region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-38.9229, -102.589)
-rotation = 0.157772
-scale = Vector2(0.365938, 0.365938)
+position = Vector2(-36.8533, -101.889)
+rotation = 0.0896672
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3587, -132.596)
-rotation = 0.157772
-scale = Vector2(0.365938, 0.365938)
+position = Vector2(-26.3603, -132.681)
+rotation = 0.0896672
+scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)
@@ -608,7 +632,7 @@ remote_path = NodePath("../../../../../SpriteContainer/Tubuh/Kepala")
 [node name="LeftShoulder" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(-31.8558, -55.6886)
 rotation = 0.0896672
-scale = Vector2(0.999832, 0.999832)
+scale = Vector2(0.999827, 0.999827)
 rest = Transform2D(0.995983, 0.0895471, -0.0895471, 0.995983, -31.8558, -55.6886)
 auto_calculate_length_and_angle = false
 length = 32.0925
@@ -673,7 +697,7 @@ bone_angle = 0.0
 
 [node name="LeftThigh" type="Bone2D" parent="GfxPlayer/Smoothing2D/Skeleton2D/Base/Body"]
 position = Vector2(-20, 12.6046)
-scale = Vector2(0.99984, 0.99984)
+scale = Vector2(0.999841, 0.999841)
 rest = Transform2D(1, 0, 0, 1, -20, 12.6046)
 auto_calculate_length_and_angle = false
 length = 24.2513
@@ -763,6 +787,13 @@ tree_root = SubResource("AnimationNodeStateMachine_i134l")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/idle = true
 parameters/conditions/is_moving = false
+
+[node name="FootstepPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7i5f1")
+volume_db = -15.0
+pitch_scale = 8.0
+script = ExtResource("5_6w6bd")
+footsteps = Array[AudioStream]([ExtResource("5_7i5f1"), ExtResource("7_wkx1q"), ExtResource("8_6pywk"), ExtResource("9_rt374"), ExtResource("10_afinh"), ExtResource("11_u3hum")])
 
 [connection signal="area_entered" from="InteractNode" to="InteractNode" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractNode" to="InteractNode" method="_on_area_exited"]
