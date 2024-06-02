@@ -29,32 +29,26 @@ scale = Vector2(0.711, 0.711)
 
 [node name="Sekolah" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("1_gsgjk")
 
 [node name="Background-sekolah" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kjfls")
 
 [node name="Papan-sekolah" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("3_uvl30")
 
 [node name="Nama-sekolak-smk" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("4_28352")
 
 [node name="Jalan-kaki" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("5_anmtm")
 
 [node name="Jalan-mobil" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("6_vvdh5")
 
 [node name="Tiang-jalan" type="Sprite2D" parent="BackSprite"]
@@ -63,12 +57,10 @@ texture = ExtResource("7_t4lxh")
 
 [node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-410.689, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("8_mx7ko")
 
 [node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(1731.36, 225)
-scale = Vector2(1, 1)
 texture = ExtResource("9_oyr6s")
 
 [node name="Contoh" type="Sprite2D" parent="BackSprite"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://c8b5qw385j1nc"]
+[gd_scene load_steps=47 format=3 uid="uid://c8b5qw385j1nc"]
 
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-02/luar_rumah_andika_02.gd" id="1_7arv2"]
 [ext_resource type="Texture2D" uid="uid://cttjbs0pii0gq" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/Contoh.png" id="1_id4op"]
 [ext_resource type="Texture2D" uid="uid://bomsjvoejtn1w" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/awan1.png" id="2_dhnbf"]
 [ext_resource type="Texture2D" uid="uid://cga78fo6tc0fs" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/awan2.png" id="3_qkl4k"]
@@ -37,9 +38,12 @@
 [ext_resource type="Texture2D" uid="uid://ngvs250qpcob" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik3.svg" id="35_kffil"]
 [ext_resource type="Texture2D" uid="uid://cok5ypvpr22cn" path="res://assets/2.2.2 - Tampilan di luar rumah Andika/tiang-listrik.svg" id="36_qisx7"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="37_3om7h"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="38_kxt07"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="39_5cji8"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="40_kqw3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6wwa"]
-size = Vector2(2591, 237.304)
+size = Vector2(2536, 261.652)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1fk1"]
 size = Vector2(280, 960)
@@ -47,7 +51,17 @@ size = Vector2(280, 960)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28jjp"]
 size = Vector2(304, 336)
 
+[sub_resource type="Resource" id="Resource_1i8fs"]
+script = ExtResource("40_kqw3y")
+duration = 0.0
+transition = 0
+ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo1ii"]
+size = Vector2(1712, 768)
+
 [node name="LuarRumahAndika02" type="Node2D"]
+script = ExtResource("1_7arv2")
 
 [node name="BackSprite" type="Sprite2D" parent="."]
 position = Vector2(872, 385)
@@ -55,7 +69,6 @@ scale = Vector2(0.711, 0.711)
 
 [node name="Background1" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("5_ovl0h")
 
 [node name="Awan1" type="Sprite2D" parent="BackSprite"]
@@ -90,35 +103,29 @@ texture = ExtResource("11_05ytm")
 
 [node name="Rumah0" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("24_24xp5")
 
 [node name="Rumah1" type="Sprite2D" parent="BackSprite"]
 visible = false
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("25_pe7x1")
 
 [node name="Rumah2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("26_oxnni")
 
 [node name="Rumah3" type="Sprite2D" parent="BackSprite"]
 visible = false
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("27_gbwxf")
 
 [node name="Rumah4" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("28_6dkvx")
 
 [node name="Rumah5" type="Sprite2D" parent="BackSprite"]
 visible = false
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("29_0ql6h")
 
 [node name="HiasanJalanTaman1" type="Sprite2D" parent="BackSprite"]
@@ -188,63 +195,107 @@ texture = ExtResource("36_qisx7")
 
 [node name="LampuJalan" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("19_2e1vb")
 
 [node name="TiangLampu" type="Sprite2D" parent="BackSprite"]
 visible = false
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("32_hsdjy")
 
 [node name="PapanHati-hati" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("20_58ott")
 
 [node name="BackgroundHitam" type="Sprite2D" parent="BackSprite"]
 position = Vector2(872.011, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("7_3hw2l")
 
 [node name="BackgroundHitam2" type="Sprite2D" parent="BackSprite"]
 position = Vector2(-261.603, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("8_rayd7")
 
 [node name="Contoh" type="Sprite2D" parent="BackSprite"]
 position = Vector2(0, -2)
-scale = Vector2(1, 1)
 texture = ExtResource("1_id4op")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(468.279, 0.348022)
+position = Vector2(331.779, -11.826)
 shape = SubResource("RectangleShape2D_c6wwa")
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 352)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-4, 0)
+position = Vector2(-328, 0)
 shape = SubResource("RectangleShape2D_r1fk1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
-position = Vector2(2311, -12)
+position = Vector2(2216, -12)
 shape = SubResource("RectangleShape2D_r1fk1")
 
 [node name="Player" parent="." instance=ExtResource("37_3om7h")]
-position = Vector2(520, 672)
+position = Vector2(520, 648)
 
-[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
-visible = false
-position = Vector2(2015, 507)
+[node name="Area2DKeRumahAndika" type="Area2D" parent="."]
+position = Vector2(-240, 507)
 collision_layer = 2
 collision_mask = 2
-monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRumahAndika"]
 shape = SubResource("RectangleShape2D_28jjp")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
+
+[node name="LuarRumah1Pos" type="Marker2D" parent="Area2DKeRumahAndika" groups=["from"]]
+position = Vector2(360, 141)
+
+[node name="Area2DKeSekolah" type="Area2D" parent="."]
+position = Vector2(1968, 507)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeSekolah"]
+shape = SubResource("RectangleShape2D_28jjp")
+debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
+
+[node name="SekolahPos" type="Marker2D" parent="Area2DKeSekolah" groups=["from"]]
+position = Vector2(360, 141)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(699, 384)
+limit_left = 16
+limit_top = 0
+limit_right = 1728
+limit_bottom = 768
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("38_kxt07")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(699, 384)
+script = ExtResource("39_5cji8")
+follow_mode = 2
+follow_target = NodePath("../Player")
+tween_resource = SubResource("Resource_1i8fs")
+follow_offset = Vector2(0, -280)
+follow_damping = true
+draw_limits = true
+limit_target = NodePath("../RoomArea/CollisionShape2D")
+
+[node name="RoomArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea"]
+position = Vector2(872, 384)
+shape = SubResource("RectangleShape2D_mo1ii")
+debug_color = Color(0.0156863, 1, 0, 0)
+
+[connection signal="body_entered" from="Area2DKeRumahAndika" to="." method="_on_area_2d_ke_rumah_andika_body_entered"]
+[connection signal="body_entered" from="Area2DKeSekolah" to="." method="_on_area_2d_ke_sekolah_body_entered"]

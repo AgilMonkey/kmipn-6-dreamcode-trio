@@ -6,7 +6,6 @@ var scene_ruang_tamu: String = "res://scenes/levels/ruang-tamu-01/ruang_tamu_01.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	var from_pos: Node2D
 	var from_nodes = get_tree().get_nodes_in_group("from")
 	
@@ -61,3 +60,10 @@ func _on_minigame_kotak_start_minigame(node):
 	%"minigame_mencari_barang".hide()
 	Dialogic.VAR.sudah_isi_token = true
 	node.stop_minigame.emit()
+
+
+func _on_area_2d_to_luar_rumah_2_body_entered(body):
+	LevelManager.from = "LuarRumah1"
+	$Player.set_process_input(false)
+	$Player.direction = Vector2.ZERO
+	LevelManager.change_scene_with_transition("res://scenes/levels/luar-rumah-andika-02/luar_rumah_andika_02.tscn")
