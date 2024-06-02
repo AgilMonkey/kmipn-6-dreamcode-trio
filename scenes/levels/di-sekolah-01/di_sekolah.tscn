@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cpbcvrvjle2hb"]
+[gd_scene load_steps=16 format=3 uid="uid://cpbcvrvjle2hb"]
 
 [ext_resource type="Texture2D" uid="uid://dilo15ju817nx" path="res://assets/3.1 - Di Sekolah/Sekolah.svg" id="1_gsgjk"]
+[ext_resource type="Script" path="res://scenes/levels/di-sekolah-01/di_sekolah.gd" id="1_tvi2s"]
 [ext_resource type="Texture2D" uid="uid://cq0x62vy6f7v1" path="res://assets/3.1 - Di Sekolah/background-SEKOLAH.png" id="2_kjfls"]
 [ext_resource type="Texture2D" uid="uid://b7tbv1vu7t62s" path="res://assets/3.1 - Di Sekolah/Papan-Sekolah.png" id="3_uvl30"]
 [ext_resource type="Texture2D" uid="uid://d0ss4am5dl0mt" path="res://assets/3.1 - Di Sekolah/Nama-Sekolak-SMK.png" id="4_28352"]
@@ -18,10 +19,11 @@ size = Vector2(3179, 237.304)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1gst"]
 size = Vector2(280, 960)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e61pw"]
-size = Vector2(304, 336)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvjsg"]
+size = Vector2(376, 336)
 
 [node name="DiSekolah" type="Node2D"]
+script = ExtResource("1_tvi2s")
 
 [node name="BackSprite" type="Sprite2D" parent="."]
 position = Vector2(532, 224)
@@ -88,12 +90,17 @@ shape = SubResource("RectangleShape2D_r1gst")
 [node name="Player" parent="." instance=ExtResource("11_kahml")]
 position = Vector2(520, 672)
 
-[node name="Area2DKeRuangTamu" type="Area2D" parent="."]
-position = Vector2(-295, 504)
+[node name="Area2DKeLuarRumah2" type="Area2D" parent="."]
+position = Vector2(-264, 507)
 collision_layer = 2
 collision_mask = 2
-monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeRuangTamu"]
-shape = SubResource("RectangleShape2D_e61pw")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeLuarRumah2"]
+position = Vector2(-36, 0)
+shape = SubResource("RectangleShape2D_bvjsg")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
+
+[node name="LuarRumah2Pos" type="Marker2D" parent="Area2DKeLuarRumah2" groups=["from"]]
+position = Vector2(344, 165)
+
+[connection signal="body_entered" from="Area2DKeLuarRumah2" to="." method="_on_area_2d_ke_luar_rumah_2_body_entered"]

@@ -261,7 +261,7 @@ shape = SubResource("RectangleShape2D_28jjp")
 debug_color = Color(0.618337, 0.52261, 0.329228, 0.42)
 
 [node name="SekolahPos" type="Marker2D" parent="Area2DKeSekolah" groups=["from"]]
-position = Vector2(360, 141)
+position = Vector2(-304, 141)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(699, 384)
