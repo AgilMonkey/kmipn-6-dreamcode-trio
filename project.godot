@@ -49,6 +49,7 @@ variables={
 "is_new_game": true,
 "sudah_bayar_token_listrik": false,
 "sudah_bicara_dengan_mamah": false,
+"sudah_isi_token": false,
 "sudah_makan": false
 }
 layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]

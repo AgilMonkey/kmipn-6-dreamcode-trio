@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=48 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cbvb4eoauh56i" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman3.png" id="25_obas3"]
 [ext_resource type="Texture2D" uid="uid://bscu4jfgbdgo1" path="res://assets/2.2 - Tampilan di luar rumah Andika/tiang listrik.svg" id="26_3h1le"]
 [ext_resource type="Texture2D" uid="uid://2kxwv5euvoov" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Rumah Pak RT.svg" id="32_7tjrp"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/InteractMinigameIsiTokenListrk.gd" id="33_ifb8h"]
 [ext_resource type="Texture2D" uid="uid://gar1mo8av7mq" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Jendela dan AC.png" id="33_itv6i"]
 [ext_resource type="Texture2D" uid="uid://be2fa7gyiaec5" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/pinttu Pak RT.png" id="34_pudcw"]
 [ext_resource type="Texture2D" uid="uid://el17qi12nd5q" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Pintu Hiasan.png" id="35_2ke3f"]
@@ -66,115 +67,6 @@ bg_color = Color(0.32, 0.154667, 0, 1)
 shadow_color = Color(0, 0, 0, 0.729412)
 shadow_size = 10
 shadow_offset = Vector2(5, 5)
-
-[sub_resource type="Animation" id="Animation_bhw35"]
-resource_name = "start"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(57, 824), Vector2(57, 24)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/MinigameIsiTokenListrik:process_mode")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [4, 0]
-}
-
-[sub_resource type="Animation" id="Animation_3ejqt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(57, 824)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/MinigameIsiTokenListrik:process_mode")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wl58g"]
-_data = {
-"RESET": SubResource("Animation_3ejqt"),
-"start": SubResource("Animation_bhw35")
-}
 
 [node name="LuarRumahAndika01" type="Node2D"]
 script = ExtResource("1_qcla1")
@@ -313,14 +205,17 @@ position = Vector2(0, -80)
 [node name="RuangTamuPos" type="Marker2D" parent="Area2DToRuangTamu" groups=["from"]]
 position = Vector2(0, 192)
 
-[node name="InteractMinigameIsiTokenListrk" parent="." instance=ExtResource("39_akihh")]
+[node name="InteractMinigameIsiTokenListrk" type="Node2D" parent="."]
 position = Vector2(352, 544)
+script = ExtResource("33_ifb8h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractMinigameIsiTokenListrk"]
+[node name="InteractArea" parent="InteractMinigameIsiTokenListrk" instance=ExtResource("39_akihh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractMinigameIsiTokenListrk/InteractArea"]
 shape = SubResource("CircleShape2D_idu05")
 debug_color = Color(0.793595, 0.195728, 0.341425, 0.42)
 
-[node name="InteractIcon" parent="InteractMinigameIsiTokenListrk" instance=ExtResource("6_1ll6f")]
+[node name="InteractIcon" parent="InteractMinigameIsiTokenListrk/InteractArea" instance=ExtResource("6_1ll6f")]
 position = Vector2(0, -120)
 
 [node name="Player" parent="." instance=ExtResource("2_vqacv")]
@@ -367,6 +262,7 @@ scale = Vector2(0.692593, 0.692593)
 texture = ExtResource("2_fbuos")
 
 [node name="MinigameStuff" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Minigames" type="Control" parent="MinigameStuff"]
 layout_mode = 3
@@ -376,22 +272,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="MinigameStuff/Minigames"]
-visible = false
+[node name="MinigamePanel" type="Panel" parent="MinigameStuff/Minigames"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 57.0
-offset_top = 824.0
+offset_top = 40.0
 offset_right = -57.0
-offset_bottom = 760.0
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xwpr")
 
-[node name="MinigameIsiTokenListrik" type="SubViewportContainer" parent="MinigameStuff/Minigames/Panel"]
-process_mode = 4
+[node name="MinigameIsiTokenListrik" type="SubViewportContainer" parent="MinigameStuff/Minigames/MinigamePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -404,19 +298,17 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="MinigameStuff/Minigames/Panel/MinigameIsiTokenListrik"]
+[node name="SubViewport" type="SubViewport" parent="MinigameStuff/Minigames/MinigamePanel/MinigameIsiTokenListrik"]
 handle_input_locally = false
 size = Vector2i(1195, 672)
 size_2d_override = Vector2i(1366, 768)
 size_2d_override_stretch = true
 render_target_update_mode = 0
 
-[node name="minigame-mengisi-token-listrik" parent="MinigameStuff/Minigames/Panel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("39_qnq23")]
-
-[node name="MinigameAnimation" type="AnimationPlayer" parent="MinigameStuff/Minigames"]
-libraries = {
-"": SubResource("AnimationLibrary_wl58g")
-}
-autoplay = "start"
+[node name="minigame-mengisi-token-listrik" parent="MinigameStuff/Minigames/MinigamePanel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("39_qnq23")]
+unique_name_in_owner = true
+process_mode = 4
+visible = false
 
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
+[connection signal="start_minigame" from="InteractMinigameIsiTokenListrk" to="." method="_on_interact_minigame_isi_token_listrk_interacted"]

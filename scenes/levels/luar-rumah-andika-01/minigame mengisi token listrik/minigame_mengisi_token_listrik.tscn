@@ -303,6 +303,16 @@ libraries = {
 }
 autoplay = "start_game"
 
+[node name="Tutorial" type="Label" parent="."]
+offset_left = 951.0
+offset_top = 137.0
+offset_right = 1335.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Z untuk menekan tombol
+Tombol panah untuk bergerak"
+
 [connection signal="signal_button" from="NumberPad/Button0/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
 [connection signal="signal_button" from="NumberPad/Button1/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
 [connection signal="signal_button" from="NumberPad/Button2/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
