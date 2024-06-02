@@ -170,6 +170,8 @@ region_enabled = true
 region_rect = Rect2(0, 988, 1920, 92)
 
 [node name="AyahAndika" type="Node2D" parent="."]
+process_mode = 4
+visible = false
 position = Vector2(363.065, 515.367)
 
 [node name="AyahAndikaSprite" type="Sprite2D" parent="AyahAndika"]
