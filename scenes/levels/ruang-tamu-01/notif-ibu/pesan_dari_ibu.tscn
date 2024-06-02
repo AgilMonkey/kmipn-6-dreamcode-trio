@@ -1,0 +1,150 @@
+[gd_scene load_steps=16 format=3 uid="uid://g805agceuw4a"]
+
+[ext_resource type="Texture2D" uid="uid://mdqsgq2hmhg3" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Contoh1.png" id="1_duo01"]
+[ext_resource type="Texture2D" uid="uid://dwlr0y0fpkmij" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Background Heanphone.svg" id="2_u62id"]
+[ext_resource type="Texture2D" uid="uid://btub6u4goecav" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Hari ini 06.00.png" id="3_0p2ni"]
+[ext_resource type="Texture2D" uid="uid://biid5qtwux8iv" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/kontak1.png" id="5_06t4q"]
+[ext_resource type="Texture2D" uid="uid://dfa00lh4kqfca" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/kotak-message.png" id="5_dafej"]
+[ext_resource type="Texture2D" uid="uid://wnphw0olb6wq" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat1 Mama.png" id="6_lk251"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="6_r1dgt"]
+[ext_resource type="Texture2D" uid="uid://fr0215fgujaj" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat2 Mama.png" id="7_o3w8m"]
+[ext_resource type="Texture2D" uid="uid://mf47kb5a4hnd" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat3 Mama.png" id="8_6124d"]
+[ext_resource type="Texture2D" uid="uid://bywficl0qakti" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat1 Andika.png" id="9_mcshf"]
+[ext_resource type="Texture2D" uid="uid://pc3h6h165df5" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat4 Mama.png" id="10_0sfd0"]
+[ext_resource type="Texture2D" uid="uid://c8ex0l2l4rqc2" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/Chat5 Mama.png" id="11_45ylk"]
+[ext_resource type="Texture2D" uid="uid://bllnym0wxscgb" path="res://assets/1.3 - Menjawab pesan teks melalui handphone/Chat/iyaa maa.png" id="12_shet5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbdga"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.678431)
+shadow_size = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1m6b"]
+atlas = ExtResource("2_u62id")
+region = Rect2(780, 14, 514, 1051)
+
+[node name="PesanDariIbu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_vertical_guides_ = [440.0, 848.0]
+metadata/_edit_lock_ = true
+
+[node name="HP" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 464.21
+offset_top = 12.0204
+offset_right = -533.79
+offset_bottom = -11.9797
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qbdga")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="BackHp" type="TextureRect" parent="HP"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -372.0
+offset_right = 184.0
+offset_bottom = 372.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_e1m6b")
+expand_mode = 1
+
+[node name="HariIni06_00" type="Sprite2D" parent="HP"]
+position = Vector2(183.75, 93.25)
+scale = Vector2(0.712389, 0.796296)
+texture = ExtResource("3_0p2ni")
+region_enabled = true
+region_rect = Rect2(984, 141, 113, 27)
+
+[node name="Kontak1" type="Sprite2D" parent="HP"]
+position = Vector2(184, 35.4074)
+scale = Vector2(0.715953, 0.668063)
+texture = ExtResource("5_06t4q")
+region_enabled = true
+region_rect = Rect2(780, 14, 514, 106)
+
+[node name="Kotak-message" type="Sprite2D" parent="HP"]
+position = Vector2(183.363, 708.396)
+scale = Vector2(0.707131, 0.71398)
+texture = ExtResource("5_dafej")
+region_enabled = true
+region_rect = Rect2(794, 990, 488, 58)
+
+[node name="Contoh1" type="Sprite2D" parent="."]
+position = Vector2(248.204, 330.565)
+scale = Vector2(0.450538, 0.450538)
+texture = ExtResource("1_duo01")
+region_enabled = true
+region_rect = Rect2(760, -16, 552, 1088)
+
+[node name="Pesan" type="Sprite2D" parent="."]
+clip_children = 1
+position = Vector2(648, 392)
+scale = Vector2(0.71875, 1.21875)
+texture = ExtResource("6_r1dgt")
+
+[node name="Chat1Mama" type="Sprite2D" parent="Pesan"]
+position = Vector2(-489.739, -174.564)
+scale = Vector2(0.972318, 0.568428)
+texture = ExtResource("6_lk251")
+region_enabled = true
+region_rect = Rect2(801, 198, 411, 83)
+
+[node name="Chat2Mama" type="Sprite2D" parent="Pesan"]
+position = Vector2(-478.609, -119.59)
+scale = Vector2(0.92024, 0.537715)
+texture = ExtResource("7_o3w8m")
+region_enabled = true
+region_rect = Rect2(801, 294, 411, 103)
+
+[node name="Chat3Mama" type="Sprite2D" parent="Pesan"]
+position = Vector2(-478.609, -65.641)
+scale = Vector2(0.960662, 0.566545)
+texture = ExtResource("8_6124d")
+region_enabled = true
+region_rect = Rect2(802, 409, 393, 84)
+
+[node name="Chat1Andika" type="Sprite2D" parent="Pesan"]
+position = Vector2(445.217, -13.1282)
+scale = Vector2(0.934524, 0.55142)
+texture = ExtResource("9_mcshf")
+region_enabled = true
+region_rect = Rect2(909, 516, 361, 93)
+
+[node name="Chat4Mama" type="Sprite2D" parent="Pesan"]
+position = Vector2(-345.043, 31.1795)
+scale = Vector2(1.02261, 0.615385)
+texture = ExtResource("10_0sfd0")
+region_enabled = true
+region_rect = Rect2(802, 624, 100, 48)
+
+[node name="Chat5Mama" type="Sprite2D" parent="Pesan"]
+position = Vector2(-467.478, 78.7693)
+scale = Vector2(0.931191, 0.548448)
+texture = ExtResource("11_45ylk")
+region_enabled = true
+region_rect = Rect2(802, 687, 383, 95)
+
+[node name="IyaaMaa" type="Sprite2D" parent="Pesan"]
+position = Vector2(389.565, 131.282)
+scale = Vector2(0.609421, 0.328205)
+texture = ExtResource("12_shet5")
+region_enabled = true
+region_rect = Rect2(869, 798, 346, 80)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
