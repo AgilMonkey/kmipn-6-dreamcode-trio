@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2fr1xssc6f4j"]
+[gd_scene load_steps=5 format=3 uid="uid://c2fr1xssc6f4j"]
 
 [ext_resource type="Script" path="res://scenes/levels/dapur-01/minigame_makan_interactable.gd" id="1_octr3"]
 [ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="2_jdgug"]
 [ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="3_4nltp"]
-[ext_resource type="Texture2D" uid="uid://c02gsg1f7ra7j" path="res://addons/2d_shapes/Ellipse.svg" id="4_mxnek"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13gpq"]
 radius = 97.3242
@@ -19,7 +18,3 @@ debug_color = Color(0.725223, 0.471672, 0.187405, 0.42)
 
 [node name="InteractIcon" parent="InteractArea" instance=ExtResource("3_4nltp")]
 position = Vector2(0, -96)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(7, 7)
-texture = ExtResource("4_mxnek")

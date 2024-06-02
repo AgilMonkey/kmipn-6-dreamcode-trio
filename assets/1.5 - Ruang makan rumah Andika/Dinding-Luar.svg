@@ -1,0 +1,16 @@
+<svg id="DIn" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3a5862;
+      }
+
+      .cls-2 {
+        fill: #162937;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="1892" y="81" width="56" height="909"/>
+  <rect class="cls-2" y="37" width="2235" height="150"/>
+  <rect class="cls-1" y="187" width="1892" height="22"/>
+</svg>

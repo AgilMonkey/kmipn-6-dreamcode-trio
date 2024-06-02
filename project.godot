@@ -34,6 +34,8 @@ directories/dtl_directory={
 "box_dialogue": "res://scenes/levels/prototype level 1/box_dialogue.dtl",
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "dialog_belum_makan": "res://scenes/levels/ruang-tamu-01/dialog_belum_makan.dtl",
+"dialog_lemari_es": "res://scenes/levels/dapur-01/dialog_lemari_es.dtl",
+"dialog_panci": "res://scenes/levels/dapur-01/dialog_panci.dtl",
 "dialogue_jam": "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl",
 "komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",
 "npc_ayah_andika_dialogue": "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl",
@@ -41,6 +43,8 @@ directories/dtl_directory={
 }
 variables={
 "ayah_andika_count": 0,
+"dapat_ingatkan_ayah_buang_sampah": false,
+"ingatkan_ayah_buang_sampah": false,
 "sudah_bayar_token_listrik": false,
 "sudah_makan": false
 }

@@ -1,3 +1,14 @@
+if {dapat_ingatkan_ayah_buang_sampah} == true and {ingatkan_ayah_buang_sampah} == false:
+	Andika: Ayah kata Ibu jangan lupa buang sampah
+	Ayah: Oh, iya iya Dika
+	Andika: Kenapa gak sekarang aja?
+	Ayah: ...
+	Ayah: Malas
+	Ayah: Hehe
+	Andika: ...
+	set {ingatkan_ayah_buang_sampah} == true
+	[end_timeline]
+
 if {ayah_andika_count} > 0 and {sudah_makan} == false:
 	jump selesai1
 

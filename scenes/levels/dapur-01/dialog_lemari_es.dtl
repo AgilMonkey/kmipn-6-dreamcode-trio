@@ -1,0 +1,3 @@
+Andika: Ada catatan dari ibu di kulkas
+Andika: "Untuk ayah, jangan lupa buang sampahnya"
+set {dapat_ingatkan_ayah_buang_sampah} = true
