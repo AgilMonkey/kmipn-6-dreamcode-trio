@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m6nep7ghuynp"
+path="res://.godot/imported/Stroking Surgery.mp3-9b7ecdf6349320b88e80f8ef31e9399e.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Stroking Surgery.mp3"
+dest_files=["res://.godot/imported/Stroking Surgery.mp3-9b7ecdf6349320b88e80f8ef31e9399e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
