@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=57 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://2kxwv5euvoov" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Rumah Pak RT.svg" id="32_7tjrp"]
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/InteractMinigameIsiTokenListrk.gd" id="33_ifb8h"]
 [ext_resource type="Texture2D" uid="uid://gar1mo8av7mq" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Jendela dan AC.png" id="33_itv6i"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/MinigameKotak.gd" id="34_440yn"]
 [ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="34_dfpbd"]
 [ext_resource type="Texture2D" uid="uid://be2fa7gyiaec5" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/pinttu Pak RT.png" id="34_pudcw"]
 [ext_resource type="Texture2D" uid="uid://el17qi12nd5q" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Pintu Hiasan.png" id="35_2ke3f"]
@@ -43,9 +44,15 @@
 [ext_resource type="PackedScene" uid="uid://hqn85c8x3b7h" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.tscn" id="39_qnq23"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 [ext_resource type="PackedScene" uid="uid://0xmmdcr30fx7" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/minigame_mencari_barang.tscn" id="41_s0jp2"]
+[ext_resource type="Texture2D" uid="uid://b7b3c0sur73mm" path="res://assets/Kotak-barang/korak2.svg" id="44_0rrqm"]
+[ext_resource type="Texture2D" uid="uid://ld4hr1p3ptgq" path="res://assets/Kotak-barang/korak3.svg" id="45_qxlvd"]
+[ext_resource type="Texture2D" uid="uid://bk0qllo8irmrr" path="res://assets/Kotak-barang/Kotak1.svg" id="46_w7a35"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx887"]
 radius = 72.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4y0b"]
+radius = 72.4431
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
 size = Vector2(2640, 261.304)
@@ -199,6 +206,34 @@ position = Vector2(0, -152)
 [node name="PakRtBuble" type="Node2D" parent="KarakterPakRt"]
 position = Vector2(0, -80)
 
+[node name="MinigameKotak" type="Node2D" parent="."]
+position = Vector2(1168, 576)
+script = ExtResource("34_440yn")
+
+[node name="Sprites" type="Node2D" parent="MinigameKotak"]
+scale = Vector2(0.42983, 0.42983)
+
+[node name="Korak3" type="Sprite2D" parent="MinigameKotak/Sprites"]
+scale = Vector2(1, 1)
+texture = ExtResource("45_qxlvd")
+
+[node name="Kotak1" type="Sprite2D" parent="MinigameKotak/Sprites"]
+scale = Vector2(1, 1)
+texture = ExtResource("46_w7a35")
+
+[node name="Korak2" type="Sprite2D" parent="MinigameKotak/Sprites"]
+scale = Vector2(1, 1)
+texture = ExtResource("44_0rrqm")
+
+[node name="InteractArea" parent="MinigameKotak" instance=ExtResource("39_akihh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MinigameKotak/InteractArea"]
+position = Vector2(40, -8)
+shape = SubResource("CircleShape2D_y4y0b")
+
+[node name="InteractIcon" parent="MinigameKotak/InteractArea" instance=ExtResource("6_1ll6f")]
+position = Vector2(48, -24)
+
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
 
@@ -284,12 +319,12 @@ shape = SubResource("RectangleShape2D_5m1p7")
 debug_color = Color(0.0156863, 1, 0, 0)
 
 [node name="ContohTampilan" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1064, 1456)
 scale = Vector2(0.692593, 0.692593)
 texture = ExtResource("2_fbuos")
 
 [node name="MinigameStuff" type="CanvasLayer" parent="."]
+layer = 0
 visible = false
 
 [node name="Minigames" type="Control" parent="MinigameStuff"]
@@ -339,9 +374,11 @@ process_mode = 4
 visible = false
 
 [node name="minigame_mencari_barang" parent="MinigameStuff/Minigames/MinigamePanel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("41_s0jp2")]
+unique_name_in_owner = true
 process_mode = 4
 visible = false
 
 [connection signal="dialogue_started" from="KarakterPakRt/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
+[connection signal="start_minigame" from="MinigameKotak" to="." method="_on_minigame_kotak_start_minigame"]
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
 [connection signal="start_minigame" from="InteractMinigameIsiTokenListrk" to="." method="_on_interact_minigame_isi_token_listrk_interacted"]

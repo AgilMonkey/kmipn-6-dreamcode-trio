@@ -46,3 +46,18 @@ func _on_interact_minigame_isi_token_listrk_interacted(node):
 
 func _on_interact_dialogue_dialogue_started(layout):
 		layout.register_character(load("res://dialogic-stuff/characters/PakRt.dch"), $KarakterPakRt/PakRtBuble)
+
+
+func _on_minigame_kotak_start_minigame(node):
+	$Player.set_process_input(false)
+	$Player.direction = Vector2.ZERO
+	$MinigameStuff.show()
+	%"minigame_mencari_barang".process_mode = Node.PROCESS_MODE_INHERIT
+	%"minigame_mencari_barang".show()
+	await %"minigame_mencari_barang".minigame_selesai
+	$Player.set_process_input(true)
+	$MinigameStuff.visible = false
+	%"minigame_mencari_barang".process_mode = Node.PROCESS_MODE_DISABLED
+	%"minigame_mencari_barang".hide()
+	Dialogic.VAR.sudah_isi_token = true
+	node.stop_minigame.emit()
