@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpioa6v4mpus7"]
 
-[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/hand_pointing/hand_pointing.gd" id="1_0pddn"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/hand_pointing/hand_pointing.gd" id="1_0pddn"]
 [ext_resource type="Texture2D" uid="uid://c5qvf20oy86h1" path="res://assets/2.1 - Minigame mengisi token listrik/tangan1.svg" id="1_s4elx"]
 [ext_resource type="Texture2D" uid="uid://dadhts8vaxcf5" path="res://assets/2.1 - Minigame mengisi token listrik/lengan.svg" id="2_4d7m1"]
-[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/hand_pointing/PressArea.gd" id="4_60h63"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/hand_pointing/PressArea.gd" id="4_60h63"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gr26e"]
 radius = 102.044

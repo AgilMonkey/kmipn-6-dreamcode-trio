@@ -1,11 +1,11 @@
 [gd_scene load_steps=27 format=3 uid="uid://hqn85c8x3b7h"]
 
-[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/minigame_mengisi_token_listrik.gd" id="1_ktepa"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.gd" id="1_ktepa"]
 [ext_resource type="Texture2D" uid="uid://j8ihq5mottew" path="res://assets/2.1 - Minigame mengisi token listrik/tokenlistrik1.png" id="2_5gbap"]
 [ext_resource type="Texture2D" uid="uid://cu1ujg7krq6rv" path="res://assets/2.1 - Minigame mengisi token listrik/tempatenter.png" id="3_14wip"]
 [ext_resource type="Texture2D" uid="uid://c1j8dqe177pwe" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala1.png" id="4_pool2"]
 [ext_resource type="Texture2D" uid="uid://ncngblpnmatu" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala2.png" id="5_eui72"]
-[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/DisplayLabel.gd" id="6_7wiip"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/DisplayLabel.gd" id="6_7wiip"]
 [ext_resource type="Texture2D" uid="uid://6m6n5sn603hu" path="res://assets/2.1 - Minigame mengisi token listrik/0.png" id="6_qqrmd"]
 [ext_resource type="Texture2D" uid="uid://c5dblf1lfmxyy" path="res://assets/2.1 - Minigame mengisi token listrik/1.png" id="7_b56ob"]
 [ext_resource type="Texture2D" uid="uid://lvxjwtmnss70" path="res://assets/2.1 - Minigame mengisi token listrik/2.png" id="8_onwmj"]
@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://bveva7rpjc80b" path="res://assets/2.1 - Minigame mengisi token listrik/9.png" id="15_ijhkp"]
 [ext_resource type="Texture2D" uid="uid://bs1oq6ko6q1th" path="res://assets/2.1 - Minigame mengisi token listrik/tombolback.png" id="16_1pcc4"]
 [ext_resource type="Texture2D" uid="uid://dm6jl6skh05s4" path="res://assets/2.1 - Minigame mengisi token listrik/tombolenter.png" id="17_74ojk"]
-[ext_resource type="PackedScene" uid="uid://duwp2pyscq4nd" path="res://scenes/2.1 - Minigame mengisi token listrik/number_pad/button.tscn" id="19_44s70"]
-[ext_resource type="PackedScene" uid="uid://bpioa6v4mpus7" path="res://scenes/2.1 - Minigame mengisi token listrik/hand_pointing/hand_pointing.tscn" id="21_83p73"]
+[ext_resource type="PackedScene" uid="uid://duwp2pyscq4nd" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/number_pad/button.tscn" id="19_44s70"]
+[ext_resource type="PackedScene" uid="uid://bpioa6v4mpus7" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/hand_pointing/hand_pointing.tscn" id="21_83p73"]
 [ext_resource type="Texture2D" uid="uid://c5qvf20oy86h1" path="res://assets/2.1 - Minigame mengisi token listrik/tangan1.svg" id="21_bnt5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bvif"]
@@ -27,6 +27,37 @@ size = Vector2(194, 831)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l1hx"]
 size = Vector2(169.999, 1537.5)
+
+[sub_resource type="Animation" id="Animation_3vm6v"]
+resource_name = "end_game"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HandPointing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_cnbh1"]
 resource_name = "start_game"
@@ -71,37 +102,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("21_bnt5c")]
-}
-
-[sub_resource type="Animation" id="Animation_3vm6v"]
-resource_name = "end_game"
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HandPointing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"set_process_input"
-}]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"tween_tangan_ke_bawah"
-}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4us8e"]
@@ -175,124 +175,100 @@ scale = Vector2(0.711, 0.711)
 
 [node name="Button0" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(783.404, 448.664)
-scale = Vector2(1, 1)
 
 [node name="Button1" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(701.828, 227.848)
-scale = Vector2(1, 1)
 texture = ExtResource("7_b56ob")
 region_rect = Rect2(871.728, 338, 64.5693, 59.4411)
 
 [node name="Button2" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(783.404, 227.848)
-scale = Vector2(1, 1)
 texture = ExtResource("8_onwmj")
 
 [node name="Button3" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(870.605, 227.848)
-scale = Vector2(1, 1)
 texture = ExtResource("9_au7w4")
 
 [node name="Button4" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(700.422, 303.797)
-scale = Vector2(1, 1)
 texture = ExtResource("10_dnwcx")
 
 [node name="Button5" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(781.997, 303.797)
-scale = Vector2(1, 1)
 texture = ExtResource("11_1oxef")
 
 [node name="Button6" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(869.198, 303.797)
-scale = Vector2(1, 1)
 texture = ExtResource("12_phuqa")
 
 [node name="Button7" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(701.828, 376.934)
-scale = Vector2(1, 1)
 texture = ExtResource("13_fneca")
 
 [node name="Button8" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(783.404, 376.934)
-scale = Vector2(1, 1)
 texture = ExtResource("14_cokbj")
 
 [node name="Button9" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(869.198, 376.934)
-scale = Vector2(1, 1)
 texture = ExtResource("15_ijhkp")
 
 [node name="ButtonBack" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(701.828, 448.664)
-scale = Vector2(1, 1)
 texture = ExtResource("16_1pcc4")
 
 [node name="ButtonEnter" parent="NumberPad" instance=ExtResource("19_44s70")]
 position = Vector2(869.198, 448.664)
-scale = Vector2(1, 1)
 texture = ExtResource("17_74ojk")
 
 [node name="NumberButtonSprites" type="Node2D" parent="NumberPad"]
 
 [node name="0" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("6_qqrmd")
 
 [node name="1" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("7_b56ob")
 
 [node name="2" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("8_onwmj")
 
 [node name="3" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("9_au7w4")
 
 [node name="4" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("10_dnwcx")
 
 [node name="5" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("11_1oxef")
 
 [node name="6" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("12_phuqa")
 
 [node name="7" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("13_fneca")
 
 [node name="8" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("14_cokbj")
 
 [node name="9" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("15_ijhkp")
 
 [node name="TombolBack" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("16_1pcc4")
 
 [node name="TombolEnter" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
 position = Vector2(759, 401)
-scale = Vector2(1, 1)
 texture = ExtResource("17_74ojk")
 
 [node name="TanganBorder" type="StaticBody2D" parent="."]
