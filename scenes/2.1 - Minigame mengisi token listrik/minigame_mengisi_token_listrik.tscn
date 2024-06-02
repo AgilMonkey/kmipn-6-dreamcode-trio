@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://hqn85c8x3b7h"]
+[gd_scene load_steps=27 format=3 uid="uid://hqn85c8x3b7h"]
 
 [ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/minigame_mengisi_token_listrik.gd" id="1_ktepa"]
 [ext_resource type="Texture2D" uid="uid://j8ihq5mottew" path="res://assets/2.1 - Minigame mengisi token listrik/tokenlistrik1.png" id="2_5gbap"]
 [ext_resource type="Texture2D" uid="uid://cu1ujg7krq6rv" path="res://assets/2.1 - Minigame mengisi token listrik/tempatenter.png" id="3_14wip"]
 [ext_resource type="Texture2D" uid="uid://c1j8dqe177pwe" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala1.png" id="4_pool2"]
 [ext_resource type="Texture2D" uid="uid://ncngblpnmatu" path="res://assets/2.1 - Minigame mengisi token listrik/tombolnyala2.png" id="5_eui72"]
+[ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/DisplayLabel.gd" id="6_7wiip"]
 [ext_resource type="Texture2D" uid="uid://6m6n5sn603hu" path="res://assets/2.1 - Minigame mengisi token listrik/0.png" id="6_qqrmd"]
 [ext_resource type="Texture2D" uid="uid://c5dblf1lfmxyy" path="res://assets/2.1 - Minigame mengisi token listrik/1.png" id="7_b56ob"]
 [ext_resource type="Texture2D" uid="uid://lvxjwtmnss70" path="res://assets/2.1 - Minigame mengisi token listrik/2.png" id="8_onwmj"]
@@ -72,8 +73,40 @@ tracks/2/keys = {
 "values": [ExtResource("21_bnt5c")]
 }
 
+[sub_resource type="Animation" id="Animation_3vm6v"]
+resource_name = "end_game"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HandPointing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_process_input"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"tween_tangan_ke_bawah"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4us8e"]
 _data = {
+"end_game": SubResource("Animation_3vm6v"),
 "start_game": SubResource("Animation_cnbh1")
 }
 
@@ -121,64 +154,146 @@ texture = ExtResource("4_pool2")
 position = Vector2(759, 401)
 texture = ExtResource("5_eui72")
 
+[node name="NumberDisplay" type="Node2D" parent="."]
+
+[node name="DisplayLabel" type="Label" parent="NumberDisplay"]
+custom_minimum_size = Vector2(230, 0)
+offset_left = 587.0
+offset_top = 137.0
+offset_right = 817.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0.172549, 0.427451, 0.466667, 1)
+theme_override_font_sizes/font_size = 28
+text = "TOKEN SALAH"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_7wiip")
+
 [node name="NumberPad" type="Node2D" parent="."]
 position = Vector2(143, 92)
 scale = Vector2(0.711, 0.711)
 
-[node name="0" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
-texture = ExtResource("6_qqrmd")
+[node name="Button0" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(783.404, 448.664)
+scale = Vector2(1, 1)
 
-[node name="1" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button1" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(701.828, 227.848)
+scale = Vector2(1, 1)
 texture = ExtResource("7_b56ob")
+region_rect = Rect2(871.728, 338, 64.5693, 59.4411)
 
-[node name="2" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button2" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(783.404, 227.848)
+scale = Vector2(1, 1)
 texture = ExtResource("8_onwmj")
 
-[node name="3" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button3" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(870.605, 227.848)
+scale = Vector2(1, 1)
 texture = ExtResource("9_au7w4")
 
-[node name="4" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button4" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(700.422, 303.797)
+scale = Vector2(1, 1)
 texture = ExtResource("10_dnwcx")
 
-[node name="5" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button5" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(781.997, 303.797)
+scale = Vector2(1, 1)
 texture = ExtResource("11_1oxef")
 
-[node name="6" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button6" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(869.198, 303.797)
+scale = Vector2(1, 1)
 texture = ExtResource("12_phuqa")
 
-[node name="7" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button7" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(701.828, 376.934)
+scale = Vector2(1, 1)
 texture = ExtResource("13_fneca")
 
-[node name="8" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button8" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(783.404, 376.934)
+scale = Vector2(1, 1)
 texture = ExtResource("14_cokbj")
 
-[node name="9" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="Button9" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(869.198, 376.934)
+scale = Vector2(1, 1)
 texture = ExtResource("15_ijhkp")
 
-[node name="TombolBack" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="ButtonBack" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(701.828, 448.664)
+scale = Vector2(1, 1)
 texture = ExtResource("16_1pcc4")
 
-[node name="TombolEnter" type="Sprite2D" parent="NumberPad"]
-position = Vector2(759, 401)
+[node name="ButtonEnter" parent="NumberPad" instance=ExtResource("19_44s70")]
+position = Vector2(869.198, 448.664)
+scale = Vector2(1, 1)
 texture = ExtResource("17_74ojk")
 
-[node name="Button" parent="." instance=ExtResource("19_44s70")]
-position = Vector2(145, 268)
+[node name="NumberButtonSprites" type="Node2D" parent="NumberPad"]
 
-[node name="ButtonArea" parent="Button" index="0"]
-collision_layer = 16
-collision_mask = 0
+[node name="0" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("6_qqrmd")
+
+[node name="1" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("7_b56ob")
+
+[node name="2" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("8_onwmj")
+
+[node name="3" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("9_au7w4")
+
+[node name="4" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("10_dnwcx")
+
+[node name="5" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("11_1oxef")
+
+[node name="6" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("12_phuqa")
+
+[node name="7" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("13_fneca")
+
+[node name="8" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("14_cokbj")
+
+[node name="9" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("15_ijhkp")
+
+[node name="TombolBack" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("16_1pcc4")
+
+[node name="TombolEnter" type="Sprite2D" parent="NumberPad/NumberButtonSprites"]
+position = Vector2(759, 401)
+scale = Vector2(1, 1)
+texture = ExtResource("17_74ojk")
 
 [node name="TanganBorder" type="StaticBody2D" parent="."]
 position = Vector2(3, 3)
@@ -204,12 +319,6 @@ rotation = 1.57079
 shape = SubResource("RectangleShape2D_8l1hx")
 
 [node name="HandPointing" parent="." instance=ExtResource("21_83p73")]
-position = Vector2(793, 920)
-collision_layer = 24
-collision_mask = 24
-
-[node name="PressArea" parent="HandPointing" index="2"]
-collision_layer = 32
 
 [node name="AnimationMinigame" type="AnimationPlayer" parent="."]
 libraries = {
@@ -217,5 +326,28 @@ libraries = {
 }
 autoplay = "start_game"
 
-[editable path="Button"]
-[editable path="HandPointing"]
+[connection signal="signal_button" from="NumberPad/Button0/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button1/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button2/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button3/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button4/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button5/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button6/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button7/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button8/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/Button9/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/ButtonBack/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+[connection signal="signal_button" from="NumberPad/ButtonEnter/ButtonArea" to="NumberDisplay/DisplayLabel" method="_on_button_area_signal_button"]
+
+[editable path="NumberPad/Button0"]
+[editable path="NumberPad/Button1"]
+[editable path="NumberPad/Button2"]
+[editable path="NumberPad/Button3"]
+[editable path="NumberPad/Button4"]
+[editable path="NumberPad/Button5"]
+[editable path="NumberPad/Button6"]
+[editable path="NumberPad/Button7"]
+[editable path="NumberPad/Button8"]
+[editable path="NumberPad/Button9"]
+[editable path="NumberPad/ButtonBack"]
+[editable path="NumberPad/ButtonEnter"]

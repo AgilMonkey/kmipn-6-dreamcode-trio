@@ -3,14 +3,13 @@ extends Node2D
 signal minigame_selesai
 
 @onready var anim_minigame = $AnimationMinigame
-var token_code = 17345
 
 func selesaikan_game():
-	minigame_selesai.emit()
+	anim_minigame.play("end_game")
+
+func tween_tangan_ke_bawah():
+	var to = Vector2($HandPointing.global_position.x, 1080)
+	var tween = get_tree().create_tween()
+	tween.tween_property($HandPointing, "global_position", to, 2)
 	print("Minigame selesai")
-
-func number_pressed(object):
-	print("number_pressed")
-
-func number_released(object):
-	print("number_released")
+	minigame_selesai.emit()

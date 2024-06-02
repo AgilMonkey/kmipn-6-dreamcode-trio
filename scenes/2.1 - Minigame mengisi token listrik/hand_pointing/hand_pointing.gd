@@ -16,7 +16,7 @@ func _input(event):
 	
 	if event.is_action_pressed("interact"):
 		tangan_sprite.texture = hand_sprite_press
-		press_area.grab()
+		press_area.press()
 	elif event.is_action_released("interact"):
 		tangan_sprite.texture = hand_spirte_release
 		press_area.release()

@@ -5,15 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://dadhts8vaxcf5" path="res://assets/2.1 - Minigame mengisi token listrik/lengan.svg" id="2_4d7m1"]
 [ext_resource type="Script" path="res://scenes/2.1 - Minigame mengisi token listrik/hand_pointing/PressArea.gd" id="4_60h63"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_d0gt3"]
-radius = 105.005
+[sub_resource type="CircleShape2D" id="CircleShape2D_gr26e"]
+radius = 102.044
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfx5m"]
 radius = 18.1108
 
 [node name="HandPointing" type="CharacterBody2D"]
 collision_layer = 0
-collision_mask = 0
+collision_mask = 32
 script = ExtResource("1_0pddn")
 
 [node name="HandSprite" type="Sprite2D" parent="."]
@@ -28,19 +28,17 @@ region_enabled = true
 region_rect = Rect2(1257.16, 401.999, 329.869, 678.001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_d0gt3")
+position = Vector2(10, -2)
+shape = SubResource("CircleShape2D_gr26e")
 
 [node name="PressArea" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(13, 34)
+position = Vector2(-87, -126)
 collision_layer = 0
-collision_mask = 57
+collision_mask = 16
 monitorable = false
 script = ExtResource("4_60h63")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PressArea"]
-position = Vector2(-99, -157)
 shape = SubResource("CircleShape2D_bfx5m")
 debug_color = Color(0.605797, 0.535237, 0.223995, 0.42)
-
-[connection signal="body_exited" from="PressArea" to="PressArea" method="_on_body_exited"]

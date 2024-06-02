@@ -12,12 +12,9 @@ region_enabled = true
 region_rect = Rect2(952.127, 556.701, 63.9115, 61.1125)
 
 [node name="ButtonArea" type="Area2D" parent="."]
-collision_layer = 24
-collision_mask = 24
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("2_bw1wt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonArea"]
 shape = SubResource("RectangleShape2D_cnuub")
-
-[connection signal="area_entered" from="ButtonArea" to="ButtonArea" method="_on_area_entered"]
-[connection signal="area_exited" from="ButtonArea" to="ButtonArea" method="_on_area_exited"]
