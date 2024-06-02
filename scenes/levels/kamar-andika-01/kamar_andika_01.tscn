@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c6kf16uesqcve"]
+[gd_scene load_steps=32 format=3 uid="uid://c6kf16uesqcve"]
 
 [ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="1_fcpmb"]
 [ext_resource type="Script" path="res://scenes/levels/kamar-andika-01/kamar_andika_01.gd" id="1_kf1ef"]
@@ -20,6 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bvugfncjku3ke" path="res://assets/1.1 - Kamar Andika/Pintu.svg" id="18_edxoq"]
 [ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="19_qqmpe"]
 [ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="20_2nbd7"]
+[ext_resource type="FontFile" uid="uid://3ah1t7r2g1bv" path="res://assets/Klee_One/KleeOne-Regular.ttf" id="21_xq84h"]
+[ext_resource type="Texture2D" uid="uid://bpripkjh7nxtw" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Double/keyboard_arrow_left_outline.png" id="22_ewwu7"]
+[ext_resource type="Texture2D" uid="uid://heoq71843oyu" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Double/keyboard_arrow_right_outline.png" id="23_acp5a"]
+[ext_resource type="Texture2D" uid="uid://b5m4hbttnqcnd" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Double/keyboard_z_outline.png" id="24_3xe27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgygd"]
 size = Vector2(1840, 226.304)
@@ -32,6 +36,140 @@ size = Vector2(80, 960)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tkuqq"]
 radius = 73.0616
+
+[sub_resource type="Animation" id="Animation_tykj5"]
+resource_name = "start_tutorial"
+length = 8.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractTutorial:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MoveTutorial:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MoveTutorial:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InteractTutorial:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4, 4.5, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5tcnf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractTutorial:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MoveTutorial:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MoveTutorial:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InteractTutorial:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mis0v"]
+_data = {
+"RESET": SubResource("Animation_5tcnf"),
+"start_tutorial": SubResource("Animation_tykj5")
+}
 
 [node name="KamarAndika01" type="Node2D"]
 script = ExtResource("1_kf1ef")
@@ -192,5 +330,79 @@ shape = SubResource("CircleShape2D_tkuqq")
 
 [node name="InteractIcon" parent="InteractDialogue" instance=ExtResource("20_2nbd7")]
 position = Vector2(0, -147)
+
+[node name="Tutorial" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="MoveTutorial" type="Label" parent="Tutorial"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 227.0
+offset_top = 637.0
+offset_right = 1172.0
+offset_bottom = 770.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_xq84h")
+theme_override_font_sizes/font_size = 50
+text = "Gunakan tombol           untuk bergerak"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Kiri" type="TextureRect" parent="Tutorial/MoveTutorial"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 39.0
+offset_right = 489.0
+offset_bottom = 113.0
+texture = ExtResource("22_ewwu7")
+expand_mode = 1
+
+[node name="Kanan" type="TextureRect" parent="Tutorial/MoveTutorial"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 39.0
+offset_right = 562.0
+offset_bottom = 113.0
+texture = ExtResource("23_acp5a")
+expand_mode = 1
+
+[node name="InteractTutorial" type="Label" parent="Tutorial"]
+visible = false
+layout_mode = 0
+offset_left = 227.0
+offset_top = 637.0
+offset_right = 1172.0
+offset_bottom = 770.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_xq84h")
+theme_override_font_sizes/font_size = 50
+text = "Gunakan tombol      Untuk berinteraksi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Z" type="TextureRect" parent="Tutorial/InteractTutorial"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 39.0
+offset_right = 489.0
+offset_bottom = 113.0
+texture = ExtResource("24_3xe27")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tutorial"]
+libraries = {
+"": SubResource("AnimationLibrary_mis0v")
+}
 
 [connection signal="body_entered" from="Area2DKeRuangTamu" to="." method="_on_area_2d_ke_ruang_tamu_body_entered"]

@@ -16,6 +16,7 @@ func _ready():
 		$Player.set_process_input(false)
 		await get_tree().create_timer(1.0).timeout
 		await new_game_dialogue()
+		$Tutorial/AnimationPlayer.play("start_tutorial")
 
 
 func new_game_dialogue():
