@@ -148,6 +148,3 @@ position = Vector2(-209.872, 535.698)
 position = Vector2(65.0055, 0.348022)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yoh60")
-
-[node name="Wall" type="StaticBody2D" parent="."]
-position = Vector2(-898.093, 97.0464)
