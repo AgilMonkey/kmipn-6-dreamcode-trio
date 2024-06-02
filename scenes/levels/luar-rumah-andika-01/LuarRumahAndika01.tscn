@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=65 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -27,7 +27,9 @@
 [ext_resource type="Texture2D" uid="uid://dj5l62hbe0eyy" path="res://assets/2.2 - Tampilan di luar rumah Andika/Tanaman1.png" id="23_767m8"]
 [ext_resource type="Texture2D" uid="uid://dl0jauix7fal6" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman2.png" id="24_w3j3l"]
 [ext_resource type="Texture2D" uid="uid://cbvb4eoauh56i" path="res://assets/2.2 - Tampilan di luar rumah Andika/tanaman3.png" id="25_obas3"]
+[ext_resource type="Texture2D" uid="uid://blbu4a0cq5taj" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Hijau.svg" id="25_pjyma"]
 [ext_resource type="Texture2D" uid="uid://bscu4jfgbdgo1" path="res://assets/2.2 - Tampilan di luar rumah Andika/tiang listrik.svg" id="26_3h1le"]
+[ext_resource type="Texture2D" uid="uid://cb4nyyljdt2km" path="res://assets/2.2 - Tampilan di luar rumah Andika/Mobil Kuning.svg" id="26_y3dmn"]
 [ext_resource type="Texture2D" uid="uid://bfrk4bcj6ugux" path="res://assets/Karakter/Karakter Pak RT.svg" id="31_semja"]
 [ext_resource type="Texture2D" uid="uid://2kxwv5euvoov" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Pak RT/Rumah Pak RT.svg" id="32_7tjrp"]
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/InteractMinigameIsiTokenListrk.gd" id="33_ifb8h"]
@@ -44,6 +46,7 @@
 [ext_resource type="PackedScene" uid="uid://hqn85c8x3b7h" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.tscn" id="39_qnq23"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 [ext_resource type="PackedScene" uid="uid://0xmmdcr30fx7" path="res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/minigame_mencari_barang.tscn" id="41_s0jp2"]
+[ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/Mobils.gd" id="42_hkwro"]
 [ext_resource type="Texture2D" uid="uid://b7b3c0sur73mm" path="res://assets/Kotak-barang/korak2.svg" id="44_0rrqm"]
 [ext_resource type="Texture2D" uid="uid://ld4hr1p3ptgq" path="res://assets/Kotak-barang/korak3.svg" id="45_qxlvd"]
 [ext_resource type="Texture2D" uid="uid://bk0qllo8irmrr" path="res://assets/Kotak-barang/Kotak1.svg" id="46_w7a35"]
@@ -66,6 +69,72 @@ radius = 112.285
 [sub_resource type="CircleShape2D" id="CircleShape2D_idu05"]
 radius = 56.5685
 
+[sub_resource type="Animation" id="Animation_iov5q"]
+resource_name = "mobil_hijau"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mobils/MobilHijau:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-464, 584), Vector2(1856, 584)]
+}
+
+[sub_resource type="Animation" id="Animation_egkmc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mobils/MobilHijau:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-464, 584)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mobils/MobilKuning:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1896, 568.875)]
+}
+
+[sub_resource type="Animation" id="Animation_sskm7"]
+resource_name = "mobil_kuning"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mobils/MobilKuning:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1896, 568.875), Vector2(-544, 568.875)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8uhfr"]
+_data = {
+"RESET": SubResource("Animation_egkmc"),
+"mobil_hijau": SubResource("Animation_iov5q"),
+"mobil_kuning": SubResource("Animation_sskm7")
+}
+
 [sub_resource type="Resource" id="Resource_iexpf"]
 script = ExtResource("4_h3xh2")
 duration = 0.0
@@ -75,14 +144,14 @@ ease = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m1p7"]
 size = Vector2(1672, 768)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0s8wo"]
+radius = 96.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwpr"]
 bg_color = Color(0.32, 0.154667, 0, 1)
 shadow_color = Color(0, 0, 0, 0.729412)
 shadow_size = 10
 shadow_offset = Vector2(5, 5)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0s8wo"]
-radius = 96.0
 
 [node name="LuarRumahAndika01" type="Node2D"]
 script = ExtResource("1_qcla1")
@@ -287,6 +356,30 @@ position = Vector2(0, -120)
 [node name="Player" parent="." instance=ExtResource("2_vqacv")]
 position = Vector2(744, 648)
 
+[node name="Mobils" type="Node2D" parent="."]
+script = ExtResource("42_hkwro")
+
+[node name="MobilKuning" type="Sprite2D" parent="Mobils"]
+position = Vector2(1896, 568.875)
+scale = Vector2(0.673398, 0.673398)
+texture = ExtResource("26_y3dmn")
+region_enabled = true
+region_rect = Rect2(75, 618, 849, 359)
+
+[node name="MobilHijau" type="Sprite2D" parent="Mobils"]
+position = Vector2(-464, 584)
+scale = Vector2(0.656425, 0.656425)
+texture = ExtResource("25_pjyma")
+region_enabled = true
+region_rect = Rect2(1423, 655, 822, 358)
+
+[node name="MobilAnim" type="AnimationPlayer" parent="Mobils"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_8uhfr")
+}
+autoplay = "mobil_hijau"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(744, 384)
 limit_left = -136
@@ -320,6 +413,19 @@ metadata/_edit_lock_ = true
 position = Vector2(700, 384)
 shape = SubResource("RectangleShape2D_5m1p7")
 debug_color = Color(0.0156863, 1, 0, 0)
+
+[node name="Area2DToLuarRumah2" type="Area2D" parent="."]
+position = Vector2(-368, 512)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToLuarRumah2"]
+position = Vector2(0, 48)
+shape = SubResource("CircleShape2D_0s8wo")
+debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
+
+[node name="LuarRumah2" type="Marker2D" parent="Area2DToLuarRumah2"]
+position = Vector2(320, 136)
 
 [node name="ContohTampilan" type="Sprite2D" parent="."]
 position = Vector2(1064, 1456)
@@ -380,19 +486,6 @@ visible = false
 unique_name_in_owner = true
 process_mode = 4
 visible = false
-
-[node name="Area2DToLuarRumah2" type="Area2D" parent="."]
-position = Vector2(-368, 512)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToLuarRumah2"]
-position = Vector2(0, 48)
-shape = SubResource("CircleShape2D_0s8wo")
-debug_color = Color(0.620763, 0.52744, 0.240547, 0.42)
-
-[node name="LuarRumah2" type="Marker2D" parent="Area2DToLuarRumah2"]
-position = Vector2(320, 136)
 
 [connection signal="dialogue_started" from="KarakterPakRt/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
 [connection signal="start_minigame" from="MinigameKotak" to="." method="_on_minigame_kotak_start_minigame"]
