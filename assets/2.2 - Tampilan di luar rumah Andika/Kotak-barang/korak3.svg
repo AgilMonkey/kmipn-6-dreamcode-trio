@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2321" height="1080" viewBox="0 0 2321 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6805b;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #c59465;
+      }
+
+      .cls-3 {
+        fill: #5f4225;
+      }
+    </style>
+  </defs>
+  <g id="Kotak">
+    <g>
+      <path class="cls-1" d="M1361.01,559.99h148v121h-148v-121Z"/>
+      <path class="cls-2" d="M1357.01,555.991H1512V574H1357.01V555.991Z"/>
+      <path class="cls-3" d="M1409.99,596.009h49.99V608h-49.99V596.009Z"/>
+    </g>
+  </g>
+</svg>

@@ -27,6 +27,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Andika": "res://dialogic-stuff/characters/Andika.dch",
 "Ayah": "res://dialogic-stuff/characters/Ayah.dch",
+"PakRt": "res://dialogic-stuff/characters/PakRt.dch",
 "flower": "res://dialogic-stuff/characters/flower.dch",
 "test_mc": "res://dialogic-stuff/characters/test_mc.dch"
 }
@@ -35,8 +36,10 @@ directories/dtl_directory={
 "dapat_kunci_pak_rt_dialog": "res://scenes/levels/prototype level 1/box gameplay scene/dapat_kunci_pak_rt_dialog.dtl",
 "dialog_belum_makan": "res://scenes/levels/ruang-tamu-01/dialog_belum_makan.dtl",
 "dialog_lemari_es": "res://scenes/levels/dapur-01/dialog_lemari_es.dtl",
+"dialog_pak_rt": "res://scenes/levels/luar-rumah-andika-01/Dialog/dialog_pak_rt.dtl",
 "dialog_panci": "res://scenes/levels/dapur-01/dialog_panci.dtl",
 "dialogue_jam": "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl",
+"ketemu_kunci_dialoge": "res://scenes/levels/luar-rumah-andika-01/2.3 - Minigame mencari barang/ketemu_kunci_dialoge.dtl",
 "komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",
 "new_game_dialogue": "res://scenes/levels/kamar-andika-01/new_game_dialogue.dtl",
 "npc_ayah_andika_dialogue": "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl",
@@ -47,8 +50,12 @@ variables={
 "dapat_ingatkan_ayah_buang_sampah": false,
 "ingatkan_ayah_buang_sampah": false,
 "is_new_game": true,
+"ketemu_kunci_pak_rt": false,
 "sudah_bayar_token_listrik": false,
+"sudah_beritahu_pak_rt": false,
 "sudah_bicara_dengan_mamah": false,
+"sudah_bicara_pak_rt": false,
+"sudah_isi_token": false,
 "sudah_makan": false
 }
 layout/style_list=["res://dialogic-stuff/default_style.tres", "res://dialogic-stuff/test_dialogue_bubble_style.tres", "res://dialogic-stuff/bubble style/bubble_style.tres"]

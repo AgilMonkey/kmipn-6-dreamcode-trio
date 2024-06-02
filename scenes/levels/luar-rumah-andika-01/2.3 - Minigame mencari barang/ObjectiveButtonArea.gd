@@ -7,6 +7,7 @@ var is_interacting: bool
 
 func _input(event):
 	if Input.is_action_just_pressed("interact") and is_interacting:
+		
 		interacted.emit()
 
 

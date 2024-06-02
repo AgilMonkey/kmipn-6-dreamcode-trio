@@ -30,6 +30,9 @@ func unregister_area(area: InteractArea):
 
 func _process(delta):
 	if active_areas.size() > 0 and can_interact:
+		for area in active_areas:
+			area.hide_interact_icon()
+		
 		var last_active_area = active_areas[0]
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		

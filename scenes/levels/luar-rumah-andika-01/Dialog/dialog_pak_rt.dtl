@@ -1,0 +1,28 @@
+if {ketemu_kunci_pak_rt} == true and {sudah_beritahu_pak_rt} == false:
+	Andika: Pak apakah ini kunci nya ?
+	PakRt: Hmm... Oh iya ini kuncinya
+	PakRt: Terimakasih banyak ya Dika, sudah mencarikan
+	Andika: Sama-sama pak
+	set {sudah_beritahu_pak_rt} = true
+	[end_timeline]
+elif {ketemu_kunci_pak_rt} == true and {sudah_beritahu_pak_rt} == true:
+	PakRt: Sekali lagi terimakasih ya Dik
+	[end_timeline]
+
+if {sudah_bicara_pak_rt} == true:
+	PakRt: Hmm... Dimana ya?
+	[end_timeline]
+	
+PakRt: Pagi Dika
+Andika: Pagi pak
+PakRt: ...
+Andika: Ada apa pak?
+PakRt: Ini Dika...
+PakRt: Kunci mobil Bapak tadi hilang di sekitar sini
+PakRt: Bisa bantu carikan nggak ?
+- Bisa pak
+	PakRt: Oh terimakasih Dik
+	PakRt: Cari aja sekitar sini
+- Maaf pak, lagi terlambat ini
+	PakRt: Oh kalau gitu gak papa deh, belajar yang baik ya
+set {sudah_bicara_pak_rt} = true
