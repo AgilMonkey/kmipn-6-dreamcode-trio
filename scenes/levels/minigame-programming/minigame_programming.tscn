@@ -1,3 +1,114 @@
-[gd_scene format=3 uid="uid://bnel8m0s1vvjl"]
+[gd_scene load_steps=13 format=3 uid="uid://bnel8m0s1vvjl"]
+
+[ext_resource type="Texture2D" uid="uid://coxkd6ksbynqc" path="res://assets/3.4 - Minigame programming/Background.png" id="1_5emj8"]
+[ext_resource type="Script" path="res://scenes/levels/minigame-programming/minigame_programming.gd" id="1_rqvkt"]
+[ext_resource type="Texture2D" uid="uid://dc1s6ddxtr4jc" path="res://assets/3.4 - Minigame programming/Contoh.png" id="2_fwa0h"]
+[ext_resource type="Texture2D" uid="uid://t0n0o0ltj8wi" path="res://assets/3.4 - Minigame programming/Laptop.svg" id="2_tjr5a"]
+[ext_resource type="Texture2D" uid="uid://ctuiic725oeup" path="res://assets/3.4 - Minigame programming/kotak-input.svg" id="3_w1oc1"]
+[ext_resource type="Texture2D" uid="uid://ci2fw3q8gvdah" path="res://assets/3.4 - Minigame programming/kotak-output.svg" id="5_7l61q"]
+[ext_resource type="Texture2D" uid="uid://b1qjhnvx3nak5" path="res://assets/3.4 - Minigame programming/Input.png" id="6_3gstv"]
+[ext_resource type="Texture2D" uid="uid://cx4iirvt0jq01" path="res://assets/3.4 - Minigame programming/Output.png" id="7_xclt7"]
+[ext_resource type="Texture2D" uid="uid://c3g6ex5sunues" path="res://assets/3.4 - Minigame programming/Run.svg" id="8_4gfnn"]
+[ext_resource type="Texture2D" uid="uid://ctawqmv3cheq2" path="res://assets/Simple Shapes/Square.png" id="9_eglq1"]
+[ext_resource type="Texture2D" uid="uid://fyitnp7u6lmh" path="res://assets/3.4 - Minigame programming/Betrei.svg" id="10_fot3u"]
+[ext_resource type="Texture2D" uid="uid://df37tky5sew25" path="res://assets/3.4 - Minigame programming/Robot.svg" id="10_s4prl"]
 
 [node name="MinigameProgramming" type="Node2D"]
+script = ExtResource("1_rqvkt")
+metadata/_edit_horizontal_guides_ = [-8.0]
+
+[node name="Contoh" type="Sprite2D" parent="."]
+position = Vector2(2064, 1520)
+texture = ExtResource("2_fwa0h")
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(680, 360)
+scale = Vector2(0.745647, 0.794078)
+
+[node name="Background" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("1_5emj8")
+
+[node name="Laptop" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("2_tjr5a")
+
+[node name="Kotak-input" type="Sprite2D" parent="Sprites"]
+position = Vector2(-356, 36)
+scale = Vector2(1.1195, 1.26389)
+texture = ExtResource("3_w1oc1")
+region_enabled = true
+region_rect = Rect2(246, 213, 636, 576)
+
+[node name="Kotak-output" type="Sprite2D" parent="Sprites"]
+position = Vector2(334, 39.5)
+scale = Vector2(0.928571, 1.04391)
+texture = ExtResource("5_7l61q")
+region_enabled = true
+region_rect = Rect2(901, 226, 728, 706)
+
+[node name="Input" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, 8)
+texture = ExtResource("6_3gstv")
+
+[node name="Output" type="Sprite2D" parent="Sprites"]
+position = Vector2(64, 0)
+texture = ExtResource("7_xclt7")
+
+[node name="Run" type="Sprite2D" parent="Sprites"]
+visible = false
+position = Vector2(104, 0)
+texture = ExtResource("8_4gfnn")
+
+[node name="ClipTurtle" type="Sprite2D" parent="Sprites"]
+clip_children = 1
+position = Vector2(337.962, 35.261)
+scale = Vector2(1.32016, 1.43641)
+texture = ExtResource("9_eglq1")
+
+[node name="Betrei" type="Sprite2D" parent="Sprites/ClipTurtle"]
+position = Vector2(-174.73, -136.767)
+scale = Vector2(1.01587, 0.876712)
+texture = ExtResource("10_fot3u")
+region_enabled = true
+region_rect = Rect2(1464, 318, 48, 92)
+
+[node name="Robot" type="Sprite2D" parent="Sprites/ClipTurtle"]
+position = Vector2(166.603, 185.863)
+scale = Vector2(1.01587, 0.876712)
+texture = ExtResource("10_s4prl")
+region_enabled = true
+region_rect = Rect2(1085, 437, 116, 140)
+
+[node name="ProgrammingUI" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="ProgrammingUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="ProgrammingUI/UI"]
+anchors_preset = 0
+offset_left = 152.0
+offset_top = 104.0
+offset_right = 1184.0
+offset_bottom = 680.0
+
+[node name="CodeTextEdit" type="TextEdit" parent="ProgrammingUI/UI/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 504.0
+offset_bottom = 464.0
+
+[node name="JalankanButton" type="Button" parent="ProgrammingUI/UI/Control"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 472.0
+offset_right = 328.0
+offset_bottom = 544.0
+text = "Jalankan"
+
+[connection signal="button_down" from="ProgrammingUI/UI/Control/JalankanButton" to="." method="_on_jalankan_button_button_down"]
