@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=45 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://2qo8f7rnhygo" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/AC-contoh.png" id="36_matia"]
 [ext_resource type="Texture2D" uid="uid://crnh3vln0w880" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/Hiasan Pintu.png" id="37_vkklq"]
 [ext_resource type="Texture2D" uid="uid://cp4mujlwg5wqf" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/Jendela dan ac.png" id="38_a7hc1"]
+[ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="39_akihh"]
 [ext_resource type="Texture2D" uid="uid://b15d6og2idb47" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/pintu.png" id="39_oom8r"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 
@@ -46,6 +47,9 @@ size = Vector2(480, 917.304)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jar6p"]
 radius = 112.285
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_idu05"]
+radius = 56.5685
 
 [sub_resource type="Resource" id="Resource_iexpf"]
 script = ExtResource("4_h3xh2")
@@ -179,6 +183,8 @@ shape = SubResource("RectangleShape2D_htk71")
 
 [node name="Area2DToRuangTamu" parent="." instance=ExtResource("4_db4xs")]
 position = Vector2(520, 456)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DToRuangTamu"]
 position = Vector2(0, 48)
@@ -191,8 +197,28 @@ position = Vector2(0, -80)
 [node name="RuangTamuPos" type="Marker2D" parent="Area2DToRuangTamu" groups=["from"]]
 position = Vector2(0, 192)
 
+[node name="InteractMinigameIsiTokenListrk" parent="." instance=ExtResource("39_akihh")]
+position = Vector2(352, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractMinigameIsiTokenListrk"]
+shape = SubResource("CircleShape2D_idu05")
+debug_color = Color(0.793595, 0.195728, 0.341425, 0.42)
+
+[node name="InteractIcon" parent="InteractMinigameIsiTokenListrk" instance=ExtResource("6_1ll6f")]
+position = Vector2(0, -120)
+
 [node name="Player" parent="." instance=ExtResource("2_vqacv")]
 position = Vector2(744, 648)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(744, 384)
+limit_left = -136
+limit_top = 0
+limit_right = 1536
+limit_bottom = 768
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("3_lykbd")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 position = Vector2(744, 384)
@@ -205,30 +231,23 @@ follow_damping = true
 draw_limits = true
 limit_target = NodePath("../RoomArea/CollisionShape2D")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(744, 384)
-limit_left = -136
-limit_top = 0
-limit_right = 1536
-limit_bottom = 768
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-script = ExtResource("3_lykbd")
-
-[node name="ContohTampilan" type="Sprite2D" parent="."]
-position = Vector2(1064, 1456)
-scale = Vector2(0.692593, 0.692593)
-texture = ExtResource("2_fbuos")
-
 [node name="RoomArea" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 0
 monitoring = false
 monitorable = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea"]
 position = Vector2(700, 384)
 shape = SubResource("RectangleShape2D_5m1p7")
 debug_color = Color(0.0156863, 1, 0, 0)
+
+[node name="ContohTampilan" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1064, 1456)
+scale = Vector2(0.692593, 0.692593)
+texture = ExtResource("2_fbuos")
 
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
