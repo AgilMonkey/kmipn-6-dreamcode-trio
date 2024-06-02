@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=43 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -39,7 +39,10 @@
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
-size = Vector2(2192, 261.304)
+size = Vector2(2640, 261.304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htk71"]
+size = Vector2(480, 917.304)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jar6p"]
 radius = 112.285
@@ -49,6 +52,9 @@ script = ExtResource("4_h3xh2")
 duration = 0.0
 transition = 0
 ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m1p7"]
+size = Vector2(1672, 768)
 
 [node name="LuarRumahAndika01" type="Node2D"]
 script = ExtResource("1_qcla1")
@@ -160,6 +166,17 @@ position = Vector2(688.221, 790.652)
 position = Vector2(-0.221008, -12)
 shape = SubResource("RectangleShape2D_4ni88")
 
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(688.221, 790.652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1079.78, -340)
+shape = SubResource("RectangleShape2D_htk71")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-1400.22, -340)
+shape = SubResource("RectangleShape2D_htk71")
+
 [node name="Area2DToRuangTamu" parent="." instance=ExtResource("4_db4xs")]
 position = Vector2(520, 456)
 
@@ -178,7 +195,7 @@ position = Vector2(0, 192)
 position = Vector2(744, 648)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(744, 368)
+position = Vector2(744, 384)
 script = ExtResource("3_omytb")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -186,15 +203,32 @@ tween_resource = SubResource("Resource_iexpf")
 follow_offset = Vector2(0, -280)
 follow_damping = true
 draw_limits = true
+limit_target = NodePath("../RoomArea/CollisionShape2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(744, 368)
+position = Vector2(744, 384)
+limit_left = -136
+limit_top = 0
+limit_right = 1536
+limit_bottom = 768
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("3_lykbd")
 
 [node name="ContohTampilan" type="Sprite2D" parent="."]
-position = Vector2(64, 1384)
+position = Vector2(1064, 1456)
+scale = Vector2(0.692593, 0.692593)
 texture = ExtResource("2_fbuos")
+
+[node name="RoomArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea"]
+position = Vector2(700, 384)
+shape = SubResource("RectangleShape2D_5m1p7")
+debug_color = Color(0.0156863, 1, 0, 0)
 
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
