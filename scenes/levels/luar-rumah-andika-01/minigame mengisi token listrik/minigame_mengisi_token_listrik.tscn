@@ -295,6 +295,7 @@ rotation = 1.57079
 shape = SubResource("RectangleShape2D_8l1hx")
 
 [node name="HandPointing" parent="." instance=ExtResource("21_83p73")]
+position = Vector2(-360, 494)
 
 [node name="AnimationMinigame" type="AnimationPlayer" parent="."]
 libraries = {

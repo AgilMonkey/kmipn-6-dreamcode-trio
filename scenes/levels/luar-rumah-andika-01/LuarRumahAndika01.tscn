@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://tg2jxwer64kt"]
+[gd_scene load_steps=50 format=3 uid="uid://tg2jxwer64kt"]
 
 [ext_resource type="Script" path="res://scenes/levels/luar-rumah-andika-01/LuarRumahAndika01.gd" id="1_qcla1"]
 [ext_resource type="Texture2D" uid="uid://ptsorpxka3d0" path="res://assets/2.2 - Tampilan di luar rumah Andika/Contoh Tampilan.png" id="2_fbuos"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cp4mujlwg5wqf" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/Jendela dan ac.png" id="38_a7hc1"]
 [ext_resource type="PackedScene" uid="uid://nroli72qd4qe" path="res://scenes/interactable/interact_area.tscn" id="39_akihh"]
 [ext_resource type="Texture2D" uid="uid://b15d6og2idb47" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/pintu.png" id="39_oom8r"]
+[ext_resource type="PackedScene" uid="uid://hqn85c8x3b7h" path="res://scenes/levels/luar-rumah-andika-01/minigame mengisi token listrik/minigame_mengisi_token_listrik.tscn" id="39_qnq23"]
 [ext_resource type="Texture2D" uid="uid://n4m4i5q1713r" path="res://assets/2.2 - Tampilan di luar rumah Andika/Rumah Andika/rumah andika.svg" id="40_s0gxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ni88"]
@@ -59,6 +60,121 @@ ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m1p7"]
 size = Vector2(1672, 768)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwpr"]
+bg_color = Color(0.32, 0.154667, 0, 1)
+shadow_color = Color(0, 0, 0, 0.729412)
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="Animation" id="Animation_bhw35"]
+resource_name = "start"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(57, 824), Vector2(57, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/MinigameIsiTokenListrik:process_mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+
+[sub_resource type="Animation" id="Animation_3ejqt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(57, 824)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/MinigameIsiTokenListrik:process_mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wl58g"]
+_data = {
+"RESET": SubResource("Animation_3ejqt"),
+"start": SubResource("Animation_bhw35")
+}
 
 [node name="LuarRumahAndika01" type="Node2D"]
 script = ExtResource("1_qcla1")
@@ -249,5 +365,58 @@ visible = false
 position = Vector2(1064, 1456)
 scale = Vector2(0.692593, 0.692593)
 texture = ExtResource("2_fbuos")
+
+[node name="MinigameStuff" type="CanvasLayer" parent="."]
+
+[node name="Minigames" type="Control" parent="MinigameStuff"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MinigameStuff/Minigames"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 824.0
+offset_right = -57.0
+offset_bottom = 760.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xwpr")
+
+[node name="MinigameIsiTokenListrik" type="SubViewportContainer" parent="MinigameStuff/Minigames/Panel"]
+process_mode = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = -29.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MinigameStuff/Minigames/Panel/MinigameIsiTokenListrik"]
+handle_input_locally = false
+size = Vector2i(1195, 672)
+size_2d_override = Vector2i(1366, 768)
+size_2d_override_stretch = true
+render_target_update_mode = 0
+
+[node name="minigame-mengisi-token-listrik" parent="MinigameStuff/Minigames/Panel/MinigameIsiTokenListrik/SubViewport" instance=ExtResource("39_qnq23")]
+
+[node name="MinigameAnimation" type="AnimationPlayer" parent="MinigameStuff/Minigames"]
+libraries = {
+"": SubResource("AnimationLibrary_wl58g")
+}
+autoplay = "start"
 
 [connection signal="change_scene" from="Area2DToRuangTamu" to="." method="_on_area_2d_to_ruang_tamu_on_change_scene"]
