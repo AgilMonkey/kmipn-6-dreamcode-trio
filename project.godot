@@ -38,6 +38,7 @@ directories/dtl_directory={
 "dialog_panci": "res://scenes/levels/dapur-01/dialog_panci.dtl",
 "dialogue_jam": "res://scenes/levels/ruang-tamu-01/dialogue_jam.dtl",
 "komputer_interact": "res://scenes/levels/kamar-andika-01/komputer_interact.dtl",
+"new_game_dialogue": "res://scenes/levels/kamar-andika-01/new_game_dialogue.dtl",
 "npc_ayah_andika_dialogue": "res://scenes/levels/ruang-tamu-01/npc_ayah_andika_dialogue.dtl",
 "test_timeline": "res://scenes/testing/test_timeline.dtl"
 }
@@ -45,6 +46,7 @@ variables={
 "ayah_andika_count": 0,
 "dapat_ingatkan_ayah_buang_sampah": false,
 "ingatkan_ayah_buang_sampah": false,
+"is_new_game": true,
 "sudah_bayar_token_listrik": false,
 "sudah_makan": false
 }
