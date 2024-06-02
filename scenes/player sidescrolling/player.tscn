@@ -520,8 +520,8 @@ script = ExtResource("4_nn2kx")
 [node name="SpriteContainer" type="Node2D" parent="GfxPlayer/Smoothing2D"]
 
 [node name="TanganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(33.1617, -107.08)
-rotation = -0.266067
+position = Vector2(29.6355, -106.183)
+rotation = -0.147717
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_kv5pg")
 offset = Vector2(2.64366, 61.69)
@@ -529,8 +529,8 @@ flip_h = true
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKanan" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(23.1444, -132.369)
-rotation = -0.269259
+position = Vector2(22.6743, -132.478)
+rotation = -0.150909
 scale = Vector2(0.365937, 0.365937)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(6.85545, 46.0599)
@@ -560,7 +560,7 @@ scale = Vector2(1.20633, 1.13822)
 texture = ExtResource("6_jvp8u")
 
 [node name="Kepala" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer/Tubuh"]
-position = Vector2(-4.25413, -208.643)
+position = Vector2(-4.25413, -211.505)
 texture = ExtResource("2_5ax5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 199, 225)
@@ -598,17 +598,17 @@ region_enabled = true
 region_rect = Rect2(0, 276, 48, 108)
 
 [node name="TanganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-39.8069, -102.938)
-rotation = 0.187382
-scale = Vector2(0.365939, 0.365939)
+position = Vector2(-37.2897, -102.024)
+rotation = 0.1039
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_x4g82")
 offset = Vector2(3.16103, 49.472)
 region_rect = Rect2(107, 260, 59, 225)
 
 [node name="LenganKiri" type="Sprite2D" parent="GfxPlayer/Smoothing2D/SpriteContainer"]
-position = Vector2(-26.3599, -132.559)
-rotation = 0.187382
-scale = Vector2(0.365939, 0.365939)
+position = Vector2(-26.3595, -132.663)
+rotation = 0.1039
+scale = Vector2(0.365938, 0.365938)
 texture = SubResource("AtlasTexture_c746m")
 offset = Vector2(-13.2145, 45.5875)
 region_rect = Rect2(107, 260, 59, 225)

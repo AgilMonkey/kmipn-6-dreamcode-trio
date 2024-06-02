@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cpbcvrvjle2hb"]
+[gd_scene load_steps=25 format=3 uid="uid://cpbcvrvjle2hb"]
 
 [ext_resource type="Texture2D" uid="uid://dilo15ju817nx" path="res://assets/3.1 - Di Sekolah/Sekolah.svg" id="1_gsgjk"]
 [ext_resource type="Script" path="res://scenes/levels/di-sekolah-01/di_sekolah.gd" id="1_tvi2s"]
@@ -13,10 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://dbv8t51a34d7l" path="res://assets/3.1 - Di Sekolah/Contoh.png" id="10_rsm0c"]
 [ext_resource type="PackedScene" uid="uid://dss8y88t5p2ut" path="res://scenes/player sidescrolling/player.tscn" id="11_kahml"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_7tdnw"]
-[ext_resource type="Script" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.gd" id="13_862hj"]
+[ext_resource type="PackedScene" uid="uid://c8367bjpdl4su" path="res://scenes/interactable/dialouge-interacting/interact_dialogue.tscn" id="13_53qss"]
+[ext_resource type="PackedScene" uid="uid://bke5qh3b8dd61" path="res://scenes/levels/objects/InteractIcon.tscn" id="14_24kj7"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_o0jpf"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_2kfrf"]
 [ext_resource type="Texture2D" uid="uid://bdoe3milemexu" path="res://assets/Karakter/Karakter Teman.svg" id="16_f3ibf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_auslq"]
+radius = 89.8953
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71je0"]
 size = Vector2(3179, 237.304)
@@ -42,6 +46,8 @@ script = ExtResource("1_tvi2s")
 [node name="BackSprite" type="Sprite2D" parent="."]
 position = Vector2(532, 224)
 scale = Vector2(0.711, 0.711)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Sekolah" type="Sprite2D" parent="BackSprite"]
 position = Vector2(478, 225)
@@ -83,16 +89,27 @@ texture = ExtResource("9_oyr6s")
 position = Vector2(478, 225)
 texture = ExtResource("10_rsm0c")
 
-[node name="KarakterTeman" type="Sprite2D" parent="."]
+[node name="Teman" type="Node2D" parent="."]
 position = Vector2(1144, 562.362)
+
+[node name="KarakterTeman" type="Sprite2D" parent="Teman"]
 scale = Vector2(0.358635, 0.358635)
 texture = ExtResource("16_f3ibf")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(254, 211, 296, 604)
 
-[node name="InteractDialogue" type="Area2D" parent="KarakterTeman"]
-script = ExtResource("13_862hj")
+[node name="InteractDialogue" parent="Teman" instance=ExtResource("13_53qss")]
+timeline_path = "res://scenes/levels/di-sekolah-01/dialog_teman.dtl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teman/InteractDialogue"]
+shape = SubResource("CircleShape2D_auslq")
+
+[node name="InteractIcon" parent="Teman/InteractDialogue" instance=ExtResource("14_24kj7")]
+position = Vector2(0, -138.362)
+
+[node name="TemanSpeechPivot" type="Node2D" parent="Teman"]
+position = Vector2(0, -74.3622)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(688.221, 790.652)
@@ -162,4 +179,5 @@ position = Vector2(872, 384)
 shape = SubResource("RectangleShape2D_oahug")
 debug_color = Color(0.0156863, 1, 0, 0)
 
+[connection signal="dialogue_started" from="Teman/InteractDialogue" to="." method="_on_interact_dialogue_dialogue_started"]
 [connection signal="body_entered" from="Area2DKeLuarRumah2" to="." method="_on_area_2d_ke_luar_rumah_2_body_entered"]

@@ -13,6 +13,12 @@ func _ready():
 	if from_pos != null:
 		$Player.global_position = from_pos.global_position
 		$Player.smoothing.teleport()
+	
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument:String):
+	if argument == "bayu_ended":
+		LevelManager.change_scene_with_transition("res://scenes/levels/ruang-kelas-andika-01/ruang_kelas_andika.tscn")
 
 
 func _on_area_2d_ke_luar_rumah_2_body_entered(body):
@@ -20,3 +26,7 @@ func _on_area_2d_ke_luar_rumah_2_body_entered(body):
 	$Player.set_process_input(false)
 	$Player.direction = Vector2.ZERO
 	LevelManager.change_scene_with_transition("res://scenes/levels/luar-rumah-andika-02/luar_rumah_andika_02.tscn")
+
+
+func _on_interact_dialogue_dialogue_started(layout):
+	layout.register_character(load("res://dialogic-stuff/characters/Bayu.dch"), $Teman/TemanSpeechPivot)
