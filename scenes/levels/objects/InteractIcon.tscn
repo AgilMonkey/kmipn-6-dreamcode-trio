@@ -192,3 +192,24 @@ texture = ExtResource("3_cxsyv")
 libraries = {
 "": SubResource("AnimationLibrary_f73tf")
 }
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 136.0
+offset_top = 80.0
+offset_right = 248.0
+offset_bottom = 136.0
+focus_neighbor_bottom = NodePath("../Button2")
+text = "interact"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 136.0
+offset_top = 176.0
+offset_right = 248.0
+offset_bottom = 232.0
+focus_neighbor_top = NodePath("../Button")
+text = "uninteract"
+
+[connection signal="button_down" from="Button" to="." method="interact"]
+[connection signal="button_down" from="Button2" to="." method="uninteract"]

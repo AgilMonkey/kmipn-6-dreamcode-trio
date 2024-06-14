@@ -17,15 +17,18 @@ func _ready():
 func _process(delta):
 	if animation_player.current_animation != "":
 		animation_pos = animation_player.current_animation_position
+	#print(animation_player.current_animation_position)
 
 
 func interact():
-	if animation_player.current_animation_position == 0.25:
+	if animation_player.current_animation_position >= 0.25:
 		return
 	
 	animation_player.play("start")
 
 
 func uninteract():
-	if animation_player.current_animation_position > 0:
-		animation_player.play_backwards("start")
+	if animation_player.current_animation_position <= 0:
+		return
+	
+	animation_player.play_backwards("start")
